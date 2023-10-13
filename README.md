@@ -19,5 +19,7 @@ The answers expressed in these surveys by the community are not intended to refl
 | Year | Report                      | Source           |
 | ---  | ---                         | ---              |
 | 2022 | [HTML report][results-2022] | [source](./2022) |
+| 2023 | [HTML report][results-2023] | [source](./2023) |
 
 [results-2022]: https://cardano-foundation.github.io/state-of-the-developer-ecosystem/2022
+[results-2023]: https://cardano-foundation.github.io/state-of-the-developer-ecosystem/2023
