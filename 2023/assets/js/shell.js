@@ -20,6 +20,7 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
           "How many years of experience do you have writing software using a functional programming stack?",
           { options:
             []
+          , sortDesc: false
           },
           "",
         ),
@@ -32,6 +33,7 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
           "Do you work on Cardano as a hobby or professionally?",
           { options:
             []
+          , sortDesc: false
           },
           "",
         ),
@@ -158,7 +160,7 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
           "",
         ),
         question23: question(
-          "How do you manage deployment to your infrastructure",
+          "How do you manage deployment to your infrastructure?",
           { options:
             []
           , sortDesc: true
@@ -191,6 +193,7 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
           "Select any statement that applies to you․",
           { options:
             []
+          , sortDesc: false
           },
           "",
         ),
@@ -263,6 +266,7 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
    * Applicable'). Somehow, there are also few answers that are simply 'null'.
    */
   function question (title, args = {}, comment = "", titleAlt = title) {
+    console.log(title)
     return {
       ...args,
       options: Object.values(args.options || {}),
