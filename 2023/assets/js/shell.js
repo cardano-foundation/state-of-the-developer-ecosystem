@@ -11,15 +11,24 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
         question1: question(
           "How many years of experience do you have writing/deploying software?",
           { options:
-            []
-          , sortDesc: true
+            [ "Less than 1 year"
+            , "Between 1 and 3 years"
+            , "Between 3 and 10 years"
+            , "Over 10 years"
+            ]
+          , sortDesc: false
           },
           "",
         ),
         question2: question(
           "How many years of experience do you have writing software using a functional programming stack?",
           { options:
-            []
+            [ "I have never used functional programming"
+            , "Less than 1 year"
+            , "Between 1 and 3 years"
+            , "Between 3 and 10 years"
+            , "Over 10 years"
+            ]
           , sortDesc: false
           },
           "",
@@ -32,7 +41,10 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
         question4: question(
           "Do you work on Cardano as a hobby or professionally?",
           { options:
-            []
+            [ "Hobby"
+            , "Profession"
+            , "Both"
+            ]
           , sortDesc: false
           },
           "",
@@ -40,7 +52,23 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
         question5: question(
           "Which language(s) are you fluent in?",
           { options:
-            []
+            [ "Arabic"
+            , "Dutch"
+            , "English"
+            , "French"
+            , "German"
+            , "Greek"
+            , "Hindi"
+            , "Indonesian"
+            , "Italian"
+            , "Japanese"
+            , "Polish"
+            , "Portuguese"
+            , "Russian"
+            , "Spanish"
+            , "Ukrainian"
+            , "Vietnamese"
+            ]
           , sortDesc: true
           },
           "",
@@ -48,7 +76,26 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
         question6: question(
           "Which best describes your current profession?",
           { options:
-            []
+            [ "Academic researcher"
+            , "Artist"
+            , "Data scientist"
+            , "Database administrator"
+            , "Designer"
+            , "Educator"
+            , "Financial analyst"
+            , "Founder/executive officer"
+            , "Marketing/sales professional"
+            , "Product manager"
+            , "Project manager"
+            , "R&D engineer"
+            , "Site reliability engineer"
+            , "Software engineer"
+            , "Student/apprentice"
+            , "System administrator"
+            , "System architect"
+            , "Trader"
+            , "Web developer"
+            ]
           , sortDesc: true
           },
           "",
@@ -56,7 +103,17 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
         question7: question(
           "What is your main development environment?",
           { options:
-            []
+            [ "Atom"
+            , "Emacs"
+            , "IntelliJ"
+            , "JetBrains"
+            , "Notepad++"
+            , "Sublime Text"
+            , "Vim/NeoVim"
+            , "Visual Studio"
+            , "Visual Studio Code"
+            , "XCode"
+            ]
           , sortDesc: true
           },
           "",
@@ -64,7 +121,29 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
         question8: question(
           "Which programming language(s) are you proficient in?",
           { options:
-            []
+            [ "Aiken"
+            , "Bash"
+            , "C"
+            , "C#"
+            , "C++"
+            , "Elixir"
+            , "Elm"
+            , "Go"
+            , "Haskell"
+            , "Helios"
+            , "Java"
+            , "JavaScript"
+            , "Kotlin"
+            , "Nix"
+            , "PHP"
+            , "Python"
+            , "Ruby"
+            , "Rust"
+            , "Scala"
+            , "Solidity"
+            , "Swift"
+            , "TypeScript"
+            ]
           , sortDesc: true
           },
           "",
@@ -82,7 +161,18 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
         question11: question(
           "What do you use (or plan to use) for writing Plutus script validators / smart contracts?",
           { options:
-            []
+            [ "Aiken"
+            , "Haskell/Plutus-tx"
+            , "Helios"
+            , "Marlowe"
+            , "OpShin"
+            , "Plutarch"
+            , "Pluto"
+            , "Plu-ts"
+            , "Scalus"
+            , "Solidity (with Milkomeda)"
+            , "N/A"
+            ]
           , sortDesc: true
           },
           "",
@@ -90,7 +180,17 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
         question12: question(
           "What language(s) do you use (or plan to use) for writing off-chain code?",
           { options:
-            []
+            [ "C#"
+            , "C++"
+            , "Go"
+            , "Haskell"
+            , "Java"
+            , "JavaScript"
+            , "Kotlin"
+            , "Python"
+            , "Rust"
+            , "TypeScript"
+            ]
           , sortDesc: true
           },
           "",
@@ -110,7 +210,29 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
         question15: question(
           "Which libraries do you use in your projects?",
           { options:
-            []
+            [ "blockfrost-sdk (blockfrost)"
+            , "cardano-api (input-output-hk)"
+            , "cardano-js-sdk (input-output-hk)"
+            , "cardano-client-lib (bloxbean)"
+            , "cardano-multiplatform-library (dcSpark)"
+            , "cardano-python (emesik)"
+            , "cardano-serialization-lib (emurgo)"
+            , "cardano-transaction-lib (plutonomicon)"
+            , "cardano-wallet-connector (dynamicstrategies)"
+            , "cardanocli-js (shareslake)"
+            , "cardanosharp-wallet (CardanoSharp)"
+            , "Gouroboros (BlinkLabs)"
+            , "Helios (Hyperion-BT)"
+            , "Koios' client (cardano-community)"
+            , "Lucid (BerryPool)"
+            , "Mesh.js (MartifyLabs)"
+            , "Ogmios' client (CardanoSolutions)"
+            , "Ouroboros-network-js (StricaHQ)"
+            , "Pallas (txpipe)"
+            , "PyCardano (cffls)"
+            , "toolkit-for-cardano (SundaeSwap-finance)"
+            , "TyphonJS (StricaHQ)"
+            ]
           , sortDesc: true
           },
           "",
@@ -123,7 +245,25 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
         question17: question(
           "Which services do you use in your projects?",
           { options:
-            []
+            [ "Atlas (GeniusYield)"
+            , "cardano-db-sync (input-output-hk)"
+            , "cardano-graphql (cardano-foundation)"
+            , "cardano-metadata-oracle (5Binaries)"
+            , "cardano-rosetta (cardano-foundation)"
+            , "cardano-transaction-lib (Plutonomicon)"
+            , "cardano-wallet (cardano-foundation)"
+            , "DAB (cardano-foundation)"
+            , "Kupo (CardanoSolutions)"
+            , "Hydra (input-output-hk)"
+            , "Marconi (input-output-hk)"
+            , "Mithril (input-output-hk)"
+            , "Offchain-metadata-tools (input-output-hk)"
+            , "Ogmios (CardanoSolutions)"
+            , "Oura (TxPipe)"
+            , "Scrolls (TxPipe)"
+            , "SMASH (input-output-hk)"
+            , "None directly"
+            ]
           , sortDesc: true
           },
           "",
@@ -136,7 +276,17 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
         question19: question(
           "Which hosted service(s)/platform(s) do you use in your projects?",
           { options:
-            []
+            [ "Blockfrost (5Binaries)"
+            , "CardanoScan (StricaHQ)"
+            , "CExplorer (Cardanians)"
+            , "Demeter.run (TxPipe)"
+            , "Freeloaderz (FreeLoaderz)"
+            , "Handle (AdaHandle)"
+            , "Koios (Koios)"
+            , "Maestro (GoMaestro)"
+            , "NMKR (NMKR)"
+            , "Token registry (cardano-foundation)"
+            ]
           , sortDesc: true
           },
           "",
@@ -149,7 +299,13 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
         question21: question(
           "Which command-line tool(s) do you use in your projects?",
           { options:
-            []
+            [ "aiken (aiken-lang)"
+            , "bech32 (input-output-hk)"
+            , "cardano-addresses (input-output-hk)"
+            , "cardano-cli (input-output-hk)"
+            , "cncli (cardano-community)"
+            , "offchain-metadata-tools (input-output-hk)"
+            ]
           , sortDesc: true
           },
           "",
@@ -162,7 +318,15 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
         question23: question(
           "How do you manage deployment to your infrastructure?",
           { options:
-            []
+            [ "Ansible"
+            , "Bash scripts"
+            , "Demeter.run"
+            , "Docker"
+            , "Kubernetes"
+            , "Nix/NixOS"
+            , "Terraform"
+            , "N/A"
+            ]
           , sortDesc: true
           },
           "",
@@ -192,7 +356,11 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
         question27: question(
           "Select any statement that applies to you․",
           { options:
-            []
+            [ "I have never heard of the Cardano Improvement Proposals (CIPs)"
+            , "I have read and used a CIP"
+            , "I have participated in conversations or reviews related to a CIP"
+            , "I have written or co-written a CIP"
+            ]
           , sortDesc: false
           },
           "",
@@ -200,7 +368,15 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
         question28: question(
           "Where do you usually seek help on technical issues?",
           { options:
-            []
+            [ "Cardano forum"
+            , "Cardano StackExchange"
+            , "Discord servers"
+            , "Friends/colleagues/community members"
+            , "GitHub discussions/issues"
+            , "Reddit(r/Cardano, r/CardanoDevelopers)"
+            , "Telegram Groups"
+            , "Twitter/X"
+            ]
           , sortDesc: true
           },
           "",
@@ -208,7 +384,20 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
         question29: question(
           "Where/how do you look for technical details on Cardano?",
           { options:
-            []
+            [ "Blog or website articles & guides"
+            , "Cardano forum"
+            , "Cardano's developer portal (https://developers.cardano.org/)"
+            , "Cardano docs (https://docs.cardano.org/)"
+            , "Discord servers"
+            , "Friends/colleagues/community members"
+            , "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)"
+            , "Reddit (r/Cardano, r/CardanoDevelopers)"
+            , "Scientific papers/specifications"
+            , "Source code"
+            , "Telegram groups"
+            , "Twitter/X"
+            , "YouTube"
+            ]
           , sortDesc: true
           },
           "",

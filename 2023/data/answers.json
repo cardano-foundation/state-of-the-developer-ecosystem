@@ -2877,7 +2877,7 @@
       "Site reliability engineer"
     ],
     [
-      "Marketing / sales professional"
+      "Marketing/sales professional"
     ],
     [
       "System architect"
@@ -2957,7 +2957,7 @@
       "Visual Studio Code"
     ],
     [
-      "Vim / NeoVim"
+      "Vim/NeoVim"
     ],
     [
       "Visual Studio Code"
@@ -3032,7 +3032,7 @@
       "Visual Studio Code"
     ],
     [
-      "Vim / NeoVim"
+      "Vim/NeoVim"
     ],
     [
       "JetBrains"
@@ -3041,14 +3041,14 @@
       "Visual Studio Code"
     ],
     [
-      "Vim / NeoVim"
+      "Vim/NeoVim"
     ],
     [
       "TIA portal",
       "Codesys"
     ],
     [
-      "Vim / NeoVim"
+      "Vim/NeoVim"
     ],
     [
       "Notepad++"
@@ -3057,10 +3057,10 @@
       "Visual Studio Code"
     ],
     [
-      "Vim / NeoVim"
+      "Vim/NeoVim"
     ],
     [
-      "Vim / NeoVim"
+      "Vim/NeoVim"
     ],
     [
       "JetBrains"
@@ -3072,7 +3072,7 @@
       "Visual Studio Code"
     ],
     [
-      "Vim / NeoVim"
+      "Vim/NeoVim"
     ],
     [
       "Visual Studio Code"
@@ -3147,16 +3147,16 @@
       "Visual Studio"
     ],
     [
-      "Vim / NeoVim"
+      "Vim/NeoVim"
     ],
     [
       "Visual Studio Code"
     ],
     [
-      "Vim / NeoVim"
+      "Vim/NeoVim"
     ],
     [
-      "Vim / NeoVim"
+      "Vim/NeoVim"
     ],
     [
       "Visual Studio Code"
@@ -3171,7 +3171,7 @@
       "Notepad++"
     ],
     [
-      "Vim / NeoVim"
+      "Vim/NeoVim"
     ],
     [
       "Visual Studio Code"
@@ -3183,7 +3183,7 @@
       "Games"
     ],
     [
-      "Vim / NeoVim"
+      "Vim/NeoVim"
     ],
     [
       "Visual Studio"
@@ -3237,7 +3237,7 @@
       "Visual Studio"
     ],
     [
-      "Vim / NeoVim"
+      "Vim/NeoVim"
     ],
     [
       "Visual Studio Code"
@@ -3252,13 +3252,10 @@
       "Visual Studio Code"
     ],
     [
-      "Vim / NeoVim"
+      "Vim/NeoVim"
     ],
     [
-      "Vim / NeoVim"
-    ],
-    [
-      "Visual Studio Code"
+      "Vim/NeoVim"
     ],
     [
       "Visual Studio Code"
@@ -3270,10 +3267,13 @@
       "Visual Studio Code"
     ],
     [
-      "Vim / NeoVim"
+      "Visual Studio Code"
     ],
     [
-      "Vim / NeoVim"
+      "Vim/NeoVim"
+    ],
+    [
+      "Vim/NeoVim"
     ],
     [
       "IntelliJ"
@@ -3297,7 +3297,7 @@
       "Visual Studio"
     ],
     [
-      "Vim / NeoVim"
+      "Vim/NeoVim"
     ],
     [
       "nix/helix"
@@ -3336,10 +3336,10 @@
       "Visual Studio Code"
     ],
     [
-      "Vim / NeoVim"
+      "Vim/NeoVim"
     ],
     [
-      "Vim / NeoVim"
+      "Vim/NeoVim"
     ],
     [
       "Emacs"
@@ -3354,7 +3354,7 @@
       "Visual Studio Code"
     ],
     [
-      "Vim / NeoVim"
+      "Vim/NeoVim"
     ],
     [
       "Visual Studio Code"
@@ -3420,7 +3420,7 @@
       "Visual Studio Code"
     ],
     [
-      "Vim / NeoVim"
+      "Vim/NeoVim"
     ],
     [
       "IntelliJ"
@@ -3429,7 +3429,7 @@
       "IntelliJ"
     ],
     [
-      "Vim / NeoVim"
+      "Vim/NeoVim"
     ],
     [
       "Visual Studio Code"
@@ -5004,7 +5004,7 @@
       "Solidity (with Milkomeda)"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Aiken",
@@ -5024,7 +5024,7 @@
       "Aiken"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Aiken",
@@ -5070,7 +5070,7 @@
       "Other"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Aiken",
@@ -5177,7 +5177,7 @@
       "Aiken"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Aiken",
@@ -5232,7 +5232,7 @@
       "Haskell/Plutus-tx"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Haskell/Plutus-tx",
@@ -5354,7 +5354,7 @@
       "OpShin"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Haskell/Plutus-tx",
@@ -5451,10 +5451,10 @@
       "Haskell/Plutus-tx"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Plutarch"
@@ -5463,7 +5463,7 @@
       "Plu-ts"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Aiken",
@@ -5534,7 +5534,7 @@
       "Haskell/Plutus-tx"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Aiken"
@@ -5553,7 +5553,7 @@
     ],
     [
       "Aiken",
-      "Not applicable"
+      "N/A"
     ],
     [
       "Aiken",
@@ -6668,9 +6668,9 @@
     [
       "cardano-js-sdk (input-output-hk)",
       "cardano-multiplatform-library (dcSpark)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Lucid (BerryPool)",
-      "Mesh.js  (MartifyLabs)",
+      "Mesh.js (MartifyLabs)",
       "Ogmios' client (CardanoSolutions)"
     ],
     [
@@ -6686,13 +6686,13 @@
     ],
     [
       "Lucid (BerryPool)",
-      "Mesh.js  (MartifyLabs)"
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "blockfrost-sdk (blockfrost)",
       "Koios' client (cardano-community)",
       "Lucid (BerryPool)",
-      "Mesh.js  (MartifyLabs)"
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "cardano-transaction-lib (plutonomicon)",
@@ -6711,13 +6711,13 @@
     [
       "blockfrost-sdk (blockfrost)",
       "Lucid (BerryPool)",
-      "Mesh.js  (MartifyLabs)",
+      "Mesh.js (MartifyLabs)",
       "Ogmios' client (CardanoSolutions)",
-      "PyCardano 21 (cffls)"
+      "PyCardano (cffls)"
     ],
     [
       "cardano-api (input-output-hk)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Koios' client (cardano-community)"
     ],
     [
@@ -6729,12 +6729,12 @@
       "cardano-api (input-output-hk)",
       "cardano-js-sdk (input-output-hk)",
       "Helios (Hyperion-BT)",
-      "Mesh.js  (MartifyLabs)"
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "blockfrost-sdk (blockfrost)",
       "Lucid (BerryPool)",
-      "Mesh.js  (MartifyLabs)",
+      "Mesh.js (MartifyLabs)",
       "TyphonJS (StricaHQ)"
     ],
     [
@@ -6746,17 +6746,17 @@
       "cardano-js-sdk (input-output-hk)",
       "cardano-multiplatform-library (dcSpark)",
       "Lucid (BerryPool)",
-      "PyCardano 21 (cffls)"
+      "PyCardano (cffls)"
     ],
     [
       "Lucid (BerryPool)",
-      "Mesh.js  (MartifyLabs)"
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "blockfrost-sdk (blockfrost)",
       "cardano-api (input-output-hk)",
       "cardano-multiplatform-library (dcSpark)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "cardanosharp-wallet (CardanoSharp)",
       "Lucid (BerryPool)",
       "Ogmios' client (CardanoSolutions)",
@@ -6776,9 +6776,9 @@
       "blockfrost-sdk (blockfrost)",
       "cardano-client-lib (bloxbean)",
       "cardano-multiplatform-library (dcSpark)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Lucid (BerryPool)",
-      "Mesh.js  (MartifyLabs)"
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "cardano-api (input-output-hk)"
@@ -6787,12 +6787,12 @@
       "cardano-api (input-output-hk)"
     ],
     [
-      "Mesh.js  (MartifyLabs)"
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "blockfrost-sdk (blockfrost)",
       "cardano-multiplatform-library (dcSpark)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Helios (Hyperion-BT)",
       "Koios' client (cardano-community)",
       "Lucid (BerryPool)",
@@ -6800,7 +6800,7 @@
     ],
     [
       "blockfrost-sdk (blockfrost)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Koios' client (cardano-community)"
     ],
     [
@@ -6810,7 +6810,7 @@
     ],
     [
       "blockfrost-sdk (blockfrost)",
-      "cardano-serialization-lib  (emurgo)"
+      "cardano-serialization-lib (emurgo)"
     ],
     [
       "cardano-api (input-output-hk)"
@@ -6819,12 +6819,12 @@
       "blockfrost-sdk (blockfrost)",
       "cardano-api (input-output-hk)",
       "Lucid (BerryPool)",
-      "Mesh.js  (MartifyLabs)"
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "blockfrost-sdk (blockfrost)",
       "cardano-api (input-output-hk)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "cardano-transaction-lib (plutonomicon)",
       "Lucid (BerryPool)",
       "Ogmios' client (CardanoSolutions)"
@@ -6833,7 +6833,7 @@
       "cardano-js-sdk (input-output-hk)",
       "cardanocli-js (shareslake)",
       "Helios (Hyperion-BT)",
-      "Mesh.js  (MartifyLabs)",
+      "Mesh.js (MartifyLabs)",
       "TyphonJS (StricaHQ)"
     ],
     [
@@ -6844,7 +6844,7 @@
     [
       "Lucid (BerryPool)",
       "Pallas (txpipe)",
-      "PyCardano 21 (cffls)"
+      "PyCardano (cffls)"
     ],
     [
       "Other"
@@ -6858,32 +6858,32 @@
       "Ogmios' client (CardanoSolutions)",
       "Ouroboros-network-js (StricaHQ)",
       "Pallas (txpipe)",
-      "PyCardano 21 (cffls)",
+      "PyCardano (cffls)",
       "TyphonJS (StricaHQ)"
     ],
     [
       "blockfrost-sdk (blockfrost)",
       "cardano-multiplatform-library (dcSpark)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "cardano-transaction-lib (plutonomicon)",
       "Helios (Hyperion-BT)",
-      "Mesh.js  (MartifyLabs)"
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "blockfrost-sdk (blockfrost)",
       "cardano-api (input-output-hk)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "cardano-transaction-lib (plutonomicon)",
       "Lucid (BerryPool)",
       "Pallas (txpipe)"
     ],
     [
       "cardano-api (input-output-hk)",
-      "Mesh.js  (MartifyLabs)"
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "blockfrost-sdk (blockfrost)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Lucid (BerryPool)"
     ],
     [
@@ -6891,7 +6891,7 @@
     ],
     [
       "cardano-api (input-output-hk)",
-      "Mesh.js  (MartifyLabs)"
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "Lucid (BerryPool)",
@@ -6921,36 +6921,36 @@
       "cardano-js-sdk (input-output-hk)",
       "cardano-wallet-connector (dynamicstrategies)",
       "Lucid (BerryPool)",
-      "Mesh.js  (MartifyLabs)",
+      "Mesh.js (MartifyLabs)",
       "Ouroboros-network-js (StricaHQ)"
     ],
     [
       "blockfrost-sdk (blockfrost)",
       "cardano-api (input-output-hk)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Lucid (BerryPool)",
-      "Mesh.js  (MartifyLabs)"
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "cardano-api (input-output-hk)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "toolkit-for-cardano (SundaeSwap-finance)",
       "Other"
     ],
     [
       "blockfrost-sdk (blockfrost)",
-      "cardano-python  (emesik)",
+      "cardano-python (emesik)",
       "Koios' client (cardano-community)"
     ],
     [
       "cardano-api (input-output-hk)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "cardano-transaction-lib (plutonomicon)"
     ],
     [
       "blockfrost-sdk (blockfrost)",
       "Lucid (BerryPool)",
-      "Mesh.js  (MartifyLabs)"
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "cardano-api (input-output-hk)"
@@ -6962,7 +6962,7 @@
       "Helios (Hyperion-BT)"
     ],
     [
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Helios (Hyperion-BT)",
       "TyphonJS (StricaHQ)"
     ],
@@ -6972,7 +6972,7 @@
     [
       "blockfrost-sdk (blockfrost)",
       "cardano-multiplatform-library (dcSpark)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Lucid (BerryPool)"
     ],
     [
@@ -6980,33 +6980,33 @@
     ],
     [
       "cardano-api (input-output-hk)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Lucid (BerryPool)",
       "plutus-apps (IOG)"
     ],
     [
       "blockfrost-sdk (blockfrost)",
       "cardano-multiplatform-library (dcSpark)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Lucid (BerryPool)",
       "Ogmios' client (CardanoSolutions)"
     ],
     [
       "blockfrost-sdk (blockfrost)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Ogmios' client (CardanoSolutions)"
     ],
     [
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Lucid (BerryPool)",
       "Ogmios' client (CardanoSolutions)"
     ],
     [
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Koios' client (cardano-community)"
     ],
     [
-      "Mesh.js  (MartifyLabs)"
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "cardano-multiplatform-library (dcSpark)",
@@ -7015,7 +7015,7 @@
       "Pallas (txpipe)"
     ],
     [
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "cardano-transaction-lib (plutonomicon)"
     ],
     [
@@ -7038,7 +7038,7 @@
     [
       "cardano-api (input-output-hk)",
       "cardano-multiplatform-library (dcSpark)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Lucid (BerryPool)",
       "Ogmios' client (CardanoSolutions)"
     ],
@@ -7060,17 +7060,17 @@
     ],
     [
       "blockfrost-sdk (blockfrost)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Lucid (BerryPool)",
-      "Mesh.js  (MartifyLabs)",
+      "Mesh.js (MartifyLabs)",
       "Ogmios' client (CardanoSolutions)"
     ],
     [
-      "cardano-serialization-lib  (emurgo)",
-      "Mesh.js  (MartifyLabs)"
+      "cardano-serialization-lib (emurgo)",
+      "Mesh.js (MartifyLabs)"
     ],
     [
-      "cardano-python  (emesik)"
+      "cardano-python (emesik)"
     ],
     [
       "cardano-api (input-output-hk)",
@@ -7082,14 +7082,14 @@
     [
       "cardano-api (input-output-hk)",
       "Lucid (BerryPool)",
-      "Mesh.js  (MartifyLabs)"
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "blockfrost-sdk (blockfrost)",
       "cardano-multiplatform-library (dcSpark)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Lucid (BerryPool)",
-      "Mesh.js  (MartifyLabs)",
+      "Mesh.js (MartifyLabs)",
       "Ogmios' client (CardanoSolutions)"
     ],
     [
@@ -7097,14 +7097,14 @@
     ],
     [
       "Koios' client (cardano-community)",
-      "Mesh.js  (MartifyLabs)"
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "Not Answered"
     ],
     [
-      "cardano-serialization-lib  (emurgo)",
-      "Mesh.js  (MartifyLabs)"
+      "cardano-serialization-lib (emurgo)",
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "Lucid (BerryPool)",
@@ -7113,7 +7113,7 @@
     [
       "blockfrost-sdk (blockfrost)",
       "cardano-api (input-output-hk)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Kuber"
     ],
     [
@@ -7124,14 +7124,14 @@
     ],
     [
       "Gouroboros (BlinkLabs)",
-      "Mesh.js  (MartifyLabs)"
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "blockfrost-sdk (blockfrost)",
       "cardano-js-sdk (input-output-hk)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "cardanocli-js (shareslake)",
-      "Mesh.js  (MartifyLabs)"
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "blockfrost-sdk (blockfrost)"
@@ -7149,7 +7149,7 @@
       "None"
     ],
     [
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Gouroboros (BlinkLabs)",
       "Koios' client (cardano-community)",
       "Apollo (Salvionied)"
@@ -7164,7 +7164,7 @@
       "Lucid (BerryPool)"
     ],
     [
-      "cardano-serialization-lib  (emurgo)"
+      "cardano-serialization-lib (emurgo)"
     ],
     [
       "blockfrost-sdk (blockfrost)",
@@ -7174,10 +7174,10 @@
     [
       "cardano-client-lib (bloxbean)",
       "cardano-multiplatform-library (dcSpark)",
-      "cardano-python  (emesik)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-python (emesik)",
+      "cardano-serialization-lib (emurgo)",
       "Lucid (BerryPool)",
-      "Mesh.js  (MartifyLabs)"
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "blockfrost-sdk (blockfrost)",
@@ -7186,7 +7186,7 @@
     ],
     [
       "blockfrost-sdk (blockfrost)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Lucid (BerryPool)"
     ],
     [
@@ -7201,19 +7201,19 @@
     [
       "blockfrost-sdk (blockfrost)",
       "cardano-client-lib (bloxbean)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Lucid (BerryPool)"
     ],
     [
       "cardano-api (input-output-hk)",
       "Lucid (BerryPool)",
-      "Mesh.js  (MartifyLabs)"
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "blockfrost-sdk (blockfrost)",
       "cardano-api (input-output-hk)",
       "cardano-multiplatform-library (dcSpark)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "cardano-transaction-lib (plutonomicon)",
       "Koios' client (cardano-community)",
       "Lucid (BerryPool)",
@@ -7242,9 +7242,9 @@
     ],
     [
       "blockfrost-sdk (blockfrost)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Lucid (BerryPool)",
-      "Mesh.js  (MartifyLabs)"
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "Not Answered"
@@ -7254,7 +7254,7 @@
     ],
     [
       "blockfrost-sdk (blockfrost)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Lucid (BerryPool)",
       "Ogmios' client (CardanoSolutions)",
       "Pallas (txpipe)"
@@ -7267,11 +7267,11 @@
       "blockfrost-sdk (blockfrost)",
       "cardano-api (input-output-hk)",
       "cardano-js-sdk (input-output-hk)",
-      "Mesh.js  (MartifyLabs)"
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "cardano-wallet-connector (dynamicstrategies)",
-      "Mesh.js  (MartifyLabs)"
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "blockfrost-sdk (blockfrost)",
@@ -7300,18 +7300,18 @@
       "cardano-js-sdk (input-output-hk)",
       "cardano-client-lib (bloxbean)",
       "cardano-multiplatform-library (dcSpark)",
-      "cardano-python  (emesik)"
+      "cardano-python (emesik)"
     ],
     [
       "blockfrost-sdk (blockfrost)"
     ],
     [
-      "cardano-serialization-lib  (emurgo)"
+      "cardano-serialization-lib (emurgo)"
     ],
     [
       "blockfrost-sdk (blockfrost)",
       "cardano-api (input-output-hk)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "cardano-transaction-lib (plutonomicon)",
       "Lucid (BerryPool)",
       "Ogmios' client (CardanoSolutions)",
@@ -7328,7 +7328,7 @@
     ],
     [
       "cardano-api (input-output-hk)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "cardano-transaction-lib (plutonomicon)",
       "Ogmios' client (CardanoSolutions)"
     ],
@@ -7336,7 +7336,7 @@
       "blockfrost-sdk (blockfrost)",
       "cardano-api (input-output-hk)",
       "cardano-multiplatform-library (dcSpark)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Lucid (BerryPool)",
       "Atlas (GeniusYield)"
     ],
@@ -7344,14 +7344,14 @@
       "cardano-transaction-lib (plutonomicon)"
     ],
     [
-      "cardano-python  (emesik)",
-      "cardano-serialization-lib  (emurgo)"
+      "cardano-python (emesik)",
+      "cardano-serialization-lib (emurgo)"
     ],
     [
       "blockfrost-sdk (blockfrost)",
       "Gouroboros (BlinkLabs)",
       "Lucid (BerryPool)",
-      "Mesh.js  (MartifyLabs)"
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "blockfrost-sdk (blockfrost)",
@@ -7359,7 +7359,7 @@
       "Gouroboros (BlinkLabs)"
     ],
     [
-      "cardano-python  (emesik)"
+      "cardano-python (emesik)"
     ],
     [
       "I have built everything myself around dbsync",
@@ -7368,11 +7368,11 @@
     [
       "blockfrost-sdk (blockfrost)",
       "cardano-transaction-lib (plutonomicon)",
-      "Mesh.js  (MartifyLabs)"
+      "Mesh.js (MartifyLabs)"
     ],
     [
       "cardano-transaction-lib (plutonomicon)",
-      "PyCardano 21 (cffls)"
+      "PyCardano (cffls)"
     ],
     [
       "blockfrost-sdk (blockfrost)"
@@ -7382,7 +7382,7 @@
     ],
     [
       "cardano-multiplatform-library (dcSpark)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "cardano-transaction-lib (plutonomicon)",
       "Ogmios' client (CardanoSolutions)",
       "mlabs-haskell/plutip",
@@ -7436,10 +7436,10 @@
       "blockfrost-sdk (blockfrost)",
       "cardano-client-lib (bloxbean)",
       "cardano-multiplatform-library (dcSpark)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Koios' client (cardano-community)",
       "Lucid (BerryPool)",
-      "Mesh.js  (MartifyLabs)",
+      "Mesh.js (MartifyLabs)",
       "Ogmios' client (CardanoSolutions)",
       "Pallas (txpipe)"
     ],
@@ -7459,12 +7459,12 @@
       "Lucid (BerryPool)",
       "Ogmios' client (CardanoSolutions)",
       "Pallas (txpipe)",
-      "PyCardano 21 (cffls)"
+      "PyCardano (cffls)"
     ],
     [
       "blockfrost-sdk (blockfrost)",
       "cardano-api (input-output-hk)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "TyphonJS (StricaHQ)"
     ],
     [
@@ -7473,7 +7473,7 @@
       "Pallas (txpipe)"
     ],
     [
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "cardano-wallet-connector (dynamicstrategies)",
       "Lucid (BerryPool)"
     ],
@@ -7487,16 +7487,16 @@
       "Pallas (txpipe)"
     ],
     [
-      "cardano-serialization-lib  (emurgo)"
+      "cardano-serialization-lib (emurgo)"
     ],
     [
       "cardano-multiplatform-library (dcSpark)",
-      "cardano-serialization-lib  (emurgo)",
+      "cardano-serialization-lib (emurgo)",
       "Koios' client (cardano-community)",
-      "Mesh.js  (MartifyLabs)",
+      "Mesh.js (MartifyLabs)",
       "Ogmios' client (CardanoSolutions)",
       "Pallas (txpipe)",
-      "PyCardano 21 (cffls)"
+      "PyCardano (cffls)"
     ],
     [
       "blockfrost-sdk (blockfrost)"
@@ -7508,14 +7508,14 @@
       "cardano-wallet-connector (dynamicstrategies)",
       "Helios (Hyperion-BT)",
       "Koios' client (cardano-community)",
-      "Mesh.js  (MartifyLabs)",
+      "Mesh.js (MartifyLabs)",
       "Ogmios' client (CardanoSolutions)",
       "Pallas (txpipe)"
     ],
     [
       "cardano-multiplatform-library (dcSpark)",
       "Lucid (BerryPool)",
-      "PyCardano 21 (cffls)"
+      "PyCardano (cffls)"
     ]
   ],
   "How satisfied are you with the current state of the Cardano libraries listed in the previous question?": [
@@ -7698,7 +7698,7 @@
     [
       "cardano-db-sync (input-output-hk)",
       "cardano-transaction-lib (Plutonomicon)",
-      "cardano-wallet (input-output-hk)"
+      "cardano-wallet (cardano-foundation)"
     ],
     [
       "Oura (TxPipe)",
@@ -7738,20 +7738,20 @@
     ],
     [
       "cardano-db-sync (input-output-hk)",
-      "cardano-graphql (input-output-hk)",
-      "cardano-wallet (input-output-hk)"
+      "cardano-graphql (cardano-foundation)",
+      "cardano-wallet (cardano-foundation)"
     ],
     [
       "cardano-db-sync (input-output-hk)",
-      "cardano-graphql (input-output-hk)",
-      "cardano-rosetta (input-output-hk)",
-      "cardano-wallet (input-output-hk)"
+      "cardano-graphql (cardano-foundation)",
+      "cardano-rosetta (cardano-foundation)",
+      "cardano-wallet (cardano-foundation)"
     ],
     [
       "cardano-db-sync (input-output-hk)",
-      "cardano-graphql (input-output-hk)",
-      "cardano-wallet (input-output-hk)",
-      "DAB (CardanoFoundation)",
+      "cardano-graphql (cardano-foundation)",
+      "cardano-wallet (cardano-foundation)",
+      "DAB (cardano-foundation)",
       "Mithril (input-output-hk)"
     ],
     [
@@ -7764,7 +7764,7 @@
     ],
     [
       "Atlas (GeniusYield)",
-      "cardano-wallet (input-output-hk)",
+      "cardano-wallet (cardano-foundation)",
       "Oura (TxPipe)",
       "SMASH (input-output-hk)"
     ],
@@ -7782,8 +7782,8 @@
       "cardano-db-sync (input-output-hk)"
     ],
     [
-      "cardano-graphql (input-output-hk)",
-      "cardano-wallet (input-output-hk)",
+      "cardano-graphql (cardano-foundation)",
+      "cardano-wallet (cardano-foundation)",
       "Ogmios (CardanoSolutions)",
       "Oura (TxPipe)",
       "Scrolls (TxPipe)"
@@ -7796,7 +7796,7 @@
       "Oura (TxPipe)"
     ],
     [
-      "cardano-wallet (input-output-hk)"
+      "cardano-wallet (cardano-foundation)"
     ],
     [
       "just learning",
@@ -7825,15 +7825,15 @@
     ],
     [
       "cardano-db-sync (input-output-hk)",
-      "cardano-wallet (input-output-hk)"
+      "cardano-wallet (cardano-foundation)"
     ],
     [
       "cardano-db-sync (input-output-hk)",
-      "cardano-graphql (input-output-hk)"
+      "cardano-graphql (cardano-foundation)"
     ],
     [
       "cardano-transaction-lib (Plutonomicon)",
-      "cardano-wallet (input-output-hk)",
+      "cardano-wallet (cardano-foundation)",
       "Kupo (CardanoSolutions)",
       "Hydra (input-output-hk)",
       "Ogmios (CardanoSolutions)"
@@ -7853,8 +7853,8 @@
     ],
     [
       "cardano-db-sync (input-output-hk)",
-      "cardano-graphql (input-output-hk)",
-      "cardano-wallet (input-output-hk)"
+      "cardano-graphql (cardano-foundation)",
+      "cardano-wallet (cardano-foundation)"
     ],
     [
       "cardano-db-sync (input-output-hk)",
@@ -7877,7 +7877,7 @@
     ],
     [
       "cardano-db-sync (input-output-hk)",
-      "cardano-wallet (input-output-hk)"
+      "cardano-wallet (cardano-foundation)"
     ],
     [
       "Scrolls (TxPipe)"
@@ -7901,7 +7901,7 @@
     [
       "cardano-db-sync (input-output-hk)",
       "cardano-transaction-lib (Plutonomicon)",
-      "cardano-wallet (input-output-hk)"
+      "cardano-wallet (cardano-foundation)"
     ],
     [
       "None directly"
@@ -7911,8 +7911,8 @@
     ],
     [
       "cardano-db-sync (input-output-hk)",
-      "cardano-rosetta (input-output-hk)",
-      "cardano-wallet (input-output-hk)",
+      "cardano-rosetta (cardano-foundation)",
+      "cardano-wallet (cardano-foundation)",
       "Offchain-metadata-tools (input-output-hk)"
     ],
     [
@@ -7924,7 +7924,7 @@
     ],
     [
       "cardano-db-sync (input-output-hk)",
-      "cardano-wallet (input-output-hk)",
+      "cardano-wallet (cardano-foundation)",
       "Kupo (CardanoSolutions)",
       "Mithril (input-output-hk)"
     ],
@@ -7935,7 +7935,7 @@
     ],
     [
       "cardano-db-sync (input-output-hk)",
-      "cardano-wallet (input-output-hk)"
+      "cardano-wallet (cardano-foundation)"
     ],
     [
       "cardano-db-sync (input-output-hk)",
@@ -7961,7 +7961,7 @@
       "None directly"
     ],
     [
-      "cardano-wallet (input-output-hk)",
+      "cardano-wallet (cardano-foundation)",
       "Kupo (CardanoSolutions)"
     ],
     [
@@ -8017,7 +8017,7 @@
     ],
     [
       "cardano-db-sync (input-output-hk)",
-      "cardano-wallet (input-output-hk)"
+      "cardano-wallet (cardano-foundation)"
     ],
     [
       "Kupo (CardanoSolutions)",
@@ -8026,8 +8026,8 @@
     ],
     [
       "cardano-db-sync (input-output-hk)",
-      "cardano-graphql (input-output-hk)",
-      "cardano-wallet (input-output-hk)",
+      "cardano-graphql (cardano-foundation)",
+      "cardano-wallet (cardano-foundation)",
       "Ogmios (CardanoSolutions)",
       "Oura (TxPipe)"
     ],
@@ -8042,14 +8042,14 @@
     ],
     [
       "cardano-db-sync (input-output-hk)",
-      "cardano-graphql (input-output-hk)"
+      "cardano-graphql (cardano-foundation)"
     ],
     [
       "None directly"
     ],
     [
-      "cardano-graphql (input-output-hk)",
-      "cardano-wallet (input-output-hk)",
+      "cardano-graphql (cardano-foundation)",
+      "cardano-wallet (cardano-foundation)",
       "Hydra (input-output-hk)"
     ],
     [
@@ -8060,7 +8060,7 @@
     ],
     [
       "cardano-db-sync (input-output-hk)",
-      "cardano-wallet (input-output-hk)",
+      "cardano-wallet (cardano-foundation)",
       "Kupo (CardanoSolutions)",
       "Ogmios (CardanoSolutions)"
     ],
@@ -8068,7 +8068,7 @@
       "cardano-metadata-oracle (5Binaries)"
     ],
     [
-      "cardano-graphql (input-output-hk)"
+      "cardano-graphql (cardano-foundation)"
     ],
     [
       "Not Answered"
@@ -8083,7 +8083,7 @@
     ],
     [
       "cardano-db-sync (input-output-hk)",
-      "cardano-wallet (input-output-hk)",
+      "cardano-wallet (cardano-foundation)",
       "Mithril (input-output-hk)"
     ],
     [
@@ -8125,7 +8125,7 @@
       "Scrolls (TxPipe)"
     ],
     [
-      "cardano-graphql (input-output-hk)",
+      "cardano-graphql (cardano-foundation)",
       "Oura (TxPipe)",
       "Scrolls (TxPipe)"
     ],
@@ -8133,11 +8133,11 @@
       "cardano-metadata-oracle (5Binaries)"
     ],
     [
-      "cardano-wallet (input-output-hk)"
+      "cardano-wallet (cardano-foundation)"
     ],
     [
       "cardano-db-sync (input-output-hk)",
-      "cardano-graphql (input-output-hk)",
+      "cardano-graphql (cardano-foundation)",
       "Kupo (CardanoSolutions)",
       "Mithril (input-output-hk)",
       "Ogmios (CardanoSolutions)",
@@ -8189,7 +8189,7 @@
     ],
     [
       "cardano-db-sync (input-output-hk)",
-      "cardano-graphql (input-output-hk)",
+      "cardano-graphql (cardano-foundation)",
       "cardano-metadata-oracle (5Binaries)"
     ],
     [
@@ -8197,7 +8197,7 @@
     ],
     [
       "cardano-db-sync (input-output-hk)",
-      "cardano-wallet (input-output-hk)",
+      "cardano-wallet (cardano-foundation)",
       "Hydra (input-output-hk)",
       "Mithril (input-output-hk)"
     ],
@@ -8221,14 +8221,14 @@
       "None directly"
     ],
     [
-      "cardano-wallet (input-output-hk)",
+      "cardano-wallet (cardano-foundation)",
       "Offchain-metadata-tools (input-output-hk)"
     ],
     [
       "Hydra (input-output-hk)"
     ],
     [
-      "cardano-wallet (input-output-hk)"
+      "cardano-wallet (cardano-foundation)"
     ],
     [
       "cardano node with custom indexer and tooling based on pallas"
@@ -8241,10 +8241,10 @@
     ],
     [
       "cardano-db-sync (input-output-hk)",
-      "cardano-wallet (input-output-hk)"
+      "cardano-wallet (cardano-foundation)"
     ],
     [
-      "cardano-graphql (input-output-hk)"
+      "cardano-graphql (cardano-foundation)"
     ],
     [
       "Kupo (CardanoSolutions)",
@@ -8256,7 +8256,7 @@
     [
       "cardano-db-sync (input-output-hk)",
       "cardano-transaction-lib (Plutonomicon)",
-      "cardano-wallet (input-output-hk)",
+      "cardano-wallet (cardano-foundation)",
       "Kupo (CardanoSolutions)",
       "Ogmios (CardanoSolutions)",
       "Oura (TxPipe)",
@@ -8296,7 +8296,7 @@
       "None directly"
     ],
     [
-      "cardano-wallet (input-output-hk)",
+      "cardano-wallet (cardano-foundation)",
       "Kupo (CardanoSolutions)",
       "Ogmios (CardanoSolutions)"
     ],
@@ -8313,7 +8313,7 @@
     ],
     [
       "cardano-transaction-lib (Plutonomicon)",
-      "cardano-wallet (input-output-hk)",
+      "cardano-wallet (cardano-foundation)",
       "Kupo (CardanoSolutions)",
       "Ogmios (CardanoSolutions)"
     ],
@@ -8359,7 +8359,7 @@
       "cardano-transaction-lib (Plutonomicon)"
     ],
     [
-      "cardano-graphql (input-output-hk)"
+      "cardano-graphql (cardano-foundation)"
     ],
     [
       "Atlas (GeniusYield)",
@@ -8375,7 +8375,7 @@
     ],
     [
       "cardano-db-sync (input-output-hk)",
-      "cardano-wallet (input-output-hk)",
+      "cardano-wallet (cardano-foundation)",
       "Ogmios (CardanoSolutions)",
       "Oura (TxPipe)",
       "Scrolls (TxPipe)"
@@ -8395,7 +8395,7 @@
       "Scrolls (TxPipe)"
     ],
     [
-      "cardano-wallet (input-output-hk)"
+      "cardano-wallet (cardano-foundation)"
     ],
     [
       "cardano-db-sync (input-output-hk)",
@@ -8410,12 +8410,12 @@
     [
       "cardano-db-sync (input-output-hk)",
       "cardano-transaction-lib (Plutonomicon)",
-      "cardano-wallet (input-output-hk)"
+      "cardano-wallet (cardano-foundation)"
     ],
     [
       "Atlas (GeniusYield)",
       "cardano-db-sync (input-output-hk)",
-      "cardano-wallet (input-output-hk)",
+      "cardano-wallet (cardano-foundation)",
       "Ogmios (CardanoSolutions)",
       "Oura (TxPipe)",
       "Scrolls (TxPipe)"
@@ -8435,9 +8435,9 @@
       "Mithril (input-output-hk)"
     ],
     [
-      "cardano-graphql (input-output-hk)",
-      "cardano-rosetta (input-output-hk)",
-      "cardano-wallet (input-output-hk)"
+      "cardano-graphql (cardano-foundation)",
+      "cardano-rosetta (cardano-foundation)",
+      "cardano-wallet (cardano-foundation)"
     ],
     [
       "Oura (TxPipe)"
@@ -8660,7 +8660,7 @@
     [
       "Handle (AdaHandle)",
       "Maestro (GoMaestro)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Blockfrost (5Binaries)",
@@ -8709,17 +8709,17 @@
       "Handle (AdaHandle)",
       "Maestro (GoMaestro)",
       "NMKR (NMKR)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Blockfrost (5Binaries)",
       "Koios (Koios)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Blockfrost (5Binaries)",
       "Demeter.run (TxPipe)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Demeter.run (TxPipe)"
@@ -8728,10 +8728,10 @@
       "Blockfrost (5Binaries)",
       "CExplorer (Cardanians)",
       "Handle (AdaHandle)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "na"
@@ -8748,7 +8748,7 @@
       "CExplorer (Cardanians)",
       "Demeter.run (TxPipe)",
       "Koios (Koios)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Blockfrost (5Binaries)",
@@ -8783,7 +8783,7 @@
     ],
     [
       "Blockfrost (5Binaries)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Demeter.run (TxPipe)"
@@ -8817,7 +8817,7 @@
       "Demeter.run (TxPipe)",
       "Freeloaderz (FreeLoaderz)",
       "NMKR (NMKR)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Blockfrost (5Binaries)",
@@ -8825,7 +8825,7 @@
       "CExplorer (Cardanians)",
       "Demeter.run (TxPipe)",
       "NMKR (NMKR)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Blockfrost (5Binaries)"
@@ -8833,7 +8833,7 @@
     [
       "Blockfrost (5Binaries)",
       "CExplorer (Cardanians)",
-      "Token registry (CardanoFoundation)",
+      "Token registry (cardano-foundation)",
       "KuberIDE"
     ],
     [
@@ -8863,7 +8863,7 @@
       "CardanoScan (StricaHQ)",
       "CExplorer (Cardanians)",
       "Demeter.run (TxPipe)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Other"
@@ -8875,7 +8875,7 @@
       "Freeloaderz (FreeLoaderz)",
       "Handle (AdaHandle)",
       "Koios (Koios)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Blockfrost (5Binaries)"
@@ -8887,13 +8887,13 @@
       "NMKR (NMKR)"
     ],
     [
-      "Token registry (CardanoFoundation)",
+      "Token registry (cardano-foundation)",
       "Other"
     ],
     [
       "CardanoScan (StricaHQ)",
       "NMKR (NMKR)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Blockfrost (5Binaries)",
@@ -8903,7 +8903,7 @@
     [
       "Blockfrost (5Binaries)",
       "CardanoScan (StricaHQ)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "CardanoScan (StricaHQ)"
@@ -8911,7 +8911,7 @@
     [
       "Blockfrost (5Binaries)",
       "CardanoScan (StricaHQ)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "non selected yet"
@@ -8920,13 +8920,13 @@
       "Blockfrost (5Binaries)",
       "CExplorer (Cardanians)",
       "Handle (AdaHandle)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Blockfrost (5Binaries)",
       "CardanoScan (StricaHQ)",
       "Handle (AdaHandle)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "minswap"
@@ -8946,7 +8946,7 @@
       "Demeter.run (TxPipe)"
     ],
     [
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Blockfrost (5Binaries)",
@@ -8965,7 +8965,7 @@
       "CExplorer (Cardanians)",
       "Handle (AdaHandle)",
       "NMKR (NMKR)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "None"
@@ -9073,7 +9073,7 @@
     ],
     [
       "Koios (Koios)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Blockfrost (5Binaries)"
@@ -9083,22 +9083,22 @@
       "CardanoScan (StricaHQ)",
       "CExplorer (Cardanians)",
       "Koios (Koios)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Blockfrost (5Binaries)",
       "NMKR (NMKR)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Blockfrost (5Binaries)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Blockfrost (5Binaries)",
       "CExplorer (Cardanians)",
       "Handle (AdaHandle)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Blockfrost (5Binaries)",
@@ -9177,7 +9177,7 @@
       "Blockfrost (5Binaries)"
     ],
     [
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "None"
@@ -9186,13 +9186,13 @@
       "Not Answered"
     ],
     [
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "CardanoScan (StricaHQ)",
       "Handle (AdaHandle)",
       "NMKR (NMKR)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "CardanoScan (StricaHQ)",
@@ -9206,7 +9206,7 @@
     ],
     [
       "Blockfrost (5Binaries)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "CardanoScan (StricaHQ)",
@@ -9215,7 +9215,7 @@
     [
       "Blockfrost (5Binaries)",
       "Handle (AdaHandle)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Blockfrost (5Binaries)"
@@ -9233,14 +9233,14 @@
       "Handle (AdaHandle)"
     ],
     [
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Blockfrost (5Binaries)",
       "Demeter.run (TxPipe)",
       "Handle (AdaHandle)",
       "NMKR (NMKR)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Blockfrost (5Binaries)",
@@ -9249,13 +9249,13 @@
       "Demeter.run (TxPipe)",
       "Handle (AdaHandle)",
       "Koios (Koios)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "CardanoScan (StricaHQ)"
     ],
     [
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Blockfrost (5Binaries)",
@@ -9270,7 +9270,7 @@
       "Handle (AdaHandle)"
     ],
     [
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Blockfrost (5Binaries)",
@@ -9325,13 +9325,13 @@
       "Blockfrost (5Binaries)",
       "CardanoScan (StricaHQ)",
       "Demeter.run (TxPipe)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Demeter.run (TxPipe)",
       "Koios (Koios)",
       "NMKR (NMKR)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Freeloaderz (FreeLoaderz)"
@@ -9344,7 +9344,7 @@
       "Blockfrost (5Binaries)",
       "CardanoScan (StricaHQ)",
       "CExplorer (Cardanians)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Blockfrost (5Binaries)"
@@ -9352,11 +9352,11 @@
     [
       "Blockfrost (5Binaries)",
       "CardanoScan (StricaHQ)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "CardanoScan (StricaHQ)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "CardanoScan (StricaHQ)",
@@ -9378,7 +9378,7 @@
     ],
     [
       "Maestro (GoMaestro)",
-      "Token registry (CardanoFoundation)"
+      "Token registry (cardano-foundation)"
     ],
     [
       "Koios (Koios)"
@@ -10432,7 +10432,7 @@
       "Nix/NixOS"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Demeter.run"
@@ -10441,7 +10441,7 @@
       "Demeter.run"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Nix/NixOS"
@@ -10506,7 +10506,7 @@
       "Docker"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "not using yet",
@@ -10524,7 +10524,7 @@
       "Bash scripts"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Manually with PuTTY"
@@ -10534,7 +10534,7 @@
       "Docker"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Docker",
@@ -10555,7 +10555,7 @@
       "Nix/NixOS"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Bash scripts",
@@ -10608,7 +10608,7 @@
       "Demeter.run"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Demeter.run",
@@ -10616,13 +10616,13 @@
       "Nix/NixOS"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Other"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Docker",
@@ -10641,7 +10641,7 @@
       "Kubernetes"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Bash scripts"
@@ -10715,7 +10715,7 @@
     ],
     [
       "Bash scripts",
-      "Not applicable"
+      "N/A"
     ],
     [
       "Not Answered"
@@ -10782,10 +10782,10 @@
       "Bash scripts"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Bash scripts"
@@ -10810,7 +10810,7 @@
       "Terraform"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Docker",
@@ -10828,7 +10828,7 @@
       "Terraform"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Bash scripts",
@@ -10848,7 +10848,7 @@
       "Nix/NixOS"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Ansible",
@@ -10857,7 +10857,7 @@
       "Terraform"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Kubernetes"
@@ -10884,7 +10884,7 @@
       "Nix/NixOS"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Demeter.run",
@@ -10895,7 +10895,7 @@
       "Kubernetes"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Kubernetes"
@@ -10935,10 +10935,10 @@
       "Terraform"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Docker",
@@ -10948,7 +10948,7 @@
       "Docker"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Bash scripts",
@@ -10974,7 +10974,7 @@
       "Terraform"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Bash scripts",
@@ -10983,7 +10983,7 @@
       "Terraform"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Not Answered"
@@ -11006,13 +11006,13 @@
       "Not Answered"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Kubernetes"
     ],
     [
-      "Not applicable"
+      "N/A"
     ],
     [
       "Nix/NixOS"
@@ -13288,15 +13288,15 @@
       "GitHub discussions/issues",
       "Reddit(r/Cardano",
       "r/CardanoDevelopers)",
-      "Telegram Groups"
+      "Telegram groups"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "GitHub discussions/issues",
       "Twitter/X"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Cardano StackExchange",
       "Discord servers",
       "Friends/colleagues/community members",
@@ -13342,20 +13342,20 @@
       "GitHub discussions/issues"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Cardano StackExchange",
       "Discord servers",
       "Friends/colleagues/community members"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Cardano StackExchange",
       "Discord servers",
       "Reddit(r/Cardano",
       "r/CardanoDevelopers)"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Discord servers"
     ],
     [
@@ -13379,7 +13379,7 @@
       "Friends/colleagues/community members"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Cardano StackExchange",
       "Discord servers",
       "GitHub discussions/issues",
@@ -13389,10 +13389,10 @@
       "Discord servers"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Discord servers",
       "Friends/colleagues/community members",
-      "Telegram Groups",
+      "Telegram groups",
       "Twitter/X"
     ],
     [
@@ -13409,22 +13409,22 @@
       "Documentation"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Cardano StackExchange",
       "GitHub discussions/issues",
-      "Telegram Groups"
+      "Telegram groups"
     ],
     [
       "Discord servers",
       "GitHub discussions/issues"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Discord servers",
       "GitHub discussions/issues"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Discord servers",
       "GitHub discussions/issues",
       "Reddit(r/Cardano",
@@ -13437,7 +13437,7 @@
       "Friends/colleagues/community members"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Discord servers",
       "GitHub discussions/issues"
     ],
@@ -13460,15 +13460,15 @@
     ],
     [
       "Discord servers",
-      "Telegram Groups",
+      "Telegram groups",
       "Twitter/X"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Cardano StackExchange",
       "Friends/colleagues/community members",
       "GitHub discussions/issues",
-      "Telegram Groups"
+      "Telegram groups"
     ],
     [
       "Cardano StackExchange",
@@ -13489,11 +13489,11 @@
       "Discord servers",
       "Friends/colleagues/community members",
       "GitHub discussions/issues",
-      "Telegram Groups"
+      "Telegram groups"
     ],
     [
       "Friends/colleagues/community members",
-      "Telegram Groups"
+      "Telegram groups"
     ],
     [
       "Discord servers",
@@ -13507,18 +13507,18 @@
       "r/CardanoDevelopers)"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Discord servers",
       "GitHub discussions/issues"
     ],
     [
       "Cardano StackExchange",
       "Friends/colleagues/community members",
-      "Telegram Groups",
+      "Telegram groups",
       "Emurgo Academy"
     ],
     [
-      "Telegram Groups"
+      "Telegram groups"
     ],
     [
       "Cardano StackExchange",
@@ -13528,13 +13528,13 @@
       "Twitter/X"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Discord servers",
       "Friends/colleagues/community members",
       "GitHub discussions/issues"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Cardano StackExchange",
       "Discord servers",
       "GitHub discussions/issues"
@@ -13543,20 +13543,20 @@
       "Cardano StackExchange"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Discord servers",
       "Friends/colleagues/community members",
       "GitHub discussions/issues",
       "Reddit(r/Cardano",
       "r/CardanoDevelopers)",
-      "Telegram Groups",
+      "Telegram groups",
       "Twitter/X"
     ],
     [
       "Internal company slack"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Cardano StackExchange",
       "Discord servers",
       "Friends/colleagues/community members",
@@ -13565,10 +13565,10 @@
     [
       "Friends/colleagues/community members",
       "GitHub discussions/issues",
-      "Telegram Groups"
+      "Telegram groups"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Discord servers",
       "Friends/colleagues/community members"
     ],
@@ -13576,19 +13576,19 @@
       "Cardano StackExchange",
       "Friends/colleagues/community members",
       "GitHub discussions/issues",
-      "Telegram Groups"
+      "Telegram groups"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Discord servers",
       "GitHub discussions/issues",
-      "Telegram Groups"
+      "Telegram groups"
     ],
     [
       "Discord servers"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Cardano StackExchange",
       "Discord servers",
       "Friends/colleagues/community members",
@@ -13596,7 +13596,7 @@
       "Twitter/X"
     ],
     [
-      "Telegram Groups",
+      "Telegram groups",
       "Twitter/X"
     ],
     [
@@ -13609,7 +13609,7 @@
       "Discord servers",
       "Friends/colleagues/community members",
       "GitHub discussions/issues",
-      "Telegram Groups",
+      "Telegram groups",
       "Twitter/X"
     ],
     [
@@ -13624,7 +13624,7 @@
       "Discord servers",
       "Friends/colleagues/community members",
       "GitHub discussions/issues",
-      "Telegram Groups"
+      "Telegram groups"
     ],
     [
       "Other"
@@ -13652,12 +13652,12 @@
       "Twitter/X"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Discord servers",
       "GitHub discussions/issues",
       "Reddit(r/Cardano",
       "r/CardanoDevelopers)",
-      "Telegram Groups",
+      "Telegram groups",
       "Twitter/X"
     ],
     [
@@ -13687,7 +13687,7 @@
       "Not Answered"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Cardano StackExchange",
       "Discord servers",
       "Reddit(r/Cardano",
@@ -13743,11 +13743,11 @@
       "Not Answered"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Discord servers",
       "Friends/colleagues/community members",
       "GitHub discussions/issues",
-      "Telegram Groups",
+      "Telegram groups",
       "Twitter/X"
     ],
     [
@@ -13770,14 +13770,14 @@
       "Discord servers"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "GitHub discussions/issues"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Discord servers",
       "Friends/colleagues/community members",
-      "Telegram Groups",
+      "Telegram groups",
       "Twitter/X"
     ],
     [
@@ -13827,7 +13827,7 @@
       "Twitter/X"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Discord servers",
       "Friends/colleagues/community members"
     ],
@@ -13835,7 +13835,7 @@
       "Not Answered"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Cardano StackExchange",
       "GitHub discussions/issues"
     ],
@@ -13846,11 +13846,11 @@
       "Not Answered"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Cardano StackExchange",
       "Discord servers",
       "GitHub discussions/issues",
-      "Telegram Groups"
+      "Telegram groups"
     ],
     [
       "Discord servers",
@@ -13865,7 +13865,7 @@
       "r/CardanoDevelopers)"
     ],
     [
-      "Cardano Forum"
+      "Cardano forum"
     ],
     [
       "Not Answered"
@@ -13881,13 +13881,13 @@
       "Discord servers"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Cardano StackExchange",
       "Discord servers",
       "Friends/colleagues/community members"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Friends/colleagues/community members",
       "Twitter/X"
     ],
@@ -13937,12 +13937,12 @@
       "Twitter/X"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Cardano StackExchange",
       "Discord servers",
       "Friends/colleagues/community members",
       "GitHub discussions/issues",
-      "Telegram Groups"
+      "Telegram groups"
     ],
     [
       "Not Answered"
@@ -13972,7 +13972,7 @@
     ],
     [
       "Discord servers",
-      "Telegram Groups"
+      "Telegram groups"
     ],
     [
       "Not Answered"
@@ -13989,7 +13989,7 @@
       "Not Answered"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Discord servers",
       "Reddit(r/Cardano",
       "r/CardanoDevelopers)"
@@ -13998,12 +13998,12 @@
       "Not Answered"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Google"
     ],
     [
-      "Cardano Forum",
-      "Telegram Groups",
+      "Cardano forum",
+      "Telegram groups",
       "Twitter/X"
     ],
     [
@@ -14052,7 +14052,7 @@
       "Discord servers",
       "Friends/colleagues/community members",
       "GitHub discussions/issues",
-      "Telegram Groups",
+      "Telegram groups",
       "Twitter/X"
     ],
     [
@@ -14062,11 +14062,11 @@
       "r/CardanoDevelopers)"
     ],
     [
-      "Cardano Forum",
+      "Cardano forum",
       "Cardano StackExchange",
       "Friends/colleagues/community members",
       "GitHub discussions/issues",
-      "Telegram Groups"
+      "Telegram groups"
     ],
     [
       "Discord servers",
@@ -14090,7 +14090,7 @@
       "(Online) courses (e.g. Plutus Pioneer Program",
       "EMURGO Academy",
       "etc.)",
-      "Telegram Groups",
+      "Telegram groups",
       "https://input-output-hk.github.io/plutus-apps/"
     ],
     [
@@ -14102,9 +14102,9 @@
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
       "Friends/colleagues/community members",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Cardano's developer portal (https://developers.cardano.org/)",
@@ -14117,7 +14117,7 @@
       "Blog or website articles & guides",
       "Discord servers",
       "Friends/colleagues/community members",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
@@ -14145,7 +14145,7 @@
     ],
     [
       "Friends/colleagues/community members",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
@@ -14156,7 +14156,7 @@
       "(Online) courses (e.g. Plutus Pioneer Program",
       "EMURGO Academy",
       "etc.)",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
@@ -14186,7 +14186,7 @@
       "(Online) courses (e.g. Plutus Pioneer Program",
       "EMURGO Academy",
       "etc.)",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Blog or website articles & guides",
@@ -14196,7 +14196,7 @@
       "etc.)"
     ],
     [
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
@@ -14209,7 +14209,7 @@
       "EMURGO Academy",
       "etc.)",
       "Twitter/X",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Cardano's developer portal (https://developers.cardano.org/)"
@@ -14219,7 +14219,7 @@
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code",
       "Twitter/X"
     ],
@@ -14231,7 +14231,7 @@
       "(Online) courses (e.g. Plutus Pioneer Program",
       "EMURGO Academy",
       "etc.)",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code",
       "Twitter/X"
     ],
@@ -14239,7 +14239,7 @@
       "Blog or website articles & guides",
       "Discord servers",
       "Friends/colleagues/community members",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
@@ -14260,22 +14260,22 @@
       "EMURGO Academy",
       "etc.)",
       "Source code",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Blog or website articles & guides",
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Blog or website articles & guides",
       "Discord servers",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Discord servers",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
@@ -14285,9 +14285,9 @@
       "(Online) courses (e.g. Plutus Pioneer Program",
       "EMURGO Academy",
       "etc.)",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Blog or website articles & guides",
@@ -14326,16 +14326,16 @@
       "(Online) courses (e.g. Plutus Pioneer Program",
       "EMURGO Academy",
       "etc.)",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Blog or website articles & guides",
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
       "Source code",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Cardano's developer portal (https://developers.cardano.org/)",
@@ -14350,17 +14350,17 @@
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Blog or website articles & guides",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Blog or website articles & guides",
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Blog or website articles & guides",
@@ -14368,7 +14368,7 @@
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Friends/colleagues/community members",
       "Source code",
-      "Telegram Groups"
+      "Telegram groups"
     ],
     [
       "Blog or website articles & guides",
@@ -14380,7 +14380,7 @@
     ],
     [
       "Friends/colleagues/community members",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
@@ -14391,15 +14391,15 @@
       "(Online) courses (e.g. Plutus Pioneer Program",
       "EMURGO Academy",
       "etc.)",
-      "Scientific papers / specifications"
+      "Scientific papers/specifications"
     ],
     [
       "Blog or website articles & guides",
       "Discord servers",
       "Friends/colleagues/community members",
       "Source code",
-      "Telegram Groups",
-      "Youtube"
+      "Telegram groups",
+      "YouTube"
     ],
     [
       "Blog or website articles & guides",
@@ -14424,7 +14424,7 @@
       "Cardano docs (https://docs.cardano.org/)",
       "Reddit (r/Cardano",
       "r/CardanoDevelopers)",
-      "Scientific papers / specifications"
+      "Scientific papers/specifications"
     ],
     [
       "Blog or website articles & guides",
@@ -14435,9 +14435,9 @@
       "(Online) courses (e.g. Plutus Pioneer Program",
       "EMURGO Academy",
       "etc.)",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code",
-      "Youtube"
+      "YouTube"
     ],
     [
       "(Online) courses (e.g. Plutus Pioneer Program",
@@ -14448,7 +14448,7 @@
       "(Online) courses (e.g. Plutus Pioneer Program",
       "EMURGO Academy",
       "etc.)",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Blog or website articles & guides",
@@ -14472,9 +14472,9 @@
       "(Online) courses (e.g. Plutus Pioneer Program",
       "EMURGO Academy",
       "etc.)",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Twitter/X",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Blog or website articles & guides"
@@ -14491,11 +14491,11 @@
       "etc.)",
       "Reddit (r/Cardano",
       "r/CardanoDevelopers)",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code",
-      "Telegram Groups",
+      "Telegram groups",
       "Twitter/X",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Cardano's developer portal (https://developers.cardano.org/)",
@@ -14503,7 +14503,7 @@
       "(Online) courses (e.g. Plutus Pioneer Program",
       "EMURGO Academy",
       "etc.)",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
@@ -14520,7 +14520,7 @@
       "Cardano docs (https://docs.cardano.org/)",
       "Friends/colleagues/community members",
       "Source code",
-      "Telegram Groups"
+      "Telegram groups"
     ],
     [
       "Cardano forum",
@@ -14539,8 +14539,8 @@
       "EMURGO Academy",
       "etc.)",
       "Source code",
-      "Telegram Groups",
-      "Youtube",
+      "Telegram groups",
+      "YouTube",
       "Gimbalabs"
     ],
     [
@@ -14548,7 +14548,7 @@
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
-      "Youtube"
+      "YouTube"
     ],
     [
       "(Online) courses (e.g. Plutus Pioneer Program",
@@ -14567,13 +14567,13 @@
       "Source code"
     ],
     [
-      "Youtube"
+      "YouTube"
     ],
     [
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Discord servers",
       "Friends/colleagues/community members",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
@@ -14583,9 +14583,9 @@
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
       "Friends/colleagues/community members",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code",
-      "Telegram Groups",
+      "Telegram groups",
       "Twitter/X"
     ],
     [
@@ -14599,23 +14599,23 @@
       "Discord servers",
       "Source code",
       "Twitter/X",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
       "Friends/colleagues/community members",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code",
-      "Telegram Groups",
+      "Telegram groups",
       "G"
     ],
     [
       "Cardano's developer portal (https://developers.cardano.org/)"
     ],
     [
-      "Scientific papers / specifications"
+      "Scientific papers/specifications"
     ],
     [
       "Blog or website articles & guides",
@@ -14624,7 +14624,7 @@
       "(Online) courses (e.g. Plutus Pioneer Program",
       "EMURGO Academy",
       "etc.)",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code",
       "Twitter/X"
     ],
@@ -14635,12 +14635,12 @@
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
       "Friends/colleagues/community members",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
       "Friends/colleagues/community members",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
@@ -14661,7 +14661,7 @@
       "(Online) courses (e.g. Plutus Pioneer Program",
       "EMURGO Academy",
       "etc.)",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
@@ -14703,9 +14703,9 @@
       "etc.)",
       "Reddit (r/Cardano",
       "r/CardanoDevelopers)",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Not Answered"
@@ -14717,7 +14717,7 @@
       "(Online) courses (e.g. Plutus Pioneer Program",
       "EMURGO Academy",
       "etc.)",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Blog or website articles & guides",
@@ -14727,7 +14727,7 @@
       "(Online) courses (e.g. Plutus Pioneer Program",
       "EMURGO Academy",
       "etc.)",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
@@ -14763,7 +14763,7 @@
     ],
     [
       "Cardano docs (https://docs.cardano.org/)",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
@@ -14817,16 +14817,16 @@
       "(Online) courses (e.g. Plutus Pioneer Program",
       "EMURGO Academy",
       "etc.)",
-      "Telegram Groups",
+      "Telegram groups",
       "Twitter/X",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Blog or website articles & guides",
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
       "Friends/colleagues/community members",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
@@ -14846,14 +14846,14 @@
       "EMURGO Academy",
       "etc.)",
       "Source code",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Blog or website articles & guides",
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Discord servers",
       "Friends/colleagues/community members",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code",
       "Twitter/X"
     ],
@@ -14880,7 +14880,7 @@
       "Blog or website articles & guides",
       "Cardano docs (https://docs.cardano.org/)",
       "Twitter/X",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Friends/colleagues/community members",
@@ -14899,7 +14899,7 @@
       "EMURGO Academy",
       "etc.)",
       "Source code",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Not Answered"
@@ -14916,9 +14916,9 @@
       "(Online) courses (e.g. Plutus Pioneer Program",
       "EMURGO Academy",
       "etc.)",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code",
-      "Telegram Groups"
+      "Telegram groups"
     ],
     [
       "Discord servers",
@@ -14937,13 +14937,13 @@
     [
       "Blog or website articles & guides",
       "Source code",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Not Answered"
     ],
     [
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
@@ -14961,7 +14961,7 @@
       "(Online) courses (e.g. Plutus Pioneer Program",
       "EMURGO Academy",
       "etc.)",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Blog or website articles & guides",
@@ -14976,23 +14976,23 @@
     [
       "Cardano docs (https://docs.cardano.org/)",
       "Friends/colleagues/community members",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
       "Cardano docs (https://docs.cardano.org/)",
       "Friends/colleagues/community members",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
       "Friends/colleagues/community members",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
       "Friends/colleagues/community members",
-      "Scientific papers / specifications"
+      "Scientific papers/specifications"
     ],
     [
       "Cardano's developer portal (https://developers.cardano.org/)",
@@ -15021,7 +15021,7 @@
       "(Online) courses (e.g. Plutus Pioneer Program",
       "EMURGO Academy",
       "etc.)",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
@@ -15052,20 +15052,20 @@
     [
       "Blog or website articles & guides",
       "Cardano's developer portal (https://developers.cardano.org/)",
-      "Scientific papers / specifications"
+      "Scientific papers/specifications"
     ],
     [
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
       "Friends/colleagues/community members",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
       "Cardano forum",
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Discord servers",
-      "Telegram Groups"
+      "Telegram groups"
     ],
     [
       "Not Answered"
@@ -15093,12 +15093,12 @@
       "Cardano forum",
       "Reddit (r/Cardano",
       "r/CardanoDevelopers)",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Blog or website articles & guides",
       "Cardano forum",
-      "Telegram Groups"
+      "Telegram groups"
     ],
     [
       "Blog or website articles & guides",
@@ -15107,7 +15107,7 @@
     ],
     [
       "Friends/colleagues/community members",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
@@ -15116,19 +15116,19 @@
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
       "Friends/colleagues/community members",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Discord servers",
       "Friends/colleagues/community members",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
       "Friends/colleagues/community members",
-      "Scientific papers / specifications"
+      "Scientific papers/specifications"
     ],
     [
       "Blog or website articles & guides",
@@ -15144,7 +15144,7 @@
     [
       "Cardano docs (https://docs.cardano.org/)",
       "Friends/colleagues/community members",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code"
     ],
     [
@@ -15165,9 +15165,9 @@
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
       "Friends/colleagues/community members",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code",
-      "Telegram Groups",
+      "Telegram groups",
       "Twitter/X"
     ],
     [
@@ -15176,15 +15176,15 @@
       "Cardano docs (https://docs.cardano.org/)",
       "Reddit (r/Cardano",
       "r/CardanoDevelopers)",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Blog or website articles & guides",
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Friends/colleagues/community members",
-      "Scientific papers / specifications",
+      "Scientific papers/specifications",
       "Source code",
-      "Telegram Groups"
+      "Telegram groups"
     ],
     [
       "Discord servers",
@@ -15195,7 +15195,7 @@
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
       "Friends/colleagues/community members",
-      "Youtube"
+      "YouTube"
     ],
     [
       "Discord servers",
