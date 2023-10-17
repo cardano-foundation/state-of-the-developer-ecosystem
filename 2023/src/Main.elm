@@ -279,6 +279,19 @@ updateQuestion3 { selectedFilter } =
             { model | questions = { questions | question3 = { q | selectedFilter = selectedFilter } } }
 
 
+updateQuestion5 :
+    { selectedFilter : Int }
+    -> Msg
+updateQuestion5 { selectedFilter } =
+    ChangeFilter <|
+        \({ questions } as model) ->
+            let
+                q =
+                    questions.question5
+            in
+            { model | questions = { questions | question5 = { q | selectedFilter = selectedFilter } } }
+
+
 updateQuestion6 :
     { selectedFilter : Int }
     -> Msg
@@ -318,6 +331,19 @@ updateQuestion7 { selectedFilter } =
             { model | questions = { questions | question7 = { q | selectedFilter = selectedFilter } } }
 
 
+updateQuestion9 :
+    { selectedFilter : Int }
+    -> Msg
+updateQuestion9 { selectedFilter } =
+    ChangeFilter <|
+        \({ questions } as model) ->
+            let
+                q =
+                    questions.question9
+            in
+            { model | questions = { questions | question9 = { q | selectedFilter = selectedFilter } } }
+
+
 updateQuestion10 :
     { selectedFilter : Int }
     -> Msg
@@ -355,6 +381,32 @@ updateQuestion12 { selectedFilter } =
                     questions.question12
             in
             { model | questions = { questions | question12 = { q | selectedFilter = selectedFilter } } }
+
+
+updateQuestion13 :
+    { selectedFilter : Int }
+    -> Msg
+updateQuestion13 { selectedFilter } =
+    ChangeFilter <|
+        \({ questions } as model) ->
+            let
+                q =
+                    questions.question13
+            in
+            { model | questions = { questions | question13 = { q | selectedFilter = selectedFilter } } }
+
+
+updateQuestion15 :
+    { selectedFilter : Int }
+    -> Msg
+updateQuestion15 { selectedFilter } =
+    ChangeFilter <|
+        \({ questions } as model) ->
+            let
+                q =
+                    questions.question15
+            in
+            { model | questions = { questions | question15 = { q | selectedFilter = selectedFilter } } }
 
 
 updateQuestion22 :
@@ -493,19 +545,132 @@ view ({ title, introduction, questions } as model) =
         , Markdown.toHtmlWith { defaultOptions | sanitize = False } [ Html.Attributes.class "introduction" ] introduction
         , viewMultipleChoices model questions.question1
         , viewMultipleChoices model questions.question2
-        , viewScale model questions.question3
+        , viewScaleWith
+            model
+            updateQuestion3
+            questions.question3
+            [ isPlutusPioneer questions
+            , withYearsOfFPExperience questions "Less than 1 year"
+            , withYearsOfFPExperience questions "Between 1 and 3 years"
+            , withYearsOfFPExperience questions "Between 3 and 10 years"
+            , withYearsOfFPExperience questions "Over 10 years"
+            ]
         , viewMultipleChoices model questions.question4
-        , viewMultipleChoices model questions.question5
-        , viewMultipleChoices model questions.question6
-        , viewMultipleChoices model questions.question7
-        , viewMultipleChoices model questions.question8
-        , viewScale model questions.question9
+        , viewMultipleChoicesWith
+            model
+            updateQuestion5
+            questions.question5
+            [ { title = "Single language spoken"
+              , function = List.filter (\xs -> List.length xs == 1)
+              }
+            ]
+        , viewMultipleChoicesWith
+            model
+            updateQuestion6
+            questions.question6
+            [ isPro questions
+            , isHobbyist questions
+            ]
+        , viewMultipleChoicesWith
+            model
+            updateQuestion7
+            questions.question7
+            [ isProficientIn questions "JavaScript"
+            , isProficientIn questions "TypeScript"
+            , isProficientIn questions "Haskell"
+            , isProficientIn questions "Bash"
+            , isProficientIn questions "Python"
+            , isProficientIn questions "Rust"
+            , isProficientIn questions "Java"
+            , isProficientIn questions "Aiken"
+            , isProficientIn questions "C++"
+            , isProficientIn questions "C"
+            , isProficientIn questions "PHP"
+            , isProficientIn questions "C#"
+            , isProficientIn questions "Go"
+            ]
+        , viewMultipleChoicesWith
+            model
+            updateQuestion8
+            questions.question8
+            [ isPlutusPioneer questions
+            , usingEditor questions "Visual Studio Code"
+            , usingEditor questions "Visual Studio"
+            , usingEditor questions "Vim/NeoVim"
+            , usingEditor questions "IntelliJ"
+            ]
+        , viewScaleWith model
+            updateQuestion9
+            questions.question9
+            [ isPlutusPioneer questions
+            , isProficientIn questions "Haskell"
+            ]
         , viewYesNo model questions.question10
-        , viewMultipleChoices model questions.question11
-        , viewMultipleChoices model questions.question12
-        , viewScale model questions.question13
+        , viewMultipleChoicesWith
+            model
+            updateQuestion11
+            questions.question11
+            [ withYearsOfFPExperience questions "Less than 1 year"
+            , withYearsOfFPExperience questions "Between 1 and 3 years"
+            , withYearsOfFPExperience questions "Between 3 and 10 years"
+            , withYearsOfFPExperience questions "Over 10 years"
+            ]
+        , viewMultipleChoicesWith
+            model
+            updateQuestion12
+            questions.question12
+            [ usingOnChain questions "Aiken"
+            , usingOnChain questions "Haskell/Plutus-tx"
+            , usingOnChain questions "Helios"
+            , usingOnChain questions "Marlowe"
+            , usingOnChain questions "OpShin"
+            , usingOnChain questions "Plu-ts"
+            , usingOnChain questions "Plutarch"
+            , usingOnChain questions "Pluto"
+            , usingOnChain questions "Solidity (with Milkomeda)"
+            ]
+        , viewScaleWith
+            model
+            updateQuestion13
+            questions.question13
+            [ usingOnChain questions "Aiken"
+            , usingOnChain questions "Haskell/Plutus-tx"
+            , usingOnChain questions "Helios"
+            , usingOnChain questions "Marlowe"
+            , usingOnChain questions "OpShin"
+            , usingOnChain questions "Plu-ts"
+            , usingOnChain questions "Plutarch"
+            , usingOnChain questions "Pluto"
+            , usingOnChain questions "Solidity (with Milkomeda)"
+            ]
         , viewOpen model questions.question14
-        , viewMultipleChoices model questions.question15
+        , viewMultipleChoicesWith
+            model
+            updateQuestion15
+            questions.question15
+            [ isProficientIn questions "JavaScript"
+            , isProficientIn questions "TypeScript"
+            , isProficientIn questions "Haskell"
+            , isProficientIn questions "Bash"
+            , isProficientIn questions "Python"
+            , isProficientIn questions "Rust"
+            , isProficientIn questions "Java"
+            , isProficientIn questions "Aiken"
+            , isProficientIn questions "C++"
+            , isProficientIn questions "C"
+            , isProficientIn questions "PHP"
+            , isProficientIn questions "C#"
+            , isProficientIn questions "Go"
+            , usingOnChain questions "Aiken"
+            , usingOnChain questions "Haskell/Plutus-tx"
+            , usingOnChain questions "Helios"
+            , usingOnChain questions "Marlowe"
+            , usingOnChain questions "OpShin"
+            , usingOnChain questions "Plu-ts"
+            , usingOnChain questions "Plutarch"
+            , usingOnChain questions "Pluto"
+            , usingOnChain questions "Solidity (with Milkomeda)"
+            ]
         , viewScale model questions.question16
         , viewMultipleChoices model questions.question17
         , viewScale model questions.question18
@@ -900,6 +1065,7 @@ viewQuestionTitle title =
                 [ Svg.Attributes.class "icon" ]
                 [ Svg.use [ Svg.Attributes.xlinkHref "#icon-link" ] [] ]
             ]
+        , Html.span [ Html.Attributes.class "number" ] [ Html.text "." ]
         , Html.text title
         ]
 
@@ -929,6 +1095,125 @@ defaultFilter : Int -> Filter a
 defaultFilter n =
     { title = "All answers (" ++ String.fromInt n ++ ")"
     , function = identity
+    }
+
+
+isPlutusPioneer : Questionnaire -> Filter a
+isPlutusPioneer questions =
+    { title = "Plutus pioneers"
+    , function =
+        \answers ->
+            List.Extra.zip answers questions.question10.answers
+                |> List.map
+                    (\( a, pioneer ) ->
+                        if List.member True pioneer then
+                            a
+
+                        else
+                            []
+                    )
+    }
+
+
+usingEditor : Questionnaire -> String -> Filter a
+usingEditor questions editor =
+    { title = "Using " ++ editor
+    , function =
+        \answers ->
+            List.Extra.zip answers questions.question7.answers
+                |> List.map
+                    (\( a, editors ) ->
+                        if List.member editor editors then
+                            a
+
+                        else
+                            []
+                    )
+    }
+
+
+withYearsOfFPExperience : Questionnaire -> String -> Filter a
+withYearsOfFPExperience questions xp =
+    { title = "With " ++ xp ++ " of experience using FP"
+    , function =
+        \answers ->
+            List.Extra.zip answers questions.question2.answers
+                |> List.map
+                    (\( a, xps ) ->
+                        if List.member xp xps then
+                            a
+
+                        else
+                            []
+                    )
+    }
+
+
+isPro : Questionnaire -> Filter a
+isPro questions =
+    { title = "Only professionals"
+    , function =
+        \answers ->
+            List.Extra.zip answers questions.question4.answers
+                |> List.map
+                    (\( a, statuses ) ->
+                        if statuses /= [ "Hobby" ] then
+                            a
+
+                        else
+                            []
+                    )
+    }
+
+
+isHobbyist : Questionnaire -> Filter a
+isHobbyist questions =
+    { title = "Only hobbyist"
+    , function =
+        \answers ->
+            List.Extra.zip answers questions.question4.answers
+                |> List.map
+                    (\( a, statuses ) ->
+                        if statuses == [ "Hobby" ] then
+                            a
+
+                        else
+                            []
+                    )
+    }
+
+
+isProficientIn : Questionnaire -> String -> Filter a
+isProficientIn questions lang =
+    { title = "Proficient in " ++ lang
+    , function =
+        \answers ->
+            List.Extra.zip answers questions.question8.answers
+                |> List.map
+                    (\( a, langs ) ->
+                        if List.member lang langs then
+                            a
+
+                        else
+                            []
+                    )
+    }
+
+
+usingOnChain : Questionnaire -> String -> Filter a
+usingOnChain questions lang =
+    { title = "Using " ++ lang ++ " on-chain"
+    , function =
+        \answers ->
+            List.Extra.zip answers questions.question11.answers
+                |> List.map
+                    (\( a, langs ) ->
+                        if List.member lang langs then
+                            a
+
+                        else
+                            []
+                    )
     }
 
 

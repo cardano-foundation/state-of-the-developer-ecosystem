@@ -37,6 +37,19 @@ main {
     flex-direction: column;
     padding: 1rem 3rem 1rem calc(var(--width-nav-menu) + 3rem);
     box-sizing: border-box;
+    counter-reset: question-number 0;
+}
+
+main article h2 {
+  counter-increment: question-number;
+}
+
+main article h2 > span.number::before {
+  content: counter(question-number);
+}
+
+main article h2 > span.number {
+  padding-right: 0.5rem;
 }
 
 @media (max-width: 1200px) {
