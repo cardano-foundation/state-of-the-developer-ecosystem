@@ -855,7 +855,14 @@ buildChart { options, answers, sortDesc } =
         [ options
             |> List.map (\( lbl, opt ) -> { x = lbl, y = countIf (List.member opt) answers })
             |> (if sortDesc then
-                    List.sortBy (negate << .y)
+                    List.sortBy
+                        (\choice ->
+                            if choice.x == "N/A" || choice.x == "None directly" then
+                                -1
+
+                            else
+                                -choice.y
+                        )
 
                 else
                     identity

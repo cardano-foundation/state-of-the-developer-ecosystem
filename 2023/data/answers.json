@@ -3509,7 +3509,7 @@
       "Haskell",
       "Nix",
       "Python",
-      "Purescript"
+      "PureScript"
     ],
     [
       "Bash",
@@ -3666,7 +3666,7 @@
       "PHP",
       "Ruby",
       "TypeScript",
-      "Purescript"
+      "PureScript"
     ],
     [
       "C",
@@ -4347,7 +4347,7 @@
       "Haskell",
       "Rust",
       "TypeScript",
-      "Purescript"
+      "PureScript"
     ],
     [
       "Rust"
@@ -5708,7 +5708,7 @@
       "Haskell",
       "Rust",
       "TypeScript",
-      "Purescript"
+      "PureScript"
     ],
     [
       "Rust",
@@ -6124,7 +6124,7 @@
     [
       "Haskell",
       "TypeScript",
-      "Purescript"
+      "PureScript"
     ],
     [
       "Haskell",
@@ -6132,7 +6132,7 @@
     ],
     [
       "Haskell",
-      "Purescript"
+      "PureScript"
     ],
     [
       "TypeScript",
@@ -6147,7 +6147,7 @@
       "Haskell",
       "Rust",
       "TypeScript",
-      "Purescript"
+      "PureScript"
     ],
     [
       "Python"
@@ -6230,7 +6230,7 @@
     ],
     [
       "Haskell",
-      "purescript"
+      "PureScript"
     ],
     [
       "Go",
@@ -7362,8 +7362,7 @@
       "cardano-python (emesik)"
     ],
     [
-      "I have built everything myself around dbsync",
-      "along with custom java code"
+      "I have built everything myself around dbsync, along with custom java code"
     ],
     [
       "blockfrost-sdk (blockfrost)",
@@ -7799,8 +7798,7 @@
       "cardano-wallet (cardano-foundation)"
     ],
     [
-      "just learning",
-      "not using yet"
+      "just learning, not using yet"
     ],
     [
       "None directly"
@@ -8318,7 +8316,7 @@
       "Ogmios (CardanoSolutions)"
     ],
     [
-      "None",
+      "None directly",
       "they are so fragmented and no one knows how to connect them"
     ],
     [
@@ -8665,7 +8663,7 @@
     [
       "Blockfrost (5Binaries)",
       "CardanoScan (StricaHQ)",
-      "Dandelion"
+      "Dandelion (Gimbalabs)"
     ],
     [
       "Blockfrost (5Binaries)",
@@ -8734,7 +8732,7 @@
       "Token registry (cardano-foundation)"
     ],
     [
-      "na"
+      "N/A"
     ],
     [
       "Demeter.run (TxPipe)"
@@ -8837,7 +8835,7 @@
       "KuberIDE"
     ],
     [
-      "None"
+      "N/A"
     ],
     [
       "Blockfrost (5Binaries)",
@@ -8914,7 +8912,7 @@
       "Token registry (cardano-foundation)"
     ],
     [
-      "non selected yet"
+      "N/A"
     ],
     [
       "Blockfrost (5Binaries)",
@@ -8968,7 +8966,7 @@
       "Token registry (cardano-foundation)"
     ],
     [
-      "None"
+      "N/A"
     ],
     [
       "CardanoScan (StricaHQ)"
@@ -9048,7 +9046,7 @@
       "Handle (AdaHandle)"
     ],
     [
-      "none of the above"
+      "N/A"
     ],
     [
       "Blockfrost (5Binaries)",
@@ -9156,7 +9154,7 @@
       "Not Answered"
     ],
     [
-      "Self host everything"
+      "N/A"
     ],
     [
       "Blockfrost (5Binaries)",
@@ -9180,7 +9178,7 @@
       "Token registry (cardano-foundation)"
     ],
     [
-      "None"
+      "N/A"
     ],
     [
       "Not Answered"
@@ -9305,7 +9303,7 @@
       "Not Answered"
     ],
     [
-      "none"
+      "N/A"
     ],
     [
       "CardanoScan (StricaHQ)"
@@ -9592,7 +9590,7 @@
       "cardano-cli (input-output-hk)"
     ],
     [
-      "none (-> Helios off-chain API)"
+      "helios (Hyperion-BT)"
     ],
     [
       "aiken (aiken-lang)",
@@ -9664,7 +9662,7 @@
       "cardano-cli (input-output-hk)"
     ],
     [
-      "none"
+      "N/A"
     ],
     [
       "cardano-cli (input-output-hk)"
@@ -9768,7 +9766,7 @@
     ],
     [
       "cardano-cli (input-output-hk)",
-      "Jambhala (Emurgo Academy)"
+      "jamb (iburzynski)"
     ],
     [
       "aiken (aiken-lang)",
@@ -9798,7 +9796,7 @@
       "cardano-addresses (input-output-hk)"
     ],
     [
-      "none"
+      "N/A"
     ],
     [
       "bech32 (input-output-hk)",
@@ -9813,7 +9811,7 @@
       "cardano-cli (input-output-hk)"
     ],
     [
-      "non selected"
+      "N/A"
     ],
     [
       "aiken (aiken-lang)",
@@ -9937,7 +9935,7 @@
       "Not Answered"
     ],
     [
-      "helios cli"
+      "helios (Hyperion-BT)"
     ],
     [
       "bech32 (input-output-hk)",
@@ -9983,7 +9981,7 @@
       "bech32 (input-output-hk)",
       "cardano-addresses (input-output-hk)",
       "cardano-cli (input-output-hk)",
-      "yaci"
+      "yaci (bloxbean)"
     ],
     [
       "cardano-addresses (input-output-hk)",
@@ -10019,7 +10017,7 @@
       "cardano-cli (input-output-hk)"
     ],
     [
-      "none"
+      "N/A"
     ],
     [
       "offchain-metadata-tools (input-output-hk)"
@@ -10061,7 +10059,7 @@
       "Other"
     ],
     [
-      "none",
+      "N/A",
       "using cli tools from code is for script kiddies"
     ],
     [
@@ -10127,7 +10125,7 @@
       "cardano-cli (input-output-hk)"
     ],
     [
-      "None",
+      "N/A",
       "cardano cli is in the node. No one knows how to install it or what it is used for"
     ],
     [
@@ -10161,7 +10159,7 @@
       "Not Answered"
     ],
     [
-      "none"
+      "N/A"
     ],
     [
       "cardano-cli (input-output-hk)"
@@ -10509,11 +10507,10 @@
       "N/A"
     ],
     [
-      "not using yet",
-      "just learning"
+      "not using yet, just learning"
     ],
     [
-      "Vercel auto deploys from Github"
+      "Vercel"
     ],
     [
       "Demeter.run",
@@ -10567,8 +10564,7 @@
     [
       "Bash scripts",
       "Docker",
-      "I would like to spend time to transition to Ansible",
-      "but has not been a priority"
+      "I would like to spend time to transition to Ansible, but has not been a priority"
     ],
     [
       "Docker",
@@ -10776,7 +10772,7 @@
       "Not Answered"
     ],
     [
-      "AWS CDK"
+      "AWS"
     ],
     [
       "Bash scripts"
@@ -11093,64 +11089,28 @@
     ],
     [
       "Docker",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
       "Source code + build instructions"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
       "Downloadable static executable (amd)",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
       "Docker",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
       "Source code + build instructions"
     ],
     [
@@ -11159,37 +11119,17 @@
     ],
     [
       "Docker",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
       "Docker",
@@ -11198,28 +11138,12 @@
     ],
     [
       "Docker",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
       "Docker",
@@ -11227,44 +11151,24 @@
     ],
     [
       "Downloadable static executable (amd)",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
       "Downloadable static executable (amd)",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
       "Docker",
       "Downloadable static executable (amd)",
       "Downloadable static executable (arm)",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
       "Nix",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions"
     ],
     [
       "Nix",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
       "Docker",
@@ -11272,92 +11176,48 @@
     ],
     [
       "Docker",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
       "Docker",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
       "Docker"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
       "Docker",
       "Downloadable static executable (amd)",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions"
     ],
     [
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
       "Downloadable static executable (amd)",
       "Downloadable static executable (arm)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions"
     ],
     [
       "Source code + build instructions"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
       "Docker",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
       "Nix",
       "Source code + build instructions"
     ],
@@ -11367,16 +11227,8 @@
     [
       "Downloadable static executable (amd)",
       "Downloadable static executable (arm)",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
       "Nix"
@@ -11389,25 +11241,13 @@
     [
       "Docker",
       "Nix",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
       "Downloadable static executable (amd)",
       "Downloadable static executable (arm)",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions"
     ],
     [
@@ -11416,36 +11256,20 @@
     ],
     [
       "Docker",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
       "Source code + build instructions"
     ],
     [
       "Docker",
       "Downloadable static executable (amd)",
       "Downloadable static executable (arm)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
       "Docker",
       "Downloadable static executable (amd)",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions"
     ],
     [
@@ -11464,30 +11288,18 @@
       "Docker",
       "Downloadable static executable (amd)",
       "Downloadable static executable (arm)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions"
     ],
     [
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
       "I don't know.  Good question.  Leaning static executable but I'm a noob"
     ],
     [
       "Docker",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions"
     ],
     [
@@ -11498,18 +11310,10 @@
       "Source code + build instructions"
     ],
     [
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
       "Nix",
       "Source code + build instructions"
     ],
@@ -11531,11 +11335,7 @@
       "web"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
       "Source code + build instructions"
     ],
     [
@@ -11543,118 +11343,66 @@
     ],
     [
       "Docker",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
       "Docker"
     ],
     [
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions"
     ],
     [
       "Docker",
       "Downloadable static executable (amd)",
       "Downloadable static executable (arm)",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
       "Docker",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
       "Docker",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
       "Downloadable static executable (amd)"
     ],
     [
       "Docker",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
       "Source code + build instructions"
     ],
     [
       "Docker"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
       "Nix",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
       "Docker",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
       "Docker",
       "Downloadable static executable (amd)",
       "Downloadable static executable (arm)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
       "Downloadable static executable (arm)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions"
     ],
     [
       "Docker",
       "Downloadable static executable (arm)",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
       "Nix",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions"
     ],
     [
@@ -11662,36 +11410,20 @@
     ],
     [
       "Downloadable static executable (amd)",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
       "Not Answered"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
       "Not Answered"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
       "Not Answered"
@@ -11700,17 +11432,9 @@
       "Docker",
       "Downloadable static executable (amd)",
       "Downloadable static executable (arm)",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
       "Nix",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions",
       "Wasm"
     ],
@@ -11720,54 +11444,30 @@
     [
       "Downloadable static executable (amd)",
       "Downloadable static executable (arm)",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
       "Source code + build instructions"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
       "Downloadable static executable (amd)"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
       "Source code + build instructions"
     ],
     [
       "Not Answered"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
       "Downloadable static executable (amd)",
       "Downloadable static executable (arm)",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
       "Nix"
     ],
     [
@@ -11778,45 +11478,21 @@
       "Not Answered"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
       "Source code + build instructions"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions",
       "just avoid nix"
     ],
@@ -11828,16 +11504,8 @@
     ],
     [
       "Docker",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions"
     ],
     [
@@ -11851,17 +11519,9 @@
     ],
     [
       "Docker",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
       "Nix",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
       "Docker",
@@ -11874,16 +11534,8 @@
       "Nix"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
       "Downloadable static executable (amd)",
@@ -11893,28 +11545,16 @@
       "Docker",
       "Downloadable static executable (amd)",
       "Nix",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions"
     ],
     [
       "Not Answered"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
       "Nix",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions"
     ],
     [
@@ -11924,32 +11564,16 @@
       "Docker"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
       "Downloadable static executable (amd)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
       "Docker",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
       "Docker"
@@ -11964,44 +11588,20 @@
       "Docker",
       "Downloadable static executable (amd)",
       "Downloadable static executable (arm)",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions"
     ],
     [
       "Nix"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions"
     ],
     [
@@ -12014,16 +11614,8 @@
       "Docker",
       "Downloadable static executable (amd)",
       "Downloadable static executable (arm)",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions",
       "ANYTHING but fucking Nix"
     ],
@@ -12035,56 +11627,32 @@
     ],
     [
       "Docker",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
       "Source code + build instructions"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
       "Docker",
       "Downloadable static executable (amd)",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
       "Nix",
       "Source code + build instructions"
     ],
     [
       "Docker",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
       "Nix"
     ],
     [
       "Nix",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions"
     ],
     [
@@ -12092,47 +11660,27 @@
       "Nix"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
       "Nix",
       "Source code + build instructions"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
       "Docker",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
       "Source code + build instructions"
     ],
     [
       "Docker",
       "Downloadable static executable (amd)",
       "Downloadable static executable (arm)",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
       "Nix",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions"
     ],
     [
@@ -12147,21 +11695,13 @@
     ],
     [
       "Docker",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
       "Nix"
     ],
     [
       "Docker",
       "Nix",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions"
     ],
     [
@@ -12172,16 +11712,8 @@
       "Static executable (x86-linux)"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
       "Not Answered"
@@ -12190,11 +11722,7 @@
       "Not Answered"
     ],
     [
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions"
     ],
     [
@@ -12211,19 +11739,11 @@
       "Downloadable static executable (arm)"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
       "Docker",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
       "Source code + build instructions"
     ],
     [
@@ -12244,30 +11764,14 @@
       "Docker",
       "Downloadable static executable (amd)",
       "Downloadable static executable (arm)",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions"
     ],
     [
       "Docker",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions"
     ],
     [
@@ -12276,30 +11780,14 @@
     ],
     [
       "Docker",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
       "Docker",
@@ -12307,16 +11795,8 @@
     ],
     [
       "Docker",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
     ],
     [
       "Source code + build instructions"
@@ -12329,23 +11809,11 @@
       "Docker",
       "Downloadable static executable (amd)",
       "Downloadable static executable (arm)",
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)"
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
     ],
     [
-      "Language package manager (e.g. yarn",
-      "pip",
-      "cargo",
-      "cabal",
-      "etc.)",
-      "OS package manager (e.g. apt",
-      "rpm",
-      "homebrew",
-      "chocolatey",
-      "etc.)",
+      "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)",
+      "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)",
       "Source code + build instructions"
     ]
   ],
@@ -13286,8 +12754,7 @@
       "Discord servers",
       "Friends/colleagues/community members",
       "GitHub discussions/issues",
-      "Reddit(r/Cardano",
-      "r/CardanoDevelopers)",
+      "Reddit(r/Cardano, r/CardanoDevelopers)",
       "Telegram groups"
     ],
     [
@@ -13323,8 +12790,7 @@
       "Cardano StackExchange",
       "Discord servers",
       "GitHub discussions/issues",
-      "Reddit(r/Cardano",
-      "r/CardanoDevelopers)"
+      "Reddit(r/Cardano, r/CardanoDevelopers)"
     ],
     [
       "Discord servers",
@@ -13351,8 +12817,7 @@
       "Cardano forum",
       "Cardano StackExchange",
       "Discord servers",
-      "Reddit(r/Cardano",
-      "r/CardanoDevelopers)"
+      "Reddit(r/Cardano, r/CardanoDevelopers)"
     ],
     [
       "Cardano forum",
@@ -13399,8 +12864,7 @@
       "Discord servers"
     ],
     [
-      "Reddit(r/Cardano",
-      "r/CardanoDevelopers)"
+      "Reddit(r/Cardano, r/CardanoDevelopers)"
     ],
     [
       "Discord servers"
@@ -13427,8 +12891,7 @@
       "Cardano forum",
       "Discord servers",
       "GitHub discussions/issues",
-      "Reddit(r/Cardano",
-      "r/CardanoDevelopers)",
+      "Reddit(r/Cardano, r/CardanoDevelopers)",
       "Twitter/X"
     ],
     [
@@ -13454,8 +12917,7 @@
     ],
     [
       "Discord servers",
-      "Reddit(r/Cardano",
-      "r/CardanoDevelopers)",
+      "Reddit(r/Cardano, r/CardanoDevelopers)",
       "Other"
     ],
     [
@@ -13503,8 +12965,7 @@
     [
       "Cardano StackExchange",
       "GitHub discussions/issues",
-      "Reddit(r/Cardano",
-      "r/CardanoDevelopers)"
+      "Reddit(r/Cardano, r/CardanoDevelopers)"
     ],
     [
       "Cardano forum",
@@ -13547,8 +13008,7 @@
       "Discord servers",
       "Friends/colleagues/community members",
       "GitHub discussions/issues",
-      "Reddit(r/Cardano",
-      "r/CardanoDevelopers)",
+      "Reddit(r/Cardano, r/CardanoDevelopers)",
       "Telegram groups",
       "Twitter/X"
     ],
@@ -13655,8 +13115,7 @@
       "Cardano forum",
       "Discord servers",
       "GitHub discussions/issues",
-      "Reddit(r/Cardano",
-      "r/CardanoDevelopers)",
+      "Reddit(r/Cardano, r/CardanoDevelopers)",
       "Telegram groups",
       "Twitter/X"
     ],
@@ -13690,8 +13149,7 @@
       "Cardano forum",
       "Cardano StackExchange",
       "Discord servers",
-      "Reddit(r/Cardano",
-      "r/CardanoDevelopers)"
+      "Reddit(r/Cardano, r/CardanoDevelopers)"
     ],
     [
       "Not Answered"
@@ -13791,8 +13249,7 @@
     [
       "Cardano StackExchange",
       "GitHub discussions/issues",
-      "Reddit(r/Cardano",
-      "r/CardanoDevelopers)"
+      "Reddit(r/Cardano, r/CardanoDevelopers)"
     ],
     [
       "Cardano StackExchange",
@@ -13861,8 +13318,7 @@
     ],
     [
       "Discord servers",
-      "Reddit(r/Cardano",
-      "r/CardanoDevelopers)"
+      "Reddit(r/Cardano, r/CardanoDevelopers)"
     ],
     [
       "Cardano forum"
@@ -13892,8 +13348,7 @@
       "Twitter/X"
     ],
     [
-      "Reddit(r/Cardano",
-      "r/CardanoDevelopers)"
+      "Reddit(r/Cardano, r/CardanoDevelopers)"
     ],
     [
       "Not Answered"
@@ -13932,8 +13387,7 @@
       "Discord servers",
       "Friends/colleagues/community members",
       "GitHub discussions/issues",
-      "Reddit(r/Cardano",
-      "r/CardanoDevelopers)",
+      "Reddit(r/Cardano, r/CardanoDevelopers)",
       "Twitter/X"
     ],
     [
@@ -13991,8 +13445,7 @@
     [
       "Cardano forum",
       "Discord servers",
-      "Reddit(r/Cardano",
-      "r/CardanoDevelopers)"
+      "Reddit(r/Cardano, r/CardanoDevelopers)"
     ],
     [
       "Not Answered"
@@ -14058,8 +13511,7 @@
     [
       "Discord servers",
       "GitHub discussions/issues",
-      "Reddit(r/Cardano",
-      "r/CardanoDevelopers)"
+      "Reddit(r/Cardano, r/CardanoDevelopers)"
     ],
     [
       "Cardano forum",
@@ -14087,9 +13539,7 @@
       "Cardano forum",
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Telegram groups",
       "https://input-output-hk.github.io/plutus-apps/"
     ],
@@ -14129,18 +13579,14 @@
       "Blog or website articles & guides",
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Source code",
       "Twitter/X"
     ],
     [
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Mastering Cardano"
     ],
     [
@@ -14153,9 +13599,7 @@
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
       "Friends/colleagues/community members",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Scientific papers/specifications",
       "Source code"
     ],
@@ -14183,17 +13627,13 @@
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
       "Friends/colleagues/community members",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "YouTube"
     ],
     [
       "Blog or website articles & guides",
       "Discord servers",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)"
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)"
     ],
     [
       "Scientific papers/specifications",
@@ -14205,9 +13645,7 @@
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
       "Friends/colleagues/community members",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Twitter/X",
       "YouTube"
     ],
@@ -14228,9 +13666,7 @@
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Scientific papers/specifications",
       "Source code",
       "Twitter/X"
@@ -14256,9 +13692,7 @@
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Source code",
       "YouTube"
     ],
@@ -14282,9 +13716,7 @@
       "Blog or website articles & guides",
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Scientific papers/specifications",
       "Source code",
       "YouTube"
@@ -14313,9 +13745,7 @@
       "Blog or website articles & guides",
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)"
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)"
     ],
     [
       "Blog or website articles & guides",
@@ -14323,9 +13753,7 @@
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Scientific papers/specifications",
       "Source code",
       "YouTube"
@@ -14341,9 +13769,7 @@
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)"
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)"
     ],
     [
       "Blog or website articles & guides",
@@ -14388,9 +13814,7 @@
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
       "Friends/colleagues/community members",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Scientific papers/specifications"
     ],
     [
@@ -14405,9 +13829,7 @@
       "Blog or website articles & guides",
       "Cardano docs (https://docs.cardano.org/)",
       "Friends/colleagues/community members",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)"
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)"
     ],
     [
       "Blog or website articles & guides",
@@ -14422,8 +13844,7 @@
       "Blog or website articles & guides",
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
-      "Reddit (r/Cardano",
-      "r/CardanoDevelopers)",
+      "Reddit (r/Cardano, r/CardanoDevelopers)",
       "Scientific papers/specifications"
     ],
     [
@@ -14432,22 +13853,16 @@
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Scientific papers/specifications",
       "Source code",
       "YouTube"
     ],
     [
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)"
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)"
     ],
     [
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "YouTube"
     ],
     [
@@ -14459,9 +13874,7 @@
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)"
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)"
     ],
     [
       "Blog or website articles & guides",
@@ -14469,9 +13882,7 @@
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Scientific papers/specifications",
       "Twitter/X",
       "YouTube"
@@ -14486,11 +13897,8 @@
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
       "Friends/colleagues/community members",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
-      "Reddit (r/Cardano",
-      "r/CardanoDevelopers)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
+      "Reddit (r/Cardano, r/CardanoDevelopers)",
       "Scientific papers/specifications",
       "Source code",
       "Telegram groups",
@@ -14500,9 +13908,7 @@
     [
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Scientific papers/specifications",
       "Source code"
     ],
@@ -14510,9 +13916,7 @@
       "Cardano forum",
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Source code"
     ],
     [
@@ -14528,16 +13932,13 @@
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
       "Friends/colleagues/community members",
-      "Reddit (r/Cardano",
-      "r/CardanoDevelopers)"
+      "Reddit (r/Cardano, r/CardanoDevelopers)"
     ],
     [
       "Blog or website articles & guides",
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Friends/colleagues/community members",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Source code",
       "Telegram groups",
       "YouTube",
@@ -14551,9 +13952,7 @@
       "YouTube"
     ],
     [
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)"
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)"
     ],
     [
       "Blog or website articles & guides",
@@ -14561,9 +13960,7 @@
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
       "Friends/colleagues/community members",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Source code"
     ],
     [
@@ -14621,9 +14018,7 @@
       "Blog or website articles & guides",
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Scientific papers/specifications",
       "Source code",
       "Twitter/X"
@@ -14658,9 +14053,7 @@
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
       "Friends/colleagues/community members",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Scientific papers/specifications",
       "Source code"
     ],
@@ -14675,18 +14068,14 @@
     [
       "Discord servers",
       "Friends/colleagues/community members",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Source code"
     ],
     [
       "Not Answered"
     ],
     [
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Gimbalabs discord"
     ],
     [
@@ -14698,11 +14087,8 @@
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
-      "Reddit (r/Cardano",
-      "r/CardanoDevelopers)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
+      "Reddit (r/Cardano, r/CardanoDevelopers)",
       "Scientific papers/specifications",
       "Source code",
       "YouTube"
@@ -14714,9 +14100,7 @@
       "Blog or website articles & guides",
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "YouTube"
     ],
     [
@@ -14724,9 +14108,7 @@
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Scientific papers/specifications",
       "Source code"
     ],
@@ -14738,9 +14120,7 @@
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Discord servers",
       "Friends/colleagues/community members",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Source code",
       "Plutus Project Based Learning"
     ],
@@ -14814,9 +14194,7 @@
       "Blog or website articles & guides",
       "Cardano forum",
       "Friends/colleagues/community members",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Telegram groups",
       "Twitter/X",
       "YouTube"
@@ -14834,17 +14212,14 @@
     ],
     [
       "Friends/colleagues/community members",
-      "Reddit (r/Cardano",
-      "r/CardanoDevelopers)",
+      "Reddit (r/Cardano, r/CardanoDevelopers)",
       "Source code"
     ],
     [
       "Blog or website articles & guides",
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Source code",
       "YouTube"
     ],
@@ -14884,8 +14259,7 @@
     ],
     [
       "Friends/colleagues/community members",
-      "Reddit (r/Cardano",
-      "r/CardanoDevelopers)"
+      "Reddit (r/Cardano, r/CardanoDevelopers)"
     ],
     [
       "Not Answered"
@@ -14895,9 +14269,7 @@
       "Cardano forum",
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Source code",
       "YouTube"
     ],
@@ -14913,9 +14285,7 @@
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
       "Discord servers",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Scientific papers/specifications",
       "Source code",
       "Telegram groups"
@@ -14931,8 +14301,7 @@
     [
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
-      "Reddit (r/Cardano",
-      "r/CardanoDevelopers)"
+      "Reddit (r/Cardano, r/CardanoDevelopers)"
     ],
     [
       "Blog or website articles & guides",
@@ -14958,9 +14327,7 @@
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
       "Friends/colleagues/community members",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "YouTube"
     ],
     [
@@ -15018,9 +14385,7 @@
       "Cardano forum",
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Scientific papers/specifications",
       "Source code"
     ],
@@ -15037,9 +14402,7 @@
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
       "Friends/colleagues/community members",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)"
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)"
     ],
     [
       "Discord servers",
@@ -15091,8 +14454,7 @@
     [
       "Blog or website articles & guides",
       "Cardano forum",
-      "Reddit (r/Cardano",
-      "r/CardanoDevelopers)",
+      "Reddit (r/Cardano, r/CardanoDevelopers)",
       "YouTube"
     ],
     [
@@ -15133,9 +14495,7 @@
     [
       "Blog or website articles & guides",
       "Discord servers",
-      "(Online) courses (e.g. Plutus Pioneer Program",
-      "EMURGO Academy",
-      "etc.)",
+      "(Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)",
       "Twitter/X"
     ],
     [
@@ -15149,8 +14509,7 @@
     ],
     [
       "Cardano forum",
-      "Reddit (r/Cardano",
-      "r/CardanoDevelopers)"
+      "Reddit (r/Cardano, r/CardanoDevelopers)"
     ],
     [
       "Discord servers",
@@ -15174,8 +14533,7 @@
       "Blog or website articles & guides",
       "Cardano's developer portal (https://developers.cardano.org/)",
       "Cardano docs (https://docs.cardano.org/)",
-      "Reddit (r/Cardano",
-      "r/CardanoDevelopers)",
+      "Reddit (r/Cardano, r/CardanoDevelopers)",
       "YouTube"
     ],
     [

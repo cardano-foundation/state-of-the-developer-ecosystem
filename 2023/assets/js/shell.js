@@ -190,6 +190,7 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
             , "Python"
             , "Rust"
             , "TypeScript"
+            , "PureScript"
             ]
           , sortDesc: true
           },
@@ -255,7 +256,6 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
             , "DAB (cardano-foundation)"
             , "Kupo (CardanoSolutions)"
             , "Hydra (input-output-hk)"
-            , "Marconi (input-output-hk)"
             , "Mithril (input-output-hk)"
             , "Offchain-metadata-tools (input-output-hk)"
             , "Ogmios (CardanoSolutions)"
@@ -279,6 +279,7 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
             [ "Blockfrost (5Binaries)"
             , "CardanoScan (StricaHQ)"
             , "CExplorer (Cardanians)"
+            , "Dandelion (Gimbalabs)"
             , "Demeter.run (TxPipe)"
             , "Freeloaderz (FreeLoaderz)"
             , "Handle (AdaHandle)"
@@ -286,6 +287,7 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
             , "Maestro (GoMaestro)"
             , "NMKR (NMKR)"
             , "Token registry (cardano-foundation)"
+            , "N/A"
             ]
           , sortDesc: true
           },
@@ -304,7 +306,11 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
             , "cardano-addresses (input-output-hk)"
             , "cardano-cli (input-output-hk)"
             , "cncli (cardano-community)"
+            , "helios (Hyperion-BT)"
+            , "jamb (iburzynski)"
             , "offchain-metadata-tools (input-output-hk)"
+            , "yaci (bloxbean)"
+            , "N/A"
             ]
           , sortDesc: true
           },
@@ -319,12 +325,14 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
           "How do you manage deployment to your infrastructure?",
           { options:
             [ "Ansible"
+            , "AWS"
             , "Bash scripts"
             , "Demeter.run"
             , "Docker"
             , "Kubernetes"
             , "Nix/NixOS"
             , "Terraform"
+            , "Vercel"
             , "N/A"
             ]
           , sortDesc: true
@@ -334,7 +342,14 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
         question24: question(
           "How would you rather consume software?",
           { options:
-            []
+            [ "Docker"
+            , "Downloadable static executable (amd)"
+            , "Downloadable static executable (arm)"
+            , "Language package manager (e.g. yarn, pip, cargo, cabal, etc.)"
+            , "Nix"
+            , "OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)"
+            , "Source code + build instructions"
+            ]
           , sortDesc: true
           },
           "",
@@ -374,7 +389,7 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
             , "Friends/colleagues/community members"
             , "GitHub discussions/issues"
             , "Reddit(r/Cardano, r/CardanoDevelopers)"
-            , "Telegram Groups"
+            , "Telegram groups"
             , "Twitter/X"
             ]
           , sortDesc: true
