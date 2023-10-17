@@ -409,69 +409,43 @@ updateQuestion15 { selectedFilter } =
             { model | questions = { questions | question15 = { q | selectedFilter = selectedFilter } } }
 
 
-updateQuestion22 :
+updateQuestion16 :
     { selectedFilter : Int }
     -> Msg
-updateQuestion22 { selectedFilter } =
+updateQuestion16 { selectedFilter } =
     ChangeFilter <|
         \({ questions } as model) ->
             let
                 q =
-                    questions.question22
+                    questions.question16
             in
-            { model | questions = { questions | question22 = { q | selectedFilter = selectedFilter } } }
+            { model | questions = { questions | question16 = { q | selectedFilter = selectedFilter } } }
 
 
-updateQuestion27 :
+updateQuestion18 :
     { selectedFilter : Int }
     -> Msg
-updateQuestion27 { selectedFilter } =
+updateQuestion18 { selectedFilter } =
     ChangeFilter <|
         \({ questions } as model) ->
             let
                 q =
-                    questions.question27
+                    questions.question18
             in
-            { model | questions = { questions | question27 = { q | selectedFilter = selectedFilter } } }
+            { model | questions = { questions | question18 = { q | selectedFilter = selectedFilter } } }
 
 
-updateQuestion28 :
+updateQuestion20 :
     { selectedFilter : Int }
     -> Msg
-updateQuestion28 { selectedFilter } =
+updateQuestion20 { selectedFilter } =
     ChangeFilter <|
         \({ questions } as model) ->
             let
                 q =
-                    questions.question28
+                    questions.question20
             in
-            { model | questions = { questions | question28 = { q | selectedFilter = selectedFilter } } }
-
-
-updateQuestion29 :
-    { selectedFilter : Int }
-    -> Msg
-updateQuestion29 { selectedFilter } =
-    ChangeFilter <|
-        \({ questions } as model) ->
-            let
-                q =
-                    questions.question29
-            in
-            { model | questions = { questions | question29 = { q | selectedFilter = selectedFilter } } }
-
-
-updateQuestion30 :
-    { selectedFilter : Int }
-    -> Msg
-updateQuestion30 { selectedFilter } =
-    ChangeFilter <|
-        \({ questions } as model) ->
-            let
-                q =
-                    questions.question30
-            in
-            { model | questions = { questions | question30 = { q | selectedFilter = selectedFilter } } }
+            { model | questions = { questions | question20 = { q | selectedFilter = selectedFilter } } }
 
 
 subscriptions : Model -> Sub Msg
@@ -633,15 +607,10 @@ view ({ title, introduction, questions } as model) =
             model
             updateQuestion13
             questions.question13
-            [ usingOnChain questions "Aiken"
-            , usingOnChain questions "Haskell/Plutus-tx"
-            , usingOnChain questions "Helios"
-            , usingOnChain questions "Marlowe"
-            , usingOnChain questions "OpShin"
-            , usingOnChain questions "Plu-ts"
-            , usingOnChain questions "Plutarch"
-            , usingOnChain questions "Pluto"
-            , usingOnChain questions "Solidity (with Milkomeda)"
+            [ withYearsOfExperience questions "Less than 1 year"
+            , withYearsOfExperience questions "Between 1 and 3 years"
+            , withYearsOfExperience questions "Between 3 and 10 years"
+            , withYearsOfExperience questions "Over 10 years"
             ]
         , viewOpen model questions.question14
         , viewMultipleChoicesWith
@@ -671,11 +640,35 @@ view ({ title, introduction, questions } as model) =
             , usingOnChain questions "Pluto"
             , usingOnChain questions "Solidity (with Milkomeda)"
             ]
-        , viewScale model questions.question16
+        , viewScaleWith
+            model
+            updateQuestion16
+            questions.question16
+            [ withYearsOfExperience questions "Less than 1 year"
+            , withYearsOfExperience questions "Between 1 and 3 years"
+            , withYearsOfExperience questions "Between 3 and 10 years"
+            , withYearsOfExperience questions "Over 10 years"
+            ]
         , viewMultipleChoices model questions.question17
-        , viewScale model questions.question18
+        , viewScaleWith
+            model
+            updateQuestion18
+            questions.question18
+            [ withYearsOfExperience questions "Less than 1 year"
+            , withYearsOfExperience questions "Between 1 and 3 years"
+            , withYearsOfExperience questions "Between 3 and 10 years"
+            , withYearsOfExperience questions "Over 10 years"
+            ]
         , viewMultipleChoices model questions.question19
-        , viewScale model questions.question20
+        , viewScaleWith
+            model
+            updateQuestion20
+            questions.question20
+            [ withYearsOfExperience questions "Less than 1 year"
+            , withYearsOfExperience questions "Between 1 and 3 years"
+            , withYearsOfExperience questions "Between 3 and 10 years"
+            , withYearsOfExperience questions "Over 10 years"
+            ]
         , viewMultipleChoices model questions.question21
         , viewScale model questions.question22
         , viewMultipleChoices model questions.question23
@@ -1138,6 +1131,23 @@ withYearsOfFPExperience questions xp =
     , function =
         \answers ->
             List.Extra.zip answers questions.question2.answers
+                |> List.map
+                    (\( a, xps ) ->
+                        if List.member xp xps then
+                            a
+
+                        else
+                            []
+                    )
+    }
+
+
+withYearsOfExperience : Questionnaire -> String -> Filter a
+withYearsOfExperience questions xp =
+    { title = "With " ++ xp ++ " of experience"
+    , function =
+        \answers ->
+            List.Extra.zip answers questions.question1.answers
                 |> List.map
                     (\( a, xps ) ->
                         if List.member xp xps then
