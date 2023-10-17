@@ -204,15 +204,15 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
         question14: question(
           "What is your most awaited feature when it comes to Cardano’s smart contracts?",
           { options:
-            [ [ "PlutusV3 / BLS / Zero-Knowledge primitives", 16 ]
-            , [ "Maturity of emerging solutions (e.g. Aiken, Helios, ...)", 14 ]
-            , [ "More/better educational resources & easier on-boarding", 10 ]
-            , [ "Better off-chain interoperability & composability", 7 ]
-            , [ "Better tooling, usability & accessibility", 7 ]
-            , [ "Input endorsers & increased scalability", 7 ]
-            , [ "Increased execution limits and/or smaller execution costs", 7 ]
-            , [ "Better abstractions to work with the EUTxO model", 5 ]
-            , [ "Hydra", 5 ]
+            [ [ "PlutusV3 / BLS / Zero-Knowledge primitives", 16, null ]
+            , [ "Maturity of emerging solutions (e.g. Aiken, Helios, ...)", 14, null ]
+            , [ "More/better educational resources & easier on-boarding", 10, null ]
+            , [ "Better off-chain interoperability & composability", 7, null ]
+            , [ "Better tooling, usability & accessibility", 7, null ]
+            , [ "Input endorsers & increased scalability", 7, null ]
+            , [ "Increased execution limits and/or smaller execution costs", 7, null ]
+            , [ "Better abstractions to work with the EUTxO model", 5, null ]
+            , [ "Hydra", 5, "https://hydra.family" ]
             ]
           , link: `${repository}/2023/data/open-questions/what-is-your-most-awaited-feature-when-it-comes-to-cardano-s-smart-contracts.md`
           },
@@ -366,7 +366,18 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
         ),
         question25: question(
           "What do you think is the greatest asset of Cardano’s developer ecosystem?",
-          { options: []
+          { options:
+            [ [ "Its community", 32, null ]
+            , [ "Its diverse and furnished open source ecosystem", 19, null ]
+            , [ "Aiken", 17, "https://aiken-lang.org/"  ]
+            , [ "Few key players (TxPipe, Gimbalabs, DCSpark...)", 16, null ]
+            , [ "Its methodology, strong foundations and overall evidence-based approach", 10, null ]
+            , [ "Its reliance on functional programming / the EUTxO model", 8, null ]
+            , [ "Lucid", 5, "https://lucid.spacebudz.io/" ]
+            , [ "Helios", 4, "https://www.hyperion-bt.org/helios-book/" ]
+            , [ "Jambhala / Emurgo Academy", 4, "https://github.com/iburzynski/jambhala#readme" ]
+            , [ "Blockfrost", 4,  "https://blockfrost.io/" ]
+            ]
           , link: `${repository}/2023/data/open-questions/what-do-you-think-is-the-greatest-asset-of-cardano-s-developer-ecosystem.md`,
           },
           "",
@@ -374,19 +385,19 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
         question26: question(
           "What do you think is the most painful point of Cardano's developer ecosystem?",
           { options:
-            [ [ "Hard to find / scattered documentation", 26 ]
-            , [ "Haskell", 22 ]
-            , [ "Tough on-boarding, hard to get started", 15 ]
-            , [ "Inconsistence between development libraries & APIs", 14 ]
-            , [ "Off-chain transaction building & on-chain/off-chain interoperability", 10 ]
-            , [ "Finding funding & financial support", 10 ]
-            , [ "Delays and disappointments from genesis entities", 9 ]
-            , [ "Adoption and general lack of users/developers/liquidity", 9 ]
-            , [ "Nix", 6 ]
-            , [ "Smart-contract debugging / testing / benchmarking", 6 ]
-            , [ "Infrastructure costs & complexity", 6 ]
-            , [ "Understanding EUTxO & how to build in this model", 5 ]
-            , [ "Speed/throughput of the network", 3 ]
+            [ [ "The hard to find / scattered documentation", 26, null ]
+            , [ "Haskell", 22, null ]
+            , [ "The tough on-boarding, it's hard to get started", 15, null ]
+            , [ "The inconsistencies between development libraries & APIs", 14, null ]
+            , [ "Off-chain transaction building & on-chain/off-chain interoperability", 10, null ]
+            , [ "Finding funding & financial support", 10, null ]
+            , [ "The delays and disappointments from genesis entities", 9, null ]
+            , [ "The adoption and the general lack of users/developers/liquidity", 9, null ]
+            , [ "Nix", 6, null ]
+            , [ "Smart contracts debugging / testing / benchmarking", 6, null ]
+            , [ "Infrastructure costs & complexity", 6, null ]
+            , [ "Understanding EUTxO & how to build in this model", 5, null ]
+            , [ "The speed/throughput of the network", 3, null ]
             ]
           , link: `${repository}/2023/data/open-questions/what-do-you-think-is-the-most-painful-point-of-cardano-s-developer-ecosystem.md`
           },
@@ -494,7 +505,6 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
    * Applicable'). Somehow, there are also few answers that are simply 'null'.
    */
   function question (title, args = {}, comment = "", titleAlt = title) {
-    console.log(title)
     return {
       ...args,
       options: Object.values(args.options || {}),

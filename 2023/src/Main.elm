@@ -203,7 +203,7 @@ type alias Open =
     { title : String
     , comment : String
     , link : String
-    , options : List ( String, Int )
+    , options : List ( String, Int, Maybe String )
     , answers : List (List String)
     }
 
@@ -640,7 +640,7 @@ viewOpen model =
             let
                 data =
                     options
-                        |> List.map (\( x, y ) -> { x = x, y = y })
+                        |> List.map (\( label, y, extraLink ) -> { x = { label = label, link = extraLink }, y = y })
                         |> List.sortBy (\{ y } -> -y)
             in
             Html.article
@@ -699,7 +699,26 @@ viewOpen model =
                                 in
                                 Html.li
                                     []
-                                    [ Html.label [] [ Html.text x ]
+                                    [ Html.label [] <|
+                                        case x.link of
+                                            Nothing ->
+                                                [ Html.text x.label ]
+
+                                            Just href ->
+                                                [ Html.text x.label
+                                                , Html.a
+                                                    [ Html.Attributes.href href
+                                                    , Html.Attributes.target "_blank"
+                                                    , Html.Attributes.style "font-size" "0.8em"
+                                                    , Html.Attributes.style "position" "relative"
+                                                    , Html.Attributes.style "top" "-0.5em"
+                                                    ]
+                                                    [ Svg.svg
+                                                        [ Svg.Attributes.class "icon"
+                                                        ]
+                                                        [ Svg.use [ Svg.Attributes.xlinkHref "#icon-external-link" ] [] ]
+                                                    ]
+                                                ]
                                     , Html.div []
                                         [ Html.div
                                             [ Html.Attributes.class "bar"

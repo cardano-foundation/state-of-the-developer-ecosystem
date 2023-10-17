@@ -6,7 +6,7 @@ The answers expressed in this survey by the community are not intended to reflec
 
 # What do you think is the most painful point of Cardano's developer ecosystem?
 
-## Hard to find / scattered documentation (26)
+## Hard to find / scattered documentation [26]
 
 - Documentation, dev experience
 - cbor/plutus data. There just doesn't seem to be any good resources for getting a good understanding of this, at least I haven't seen any. Aiken blueprint helps abstract some of this away but grasping the concepts on a fundamental level still seems important to build on Cardano. Would like to see more ways to make this less painful
@@ -35,7 +35,7 @@ The answers expressed in this survey by the community are not intended to reflec
 - Documentation
 - the documenation with real world examples
 
-## Haskell (22)
+## Haskell [22]
 
 - It is very time consuming to learn Plutus right now, this is where my pain is at the moment.
 - Learning curve especially functional Haskell.
@@ -62,7 +62,7 @@ The answers expressed in this survey by the community are not intended to reflec
 - Legacy Haskell code is a sticking point for many of us.
 - Plutus, Hydra
 
-## Tough on-boarding, hard to get started (15)
+## Tough on-boarding, hard to get started [15]
 
 - Getting started
 - I am still learning and find it is hard to find great educational material. Would love to see more courses on Aiken and other SC languages. And also videos about the dev tools from earlier in the survey.
@@ -80,7 +80,7 @@ The answers expressed in this survey by the community are not intended to reflec
 - At present, there is no standardized resource available for beginners.
 - Lack of great documentation to start from zero
 
-## Inconsistence between development libraries & APIs (14)
+## Inconsistence between development libraries & APIs [14]
 
 - Infighting between solutions.
 - drama and fighting between projects beyond competition and healthy rivalry. also projects rugging after draining community funds.
@@ -97,7 +97,7 @@ The answers expressed in this survey by the community are not intended to reflec
 - Too many layers of abstraction in the core Cardano libraries (cardano-ledger, ouroboros-consensus, cardano-api, etc.), leading to downstream libraries repeatedly reinventing APIs and types in misguided attempts to mitigate some complexity.
 - In places they are hard to follow and and naming conventions and standards are all over the place between projects and within projects.
 
-## Off-chain transaction building & on-chain/off-chain interoperability (10)
+## Off-chain transaction building & on-chain/off-chain interoperability [10]
 
 - Debugging serialization problems & onchain bugs is still difficult. Aiken has made good progress here, but there's lots of room to improve.
 - The offchain needs a lot of work to be much simpler and not in JS. This is a crucial part of transaction building. And a massive blocker to rapid contract improvement.
@@ -110,7 +110,7 @@ The answers expressed in this survey by the community are not intended to reflec
 - Bridging on chain and off chain
 - Getting a frontend engineer to build correct off chain in some library that Ale's made where he stopped maintaining it after his mvp release is painful. Then we try to use some other lib that is even worse to use in terms of devx since they are just forks of some other repo no one maintains. It's literally the worst part of cardano. For how easy it is to use the cli, it's a joke when it comes to getting anything else to work. The amount of effort to make a dapp work on the frontend is crazy."
 
-## Finding funding & financial support (10)
+## Finding funding & financial support [10]
 
 - Bad financial support for diverse dev-system contributors like Adriano / GameChanger, Gimbalabs, and many more.  No economic reciprocity for dedicated contributions, resulting in talent being wasted to friction & attention-leakage.  difficult mental/operational models, low accessibility of learning materials, no /low maturity of architectural / system-design patterns / practical lifecycle support.  anarchic / chaotic / you're-on-your-own vibe.
 - It is severely underfunded! Many libraries like PyCardano or OpShin are mainly built by a single person who also runs this library only as a side project. If there were maybe 2 or 3 more people working on these libraries (even just part-time), the developer experience would be sooo much better. The ideas behind these tools are sometimes very good, but the resources needed to put the ideas into practice are lacking.
@@ -123,7 +123,7 @@ The answers expressed in this survey by the community are not intended to reflec
 - See previous response about limited funding.
 - Lack of support, software quality
 
-## Delays and disappointments from genesis entities (9)
+## Delays and disappointments from genesis entities [9]
 
 - Technical decisions made by IOG
 - Open source projects are slow to deliver.
@@ -135,7 +135,7 @@ The answers expressed in this survey by the community are not intended to reflec
 - Founding entitites disconnected from dev env reality,
 - Most of the tooling around/built by iohk, cardano foundation, etc
 
-## Adoption and general lack of users/developers/liquidity (9)
+## Adoption and general lack of users/developers/liquidity [9]
 
 - the relatively low uptake and the still small ecosystem make it difficult to determine the likely medium- and long-term success of projects that are present and further developed
 - Users
@@ -147,7 +147,7 @@ The answers expressed in this survey by the community are not intended to reflec
 - Community is very small
 - There's need to more innovation, more young developers interested in building on cardano
 
-## Nix (6)
+## Nix [6]
 
 - Also Nix. Besides being able to integrating anything, it has a step learning curve. I would love to see some movement on improving the Nix language and tooling towards a more unified Cardano-Nix ecosystem.
 - Nix
@@ -156,7 +156,7 @@ The answers expressed in this survey by the community are not intended to reflec
 - (Haskell and) nix everywhere
 - (Haskell and) Nix
 
-## Smart-contract debugging / testing / benchmarking (6)
+## Smart-contract debugging / testing / benchmarking [6]
 
 - on-chain script debuging
 - Smart contract testing and frameworks for off-chain code in general.
@@ -165,7 +165,7 @@ The answers expressed in this survey by the community are not intended to reflec
 - Debugging serialization problems & onchain bugs is still difficult. Aiken has made good progress here, but there's lots of room to improve.
 - Complexity of smart contract development
 
-## Infrastructure costs & complexity (6)
+## Infrastructure costs & complexity [6]
 
 - It's hard to run a node locally without powerful hardware.
 - Demanding on resources and technical skills
@@ -174,7 +174,7 @@ The answers expressed in this survey by the community are not intended to reflec
 - Support for equipment
 - The lack of alternative node clients (eg. ready only or light clients) and the high cost of indexing datum data for dapps
 
-## Understanding EUTxO & how to build in this model (5)
+## Understanding EUTxO & how to build in this model [5]
 
 - Lack of understanding of Smart Contract Plutus V2 Design Patterns, semantics is hard, syntax became easy these days.
 - Batching, lack of atomic composability
@@ -182,7 +182,7 @@ The answers expressed in this survey by the community are not intended to reflec
 - Leaving some of the critical things that should be part of core libraries, to interpretation and implementation by the dapp teams which makes their life difficult!
 - The eUTxO model :) ... though allowing for interesting design solutions it can be a hurdle until you understand the benefits and find solutions to certain problems easier solved with an account based model.
 
-## Speed/throughput of the network (3)
+## Speed/throughput of the network [3]
 
 - Speed of the network
 - Speed & integration & flexibility

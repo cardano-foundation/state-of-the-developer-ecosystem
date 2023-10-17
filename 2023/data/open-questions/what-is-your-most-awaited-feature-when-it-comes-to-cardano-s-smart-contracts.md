@@ -6,7 +6,7 @@ The answers expressed in this survey by the community are not intended to reflec
 
 # What is your most awaited feature when it comes to Cardano’s smart contracts?
 
-## PlutusV3 (BLS, Zero-Knowledge...) (16)
+## PlutusV3 (BLS, Zero-Knowledge...) [16]
 
 - More capabilities and Zero Knowledge
 - PlutusV3 because of Blake2b224 hash, bitwise builtins, and BLS primitives
@@ -25,7 +25,7 @@ The answers expressed in this survey by the community are not intended to reflec
 - Plutus V3, ZK primitives, UPLC Constr/Case, merging of Plutus Data into UPLC, EC point operations primitives, bitwise operations primitives
 - BLS builtins
 
-## Maturity of emerging solutions (e.g. Aiken, Helios, ...) (14)
+## Maturity of emerging solutions (e.g. Aiken, Helios, ...) [14]
 
 - Production ready languages (aiken, opshin) + remix like code editor with build and deploy smart contract functionality
 - Naumachia
@@ -42,7 +42,7 @@ The answers expressed in this survey by the community are not intended to reflec
 - An aiken release with an audit (or audits) that can be relied upon for serious Cardano projects.
 - Being able to code them in a simpler language
 
-## More educational material / Easier on-boarding (10)
+## More educational material / Easier on-boarding [10]
 
 - Just more educational material
 - Open-sourcing a lot of them
@@ -55,7 +55,7 @@ The answers expressed in this survey by the community are not intended to reflec
 - Great documentation
 - Overall better polish and documentation
 
-## Better off-chain interoperability (7)
+## Better off-chain interoperability [7]
 
 - Off chain code generation from blueprint for aiken
 - More off chain dsl, preferably not in js/ts
@@ -65,7 +65,7 @@ The answers expressed in this survey by the community are not intended to reflec
 - JavaScript or TypeScript SDK to generate Cardano's smart contracts
 - Off-chain check of tx
 
-## Input endorsers & scalability (7)
+## Input endorsers & scalability [7]
 
 - Tiered fees, input endorsers for improved scalability
 - Input endorsers
@@ -75,7 +75,7 @@ The answers expressed in this survey by the community are not intended to reflec
 - Higher throughput
 - Contention so
 
-## Usability & Accessibility (7)
+## Usability & Accessibility [7]
 
 - Being able to develop on a Windows computer
 - a smart contract IDE
@@ -85,7 +85,7 @@ The answers expressed in this survey by the community are not intended to reflec
 - better tooling
 - Better tooling
 
-## Increased execution limits and/or smaller execution costs (7)
+## Increased execution limits and/or smaller execution costs [7]
 
 - Raised execution units limits
 - Higher limits for tx size and ex units.
@@ -95,7 +95,7 @@ The answers expressed in this survey by the community are not intended to reflec
 - script size reduced
 - Making it cheaper to execute
 
-## Better abstractions to work with EUTxO (5)
+## Better abstractions to work with EUTxO [5]
 
 - Being able to build more complex expression for the smart contracts and also hopefully someday we can abstract everything much better to the point where the average developer can just do LockAsset() Swap() RedeemAsset()
 - Abstractions on top of the EUTXO model to facilitate creating validators.
@@ -103,7 +103,7 @@ The answers expressed in this survey by the community are not intended to reflec
 - Composability, some method to avoid batching
 - Plug and play smart contract suites for off-chain businesses of all types
 
-## Hydra (5)
+## Hydra [5]
 
 - Hydra
 - Hydra
@@ -111,27 +111,27 @@ The answers expressed in this survey by the community are not intended to reflec
 - Hydra
 - Hydra
 
-## On-chain randomness (2)
+## On-chain randomness [2]
 
 - Time and randomness would both be nice.
 - On chain random number generation
 
-## Identity (2)
+## Identity [2]
 
 - More integration and development with Atala Prism in the ecosystem.
 - Native Capability for layer2 or sidechain data networks and access control networks like SSI
 
-## Optional datum (2)
+## Optional datum [2]
 
 - Spending UTXOs that do not have a datum.
 - (Optional Datum) and (optional redeemer) so that wallets can directly pay to contract address without worrying  about the datum. Datum and redeemer is optional in ledger but it is the plutus that is demanding them.
 
-## Plutus-Tx Improvements (2)
+## Plutus-Tx Improvements [2]
 
 - Faster and smaller smart contracts with future PlutusTx updates
 - PlutusTx optimisation and better tooling
 
-## Voltaire (2)
+## Voltaire [2]
 
 - Voltaire
 - Governance and Dapps
