@@ -161,12 +161,6 @@ article > p {
     hyphens: auto;
 }
 
-span.see-all {
-    display: inline-block;
-    width: 100%;
-    font-size: 0.9em;
-}
-
 /* nav */
 
 nav {
@@ -249,14 +243,18 @@ aside select {
     max-width: 15rem;
 }
 
+aside .see-all,
 aside .filters {
     margin-top: 0;
     margin-left: 1rem;
-}
-
-aside span.filters {
     display: inline-block;
     font-size: 0.9em;
+}
+
+aside .see-all svg.icon {
+  position: relative;
+  top: 0.15em;
+  left: 0.25em;
 }
 
 aside button.active {

@@ -203,7 +203,7 @@ type alias Open =
     { title : String
     , comment : String
     , link : String
-    , options : List String
+    , options : List ( String, Int )
     , answers : List (List String)
     }
 
@@ -504,7 +504,7 @@ view ({ title, introduction, questions } as model) =
         , viewMultipleChoices model questions.question11
         , viewMultipleChoices model questions.question12
         , viewScale model questions.question13
-        , viewOpen questions.question14
+        , viewOpen model questions.question14
         , viewMultipleChoices model questions.question15
         , viewScale model questions.question16
         , viewMultipleChoices model questions.question17
@@ -515,8 +515,8 @@ view ({ title, introduction, questions } as model) =
         , viewScale model questions.question22
         , viewMultipleChoices model questions.question23
         , viewMultipleChoices model questions.question24
-        , viewOpen questions.question25
-        , viewOpen questions.question26
+        , viewOpen model questions.question25
+        , viewOpen model questions.question26
         , viewMultipleChoices model questions.question27
         , viewMultipleChoices model questions.question28
         , viewMultipleChoices model questions.question29
@@ -631,25 +631,95 @@ viewScaleWith model toMsg { title, comment, answers, minimum, maximum, selectedF
 
 
 viewOpen :
-    Open
+    Model
+    -> Open
     -> Html Msg
-viewOpen =
+viewOpen model =
     Html.Lazy.lazy <|
         \{ title, options, comment, answers, link } ->
+            let
+                data =
+                    options
+                        |> List.map (\( x, y ) -> { x = x, y = y })
+                        |> List.sortBy (\{ y } -> -y)
+            in
             Html.article
                 []
                 [ viewQuestionTitle title
-                , Html.span
-                    [ Html.Attributes.class "see-all" ]
-                    [ Html.text <| String.fromInt (total answers) ++ " answers "
-                    , Html.a
-                        [ Html.Attributes.href link
-                        , Html.Attributes.target "_blank"
+                , Html.aside
+                    []
+                    [ Html.div
+                        []
+                        [ Html.button
+                            [ Html.Events.onClick (ChangeDisplayOption DisplayRelative)
+                            , Html.Attributes.class <|
+                                case model.displayOption of
+                                    DisplayRelative ->
+                                        "active"
+
+                                    DisplayTotal ->
+                                        ""
+                            ]
+                            [ Html.text "relative (%)" ]
+                        , Html.button
+                            [ Html.Events.onClick (ChangeDisplayOption DisplayTotal)
+                            , Html.Attributes.class <|
+                                case model.displayOption of
+                                    DisplayRelative ->
+                                        ""
+
+                                    DisplayTotal ->
+                                        "active"
+                            ]
+                            [ Html.text "total" ]
                         ]
-                        [ Html.text "(see all)" ]
+                    , Html.span
+                        [ Html.Attributes.class "see-all" ]
+                        [ Html.text <| String.fromInt (total answers) ++ " answers "
+                        , Html.a
+                            [ Html.Attributes.href link
+                            , Html.Attributes.target "_blank"
+                            ]
+                            [ Html.text "(see all)"
+                            , Svg.svg
+                                [ Svg.Attributes.class "icon"
+                                ]
+                                [ Svg.use [ Svg.Attributes.xlinkHref "#icon-external-link" ] [] ]
+                            ]
+                        ]
                     ]
-                , Html.ul [] <|
-                    List.map (\opt -> Html.li [] [ Html.text opt ]) options
+                , Html.ul
+                    [ Html.Attributes.class "bars" ]
+                    (data
+                        |> List.map
+                            (\{ x, y } ->
+                                let
+                                    yMax =
+                                        total answers
+                                in
+                                Html.li
+                                    []
+                                    [ Html.label [] [ Html.text x ]
+                                    , Html.div []
+                                        [ Html.div
+                                            [ Html.Attributes.class "bar"
+                                            , Html.Attributes.style "width" (displayPercent yMax y)
+                                            ]
+                                            []
+                                        , Html.label
+                                            []
+                                            [ Html.text <|
+                                                case model.displayOption of
+                                                    DisplayTotal ->
+                                                        String.fromInt y
+
+                                                    DisplayRelative ->
+                                                        displayPercent yMax y
+                                            ]
+                                        ]
+                                    ]
+                            )
+                    )
                 , Html.hr [] []
                 , Markdown.toHtmlWith { defaultOptions | sanitize = False } [] comment
                 ]
