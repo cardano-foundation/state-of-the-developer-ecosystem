@@ -279,6 +279,19 @@ updateQuestion3 { selectedFilter } =
             { model | questions = { questions | question3 = { q | selectedFilter = selectedFilter } } }
 
 
+updateQuestion4 :
+    { selectedFilter : Int }
+    -> Msg
+updateQuestion4 { selectedFilter } =
+    ChangeFilter <|
+        \({ questions } as model) ->
+            let
+                q =
+                    questions.question4
+            in
+            { model | questions = { questions | question4 = { q | selectedFilter = selectedFilter } } }
+
+
 updateQuestion5 :
     { selectedFilter : Int }
     -> Msg
@@ -422,6 +435,19 @@ updateQuestion16 { selectedFilter } =
             { model | questions = { questions | question16 = { q | selectedFilter = selectedFilter } } }
 
 
+updateQuestion17 :
+    { selectedFilter : Int }
+    -> Msg
+updateQuestion17 { selectedFilter } =
+    ChangeFilter <|
+        \({ questions } as model) ->
+            let
+                q =
+                    questions.question17
+            in
+            { model | questions = { questions | question17 = { q | selectedFilter = selectedFilter } } }
+
+
 updateQuestion18 :
     { selectedFilter : Int }
     -> Msg
@@ -435,6 +461,19 @@ updateQuestion18 { selectedFilter } =
             { model | questions = { questions | question18 = { q | selectedFilter = selectedFilter } } }
 
 
+updateQuestion19 :
+    { selectedFilter : Int }
+    -> Msg
+updateQuestion19 { selectedFilter } =
+    ChangeFilter <|
+        \({ questions } as model) ->
+            let
+                q =
+                    questions.question19
+            in
+            { model | questions = { questions | question19 = { q | selectedFilter = selectedFilter } } }
+
+
 updateQuestion20 :
     { selectedFilter : Int }
     -> Msg
@@ -446,6 +485,32 @@ updateQuestion20 { selectedFilter } =
                     questions.question20
             in
             { model | questions = { questions | question20 = { q | selectedFilter = selectedFilter } } }
+
+
+updateQuestion22 :
+    { selectedFilter : Int }
+    -> Msg
+updateQuestion22 { selectedFilter } =
+    ChangeFilter <|
+        \({ questions } as model) ->
+            let
+                q =
+                    questions.question22
+            in
+            { model | questions = { questions | question22 = { q | selectedFilter = selectedFilter } } }
+
+
+updateQuestion23 :
+    { selectedFilter : Int }
+    -> Msg
+updateQuestion23 { selectedFilter } =
+    ChangeFilter <|
+        \({ questions } as model) ->
+            let
+                q =
+                    questions.question23
+            in
+            { model | questions = { questions | question23 = { q | selectedFilter = selectedFilter } } }
 
 
 subscriptions : Model -> Sub Msg
@@ -529,7 +594,15 @@ view ({ title, introduction, questions } as model) =
             , withYearsOfFPExperience questions "Between 3 and 10 years"
             , withYearsOfFPExperience questions "Over 10 years"
             ]
-        , viewMultipleChoices model questions.question4
+        , viewMultipleChoicesWith
+            model
+            updateQuestion4
+            questions.question4
+            [ withYearsOfExperience questions "Less than 1 year"
+            , withYearsOfExperience questions "Between 1 and 3 years"
+            , withYearsOfExperience questions "Between 3 and 10 years"
+            , withYearsOfExperience questions "Over 10 years"
+            ]
         , viewMultipleChoicesWith
             model
             updateQuestion5
@@ -649,7 +722,28 @@ view ({ title, introduction, questions } as model) =
             , withYearsOfExperience questions "Between 3 and 10 years"
             , withYearsOfExperience questions "Over 10 years"
             ]
-        , viewMultipleChoices model questions.question17
+        , viewMultipleChoicesWith
+            model
+            updateQuestion17
+            questions.question17
+            [ withYearsOfExperience questions "Less than 1 year"
+            , withYearsOfExperience questions "Between 1 and 3 years"
+            , withYearsOfExperience questions "Between 3 and 10 years"
+            , withYearsOfExperience questions "Over 10 years"
+            , isProficientIn questions "JavaScript"
+            , isProficientIn questions "TypeScript"
+            , isProficientIn questions "Haskell"
+            , isProficientIn questions "Bash"
+            , isProficientIn questions "Python"
+            , isProficientIn questions "Rust"
+            , isProficientIn questions "Java"
+            , isProficientIn questions "Aiken"
+            , isProficientIn questions "C++"
+            , isProficientIn questions "C"
+            , isProficientIn questions "PHP"
+            , isProficientIn questions "C#"
+            , isProficientIn questions "Go"
+            ]
         , viewScaleWith
             model
             updateQuestion18
@@ -659,7 +753,28 @@ view ({ title, introduction, questions } as model) =
             , withYearsOfExperience questions "Between 3 and 10 years"
             , withYearsOfExperience questions "Over 10 years"
             ]
-        , viewMultipleChoices model questions.question19
+        , viewMultipleChoicesWith
+            model
+            updateQuestion19
+            questions.question19
+            [ withYearsOfExperience questions "Less than 1 year"
+            , withYearsOfExperience questions "Between 1 and 3 years"
+            , withYearsOfExperience questions "Between 3 and 10 years"
+            , withYearsOfExperience questions "Over 10 years"
+            , isProficientIn questions "JavaScript"
+            , isProficientIn questions "TypeScript"
+            , isProficientIn questions "Haskell"
+            , isProficientIn questions "Bash"
+            , isProficientIn questions "Python"
+            , isProficientIn questions "Rust"
+            , isProficientIn questions "Java"
+            , isProficientIn questions "Aiken"
+            , isProficientIn questions "C++"
+            , isProficientIn questions "C"
+            , isProficientIn questions "PHP"
+            , isProficientIn questions "C#"
+            , isProficientIn questions "Go"
+            ]
         , viewScaleWith
             model
             updateQuestion20
@@ -670,8 +785,40 @@ view ({ title, introduction, questions } as model) =
             , withYearsOfExperience questions "Over 10 years"
             ]
         , viewMultipleChoices model questions.question21
-        , viewScale model questions.question22
-        , viewMultipleChoices model questions.question23
+        , viewScaleWith
+            model
+            updateQuestion22
+            questions.question22
+            [ withYearsOfExperience questions "Less than 1 year"
+            , withYearsOfExperience questions "Between 1 and 3 years"
+            , withYearsOfExperience questions "Between 3 and 10 years"
+            , withYearsOfExperience questions "Over 10 years"
+            ]
+        , viewMultipleChoicesWith
+            model
+            updateQuestion23
+            questions.question23
+            [ withYearsOfExperience questions "Less than 1 year"
+            , withYearsOfExperience questions "Between 1 and 3 years"
+            , withYearsOfExperience questions "Between 3 and 10 years"
+            , withYearsOfExperience questions "Over 10 years"
+            , usingService questions "Atlas (GeniusYield)"
+            , usingService questions "cardano-db-sync (input-output-hk)"
+            , usingService questions "cardano-graphql (cardano-foundation)"
+            , usingService questions "cardano-metadata-oracle (5Binaries)"
+            , usingService questions "cardano-rosetta (cardano-foundation)"
+            , usingService questions "cardano-transaction-lib (Plutonomicon)"
+            , usingService questions "cardano-wallet (cardano-foundation)"
+            , usingService questions "DAB (cardano-foundation)"
+            , usingService questions "Kupo (CardanoSolutions)"
+            , usingService questions "Hydra (input-output-hk)"
+            , usingService questions "Mithril (input-output-hk)"
+            , usingService questions "Offchain-metadata-tools (input-output-hk)"
+            , usingService questions "Ogmios (CardanoSolutions)"
+            , usingService questions "Oura (TxPipe)"
+            , usingService questions "Scrolls (TxPipe)"
+            , usingService questions "SMASH (input-output-hk)"
+            ]
         , viewMultipleChoices model questions.question24
         , viewOpen model questions.question25
         , viewOpen model questions.question26
@@ -897,7 +1044,6 @@ viewOpen model =
                                     ]
                             )
                     )
-                , Html.hr [] []
                 , Markdown.toHtmlWith { defaultOptions | sanitize = False } [] comment
                 ]
 
@@ -1219,6 +1365,23 @@ usingOnChain questions lang =
                 |> List.map
                     (\( a, langs ) ->
                         if List.member lang langs then
+                            a
+
+                        else
+                            []
+                    )
+    }
+
+
+usingService : Questionnaire -> String -> Filter a
+usingService questions tool =
+    { title = "Using " ++ tool ++ " as a service"
+    , function =
+        \answers ->
+            List.Extra.zip answers questions.question17.answers
+                |> List.map
+                    (\( a, tools ) ->
+                        if List.member tool tools then
                             a
 
                         else
