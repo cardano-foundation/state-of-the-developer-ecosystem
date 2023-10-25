@@ -6,7 +6,7 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
     node,
     flags: {
       title: "State of the Cardano Developer Ecosystem - 2023",
-      introduction: "The second edition of the annual survey to assess the state of the Cardano developer ecosystem was conducted. It consisted of 30 questions. While a total of 174 replies were received, some questions obtained fewer responses than others.<br/><br/>The Cardano Foundation invites anyone interested in performing supplementary analysis of the results to do so. This survey comes as part of our commitment to both empower the Cardano community and foster the open source maturity of the Cardano ecosystem. Consequently, the report, as well as the code for rendering it, are <a href='https://github.com/cardano-foundation/state-of-the-developer-ecosystem'>open source <svg class='icon' style='top: 2px; position: relative;'><use xlink:href='#icon-github'/></svg></a> and we heartly welcome contributions from the community. For instance, the community might want to add more filters to the ones already included in the report. A [Github discussion board](https://github.com/cardano-foundation/state-of-the-developer-ecosystem/discussions/) has been created to encourage the debate.<br/><br/>Going forward, [we expect to conduct annual surveys](https://cardanofoundation.org/en/news/state-of-the-cardano-developer-ecosystem-a-survey-to-equip-the-community/) in order to better evaluate what has been accomplished, which steps led to advantageous results, what these were, and which aspects still require attention.<br/><br/> The Cardano Foundation <u>thanks all those who took the time to answer this year’s survey</u> and hopes to also count with their participation for the forthcoming second edition.",
+      introduction: "The second edition of the annual survey to assess the state of the Cardano developer ecosystem was conducted. It consisted of 30 questions. While a total of 174 replies were received, some questions obtained fewer responses than others.<br/><br/>The Cardano Foundation invites anyone interested in performing supplementary analysis of the results to do so. This survey comes as part of our commitment to both empower the Cardano community and foster the open source maturity of the Cardano ecosystem. Consequently, the report, as well as the code for rendering it, are <a href='https://github.com/cardano-foundation/state-of-the-developer-ecosystem'>open source <svg class='icon' style='top: 2px; position: relative;'><use xlink:href='#icon-github'/></svg></a> and we heartly welcome contributions from the community. For instance, the community might want to add more filters to the ones already included in the report. A [Github discussion board](https://github.com/cardano-foundation/state-of-the-developer-ecosystem/discussions/) has been created to encourage the debate.<br/><br/>Going forward, [we will continue conducting annual surveys](https://cardanofoundation.org/en/news/state-of-the-cardano-developer-ecosystem-a-survey-to-equip-the-community/) in order to better evaluate what has been accomplished, which steps led to advantageous results, what these were, and which aspects still require attention.<br/><br/> The Cardano Foundation <u>thanks all those who took the time to answer this year’s survey</u> and hopes to also count with their participation for the forthcoming second edition.",
       questions: {
         question1: question(
           "How many years of experience do you have writing/deploying software?",
@@ -18,7 +18,7 @@ fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => re
             ]
           , sortDesc: false
           },
-`The composition of the developer panel skews noticeably towards the experienced end of the spectrum, with scant representation from those in the earliest stages of their careers. This trend suggests the industry might present a significant learning curve and barriers to entry that challenge beginners.
+`The composition of the developer panel skews noticeably towards the experienced end of the spectrum, with minimal representation from those in the earliest stages of their career. This trend suggests the industry might present a significant learning curve and barriers to entry that challenge beginners.
 
 The notable absence of professionals with less than a year of experience, coupled with a strong presence of veterans with upwards of a decade in the field, raises questions about accessibility for newcomers. It highlights the need for mechanisms within the sector that can help bridge this gap, easing novices' entry through mentorship, education, and practical support. This point is later reinforced by answers to other questions.`
         ),
@@ -33,16 +33,16 @@ The notable absence of professionals with less than a year of experience, couple
             ]
           , sortDesc: false
           },
-`The experience within the panel regarding functional programming presents a more evenly distributed picture, a departure from the previous observation of a largely senior-dominated landscape. Despite the strong presence of Haskell, known for their steep learning curve, there's an encouraging sign that the ecosystem doesn't discourage non-functional programming (FP) enthusiasts.
+`The experience within the panel regarding functional programming presents a more evenly distributed picture, a departure from the previous observation of a largely senior-dominated landscape. Despite the strong presence of Haskell, known for its steep learning curve, the overwhelming number of participants with zero to three-years experience using a functional programming stack suggests that the ecosystem does not discourage non-functional programming (FP) enthusiasts, truly a heartening result.
 
-Furthermore, the panel seems to house a higher concentration of functional programmers compared to other more typical developer ecosystems. FP developers are usually a rarity, often comprising around just 5% of the environment. Overall, the data suggests a welcoming space for functional programming, inviting a diversity of experience levels and accommodating both dedicated practitioners and those just beginning to explore its potential.`
+Furthermore, the panel seems to house a higher concentration of functional programmers compared to other more typical developer ecosystems. FP developers are usually a rarity, often comprising around just 5% of the environment. Overall, the data points to a welcoming space for functional programming, inviting diverse experience levels and accommodating both dedicated practitioners and those just beginning to explore its potential.`
         ),
         question3: question(
           "How would you rate your sentiment towards functional programming?",
           { minimum: "Dreaded", maximum: "Loved" },
-`The panel's sentiment towards functional programming trends positively, with an average rating of 7.4 out of 10. This favourable outlook is bolstered by a significant segment awarding it a perfect score. Notably, there's a correlation between experience and sentiment; the more seasoned the developer, the more likely they are to express a higher regard for functional programming.
+`The panel's sentiment towards functional programming trends positively, with an average rating of 7.4 out of 10. This favourable outlook is bolstered by a significant segment awarding it a perfect score. Notably, a correlation between experience and sentiment is apparent; the more seasoned the developer, the more likely they are to express a higher regard for functional programming.
 
-This trend isn't particularly surprising — it's reasonable to deduce that those who continue in the field are the ones who find the most satisfaction and success in it, a classic example of survivor bias. However, it's still heartening to see the positive reception among those who have delved deep into functional programming, affirming its value and appeal to practitioners who have truly grasped its nuances through experience. This positive correlation suggests a rewarding journey for those willing to invest time in mastering functional programming, promising an appreciation that seems to deepen with time and expertise.`
+This trend should not come as a surprise—it is reasonable to deduce that those who continue in the field correspond to the ones who find the most satisfaction and success in it, leading to a classic example of survivor bias. Nonetheless, it remains encouraging to see the positive reception among those who have delved deep into functional programming, affirming its value and appeal to practitioners who truly grasp its nuances through experience. This positive correlation suggests a rewarding journey for those willing to invest time in mastering functional programming, promising an appreciation that seems to deepen with time and expertise.`
         ),
         question4: question(
           "Do you work on Cardano as a hobby or professionally?",
@@ -53,9 +53,9 @@ This trend isn't particularly surprising — it's reasonable to deduce that thos
             ]
           , sortDesc: false
           },
-`The Cardano developer community continues to be a mix of hobbyists and professionals, although there's a noticeable trend of hobbyists either transitioning to professional roles or departing from the ecosystem. Compared to 2022, the proportion of hobbyists has almost halved, suggesting that the environment is perhaps becoming more professionalised or that the platform's evolving scope and complexity are influencing this shift.
+`The results indicate that the Cardano developer community remains a mix of hobbyists and professionals, although there is a noticeable trend of hobbyists either transitioning to professional roles or departing from the ecosystem. Compared to 2022, the proportion of hobbyists has almost halved, suggesting that the environment is perhaps becoming more professional or that the platform's evolving scope and complexity play a role in influencing this shift.
 
-Despite this, the persistence of a hobbyist segment highlights Cardano's ongoing appeal to a diverse range of enthusiasts, not just career-focused individuals. This trend could reflect the ecosystem's growing maturity and the increasing opportunities for professional development within Cardano.`
+Nevertheless, the persistence of a hobbyist segment highlights Cardano's ongoing appeal to a diverse range of enthusiasts, not just career-focused individuals. This trend could reflect the ecosystem's growing maturity and the increasing opportunities for professional development within Cardano.`
         ),
         question5: question(
           "Which language(s) are you fluent in?",
@@ -81,7 +81,7 @@ Despite this, the persistence of a hobbyist segment highlights Cardano's ongoing
           },
 `Unsurprisingly, English remains the predominant language among the panel, consistent with its global status as the lingua franca of the tech industry. The preference for English, followed by Spanish, French, and German — mirroring last year's top four — underscores the influence of these languages in the professional and hobbyist communities surrounding software development and functional programming.
 
-However, an interesting point to consider is the high percentage of respondents who only speak English, approximately 80%. This could be partly attributed to a selection bias given that the survey was conducted in English, potentially limiting the diversity of respondents based on language fluency. This factor is worth considering when interpreting the data, as it suggests that there might be non-English-speaking communities with an interest in these areas that the survey didn't reach. Understanding this limitation is crucial for future surveys or community outreach efforts, indicating a possible need for a more inclusive approach that encompasses multiple languages to capture a truly global perspective.`
+However, the high percentage of respondents who only speak English, approximately 80%, provides an interesting point to consider. This could perhaps be partly due to a selection bias as the survey was conducted in English, thus potentially limiting the diversity of respondents based on language fluency. This factor warrants consideration when interpreting the data, as it suggests that there might exist non-English-speaking communities with an interest in these areas that the survey did not reach. Understanding this limitation is crucial for future surveys or community outreach efforts, indicating a possible need for a more inclusive approach that encompasses multiple languages to capture a truly global perspective.`
         ),
         question6: question(
           "Which best describes your current profession?",
@@ -108,9 +108,9 @@ However, an interesting point to consider is the high percentage of respondents 
             ]
           , sortDesc: true
           },
-`The panel features a diverse range of professions, though software engineers make up the largest group, encompassing 40% of the respondents. This isn't surprising given the technical nature of the topics at hand often directly relevant to software engineering.
+`The panel features a diverse range of professions, though software engineers make up the largest group, encompassing 40% of the respondents. An unsurprising result given the technical nature of the topics at hand often directly relevant to software engineering.
 
-What's particularly striking is the significant presence of founders, co-founders, and executive officers, suggesting a vibrant startup culture within this community. This could indicate that the ecosystem is not just attracting those who implement and manage technology, but also those who are looking to pioneer new ideas and drive technological innovation forward from a leadership perspective.
+What proves particularly striking is the significant presence of founders, co-founders, and executive officers, suggesting a vibrant startup culture within the Cardano developer community. This could indicate that the ecosystem attracts not just those who implement and manage technology, but also those looking to pioneer new ideas and drive technological innovation forward from a leadership perspective.
 
 The substantial representation of this demographic might hint at a broader trend of entrepreneurial activity, perhaps fueled by the emerging opportunities in the fields related to functional programming and blockchain technology, where individuals are motivated to carve out their own path and shape the future of the industry.`
         ),
@@ -132,9 +132,9 @@ The substantial representation of this demographic might hint at a broader trend
           },
 `The preferences for development environments among the panel members show a clear favouritism towards Visual Studio Code and Vim/NeoVim, standing out as the preferred editors across the board irrespective of programming language.
 
-However, it's interesting to note that IntelliJ garners particular preference among those who primarily work with Java and C++, pointing to the environment's specific strengths or features that resonate with developers in these languages.
+However, it is interesting to note that IntelliJ garners particular preference among those who primarily work with Java and C++, pointing to the environment's specific strengths or features that resonate with developers in these languages.
 
-These insights not only reveal the most popular tools but also suggest that when it comes to development environments, one size doesn't fit all; specific languages might benefit from environments tailored to their unique demands.`
+These insights not only reveal the most popular tools but also suggest that when it comes to development environments, one size does not fit all; specific languages might benefit from environments tailored to their unique demands.`
         ),
         question8: question(
           "Which programming language(s) are you proficient in?",
@@ -164,30 +164,30 @@ These insights not only reveal the most popular tools but also suggest that when
             ]
           , sortDesc: true
           },
-`The programming language proficiency among the panel mirrors trends observed in broader developer ecosystems, such as those documented in StackOverflow surveys, with JavaScript, TypeScript, and Python leading the pack. This prevalence aligns with the global demand and applicability of these languages in various domains. However, the Cardano ecosystem shows – unsurprisingly – a distinctive spike in the number of developers proficient in Haskell and Rust, diverging from more typical developer environments.
+`The programming language proficiency among the panel mirrors trends observed in broader developer ecosystems, such as those documented in StackOverflow surveys, with JavaScript, TypeScript, and Python leading the pack. This prevalence aligns with the global demand and applicability of these languages in various domains.
 
-Remarkably, despite its novelty, over 20% of respondents claim proficiency in Aiken — a language that hadn't even marked its first anniversary at the survey's time. This could signal a strong enthusiasm for adopting new tech or perhaps Aiken's ease of learning, or a blend of both elements.
+However, the Cardano ecosystem shows, unsurprisingly, a distinctive spike in the number of developers proficient in Haskell and Rust, diverging from more typical developer environments. Remarkably, despite its novelty, over 20% of respondents claim proficiency in Aiken—a language that had not even marked its first anniversary at the survey's time. This could signal a strong enthusiasm for adopting new tech, the ease of learning Aiken, or perhaps a blend of both elements.
 
-Additionally, there's a noteworthy statistic within the subset of Plutus Pioneers: over 55% report proficiency in Haskell, almost double the rate reported by the panel at large. This suggests that the Plutus Pioneer Program is particularly effective in building Haskell knowledge, highlighting the program's role in skill development and capacity building within the Cardano community.`
+Additionally, the results showcase a noteworthy statistic within the subset of Plutus Pioneers: over 55% report proficiency in Haskell, almost double the rate reported by the panel at large. This suggests that the Plutus Pioneer Program is particularly effective in building Haskell knowledge, highlighting the program's role in skill development and capacity building within the Cardano community.`
         ),
         question9: question(
           "How would you rate your technical understanding of Cardano?",
           { minimum: "Rookie", maximum: "Expert" },
 `The self-assessed technical understanding of Cardano among respondents is notably high, with an average score of 7.2 out of 10. This indicates a confident level of familiarity with Cardano's intricacies, reflecting perhaps the effectiveness of educational resources or the comprehensive nature of community-driven knowledge sharing.
 
-What's more, there's been a marked progression in this metric, with the mean score climbing by 0.7 points compared to the previous year. This uptick is a positive signal, denoting a collective deepening of knowledge and possibly the increased accessibility of information or enhanced learning avenues over time.
+Moreover, results show a marked progression in this metric, with the mean score climbing by 0.7 points compared to the previous year. This uptick provides a positive signal, denoting a collective deepening of knowledge and possibly the increased accessibility of information or enhanced learning avenues over time.
 
-An interesting pattern emerges when the data is dissected by specific segments: both Plutus Pioneers and those proficient in Haskell report an even higher average understanding, registering at 8.1 out of 10. This strong correlation suggests that familiarity with Haskell, or having been through the Plutus Pioneer Program, equips individuals with a deeper comprehension of Cardano.`
+An interesting pattern emerges when the data is dissected by specific segments: both Plutus Pioneers and those proficient in Haskell report an even higher average understanding, registering at 8.1 out of 10. This strong correlation suggests that familiarity with Haskell, or experience going through the Plutus Pioneer Program, equips individuals with a deeper comprehension of Cardano.`
         ),
         question10: question(
           "Are you a certified Plutus Pioneer?",
           {},
 `The survey results indicate a nearly identical distribution to 2022 concerning certified Plutus Pioneers:
 
-- A considerable number of respondents are not Plutus Pioneers, which suggests that while the Plutus Pioneer Program (PPP) is beneficial, it's not seen as a prerequisite for developing on Cardano.
-- However, there's an implication that participating in the PPP enhances participants' overall technical understanding of the Cardano ecosystem. This could mean that the program offers valuable insights and education about Cardano.
+- As seen from answers to previous questions, participating in the PPP enhances participants' overall technical understanding of the Cardano ecosystem. This could mean that the program offers valuable insights and education about Cardano.
+- At the same time, a considerable number of respondents are not Plutus Pioneers, which suggests that, while the Plutus Pioneer Program (PPP) has proven benefits, it is not seen as a prerequisite for developing on Cardano.
 
-These points suggest that the PPP maintains its relevance and offers clear benefits, but the community doesn't view it as the only path to proficiency in Cardano development.`
+These points suggest that the PPP maintains its relevance and offers clear benefits, but the community does not view it as the only path to proficiency in Cardano development.`
         ),
         question11: question(
           "What do you use (or plan to use) for writing Plutus script validators / smart contracts?",
@@ -208,7 +208,7 @@ These points suggest that the PPP maintains its relevance and offers clear benef
           },
 `The landscape of developers' preferences in the Cardano ecosystem is evolving rapidly, particularly in the tools used for crafting smart contracts. Aiken, a newcomer, has made a remarkable entrance, garnering attention and use from developers across various experience levels. Its broad appeal underscores its emerging importance and sets the stage for whether it will sustain this positive impression in the times ahead.
 
-Meanwhile, Plutarch finds its niche among more seasoned developers, suggesting its appeal might be rooted in advanced features or complexities that cater more effectively to those with extensive backgrounds. This dynamic illustrates a vibrant and responsive ecosystem, where innovative tools are emerging and developers are open to adapting their preferences and workflows, influenced by ongoing advancements in platform capabilities, user guidance, and overall usability.`
+Meanwhile, Plutarch appears to find its niche among more seasoned developers, suggesting its appeal might be rooted in advanced features or complexities that cater more effectively to those with extensive backgrounds. This dynamic illustrates a vibrant and responsive ecosystem, with innovative tools emerging and developers open to adapting their preferences and workflows—each trend influenced by ongoing advancements in platform capabilities, user guidance, and overall usability.`
         ),
         question12: question(
           "What language(s) do you use (or plan to use) for writing off-chain code?",
@@ -229,7 +229,7 @@ Meanwhile, Plutarch finds its niche among more seasoned developers, suggesting i
           },
 `The choices developers make for writing off-chain code in the Cardano ecosystem seem to mirror their language proficiencies. JavaScript and TypeScript, widely popular in the broader developer community, stand out as the primary languages. This trend likely owes itself to the wealth of development resources available for these languages, making them accessible and practical options.
 
-Notably, there's a discernible and rather unsurprising pattern relating the choice of on-chain and off-chain languages. For instance, those who lean towards Haskell or PlutusTx for on-chain development also show a preference for using Haskell for their off-chain code, demonstrating a consistency in their development stack. Similarly, Aiken users exhibit a tendency for Rust in off-chain scenarios, while OpShin's adherents gravitate towards Python.`
+Notably, there is a discernible and rather unsurprising pattern relating the choice of on-chain and off-chain languages. For instance, those who lean towards Haskell or PlutusTx for on-chain development also show a preference for using Haskell for their off-chain code, demonstrating a consistency in their development stack. Similarly, Aiken users exhibit a tendency for Rust in off-chain scenarios, while OpShin's adherents gravitate towards Python.`
         ),
         question13: question(
           "How satisfied are you with the current state of the smart contract ecosystem?",
