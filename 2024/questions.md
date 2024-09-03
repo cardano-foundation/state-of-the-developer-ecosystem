@@ -1,7 +1,3 @@
-<style type="text/css">
-    ol ol { list-style-type: lower-alpha; }
-</style>
-
 # Questions 2024
 This document lists the questions intended to be shared with the Community for the survey 2024. The idea is to gauge a discussion with the Community around which are the right questions to ask this year.
 
@@ -11,7 +7,7 @@ This document lists the questions intended to be shared with the Community for t
 |1|How many years of experience do you have writing/deploying software?|change options|[Link](https://github.com/cardano-foundation/state-of-the-developer-ecosystem/discussions/5)|
 |2|How many years of experience do you have writing software using a functional programming stack?|change options|[Link](https://github.com/cardano-foundation/state-of-the-developer-ecosystem/discussions/5)|
 |3|How would you rate your sentiment towards functional programming?|delete|[Link](https://github.com/cardano-foundation/state-of-the-developer-ecosystem/discussions/5)|
-|4|Do you work on Cardano as a hobby or professionally?|What is your most awaited feature when it comes to Cardano’s smart contracts||
+|4|Do you work on Cardano as a hobby or professionally?|:heavy_check_mark:||
 |5|Which language(s) are you fluent in?|change wording|[Link](https://github.com/cardano-foundation/state-of-the-developer-ecosystem/discussions/6)|
 |6|Which best describes your current profession?|change options||
 |7|What is your main development environment?|:heavy_check_mark:||
@@ -39,8 +35,8 @@ This document lists the questions intended to be shared with the Community for t
 |29|Where/how do you look for technical details on Cardano?|:heavy_check_mark:||
 |30|On average, how satisfied are you with the technical answers/details you find in documentation and within the community?|:heavy_check_mark:||
 
-## Questions from 2023
-List of questions from the 2023 survey:
+## Proposed Questions for 2024
+List of questions proposed for the 2024 survey:
 
 1. **How many years of experience do you have writing/deploying software?**
     1. I never wrote or deployed software
