@@ -1,7 +1,556 @@
 # Questions 2024
 This document lists the questions intended to be shared with the Community for the survey 2024. The idea is to gauge a discussion with the Community around which are the right questions to ask this year.
 
+## Proposed Questions for 2024
+
+State of the Cardano Developer Ecosystem - 2024
+
+### Developer Profile
+
+</td></tr></table>
+
+#### Q1 – How many years of experience do you have writing/deploying software?
+
+<table><tr><td><small><strong>single choice</strong></small></td><td>
+
+- [ ] I never wrote or deployed software
+- [ ] Less than 1 year
+- [ ] Between 1 and 2 years
+- [ ] Between 2 and 7 years
+- [ ] Over 7 years
+
+</td></tr></table>
+
+#### Q2 – How many years of experience do you have writing software using a functional programming stack?
+
+<table><tr><td><small><strong>single choice</strong></small></td><td>
+
+- [ ] I have never used functional programming
+- [ ] Less than 1 year
+- [ ] Between 1 and 2 years
+- [ ] Between 2 and 7 years
+- [ ] Over 7 years
+
+</td></tr></table>
+
+#### Q3 – How many years of experience do you have writing/deploying software in the blockchain industry?
+
+<table><tr><td><small><strong>single choice</strong></small></td><td>
+
+- [ ] I never wrote or deployed blockchain-related software
+- [ ] Less than 1 year
+- [ ] Between 1 and 2 years
+- [ ] Between 2 and 7 years
+- [ ] Over 7 years
+
+</td></tr></table>
+
+#### Q4 – Do you work on Cardano as a hobby or professionally?
+
+<table><tr><td><small><strong>single choice</strong></small></td><td>
+
+- [ ] Hobby
+- [ ] Profession
+- [ ] Both
+
+</td></tr></table>
+
+#### Q5 – Did you ever contribute, write, or deploy software in other blockchain ecosystems?
+
+<table><tr><td><small><strong>single choice</strong></small></td><td>
+
+- [ ] I only ever worked in the Cardano ecosystem
+- [ ] I have worked in other blockchain ecosystems before but moved to Cardano
+- [ ] Besides Cardano, I also work in parallel in other blockchain ecosystems
+
+</td></tr></table>
+
+#### Q6 – Which other blockchain ecosystem(s) are you the most familiar with?
+
+<table><tr><td><small><strong>multiple choices</strong></small></td><td>
+
+- [ ] Algorand
+- [ ] Aptos
+- [ ] Avalanche
+- [ ] Base
+- [ ] Bitcoin (incl. Lightning)
+- [ ] BNB
+- [ ] Cosmos
+- [ ] Ergo
+- [ ] Ethereum
+- [ ] Ethereum L2s (StarkNet, Arbitrum, Scroll, Aztec, ...)
+- [ ] ICP
+- [ ] Mina
+- [ ] NEAR
+- [ ] Polkadot
+- [ ] Polygon
+- [ ] Radix
+- [ ] Solana
+- [ ] Stellar
+- [ ] Sui
+- [ ] TON
+- [ ] Tezos
+- [ ] Other (specify)
+
+</td></tr></table>
+
+#### Q7 – Which best describes your current profession?
+
+<table><tr><td><small><strong>single choice</strong></small></td><td>
+
+- [ ] Academic researcher
+- [ ] Artist
+- [ ] Data scientist
+- [ ] Database administrator
+- [ ] Designer
+- [ ] Educator
+- [ ] Financial analyst
+- [ ] Founder/C-Suite
+- [ ] Marketing/sales professional
+- [ ] Product manager
+- [ ] Project manager
+- [ ] R&D engineer
+- [ ] Site reliability engineer
+- [ ] Software engineer
+- [ ] Student/apprentice
+- [ ] System administrator
+- [ ] System architect
+- [ ] Trader
+- [ ] Web developer
+- [ ] Other (specify)
+
+</td></tr></table>
+
+#### Q8 – What is your main development environment?
+
+<table><tr><td><small><strong>single choice</strong></small></td><td>
+
+- [ ] Atom
+- [ ] Emacs
+- [ ] IntelliJ
+- [ ] JetBrains
+- [ ] Notepad++
+- [ ] Sublime Text
+- [ ] Vim/NeoVim
+- [ ] Visual Studio
+- [ ] Visual Studio Code
+- [ ] XCode
+- [ ] Zed
+- [ ] Other (specify)
+
+</td></tr></table>
+
+#### Q9 – Which programming language(s) are you proficient in?
+
+<table><tr><td><small><strong>multiple choices</strong></small></td><td>
+
+- [ ] Aiken
+- [ ] Bash
+- [ ] C
+- [ ] C#
+- [ ] C++
+- [ ] Elixir
+- [ ] Elm
+- [ ] Go
+- [ ] Haskell
+- [ ] Helios
+- [ ] Java
+- [ ] JavaScript
+- [ ] Kotlin
+- [ ] Nix
+- [ ] PHP
+- [ ] Python
+- [ ] Ruby
+- [ ] Rust
+- [ ] Scala
+- [ ] Solidity
+- [ ] Swift
+- [ ] TypeScript
+- [ ] Other (specify)
+
+</td></tr></table>
+
+### DApps Development
+
+#### Q10 – How would you rate your technical understanding of Cardano?
+
+<table><tr><td><small><strong>scale</strong></small></td><td>
+
+<pre>rookie [0 =================> 10] expert</pre>
+
+</td></tr></table>
+
+#### Q11 – What is the biggest priority on the Cardano technical roadmap?
+
+<table><tr><td><small><strong>single choice</strong></small></td><td>
+
+- [ ] Accessibility & use cases enabling
+- [ ] Cross-chain bridges & interoperability with other ecosystems
+- [ ] Governance
+- [ ] Higher throughput, via e.g. Ouroboros Leios
+- [ ] Lower finality, via e.g. Peras
+- [ ] Zero-knowledge solutions (either natively, or via L2s)
+- [ ] Nodes diversity, via e.g. Amaru
+- [ ] Smart contracts testing & verification
+- [ ] Other (specify)
+
+</td></tr></table>
+
+#### Q12 – What do you use (or plan to use) for writing Plutus script validators/smart contracts?
+
+<table><tr><td><small><strong>multiple choices</strong></small></td><td>
+
+- [ ] Aiken
+- [ ] Plinth (ex Plutus-Tx)/Haskell
+- [ ] Helios
+- [ ] Marlowe
+- [ ] OpShin
+- [ ] Plutarch
+- [ ] Pluto
+- [ ] Plu-ts
+- [ ] Scalus
+- [ ] Solidity (with Milkomeda)
+- [ ] N/A
+- [ ] Other (specify)
+
+</td></tr></table>
+
+#### Q13 – What language(s) do you use (or plan to use) for writing off-chain code?
+
+<table><tr><td><small><strong>multiple choices</strong></small></td><td>
+
+- [ ] C#
+- [ ] C++
+- [ ] Elixir
+- [ ] Go
+- [ ] Haskell
+- [ ] Java
+- [ ] JavaScript
+- [ ] Kotlin
+- [ ] PureScript
+- [ ] Python
+- [ ] Rust
+- [ ] Scala
+- [ ] TypeScript
+- [ ] Other (specify)
+
+</td></tr></table>
+
+#### Q14 – How satisfied are you with the current state of the smart contract ecosystem?
+
+<table><tr><td><small><strong>scale</strong></small></td><td>
+
+<pre>unsatisfied [0 =================> 10] pleased</pre>
+
+</td></tr></table>
+
+#### Q15 – Which category of Cardano decentralized applications (DApps) are you currently working on or most interested in?
+
+<table><tr><td><small><strong>multiple choices</strong></small></td><td>
+
+- [ ] Decentralized Finance (DeFi) (e.g., DEXs, lending, stablecoins)
+- [ ] NFT Marketplaces (e.g., buying, selling, or minting NFTs)
+- [ ] Governance (e.g., voting platforms, Project Catalyst)
+- [ ] Identity and Authentication (e.g., decentralized identity)
+- [ ] Gaming and Metaverse (e.g., virtual worlds, blockchain games)
+- [ ] Real-World Asset Tokenization (e.g., real estate, commodities)
+- [ ] Social dApps (e.g., community platforms, content creation)
+- [ ] Supply Chain Management (e.g., product traceability, logistics)
+- [ ] Other (Please specify)
+- [ ] Ecosystem
+
+</td></tr></table>
+
+#### Q16 – Which library(ies) do you use in your projects?
+
+<table><tr><td><small><strong>multiple choices</strong></small></td><td>
+
+- [ ] None directly
+- [ ] Apollo (Go)
+- [ ] Blaze (TypeScript)
+- [ ] Blockfrost SDK (Any language)
+- [ ] Cardano API (Haskell)
+- [ ] Cardano-client-lib (Java)
+- [ ] Cardano-js-sdk (TypeScript)
+- [ ] Cardano-multiplatform-library (JavaScript/Rust)
+- [ ] Cardano-python (Python)
+- [ ] Cardano-serialization-lib (JavaScript/Rust)
+- [ ] Cardano-transaction-lib (PureScript)
+- [ ] Cardano-wallet-connector (JavaScript)
+- [ ] Cardanosharp-wallet (C#)
+- [ ] Gouroboros (Go)
+- [ ] Helios (JavaScript)
+- [ ] Koios' client (Any language)
+- [ ] Kuber (Haskell)
+- [ ] LibCardano (C++)
+- [ ] Lucid (TypeScript)
+- [ ] Lucid-evolution (TypeScript)
+- [ ] Mesh (JavaScript)
+- [ ] Ogmios' clients (Any language)
+- [ ] Pallas (Rust)
+- [ ] Plu-ts (TypeScript)
+- [ ] Plutip (Haskell)
+- [ ] PyCardano (Python)
+- [ ] Strica's libraries (JavaScript)
+- [ ] Yaci (Java)
+- [ ] Other (specify)
+
+</td></tr></table>
+
+#### Q17 – It would be nice if a library in … implemented … ? (please specify language and one or more features)
+
+<table><tr><td><small><strong>open question</strong></small></td><td>
+...
+</td></tr></table>
+
+#### Q18 – Which services do you use in your projects?
+
+<table><tr><td><small><strong>multiple choices</strong></small></td><td>
+
+- [ ] None directly
+- [ ] Adder
+- [ ] Atlas
+- [ ] Cardano-db-sync
+- [ ] Cardano-graphql
+- [ ] Cardano-metadata-oracle
+- [ ] Cardano-rosetta
+- [ ] Cardano-transaction-lib
+- [ ] Cardano-wallet
+- [ ] Carp
+- [ ] DAB
+- [ ] Dolos
+- [ ] Hydra
+- [ ] Kupo
+- [ ] Ledger-sync
+- [ ] Mithril
+- [ ] Ogmios
+- [ ] Oura
+- [ ] Scrolls
+- [ ] Yaci Store
+- [ ] Other (specify)
+
+</td></tr></table>
+
+#### Q19 – It would be nice if a service provided … ?
+
+<table><tr><td><small><strong>open question</strong></small></td><td>
+...
+</td></tr></table>
+
+#### Q20 – What hosted service(s)/platform(s) do you use in your projects?
+
+<table><tr><td><small><strong>multiple choices</strong></small></td><td>
+
+- [ ] None directly
+- [ ] Blockfrost
+- [ ] CardanoScan
+- [ ] CExplorer
+- [ ] CF’s Token registry
+- [ ] Demeter.run
+- [ ] Freeloaderz
+- [ ] Handle
+- [ ] Koios
+- [ ] Maestro
+- [ ] NMKR
+- [ ] Other (specify)
+
+</td></tr></table>
+
+#### Q21 – How do you prefer interacting with a local or remote service?
+
+<table><tr><td><small><strong>multiple choices</strong></small></td><td>
+
+- [ ] GraphQL
+- [ ] JSON over HTTP
+- [ ] JSON over WebSocket
+- [ ] gRPC / Protocol Buffers
+- [ ] MQTT
+- [ ] Thrift
+- [ ] Bespoke protocols
+- [ ] Other
+
+</td></tr></table>
+
+#### Q22 – Which command-line tool(s) do you use in your projects?
+
+<table><tr><td><small><strong>multiple choices</strong></small></td><td>
+
+- [ ] None directly
+- [ ] aiken
+- [ ] bech32
+- [ ] cardano-addresses
+- [ ] cardano-cli
+- [ ] cardano-up
+- [ ] cncli
+- [ ] gastronomy
+- [ ] helios
+- [ ] jamb
+- [ ] nview
+- [ ] offchain-metadata-tools
+- [ ] plutip
+- [ ] txtop
+- [ ] yaci
+- [ ] yaci’s devkit
+- [ ] Other (specify)
+
+</td></tr></table>
+
+#### Q23 – It would be nice if there were a CLI for … ?
+
+<table><tr><td><small><strong>open question</strong></small></td><td>
+...
+</td></tr></table>
+
+#### Q24 – Which type of infrastructure do you currently use or prefer for deploying DApps/blockchain applications?
+
+<table><tr><td><small><strong>multiple choices</strong></small></td><td>
+
+- [ ] Private Cloud (e.g., on-premise or self-hosted infrastructure)
+- [ ] Public Cloud Service Provider (e.g., AWS, Azure, Google Cloud, Demeter.run)
+- [ ] Hybrid Cloud (a combination of private and public cloud)
+- [ ] Decentralized Cloud (e.g., IPFS, Filecoin, Storj)
+- [ ] Third-Party Services (e.g., Demeter.run, Blockfrost, GoMaestro, Cloudflare etc)
+- [ ] Other (Please specify)
+
+</td></tr></table>
+
+#### Q25 – How would you prefer to consume software?
+
+<table><tr><td><small><strong>multiple choices</strong></small></td><td>
+
+- [ ] Docker
+- [ ] Downloadable static executable (amd)
+- [ ] Downloadable static executable (arm)
+- [ ] Language package manager (e.g. yarn, pip, cargo, cabal, etc.)
+- [ ] Nix
+- [ ] OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)
+- [ ] Source code + build instructions
+- [ ] Other (specify)
+
+</td></tr></table>
+
+#### Q26 – What do you think is the greatest asset of Cardano’s developer ecosystem?
+
+<table><tr><td><small><strong>open question</strong></small></td><td>
+...
+</td></tr></table>
+
+#### Q27 – What do you think is the biggest pain point of Cardano's developer ecosystem?
+
+<table><tr><td><small><strong>open question</strong></small></td><td>
+...
+</td></tr></table>
+
+### Community
+
+#### Q28 – Select any statement that applies to you.
+
+<table><tr><td><small><strong>multiple choices</strong></small></td><td>
+
+- [ ] I have never heard of the Cardano Improvement Proposals (CIPs)
+- [ ] I have read and used a CIP
+- [ ] I have participated in conversations or reviews related to a CIP
+- [ ] I have written or co-written a CIP
+
+</td></tr></table>
+
+#### Q29 – Where do you usually seek help on technical issues?
+
+<table><tr><td><small><strong>multiple choices</strong></small></td><td>
+
+- [ ] Cardano forum
+- [ ] Cardano's StackExchange
+- [ ] Discord servers
+- [ ] Friends/colleagues/community members
+- [ ] GitHub discussions/issues
+- [ ] Reddit(r/Cardano, r/CardanoDevelopers)
+- [ ] Telegram Groups
+- [ ] Twitter/X
+- [ ] Other (specify)
+
+</td></tr></table>
+
+#### Q30 – Where/how do you learn about the technical details of Cardano?
+
+<table><tr><td><small><strong>multiple choices</strong></small></td><td>
+
+- [ ] Blog or website articles & guides
+- [ ] Cardano forum
+- [ ] Cardano's developer portal (https://developers.cardano.org/)
+- [ ] Cardano docs (https://docs.cardano.org/)
+- [ ] Discord servers
+- [ ] Friends/colleagues/community members
+- [ ] (Online) courses (e.g. CBCA, Plutus PBL, EMURGO Academy, etc.)
+- [ ] Reddit (r/Cardano, r/CardanoDevelopers)
+- [ ] Scientific papers/specifications
+- [ ] Source code
+- [ ] Telegram groups
+- [ ] Twitter/X
+- [ ] YouTube
+- [ ] Other (specify)
+
+</td></tr></table>
+
+#### Q31 – On average, how satisfied are you with the technical answers/details you find in documentation and within the community?
+
+<table><tr><td><small><strong>scale</strong></small></td><td>
+
+<pre>unsatisfied [0 =================> 10] pleased</pre>
+
+</td></tr></table>
+
+#### Q32 – Which language(s) do you prefer to consume documentation and educational content in?
+
+<table><tr><td><small><strong>multiple choices</strong></small></td><td>
+
+- [ ] Arabic
+- [ ] Croatian
+- [ ] Dutch
+- [ ] English
+- [ ] Filipino/Tagalog
+- [ ] French
+- [ ] German
+- [ ] Greek
+- [ ] Hindi
+- [ ] Indonesian
+- [ ] Italian
+- [ ] Japanese
+- [ ] Polish
+- [ ] Portuguese
+- [ ] Russian
+- [ ] Spanish
+- [ ] Ukrainian
+- [ ] Vietnamese
+- [ ] Other (specify)
+
+</td></tr></table>
+
+#### Q33 – Did you attend the Cardano Buidler Fest in April 2024?
+
+<table><tr><td><small><strong>single choice</strong></small></td><td>
+
+- [ ] Yes
+- [ ] No, but I wanted to
+- [ ] No
+
+</td></tr></table>
+
+#### Q34 – How satisfied were you with the Cardano Buidler Fest?
+
+<table><tr><td><small><strong>scale</strong></small></td><td>
+
+<pre>unsatisfied [0 =================> 10] pleased</pre>
+
+</td></tr></table>
+
+#### Q35 – Do you have any ideas on how to improve the next potential Cardano Buidler Fest?
+
+<table><tr><td><small><strong>open question</strong></small></td><td>
+...
+</td></tr></table>
+
 ## Change log 2024 questions compared to 2023
+
 |#|Question|Change|Link to Discussion|
 |:--------:|--------|-------|-------|
 |1|How many years of experience do you have writing/deploying software?|change options|[Link](https://github.com/cardano-foundation/state-of-the-developer-ecosystem/discussions/5)|
@@ -34,313 +583,3 @@ This document lists the questions intended to be shared with the Community for t
 |28|Where do you usually seek help on technical issues?|:heavy_check_mark:||
 |29|Where/how do you look for technical details on Cardano?|:heavy_check_mark:||
 |30|On average, how satisfied are you with the technical answers/details you find in documentation and within the community?|:heavy_check_mark:||
-
-## Proposed Questions for 2024
-List of questions proposed for the 2024 survey:
-
-1. **How many years of experience do you have writing/deploying software?**
-    1. I never wrote or deployed software
-    2. ~~Less than 1 year~~ Newcomers, < 1 year
-    3. ~~Between 1 and 3 years~~ Emerging, 1-2 years
-    4. ~~Between 3 and 10 years~~ Established, 2+ years
-    5. ~~Over 10 years~~ Seasoned, 7+ years
-
-2. **How many years of experience do you have writing software using a functional programming stack?**
-    1. I have never used functional programming
-    2. ~~Less than 1 year~~ Newcomers, < 1 year
-    3. ~~Between 1 and 3 years~~ Emerging, 1-2 years
-    4. ~~Between 3 and 10 years~~ Established, 2+ years
-    5. ~~Over 10 years~~ Seasoned, 7+ years
-
-3. **How many years of experience do you have writing/deploying software in crypto?**
-    1. I never wrote or deployed software in crypto
-    2. ~~Less than 1 year~~ Newcomers, < 1 year
-    3. ~~Between 1 and 3 years~~ Emerging, 1-2 years
-    4. ~~Between 3 and 10 years~~ Established, 2+ years
-    5. ~~Over 10 years~~ Seasoned, 7+ years
-
-4. **Did you ever contribute, or wrote and deployed software in other crypto ecosystems?**
-    1. I only ever worked in the Cardano ecosystem
-    2. I have worked in other crypto ecosystems before but moved to Cardano
-    3. Besides Cardano, I work in parallel also in other crypto ecosystems at the moment
-
-5. **In case you have developed or deployed or still develop and deploy software in other crypto ecosystems, which have this been?**
-    1. Bitcoin
-    2. Ethereum and its L2s
-    3. Solana
-    4. Cosmos
-    5. Polkadot
-    6. Algorand
-    7. Avalanche
-    8. Tezos
-    9. ...
-    10. Other
-    11. N/A
-
-6. **Do you work on Cardano as a hobby or professionally?**
-    1. Hobby
-    2. Profession
-    3. Both
-
-7. **Which language(s) do you prefer to consume documentation and educational content in?**
-    1. English
-    2. Spanish
-    3. German
-    4. French
-    5. Vietnamese
-    6. Russian
-    7. Portuguese
-    8. Dutch
-    9. Italian
-    10. Hindi
-    11. Polish
-    12. Japanese
-    13. Arabic
-    14. Indonesian
-    15. Greek
-    16. Ukrainian
-    17. Other
-
-8. **Which best describes your current profession?**
-    1. Software engineer
-    2. Founder/~~executive officer~~C-Suite
-    3. System architect
-    4. Web developer
-    5. Project manager
-    6. R&D engineer
-    7. Student/apprentice
-    8. System administrator
-    9. Academic researcher
-    10. Educator
-    11. Trader
-    12. Designer
-    13. Product manager
-    14. Data scientist
-    15. Database administrator
-    16. Financial analyst
-    17. Site reliability engineer and DevOps
-    18. Artist
-    19. Marketing/sales professional
-    20. Other
-
-9. **What is your main development environment?**
-    1. Visual Studio Code
-    2. Vim/NeoVim
-    3. Visual Studio
-    4. IntelliJ
-    5. Emacs
-    6. JetBrains
-    7. Notepad++
-    8. Atom
-    9. Sublime Text
-    10. XCode
-    11. Other
-
-10. **Which programming language(s) are you proficient in?**
-    1. JavaScript
-    2. TypeScript
-    3. Python
-    4. Haskell
-    5. Bash
-    6. Rust
-    7. Java
-    8. Aiken
-    9. C++
-    10. C
-    11. PHP
-    12. C#
-    13. Go
-    14. Nix
-    15. Solidity
-    16. Kotlin
-    17. Ruby
-    18. Elm
-    19. Scala
-    20. Swift
-    21. Helios
-    22. Elixir
-    23. Other
-
-11. **How would you rate your technical understanding of Cardano?**
-    - Scale from 1 (Rookie) to 10 (Expert)
-
-12. **What do you use (or plan to use) for writing Plutus script validators / smart contracts?**
-    1. Aiken
-    2. Haskell/Plutus-tx
-    3. Marlowe
-    4. Plutarch
-    5. Plu-ts
-    6. Helios
-    7. OpShin
-    8. Solidity (with Milkomeda)
-    9. Pluto
-    10. Scalus
-    11. N/A
-    12. Other
-
-13. **What language(s) do you use (or plan to use) for writing off-chain code?**
-    1. TypeScript
-    2. JavaScript
-    3. Haskell
-    4. Rust
-    5. Python
-    6. Java
-    7. Go
-    8. C#
-    9. PureScript
-    10. C++
-    11. Kotlin
-    12. Other
-
-14. **How satisfied are you with the current state of the smart contract ecosystem?**
-    - Scale from 1 (Unsatisfied) to 10 (Pleased)
-
-15. **What is your most awaited feature when it comes to Cardano’s smart contracts?**
-    - Open Question
-
-16. **Which libraries do you use in your projects?**
-    1. blockfrost-sdk (blockfrost)
-    2. Lucid (BerryPool)
-    3. cardano-api (input-output-hk)
-    4. cardano-serialization-lib (emurgo)
-    5. Mesh.js (MartifyLabs)
-    6. Ogmios' client (CardanoSolutions)
-    7. cardano-multiplatform-library (dcSpark)
-    8. Pallas (txpipe)
-    9. cardano-js-sdk (input-output-hk)
-    10. cardano-transaction-lib (plutonomicon)
-    11. Koios' client (cardano-community)
-    12. yaci or cardano-client-lib (bloxbean)
-    13. Helios (Hyperion-BT)
-    14. cardano-wallet-connector (dynamicstrategies)
-    15. Gouroboros (BlinkLabs)
-    16. PyCardano (cffls)
-    17. cardano-python (emesik)
-    18. TyphonJS (StricaHQ)
-    19. cardanocli-js (shareslake)
-    20. cardanosharp-wallet (CardanoSharp)
-    21. Ouroboros-network-js (StricaHQ)
-    22. toolkit-for-cardano (SundaeSwap-finance)
-    23. Other
-
-17. **Which services do you use in your projects?**
-    1. cardano-db-sync (input-output-hk)
-    2. Ogmios (CardanoSolutions)
-    3. Kupo (CardanoSolutions)
-    4. cardano-wallet (cardano-foundation)
-    5. Oura (TxPipe)
-    6. Scrolls (TxPipe)
-    7. cardano-transaction-lib (Plutonomicon)
-    8. Hydra (input-output-hk)
-    9. cardano-graphql (cardano-foundation)
-    10. Mithril (input-output-hk)
-    11. Atlas (GeniusYield)
-    12. cardano-metadata-oracle (5Binaries)
-    13. Offchain-metadata-tools (input-output-hk)
-    14. SMASH (input-output-hk)
-    15. cardano-rosetta (cardano-foundation)
-    16. DAB (cardano-foundation)
-    17. None directly
-    18. Other
-
-18. **Which hosted service(s)/platform(s) do you use in your projects?**
-    1. Blockfrost (5Binaries)
-    2. CardanoScan (StricaHQ)
-    3. CExplorer (Cardanians)
-    4. Demeter.run (TxPipe)
-    5. Token registry (cardano-foundation)
-    6. Handle (AdaHandle)
-    7. Koios (Koios)
-    8. Maestro (GoMaestro)
-    9. NMKR (NMKR)
-    10. Freeloaderz (FreeLoaderz)
-    11. Dandelion (Gimbalabs)
-    12. N/A
-    13. Other
-
-19. **Which command-line tool(s) do you use in your projects?**
-    1. cardano-cli (input-output-hk)
-    2. aiken (aiken-lang)
-    3. cardano-addresses (input-output-hk)
-    4. bech32 (input-output-hk)
-    5. cncli (cardano-community)
-    6. offchain-metadata-tools (input-output-hk)
-    7. helios (Hyperion-BT)
-    8. jamb (iburzynski)
-    9. yaci (bloxbean)
-    10. N/A
-    11. Other
-
-20. **How do you manage deployment to your infrastructure?**
-    1. Docker
-    2. Bash scripts
-    3. Nix/NixOS
-    4. Kubernetes
-    5. Demeter.run
-    6. Terraform
-    7. Ansible
-    8. AWS
-    9. Vercel
-    10. N/A
-    11. Other
-
-21. **How would you rather consume software?**
-    1. Language package manager (e.g. yarn, pip, cargo, cabal, etc.)
-    2. Docker
-    3. OS package manager (e.g. apt, rpm, homebrew, chocolatey, etc.)
-    4. Source code + build instructions
-    5. Nix
-    6. Downloadable static executable (amd)
-    7. Downloadable static executable (arm)
-    8. Other
-
-22. **What improvements or additional features and language support are missing in Cardano's offchain infrastructure like libraries, services and hosted services?**
-    - Open Question
-
-23. **What do you think is the greatest asset of Cardano’s developer ecosystem?**
-    - Open Question
-
-24. **What do you think is the most painful point of Cardano's developer ecosystem?**
-    - Open Question
-
-25. **Select any statement that applies to you․**
-    1. I have never heard of the Cardano Improvement Proposals (CIPs)
-    2. I have read and used a CIP
-    3. I have participated in conversations or reviews related to a CIP
-    4. I have written or co-written a CIP
-
-26. **Where do you usually seek help on technical issues?**
-    1. Discord servers
-    2. GitHub discussions/issues
-    3. Friends/colleagues/community members
-    4. Cardano StackExchange
-    5. Cardano forum
-    6. Telegram groups
-    7. Twitter/X
-    8. Reddit(r/Cardano, r/CardanoDevelopers)
-    9. Other
-
-27. **Where/how do you look for technical details on Cardano?**
-    1. Source code
-    2. Cardano docs (https://docs.cardano.org/)
-    3. Cardano's developer portal (https://developers.cardano.org/)
-    4. Blog or website articles & guides
-    5. Discord servers
-    6. Friends/colleagues/community members
-    7. Scientific papers/specifications
-    8. (Online) courses (e.g. Plutus Pioneer Program, EMURGO Academy, etc.)
-    9. Cardano forum
-    10. YouTube
-    11. Twitter/X
-    12. Telegram groups
-    13. Reddit (r/Cardano, r/CardanoDevelopers)
-    14. Other
-
-28. **On average, how satisfied are you with the technical answers/details you find in documentation and within the community?**
-    - Scale from 1 (Unsatisfied) to 10 (Pleased)
-
-29. **How satisfied were you with the experience provided by the Cardano Buidler Fest in Toulouse?**
-    - Scale from 1 (Unsatisfied) to 10 (Pleased)
-
-30. **What would you like to improve on the Buidler Fest or do you want to share any other ideas for community engagement in terms of events?**
-    - Open Question
