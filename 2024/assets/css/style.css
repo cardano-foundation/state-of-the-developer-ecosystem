@@ -363,14 +363,15 @@ div.stack-legend:before {
 }
 
 div.pie {
-  width: 20rem;
-  height: 20rem;
+  width: 14rem;
+  height: 14rem;
   border-radius: 50%;
   border: 5px solid var(--color-primary);
   margin: 0 auto;
-  margin-top: 4rem;
+  margin-top: 3rem;
   position: relative;
 }
+
 
 div.pie::before,
 div.pie::after {
@@ -389,6 +390,85 @@ div.pie::after {
   right: 1rem;
 }
 
+div.box-plot {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 80%;
+  height: 7.5rem;
+  margin: 2rem auto;
+  z-index: 2;
+}
+
+div.box-plot .box {
+  background: var(--color-primary);
+  height: 5rem;
+  position: absolute;
+  border: 0.1rem solid var(--color-text);
+  box-sizing: border-box;
+}
+
+div.box-plot > .whisker {
+  height: 2rem;
+  background: var(--color-text);
+  width: 0.2rem;
+  position: absolute;
+  top: 1.5rem;
+  box-sizing: border-box;
+}
+
+div.box-plot > .link {
+  height: 0.1rem;
+  background: var(--color-text);
+  position: absolute;
+  color: var(--color-text);
+  box-sizing: border-box;
+  top: 2.45rem;
+}
+
+div.box-plot > .median {
+  background: var(--color-text);
+  box-sizing: border-box;
+  height: 5rem;
+  position: absolute;
+}
+
+div.box-plot ~ .scale {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 88%;
+  margin: 0 auto;
+}
+
+div.box-plot ~ .scale > .bucket {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  position: relative;
+}
+
+div.box-plot ~ .scale > .bucket.labelled::before {
+  content: attr(data-label);
+  position: absolute;
+  top: 1.25rem;
+  color: var(--color-text);
+  width: 100%;
+  text-align: center;
+}
+
+div.box-plot ~ .scale > .bucket::after {
+  content: '';
+  width: 0.1rem;
+  height: 8.5rem;
+  position: absolute;
+  left: calc(50% - 0.05rem);
+  background: var(--color-primary-light);
+  opacity: 0.35;
+  top: -9.5rem;
+}
 
 div.stack-legend:after {
     font-size: 0.8em;

@@ -19,6 +19,7 @@ import Html exposing (Html)
 import Html.Attributes
 import Html.Events
 import Html.Lazy
+import List.Extra as List
 import Markdown exposing (defaultOptions)
 import Slug
 import Svg
@@ -181,7 +182,6 @@ type alias BarChart a =
     , sortDesc : Bool
     , additionalFilters : List (Filter a)
     , selectedFilter : Int
-    , footnote : Maybe (Int -> List (List a) -> String)
     }
 
 
@@ -771,7 +771,7 @@ view ({ title, introduction, questions } as model) =
             updateQuestion13
             questions.question13
             []
-        , viewScaleWith model updateQuestion14 questions.question14 []
+        , viewScaleWith model updateQuestion14 [] questions.question14
         , viewMultipleChoicesWith
             model
             updateQuestion15
@@ -842,7 +842,6 @@ viewMultipleChoicesWith model toMsg { title, comment, options, answers, sortDesc
         , sortDesc = sortDesc
         , selectedFilter = selectedFilter
         , additionalFilters = additionalFilters
-        , footnote = Nothing
         }
 
 
@@ -908,9 +907,9 @@ viewYesNoWith model toMsg additionalFilters =
             in
             Html.article
                 []
-                ([ viewQuestionTitle title
-                 , viewQuestionControls toMsg model.displayOption filters (total answers)
-                 , Html.div
+                [ viewQuestionTitle title
+                , viewQuestionControls toMsg model.displayOption filters (total answers)
+                , Html.div
                     [ Html.Attributes.class "pie"
                     , Html.Attributes.attribute "data-yes"
                         (case model.displayOption of
@@ -937,9 +936,8 @@ viewYesNoWith model toMsg additionalFilters =
                             ]
                     ]
                     []
-                 ]
-                    ++ viewQuestionFooter Nothing filteredAnswers comment
-                )
+                , viewQuestionFooter comment
+                ]
 
 
 viewScale :
@@ -947,45 +945,171 @@ viewScale :
     -> Scale
     -> Html Msg
 viewScale model q =
-    viewScaleWith model noUpdate q []
+    viewScaleWith model noUpdate [] q
 
 
 viewScaleWith :
     Model
     -> ({ selectedFilter : Int } -> Msg)
-    -> Scale
     -> List (Filter Int)
+    -> Scale
     -> Html Msg
-viewScaleWith model toMsg { title, comment, answers, minimum, maximum, selectedFilter } additionalFilters =
-    viewBarChart
-        model
-        toMsg
-        True
-        { title = title
-        , comment = comment
-        , answers = answers
-        , options =
-            List.concat
-                [ [ ( "10 (" ++ maximum ++ ")", 10 ) ]
-                , List.range 2 9 |> List.map (\n -> ( String.fromInt n, n )) |> List.reverse
-                , [ ( "1 (" ++ minimum ++ ")", 1 ) ]
-                ]
-        , sortDesc = False
-        , selectedFilter = selectedFilter
-        , additionalFilters = additionalFilters
-        , footnote =
-            Just
-                (\totalFilteredAnswers filteredAnswers ->
-                    let
-                        mean =
-                            toFloat (List.sum (List.map List.sum filteredAnswers)) / toFloat totalFilteredAnswers
-                    in
-                    String.join " "
-                        [ "Arithmetic mean = "
-                        , (10 * mean) |> truncate |> (\x -> String.fromInt (x // 10) ++ "." ++ String.fromInt (x - 10 * (x // 10)))
+viewScaleWith model toMsg additionalFilters =
+    Html.Lazy.lazy <|
+        \{ title, answers, comment, minimum, maximum, selectedFilter } ->
+            let
+                filters =
+                    Array.fromList (defaultFilter (total answers) :: additionalFilters)
+
+                filteredAnswers =
+                    filters
+                        |> Array.get selectedFilter
+                        |> Maybe.withDefault (defaultFilter <| total answers)
+                        |> (\{ function } -> function answers)
+                        |> List.filterMap List.head
+                        |> List.sort
+                        |> Array.fromList
+
+                len =
+                    Array.length filteredAnswers
+
+                minValue =
+                    filteredAnswers |> Array.get 0 |> Maybe.withDefault 0
+
+                maxValue =
+                    filteredAnswers |> Array.get (len - 1) |> Maybe.withDefault 10
+
+                median =
+                    if remainderBy len 2 == 0 then
+                        filteredAnswers
+                            |> Array.get ((len - 1) // 2)
+                            |> Maybe.withDefault 0
+                            |> toFloat
+
+                    else
+                        let
+                            half =
+                                len // 2
+
+                            sup =
+                                filteredAnswers |> Array.get half |> Maybe.withDefault 10
+
+                            inf =
+                                filteredAnswers |> Array.get (half - 1) |> Maybe.withDefault 0
+                        in
+                        (toFloat sup + toFloat inf) / 2
+
+                q1 =
+                    filteredAnswers
+                        |> Array.get (ceiling (toFloat len / 4))
+                        |> Maybe.withDefault 0
+
+                q3 =
+                    filteredAnswers
+                        |> Array.get (ceiling (3 * toFloat len / 4))
+                        |> Maybe.withDefault 10
+
+                position n =
+                    String.fromInt (n * 10) ++ "%"
+            in
+            Html.article
+                []
+                [ viewQuestionTitle title
+                , viewQuestionControls toMsg model.displayOption filters (total answers)
+                , Html.div
+                    [ Html.Attributes.class "box-plot"
+                    ]
+                    [ Html.div
+                        [ Html.Attributes.class "whisker"
+                        , Html.Attributes.style "left" <| "calc(" ++ position minValue ++ " - 0.1rem)"
                         ]
-                )
-        }
+                        []
+                    , Html.div
+                        [ Html.Attributes.class "link"
+                        , Html.Attributes.style "width" <| position (q1 - minValue)
+                        , Html.Attributes.style "left" <| position minValue
+                        ]
+                        []
+                    , Html.div
+                        [ Html.Attributes.class "box"
+                        , Html.Attributes.style "left" <| position q1
+                        , Html.Attributes.style "width" <| position (q3 - q1)
+                        ]
+                        []
+                    , Html.div
+                        [ Html.Attributes.class "median"
+                        , Html.Attributes.style "left" <| "calc(" ++ String.fromFloat (median * 10) ++ "% - 0.125rem)"
+                        , Html.Attributes.style "width" "0.25rem"
+                        ]
+                        []
+                    , Html.div
+                        [ Html.Attributes.class "link"
+                        , Html.Attributes.style "width" <| position (maxValue - q3)
+                        , Html.Attributes.style "left" <| position q3
+                        ]
+                        []
+                    , Html.div
+                        [ Html.Attributes.class "whisker"
+                        , Html.Attributes.style "left" <| "calc(" ++ position maxValue ++ " - 0.1rem)"
+                        ]
+                        []
+                    ]
+                , Html.div
+                    [ Html.Attributes.class "scale"
+                    ]
+                    (List.range 0 10
+                        |> List.map
+                            (\ix ->
+                                Html.div
+                                    (Html.Attributes.class "bucket"
+                                        :: (case ix of
+                                                0 ->
+                                                    [ Html.Attributes.class "labelled", Html.Attributes.attribute "data-label" minimum ]
+
+                                                10 ->
+                                                    [ Html.Attributes.class "labelled", Html.Attributes.attribute "data-label" maximum ]
+
+                                                _ ->
+                                                    []
+                                           )
+                                    )
+                                    [ Html.text (String.fromInt ix) ]
+                            )
+                    )
+                , viewQuestionFooter comment
+                ]
+
+
+
+--    viewBarChart
+--        model
+--        toMsg
+--        True
+--        { title = title
+--        , comment = comment
+--        , answers = answers
+--        , options =
+--            List.concat
+--                [ [ ( "10 (" ++ maximum ++ ")", 10 ) ]
+--                , List.range 2 9 |> List.map (\n -> ( String.fromInt n, n )) |> List.reverse
+--                , [ ( "1 (" ++ minimum ++ ")", 1 ) ]
+--                ]
+--        , sortDesc = False
+--        , selectedFilter = selectedFilter
+--        , additionalFilters = additionalFilters
+--        , footnote =
+--            Just
+--                (\totalFilteredAnswers filteredAnswers ->
+--                    let
+--                        mean =
+--                            toFloat (List.sum (List.map List.sum filteredAnswers)) / toFloat totalFilteredAnswers
+--                    in
+--                    String.join " "
+--                        [ "Arithmetic mean = "
+--                        , (10 * mean) |> truncate |> (\x -> String.fromInt (x // 10) ++ "." ++ String.fromInt (x - 10 * (x // 10)))
+--                        ]
+--                )
+--        }
 
 
 viewOpen :
@@ -1111,9 +1235,6 @@ viewStackBarChart model =
                 filteredAnswers =
                     answers
 
-                footnote =
-                    Nothing
-
                 comment =
                     ""
 
@@ -1197,16 +1318,6 @@ viewStackBarChart model =
                                     ]
                             )
                     )
-                , Html.div
-                    [ Html.Attributes.class "footnote" ]
-                    [ Html.text <|
-                        case footnote of
-                            Just custom ->
-                                custom (totalWith Array.length filteredAnswers) filteredAnswers
-
-                            Nothing ->
-                                ""
-                    ]
                 , Markdown.toHtmlWith { defaultOptions | sanitize = False } [] comment
                 ]
 
@@ -1219,7 +1330,7 @@ viewBarChart :
     -> Html Msg
 viewBarChart model toMsg singleChoice =
     Html.Lazy.lazy <|
-        \{ title, options, answers, comment, sortDesc, selectedFilter, additionalFilters, footnote } ->
+        \{ title, options, answers, comment, sortDesc, selectedFilter, additionalFilters } ->
             let
                 filters =
                     Array.fromList (defaultFilter (total answers) :: additionalFilters)
@@ -1239,9 +1350,9 @@ viewBarChart model toMsg singleChoice =
             in
             Html.article
                 []
-                ([ viewQuestionTitle title
-                 , viewQuestionControls toMsg model.displayOption filters (total answers)
-                 , Html.ul
+                [ viewQuestionTitle title
+                , viewQuestionControls toMsg model.displayOption filters (total answers)
+                , Html.ul
                     [ Html.Attributes.class "bars" ]
                     (data
                         |> List.filterMap
@@ -1285,9 +1396,8 @@ viewBarChart model toMsg singleChoice =
                                             ]
                             )
                     )
-                 ]
-                    ++ viewQuestionFooter footnote filteredAnswers comment
-                )
+                , viewQuestionFooter comment
+                ]
 
 
 viewQuestionTitle : String -> Html a
@@ -1386,24 +1496,9 @@ viewQuestionControls toMsg displayOption filters totalAnswers =
         )
 
 
-viewQuestionFooter :
-    Maybe (Int -> List (List a) -> String)
-    -> List (List a)
-    -> String
-    -> List (Html Msg)
-viewQuestionFooter footnote filteredAnswers comment =
-    [ Html.div
-        [ Html.Attributes.class "footnote" ]
-        [ Html.text <|
-            case footnote of
-                Just custom ->
-                    custom (total filteredAnswers) filteredAnswers
-
-                Nothing ->
-                    ""
-        ]
-    , Markdown.toHtmlWith { defaultOptions | sanitize = False } [] comment
-    ]
+viewQuestionFooter : String -> Html Msg
+viewQuestionFooter =
+    Markdown.toHtmlWith { defaultOptions | sanitize = False } []
 
 
 viewMenuLink : { r | title : String } -> Html a
