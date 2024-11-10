@@ -6,180 +6,159 @@ The answers expressed in this survey by the community are not intended to reflec
 
 # What do you think is the greatest asset of Cardano’s developer ecosystem?
 
-## Its community [32]
+## Aiken. [22]
 
-- Comunity
-- Passionate advocates of decentralized finance
-- The community efforts
-- Community
-- Community support
-- Community.
-- the awesome people in the developer's community
-- Talented people
-- Community
-- the attitude of the ecosystem developers themselves
-- The community development
-- Its ability to self-organize and create communities
-- It’s community
-- The people
-- Community support
-- developer community and exchange of (really hidden) documentation
-- its community itself, as well as its leaders and institutions that are in constant review and reinvention
-- The community
-- Its Developers
-- The non-IOG developers with skin-in-the-game, without them we wouldn't go anywhere
-- The builders themselves.
-- Really smart and methodical developers
-- This is rather useless feedback, but I think the greatest asset of Cardano's developer ecosystem is Cardano. The design from first-principles makes it logical, extensible, and lends itself to building safe applications on top of Cardano.
-- Intelligent people in this ecosystem and security.
-- People who have been and continue to work on ecosystem regardless of the hazardous process of interim treasury extraction program. Additionally the bootstrap entities (CF + IO, not emurgo) that continue to progress the development ecosystem in absence of an alternate node implementation
-- It’s people
-- The community, but that means putting more time to ask and communicate. Unlike NodeJS where you can learn and create products on your own
-- Discord server is by far the best resource I have used.  Not so much for the content, but for the availability of people at all times to point me in the right direction to the content I need.
-- Good question, I feel right now that from when I got involved to now it is just too hard to build anything even though I have built some of the largest websites in the world. But to answer the question I think it's the actually developers who are way smarter than me that make the ecosystem what it is.
-- The Community.
-- Open source developers
-- Community
+- "Aiken"
+- "Aiken [...]"
+- "Probably Aiken"
+- "Aiken"
+- "aiken"
+- "Aiken [...]"
+- "Aiken"
+- "aiken [...]"
+- "Aiken."
+- "Aiken"
+- "Its Aiken onchain ecosystem."
+- "Aiken, [...]"
+- "Aiken, [...]"
+- "[...] and Aiken"
+- "That’s a very open ended question, but as I spend most of my time writing validators Aiken really has changed the game"
+- "CF's investment in Aiken"
+- "Now it is Aiken for sure"
+- "Aiken. Like for real it saved cardano."
+- "Right now it's Aiken"
+- "Right now, Aiken, Helios and the book \"Cardano Smart Contracts\" by Lawrence Arthur Ley."
+- "Aiken, [...]"
+- "aiken, [...]"
 
-## Its diverse and furnished open source ecosystem [19]
+## A high concentration of talented developers. [19]
 
-- There's a tool for everyone and it's becoming more diverse.
-- All the different independently developed libraries like Aiken, OpShin, etc. that follow different paradigms and each have their own strengths. This allows the developer a lot of freedom and optimization of their own goals when choosing their tools.
-- multiple smart contract languages: Aiken, Python, TS
-- The ingenuity and size of the developer ecosystem
-- The ecosystem is moving towards open source code.
-- Open and collaborative
-- Open Source and Tech Stack
-- The plutonomicon
-- A good initial base for a growing solid diversity. Not just one big entity, but also not too many ultra-small different ones.
-- Intelligent/creative devs and positive/constructive attitude
-- The enthusiasm for the echo systems values and its research based development, however now is the time to deliver and provide a better development experience.
-- We have a lot of passionate and smart engineers creating open source projects.
-- Some smart and hardworking teams building libraries and tools
-- Lots of really smart devs working on open source solutions
-- Diversity and high-quality collaborations
-- Toolings around building frontend dApps
-- It's diversity
-- Open source
-- Community tools
-- Being based on Nix is probably the best asset, being able to integrate different tools in different languages is a unique feature of the Cardano ecosystem.
+- "High concentration of talent with a functional programming mindset."
+- "Top Developers are unique and very detailed oriented"
+- "DEVELOPERS"
+- "Unfortunately a few talented people that know how to use our smart validator system and Cardano at all. This has improved over the past year with organizations like Anastasia Labs, txpipe and others but it's still rare talent on that level of knowledge."
+- "ktorz. Only half joking"
+- "[...] expert programmers"
+- "The Developers"
+- "talent"
+- "[...] and developers with a passion"
+- "The txpipe discord is full of devs who are very helpful with tooling problems"
+- "The developers, such as ktorz"
+- "Pi Lanningham"
+- "TxPipe team"
+- "Passionate developers"
+- "[...] but also the Aiken discord channel in TxPipe. I didn't realize how important it was to have a builder focused space where people could ask questions, share achievements, and sometimes just chat / joke around. I'm also enjoying the amaru channel in PRAGMA for similar reasons and I'm hoping to find more spaces like this."
+- "High caliber developer pool"
+- "its developers developers developers of course :)"
+- "IQ Level"
+- "The talent"
 
-## Aiken (https://aiken-lang.org/) [17]
+## Its rigorous foundation and focus on correctness [15]
 
-- aiken
-- Probably Aiken. Understanding Cardano smart contracts is difficult enough without the baggage that comes from plutus-tx/haskell tooling. Aiken takes those rough edges away so you can focus on the eutxo and smart validator paradigm. Not to mention the discord channel for Aiken is a great place to learn not only about Aiken but about smart contracts in general. I wish there was (or I knew about) other channels like that for discussing smart contracts on Cardano.
-- aiken
-- developers and companies building stuff for the end-to-end toolchain with a focus on developer experience (like aiken)
-- Aiken
-- Aiken(, Ogmios, Lucid)
-- It is hard to select one. I would go with Aiken or Kupo.
-- The greatest challenge for Cardano devs has been simply writing the code. Aiken and Lucid are both key improvements in that area.
-- Aiken
-- Aiken
-- Aiken
-- Aiken (and Lucid)
-- Aiken (+ Lucid + Blockfrost/Koios)
-- Aiken Ogmios
-- Aiken(, Helios, Cardano-Client-Lib (bloxbean), Lucid, Scrolls, Yaci-DevKit.)
-- AIKEN!!!
-- aiken
-- Free and open source projects like aiken and Lucid
+- "Cardano's greatest asset within its developer ecosystem is arguably its strong focus on formal methods and rigorous scientific research, particularly its use of Haskell as the primary language for smart contract development."
+- "It just works most of the time"
+- "Reproducibility and formal verification is something that only Cardano has at least an acceptable level. I've been in EVM ecosystem, and everything is clunky there, they are very far from what we have here."
+- "[...] I like cardano determinism and principles."
+- "Decentralised, eUTXO"
+- "Scientifically sound tech, [...]"
+- "Technology"
+- "Reliability"
+- "The research and associated core engineering."
+- "Security"
+- "Security"
+- "Formal methods in the foundations"
+- "Core Haskell based Plutus API and it's security features"
+- "Culture of correctness and security over speed of deployment. [...]"
+- "peer reviewed and formally verified"
 
-## Few key players (TxPipe, Gimbalabs, DcSpark...) [16]
+## Specific tools/libraries other than Aiken (e.g. Plu-ts, Lucid-Evolution, Blaze, Mesh, db-sync, Ogmios, Kupo...) [15]
 
-- People like KtorZ, Santiago and RVcas (Lucas) who are carrying the entire ecosystem behind their backs making it accessible
-- Developers like TxPipe e.g.
-- ktorz
-- TxPipe and developers.cardano.org
-- KtoRz. Good libraries. Helpful. Good explanations.
-- Demeter run
-- DemeterRun and BlinkLabs
-- TxPipe
-- TxPipe and DcSpark
-- MLabs, DcSpark, companies that can substitute for incompetencies of founding entities
-- Can't pick just one, so I'll name TxPipe and dcSpark for all the projects, libraries and services they provide, CF for funding of multiple projects and IOG for the research, technology and reference implementation of many of the tools.
-- Christian Schmitz on output-for-effort. TxPipe for overall output  Stellar Contracts for architectural leadership
-- The consultancies and businesses struggling to deliver projects and paying hard for some past mistakes made and currently established practices used by technical teams at IOG.
-- Gimbalabs
-- The Gimbalabs community
-- The collaboration-focussed community educators like Gimbalabs.
+- "[...] Blaze, Yaci-Dev-Kit, Lucid-Evolution, Yaci-Store on chain indexer."
+- "[...], Ogmios and Kupo."
+- "cardano -node"
+- "The cardano-node-emulator. It allows writing automated tests for smart-contracts written in any language. I write my contracts in aiken and can still use the cardano-node-emulator haskell library to write tests for them. It even enables benchmarking the smart contracts."
+- "Mesh, Lucid-evolution [...]
+- "cardano-api and Plutarch honestly. Maybe CSL for frontend as well."
+- "[...] and lucid-evolution and blaze"
+- "Blaze and cardano-js-sdk"
+- "plu-ts"
+- "Plu-ts"
+- "[...] and plu-ts, both ready to use, looks good. [...]"
+- "db sync"
+- "DBsync"
+- "Cardano dbsynch"
+- Amazing open source tools, from demeter to ogmios,kupo, pycardano, opshin to free tier levels of access to indexers like blockfrost ,koios and demeter."
 
-## Its methodology, strong foundations and overall evidence-based approach [10]
+## Its tooling diversity and open source collaboration. [11]
 
-- Resilience of the node and adjacent systems when correctly set up, as well as the comparably low compute requirements, enabling many people to host the services on their own or rented hardware.
-- Its philosophy?  First principles, start from the beginning, actually do the academic/foundational legwork, (Ouroboros, Hydra, etc.) Actually getting the smarty university professors to publish papers, the fact that the blockchain (unlike many others, particularly Solana, but also ETH, etc) doesn't fucking break down and have to be restarted... But the implementation is slow.
-- Security rigor
-- Security and correctness.
-- The technical understanding of the developers who have been core contributors
-- Cardano blockchain, tooling sucks right now so theres not much benefit outside of the chain itself
-- I think the greatest asset is actually the standards. Most standards in Cardano are a bit newer or less adopted, but the standards miss out on the mistakes that make me hate other blockchains. Namely our asset standard and budding contract interoperability standards are light years better than the awful standards that now plague Eth and literally every other blockchain that thought copying the ERC-20 standard is a good idea. I have seen a few improve on ERC-20 like cosmos with CW20.
-- The start of the CIP process
-- Reproducible builds
-- Strong computer science foundation rooted in functional programming
+- "Community cross pollination I see with with different language teams. Blink labs building a Go Node out while working with Amaru and vice versa. Let em cook!"
+- "Its diversity, across many language ecosystem and developers from all horizons."
+- "The community's willingness to jump in and provide opensource tools where IOG completely dropped the ball on developer experience."
+- "The cooperation in the space is admirable and other people are always ready to help"
+- "The variety of tools. Especially in smart contracts, that I have multiple options to choose from."
+- "Organic growth of solutions, lots of open source."
+- "Open Source ecosystem"
+- "the strength and size of the open source community."
+- "Vibrant community, especially the part that people can manage difficult discussion. Open collaboration to work on same piece of open source software"
+- "Diverse options of domain specific languages for people to use for building instead of strictly Haskell"
+- "The tenacity and willingness of the community to build what is lacking"
 
-## Its reliance on functional programming / the EUTxO model [8]
+## Its people & community. [10]
 
-- Functional programming, utxo model
-- Determinism vastly simplifies practical applications of ZKP. Functional Programming compilation target language (once we get a legitimate framework for formal verification)
-- eutxo
-- Strong computer science foundation rooted in functional programming
-- The eutxo model that sets it apart from most other chains and allows for interesting design solutions.
-- Determinism.
-- The possibility of using Haskell and other strongly typed, expressive languages to write contracts and off-chain code in.
-- The minimalist and functional design of plutus
+- "Community"
+- "Genuine people"
+- "Diversity and passion"
+- "The community"
+- "community"
+- "Tenacity"
+- "the community [...]
+- "[...] developer support from other people, can just hop in discord and ask"
+- "The amazing diversity of different and multi-talented individuals all doing their part to improve in various languages and environments."
+- "The community is available for questions."
 
-## Lucid (https://lucid.spacebudz.io/) [5]
+## Good education material such as Gimbalabs PBL or CF's Academy [6]
 
-- (Aiken, Ogmios,) Lucid
-- (Aiken and) Lucid
-- (Aiken +) Lucid (+ Blockfrost/Koios)
-- (Aiken, Helios, Cardano-Client-Lib (bloxbean),) Lucid (, Scrolls, Yaci-DevKit.)
-- Free and open source projects like aiken and Lucid
+- "Entry level education - gimbalabs ppbl, CF's blockchain course, plutus pioneers"
+- "The developer survey"
+- "knowledge"
+- "[...], professors, [...]"
+- "[...], Developer Portal"
+- "Docs"
 
-## Helios (https://www.hyperion-bt.org/helios-book/) [4]
+## Project Catalyst [2]
 
-- Helios - Javascript functional DSL language
-- Helios
-- Christian Schmitz on output-for-effort. TxPipe for overall output  Stellar Contracts for architectural leadership
-- (Aiken,) Helios (, Cardano-Client-Lib (bloxbean),Lucid , Scrolls, Yaci-DevKit.)
-
-## Jambhala / Emurgo Academy (https://github.com/iburzynski/jambhala#readme) [4]
-
-- Emurgo Academy.
-- Jambhala is really looking good (out of Emurgo)
-- https://github.com/iburzynski/jambhala
-- Jambhala by Ian Burzynski at Emurgo Academy https://github.com/iburzynski/jambhala
-
-## Blockfrost (https://blockfrost.io/) [4]
-
-- Blockfrost free tier and cardano serialization lib
-- probably meshJS with koios and blockfrost for non smart-contract related.
-- (Aiken + Lucid +) Blockfrost/Koios
-- Blockfrost
+- "Project catalyst"
+- "Project Catalyst"
 
 ## Unclassified
 
-- Marlowe
-- The simplicity of the onchain code. With highlevel languages we can make it so that even non tech-gurus are able to validate a dApp since the onchain logic is minimal
-- It's written in Haskell :)
-- plutus apps repository
-- Easy to use APIS
-- Hydra
-- nothing
-- Finding a need and building a solution.
-- From Cardano’s roadmap to its tokens, smart contracts, technology, and partnerships, here are some useful basics about this influential blockchain protocol. The Cardano blockchain protocol uses a Proof-of-Stake (PoS) consensus mechanism and has numerous use cases and applications. These include crypto transactions and staking, smart contracts, Internet of Things (IoT), non-fungible tokens (NFT), and more.
-- It's great
-- People do not give up even if they do not get any support, the documentation is confusing/poor, and there is no penetrating financial barriers
-- i loved your futuristic pourpose
-- minswap
-- light as possible chain data aggregation such as oura to spin up, and around it, a light as possible development stack
-- Being an underdog and not having an abundance of funding options in the ecosystem makes the developers more hungry. The all flash no substance crowd are washed out quickly. The developers here are better.
-- Apollo library, for Golang Native transaction building.
-- Nothing specific
-- good blockchain with great features
-- Sucking so that icp can thrive
-- Nothing is great in the Cardano developer ecosystem
-- certainly not the documentation for developer with IQ < 140
-- Plutarch
-- cardano-node
-- scalability
+- "-"
+- "---------------"
+- "."
+- "???????????"
+- "\"This question is required\"."
+- "A universal, multi-platform language some big players are starting to use, but you probably have not yet because funding and marketing makes tooling popular on Cardano, not features, values  and capabilities."
+- "Aaaauuutrdgjjy"
+- "barrier to entry"
+- "commitment"
+- "Decentralized Finance"
+- "Don't know enough to answer."
+- "Go to bed now so I'll be there in about the election and Spanish flu  me ha I me know when you get here please"
+- "hard to say"
+- "Hopefully account abstraction will be. They are making bigger moves to enshrine it in Ethereum."
+- "I don't know"
+- "I have no idea"
+- "Investments"
+- "It still needs work"
+- "l;kjk"
+- "Na"
+- "NA"
+- "no comment"
+- "No idea"
+- "Non answer"
+- "None. Everything is fragmented and bad in different ways."
+- "nononononononono"
+- "Overcomplicating things."
+- "The critical logic can be minimized to thr validator while everything else goes offchain."
+- "The facility"
+- "Undecided"

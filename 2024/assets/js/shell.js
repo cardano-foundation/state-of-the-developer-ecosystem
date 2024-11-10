@@ -436,8 +436,18 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
         ),
         question23: question(
           "It would be nice if there were a CLI for … ?",
-          { options: []
-          , link: `${repository}/2024/data/open-questions/what-is-your-most-awaited-feature-when-it-comes-to-cardano-s-smart-contracts.md`
+          { options:
+	    [ [ "...probably something, but no idea come to mind.", 31, null ]
+	    , [ "...nothing extra, the CLI offering is great as it is.", 13, null ]
+	    , [ "...scaffolding and operating private node (test) clusters.", 10, null ]
+	    , [ "...manipulating and inspecting CBOR.", 9, null ]
+	    , [ "...easier wallet management (including multisig)", 5, null ]
+	    , [ "...transaction building, possibly bespoke to popular dApps.", 5, null ]
+	    , [ "...easier blockchain data access without requiring heavy tools / services.", 5, null ]
+	    , [ "...non-unix users, possibly even just TUI or full-blown GUI.", 3, null ]
+	    , [ "...visualizing transactions.", 2, null ]
+	    ]
+          , link: `${repository}/2024/data/open-questions/it-would-be-nice-if-there-were-a-cli-for.md`
           },
 	  ``,
         ),
@@ -473,7 +483,16 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
         ),
         question26: question(
           "What do you think is the greatest asset of Cardano’s developer ecosystem?",
-          { options: []
+          { options:
+	    [ [ "Aiken.", 22, null ]
+	    , [ "A high concentration of talented developers.", 19, null ]
+	    , [ "Its rigorous foundation and focus on correctness.", 15, null ]
+	    , [ "Specific tools/libraries other than Aiken (e.g. Plu-ts, Lucid-Evolution, Blaze, Mesh, db-sync, Ogmios, Kupo...).", 15, null ]
+	    , [ "Its tooling diversity and open source collaboration.", 11, null ]
+	    , [ "Its people & resilient community.", 10, null ]
+	    , [ "Good education materials such as Gimbalabs PBL or CF's Academy.", 6, null ]
+	    , [ "Project Catalyst", 2, null ]
+	    ]
           , link: `${repository}/2024/data/open-questions/what-do-you-think-is-the-greatest-asset-of-cardano-s-developer-ecosystem.md`,
           },
 	  ``,
@@ -481,7 +500,7 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
         question27: question(
 	  "What do you think is the biggest pain point of Cardano's developer ecosystem?",
           { options: []
-          , link: `${repository}/2024/data/open-questions/what-do-you-think-is-the-most-painful-point-of-cardano-s-developer-ecosystem.md`
+          , link: `${repository}/2024/data/open-questions/what-do-you-think-is-the-biggest-pain-point-of-cardano-s-developer-ecosystem.md`
           },
 	  ``,
         ),
