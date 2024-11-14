@@ -839,11 +839,24 @@ viewDotsPlot model toMsg additionalFilters =
 
                 ( data, others, yMax ) =
                     buildDotsPlot { options = options, answers = filteredAnswers }
+
+                selectY { y } =
+                    y
+
+                globalMin =
+                    data |> List.minimumBy selectY |> Maybe.map selectY |> Maybe.withDefault 0
+
+                globalMax =
+                    data |> List.maximumBy selectY |> Maybe.map selectY |> Maybe.withDefault yMax
+
+                scale =
+                    (toFloat globalMax - toFloat globalMin) / (toFloat maxColors - 1)
             in
             Html.article
                 []
                 [ viewQuestionTitle title
                 , viewQuestionControls toMsg model.displayOption filters (total answers) (Just yMax)
+                , Html.div [ Html.Attributes.class "stack-legend" ] []
                 , (data
                     ++ (if others.y > 0 then
                             [ others ]
@@ -852,14 +865,24 @@ viewDotsPlot model toMsg additionalFilters =
                             []
                        )
                   )
-                    |> List.map
-                        (\choice ->
+                    |> List.indexedMap
+                        (\i choice ->
                             let
+                                rank =
+                                    floor (toFloat (choice.y - globalMin) / scale)
+
                                 dots =
                                     List.repeat choice.y (Html.div [ Html.Attributes.class "dot" ] [])
                             in
                             Html.li
-                                [ Html.Attributes.class "dot-group" ]
+                                (Html.Attributes.class "dot-group"
+                                    :: (if i == List.length data then
+                                            []
+
+                                        else
+                                            [ Html.Attributes.attribute "data-rank" (String.fromInt rank) ]
+                                       )
+                                )
                                 [ Html.label [] [ Html.text choice.x ]
                                 , Html.div []
                                     [ Html.div [] dots
