@@ -26,6 +26,11 @@ import Svg
 import Svg.Attributes
 
 
+maxColors : Int
+maxColors =
+    16
+
+
 main : Program Flags Model Msg
 main =
     Browser.element
@@ -174,21 +179,13 @@ type alias Filter a =
     }
 
 
-type alias BarChart a =
+type alias MultipleChoices =
     { title : String
     , comment : String
-    , answers : List (List a)
-    , options : List ( String, a )
-    , sortDesc : Bool
-    , additionalFilters : List (Filter a)
-    , selectedFilter : Int
-    }
-
-
-type alias StackBarChart =
-    { title : String
-    , answers : List (Array String)
+    , answers : List (List String)
     , options : List String
+    , sortDesc : Bool
+    , selectedFilter : Int
     }
 
 
@@ -199,17 +196,6 @@ type alias Ranking =
     , options : List String
     , sortDesc : Bool
     , selectedFilter : Int
-    }
-
-
-type alias MultipleChoices =
-    { title : String
-    , comment : String
-    , answers : List (List String)
-    , options : List String
-    , sortDesc : Bool
-    , selectedFilter : Int
-    , singleChoice : Bool
     }
 
 
@@ -723,158 +709,186 @@ view ({ title, introduction, questions } as model) =
             , Html.text title
             ]
         , Markdown.toHtmlWith { defaultOptions | sanitize = False } [ Html.Attributes.class "introduction" ] introduction
-        , viewMultipleChoices model questions.question1
-        , viewMultipleChoices model questions.question2
-        , viewMultipleChoices model questions.question3
-        , viewMultipleChoicesWith
-            model
-            updateQuestion4
-            questions.question4
-            []
-        , viewMultipleChoicesWith
-            model
-            updateQuestion5
-            questions.question5
-            []
-        , viewMultipleChoicesWith
-            model
-            updateQuestion6
-            questions.question6
-            []
-        , viewMultipleChoicesWith
-            model
-            updateQuestion7
-            questions.question7
-            []
-        , viewMultipleChoicesWith
-            model
-            updateQuestion8
-            questions.question8
-            []
-        , viewMultipleChoicesWith model
-            updateQuestion9
-            questions.question9
-            []
-        , viewScale model questions.question10
-        , viewRankingWith
-            model
-            updateQuestion11
-            questions.question11
-            []
-        , viewMultipleChoicesWith
-            model
-            updateQuestion12
-            questions.question12
-            []
-        , viewMultipleChoicesWith
-            model
-            updateQuestion13
-            questions.question13
-            []
-        , viewScaleWith model updateQuestion14 [] questions.question14
-        , viewMultipleChoicesWith
-            model
-            updateQuestion15
-            questions.question15
-            []
-        , viewMultipleChoicesWith
-            model
-            updateQuestion16
-            questions.question16
-            []
-        , viewOpen model questions.question17
-        , viewMultipleChoicesWith
-            model
-            updateQuestion18
-            questions.question18
-            []
-        , viewOpen model questions.question19
-        , viewMultipleChoicesWith
-            model
-            updateQuestion20
-            questions.question20
-            []
-        , viewMultipleChoices model questions.question21
-        , viewMultipleChoicesWith
-            model
-            updateQuestion22
-            questions.question22
-            []
-        , viewOpen model questions.question23
-        , viewMultipleChoices model questions.question24
-        , viewMultipleChoices model questions.question25
-        , viewOpen model questions.question26
-        , viewOpen model questions.question27
-        , viewMultipleChoices model questions.question28
-        , viewMultipleChoices model questions.question29
-        , viewMultipleChoices model questions.question30
-        , viewScale model questions.question31
-        , viewMultipleChoices model questions.question32
-        , viewYesNo model questions.question33
-        , viewScale model questions.question34
-        , viewOpen model questions.question35
+        , questions.question1 |> viewBarChart model noUpdate []
+        , questions.question2 |> viewBarChart model noUpdate []
+        , questions.question3 |> viewBarChart model noUpdate []
+        , questions.question4 |> viewBarChart model updateQuestion4 []
+        , questions.question5 |> viewBarChart model updateQuestion5 []
+        , questions.question6 |> viewDotsPlot model updateQuestion6 []
+        , questions.question7 |> viewBarChart model updateQuestion7 []
+        , questions.question8 |> viewBarChart model updateQuestion8 []
+        , questions.question9 |> viewDotsPlot model updateQuestion9 []
+        , questions.question10 |> viewBoxPlot model noUpdate []
+        , questions.question11 |> viewStackBarChart model
+        , questions.question12 |> viewDotsPlot model updateQuestion12 []
+        , questions.question13 |> viewDotsPlot model updateQuestion13 []
+        , questions.question14 |> viewBoxPlot model updateQuestion14 []
+        , questions.question15 |> viewDotsPlot model updateQuestion15 []
+        , questions.question16 |> viewDotsPlot model updateQuestion16 []
+        , questions.question17 |> viewOpen model
+        , questions.question18 |> viewDotsPlot model updateQuestion18 []
+        , questions.question19 |> viewOpen model
+        , questions.question20 |> viewDotsPlot model updateQuestion20 []
+        , questions.question21 |> viewDotsPlot model noUpdate []
+        , questions.question22 |> viewDotsPlot model updateQuestion22 []
+        , questions.question23 |> viewOpen model
+        , questions.question24 |> viewDotsPlot model noUpdate []
+        , questions.question25 |> viewDotsPlot model noUpdate []
+        , questions.question26 |> viewOpen model
+        , questions.question27 |> viewOpen model
+        , questions.question28 |> viewDotsPlot model noUpdate []
+        , questions.question29 |> viewDotsPlot model noUpdate []
+        , questions.question30 |> viewDotsPlot model noUpdate []
+        , questions.question31 |> viewBoxPlot model noUpdate []
+        , questions.question32 |> viewDotsPlot model noUpdate []
+        , questions.question33 |> viewPieChart model noUpdate []
+        , questions.question34 |> viewBoxPlot model noUpdate []
+        , questions.question35 |> viewOpen model
         ]
 
 
-viewMultipleChoices :
-    Model
-    -> MultipleChoices
-    -> Html Msg
-viewMultipleChoices model q =
-    viewMultipleChoicesWith model noUpdate q []
-
-
-viewMultipleChoicesWith :
+viewBarChart :
     Model
     -> ({ selectedFilter : Int } -> Msg)
-    -> MultipleChoices
     -> List (Filter String)
+    -> MultipleChoices
     -> Html Msg
-viewMultipleChoicesWith model toMsg { title, comment, options, answers, sortDesc, selectedFilter, singleChoice } additionalFilters =
-    viewBarChart
-        model
-        toMsg
-        singleChoice
-        { title = title
-        , comment = comment
-        , answers = answers
-        , options = List.map (\x -> ( x, x )) options
-        , sortDesc = sortDesc
-        , selectedFilter = selectedFilter
-        , additionalFilters = additionalFilters
-        }
+viewBarChart model toMsg additionalFilters =
+    Html.Lazy.lazy <|
+        \{ title, options, answers, comment, sortDesc, selectedFilter } ->
+            let
+                filters =
+                    Array.fromList (defaultFilter (total answers) :: additionalFilters)
+
+                filteredAnswers =
+                    filters
+                        |> Array.get selectedFilter
+                        |> Maybe.withDefault (defaultFilter <| total answers)
+                        |> (\{ function } -> function answers)
+
+                data =
+                    buildBarChart
+                        { options = options
+                        , answers = filteredAnswers
+                        , sortDesc = sortDesc
+                        }
+            in
+            Html.article
+                []
+                [ viewQuestionTitle title
+                , viewQuestionControls toMsg model.displayOption filters (total answers) Nothing
+                , Html.ul
+                    [ Html.Attributes.class "bars" ]
+                    (data
+                        |> List.filterMap
+                            (\{ x, y } ->
+                                if y == 0 then
+                                    Nothing
+
+                                else
+                                    Just <|
+                                        let
+                                            yMax =
+                                                total filteredAnswers
+                                        in
+                                        Html.li
+                                            []
+                                            [ Html.label [] [ Html.text x ]
+                                            , Html.div []
+                                                [ Html.div
+                                                    [ Html.Attributes.class "bar"
+                                                    , Html.Attributes.style "width" (displayPercent yMax y)
+                                                    ]
+                                                    []
+                                                , Html.label
+                                                    []
+                                                    [ Html.text <|
+                                                        case model.displayOption of
+                                                            DisplayTotal ->
+                                                                String.fromInt y
+
+                                                            DisplayRelative ->
+                                                                displayPercent yMax y
+                                                    ]
+                                                ]
+                                            ]
+                            )
+                    )
+                , viewQuestionFooter comment
+                ]
 
 
-viewRankingWith :
+viewDotsPlot :
     Model
     -> ({ selectedFilter : Int } -> Msg)
-    -> Ranking
     -> List (Filter String)
+    -> MultipleChoices
     -> Html Msg
-viewRankingWith model _ { title, comment, options, answers, sortDesc, selectedFilter } additionalFilters =
-    viewStackBarChart
-        model
-        { title = title
-        , answers = answers
-        , options = options
-        }
+viewDotsPlot model toMsg additionalFilters =
+    Html.Lazy.lazy <|
+        \{ title, comment, options, answers, sortDesc, selectedFilter } ->
+            let
+                filters =
+                    Array.fromList (defaultFilter (total answers) :: additionalFilters)
+
+                filteredAnswers =
+                    filters
+                        |> Array.get selectedFilter
+                        |> Maybe.withDefault (defaultFilter <| total answers)
+                        |> (\{ function } -> function answers)
+
+                ( data, others, yMax ) =
+                    buildDotsPlot { options = options, answers = answers }
+            in
+            Html.article
+                []
+                [ viewQuestionTitle title
+                , viewQuestionControls toMsg model.displayOption filters (total answers) (Just yMax)
+                , (data ++ [ others ])
+                    |> List.map
+                        (\choice ->
+                            let
+                                dots =
+                                    List.repeat choice.y (Html.div [ Html.Attributes.class "dot" ] [])
+                            in
+                            Html.li
+                                [ Html.Attributes.class "dot-group" ]
+                                [ Html.label [] [ Html.text choice.x ]
+                                , Html.div []
+                                    [ Html.div [] dots
+                                    , Html.div [ Html.Attributes.class "dot-labels" ] <|
+                                        case model.displayOption of
+                                            DisplayTotal ->
+                                                [ Html.label [] [ Html.text <| String.fromInt choice.y ] ]
+
+                                            DisplayRelative ->
+                                                [ Html.label []
+                                                    [ Html.text <|
+                                                        displayPercent (total answers) choice.y
+                                                            ++ " (of respondents)"
+                                                    ]
+                                                , Html.label
+                                                    []
+                                                    [ Html.text <|
+                                                        displayPercent yMax choice.y
+                                                            ++ " (of all answers)"
+                                                    ]
+                                                ]
+                                    ]
+                                ]
+                        )
+                    |> Html.ul [ Html.Attributes.class "dots" ]
+                , viewQuestionFooter comment
+                ]
 
 
-viewYesNo :
-    Model
-    -> YesNo
-    -> Html Msg
-viewYesNo model =
-    viewYesNoWith model noUpdate []
-
-
-viewYesNoWith :
+viewPieChart :
     Model
     -> ({ selectedFilter : Int } -> Msg)
     -> List (Filter Bool)
     -> YesNo
     -> Html Msg
-viewYesNoWith model toMsg additionalFilters =
+viewPieChart model toMsg additionalFilters =
     Html.Lazy.lazy <|
         \{ title, answers, comment, selectedFilter } ->
             let
@@ -908,7 +922,7 @@ viewYesNoWith model toMsg additionalFilters =
             Html.article
                 []
                 [ viewQuestionTitle title
-                , viewQuestionControls toMsg model.displayOption filters (total answers)
+                , viewQuestionControls toMsg model.displayOption filters (total answers) Nothing
                 , Html.div
                     [ Html.Attributes.class "pie"
                     , Html.Attributes.attribute "data-yes"
@@ -940,21 +954,13 @@ viewYesNoWith model toMsg additionalFilters =
                 ]
 
 
-viewScale :
-    Model
-    -> Scale
-    -> Html Msg
-viewScale model q =
-    viewScaleWith model noUpdate [] q
-
-
-viewScaleWith :
+viewBoxPlot :
     Model
     -> ({ selectedFilter : Int } -> Msg)
     -> List (Filter Int)
     -> Scale
     -> Html Msg
-viewScaleWith model toMsg additionalFilters =
+viewBoxPlot model toMsg additionalFilters =
     Html.Lazy.lazy <|
         \{ title, answers, comment, minimum, maximum, selectedFilter } ->
             let
@@ -1015,7 +1021,7 @@ viewScaleWith model toMsg additionalFilters =
             Html.article
                 []
                 [ viewQuestionTitle title
-                , viewQuestionControls toMsg model.displayOption filters (total answers)
+                , viewQuestionControls toMsg model.displayOption filters (total answers) Nothing
                 , Html.div
                     [ Html.Attributes.class "box-plot"
                     ]
@@ -1078,38 +1084,6 @@ viewScaleWith model toMsg additionalFilters =
                     )
                 , viewQuestionFooter comment
                 ]
-
-
-
---    viewBarChart
---        model
---        toMsg
---        True
---        { title = title
---        , comment = comment
---        , answers = answers
---        , options =
---            List.concat
---                [ [ ( "10 (" ++ maximum ++ ")", 10 ) ]
---                , List.range 2 9 |> List.map (\n -> ( String.fromInt n, n )) |> List.reverse
---                , [ ( "1 (" ++ minimum ++ ")", 1 ) ]
---                ]
---        , sortDesc = False
---        , selectedFilter = selectedFilter
---        , additionalFilters = additionalFilters
---        , footnote =
---            Just
---                (\totalFilteredAnswers filteredAnswers ->
---                    let
---                        mean =
---                            toFloat (List.sum (List.map List.sum filteredAnswers)) / toFloat totalFilteredAnswers
---                    in
---                    String.join " "
---                        [ "Arithmetic mean = "
---                        , (10 * mean) |> truncate |> (\x -> String.fromInt (x // 10) ++ "." ++ String.fromInt (x - 10 * (x // 10)))
---                        ]
---                )
---        }
 
 
 viewOpen :
@@ -1226,7 +1200,7 @@ viewOpen model =
 
 viewStackBarChart :
     Model
-    -> StackBarChart
+    -> Ranking
     -> Html Msg
 viewStackBarChart model =
     Html.Lazy.lazy <|
@@ -1322,84 +1296,6 @@ viewStackBarChart model =
                 ]
 
 
-viewBarChart :
-    Model
-    -> ({ selectedFilter : Int } -> Msg)
-    -> Bool
-    -> BarChart a
-    -> Html Msg
-viewBarChart model toMsg singleChoice =
-    Html.Lazy.lazy <|
-        \{ title, options, answers, comment, sortDesc, selectedFilter, additionalFilters } ->
-            let
-                filters =
-                    Array.fromList (defaultFilter (total answers) :: additionalFilters)
-
-                filteredAnswers =
-                    filters
-                        |> Array.get selectedFilter
-                        |> Maybe.withDefault (defaultFilter <| total answers)
-                        |> (\{ function } -> function answers)
-
-                data =
-                    buildBarChart
-                        { options = options
-                        , answers = filteredAnswers
-                        , sortDesc = sortDesc
-                        }
-            in
-            Html.article
-                []
-                [ viewQuestionTitle title
-                , viewQuestionControls toMsg model.displayOption filters (total answers)
-                , Html.ul
-                    [ Html.Attributes.class "bars" ]
-                    (data
-                        |> List.filterMap
-                            (\{ x, y } ->
-                                if y == 0 then
-                                    Nothing
-
-                                else
-                                    Just <|
-                                        let
-                                            yMax =
-                                                total filteredAnswers
-                                        in
-                                        Html.li
-                                            []
-                                            [ Html.label [] [ Html.text x ]
-                                            , Html.div []
-                                                [ Html.div
-                                                    [ Html.Attributes.class "bar"
-                                                    , Html.Attributes.class
-                                                        (if singleChoice then
-                                                            "single-choice"
-
-                                                         else
-                                                            "multiple-choice"
-                                                        )
-                                                    , Html.Attributes.style "width" (displayPercent yMax y)
-                                                    ]
-                                                    []
-                                                , Html.label
-                                                    []
-                                                    [ Html.text <|
-                                                        case model.displayOption of
-                                                            DisplayTotal ->
-                                                                String.fromInt y
-
-                                                            DisplayRelative ->
-                                                                displayPercent yMax y
-                                                    ]
-                                                ]
-                                            ]
-                            )
-                    )
-                , viewQuestionFooter comment
-                ]
-
-
 viewQuestionTitle : String -> Html a
 viewQuestionTitle title =
     let
@@ -1434,8 +1330,9 @@ viewQuestionControls :
     -> DisplayOption
     -> Array (Filter a)
     -> Int
+    -> Maybe Int
     -> Html Msg
-viewQuestionControls toMsg displayOption filters totalAnswers =
+viewQuestionControls toMsg displayOption filters totalRespondents whenTotalAnswers =
     Html.aside
         []
         (Html.div
@@ -1490,7 +1387,15 @@ viewQuestionControls toMsg displayOption filters totalAnswers =
                 else
                     [ Html.span
                         [ Html.Attributes.class "filters" ]
-                        [ Html.text <| String.fromInt totalAnswers ++ " answers" ]
+                        (Html.text (String.fromInt totalRespondents ++ " respondents")
+                            :: (case whenTotalAnswers of
+                                    Nothing ->
+                                        []
+
+                                    Just totalAnswers ->
+                                        [ Html.text (" / " ++ String.fromInt totalAnswers ++ " answers") ]
+                               )
+                        )
                     ]
                )
         )
@@ -1634,7 +1539,7 @@ buildStackBarChart { options, answers } =
                 stack
 
         scale =
-            (toFloat globalMax - toFloat globalMin) / 15
+            (toFloat globalMax - toFloat globalMin) / (toFloat maxColors - 1)
     in
     stack
         |> Dict.toList
@@ -1645,17 +1550,62 @@ buildStackBarChart { options, answers } =
             )
 
 
+buildDotsPlot :
+    { options : List String, answers : List (List String) }
+    -> ( List { x : String, y : Int }, { x : String, y : Int }, Int )
+buildDotsPlot { options, answers } =
+    let
+        countOne value =
+            case value of
+                Nothing ->
+                    Just 1
+
+                Just n ->
+                    Just (n + 1)
+
+        ( countedAnswers, countedOthers ) =
+            answers
+                |> List.foldr
+                    (\opts ( dict0, others0 ) ->
+                        List.foldr
+                            (\opt ( dict, others ) ->
+                                if List.member opt options then
+                                    ( dict |> Dict.update opt countOne, others )
+
+                                else
+                                    ( dict, others + 1 )
+                            )
+                            ( dict0, others0 )
+                            opts
+                    )
+                    ( Dict.empty, 0 )
+
+        count =
+            List.foldr (\{ y } n -> y + n) 0
+
+        sortedAnswers =
+            countedAnswers
+                |> Dict.toList
+                |> List.map (\( x, y ) -> { x = x, y = y })
+                |> List.sortBy (\choice -> -choice.y)
+    in
+    ( sortedAnswers
+    , { x = "Other", y = countedOthers }
+    , countedOthers + count sortedAnswers
+    )
+
+
 buildBarChart :
-    { options : List ( String, a ), answers : List (List a), sortDesc : Bool }
+    { options : List String, answers : List (List String), sortDesc : Bool }
     -> List { x : String, y : Int }
 buildBarChart { options, answers, sortDesc } =
     List.concat
         [ options
-            |> List.map (\( lbl, opt ) -> { x = lbl, y = countIf (List.member opt) answers })
+            |> List.map (\opt -> { x = opt, y = countIf (List.member opt) answers })
             |> (if sortDesc then
                     List.sortBy
                         (\choice ->
-                            if choice.x == "N/A" || choice.x == "None directly" then
+                            if choice.x == "None directly" then
                                 -1
 
                             else
@@ -1666,12 +1616,9 @@ buildBarChart { options, answers, sortDesc } =
                     identity
                )
         , let
-            shownOptions =
-                List.map Tuple.second options
-
             y =
                 answers
-                    |> countIf (List.any (\x -> not (List.member x shownOptions)))
+                    |> countIf (List.any (\x -> not (List.member x options)))
           in
           if y > 0 then
             [ { x = "Other", y = y } ]

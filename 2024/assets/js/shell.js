@@ -17,7 +17,6 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
             , "Over 7 years"
             ]
           , sortDesc: false
-	  , singleChoice: true
           },
 	  ``,
         ),
@@ -31,7 +30,6 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
             , "Over 7 years"
             ]
           , sortDesc: false
-	  , singleChoice: true
           },
 	  ``,
         ),
@@ -45,7 +43,6 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
             , "Over 7 years"
             ]
           , sortDesc: false
-	  , singleChoice: true
           },
 	  ``,
         ),
@@ -57,7 +54,6 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
             , "Both"
             ]
           , sortDesc: false
-	  , singleChoice: true
           },
 	  ``,
         ),
@@ -69,7 +65,6 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
 	    , "Besides Cardano I also work in parallel with other blockchain ecosystems"
             ]
           , sortDesc: false
-	  , singleChoice: true
           },
 	  ``,
         ),
@@ -99,7 +94,6 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
             , "Tezos"
             ]
           , sortDesc: true
-	  , singleChoice: false
           },
 	  ``,
         ),
@@ -127,7 +121,6 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
             , "Web developer"
             ]
           , sortDesc: true
-	  , singleChoice: true
           },
 	  ``,
         ),
@@ -148,7 +141,6 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
 	    , "Zed"
             ]
           , sortDesc: true
-	  , singleChoice: true
           },
 	  ``,
         ),
@@ -181,7 +173,6 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
             , "TypeScript"
             ]
           , sortDesc: true
-	  , singleChoice: false
           },
 	  ``
         ),
@@ -222,7 +213,6 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
             , "Solidity (with Milkomeda)"
             ]
           , sortDesc: true
-	  , singleChoice: false
           },
 	  ``,
         ),
@@ -246,7 +236,6 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
             , "TypeScript"
             ]
           , sortDesc: true
-	  , singleChoice: false
           },
 	  ``,
         ),
@@ -268,7 +257,6 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
             , "Supply Chain Management"
             ]
           , sortDesc: true
-	  , singleChoice: false
           },
 	  ``,
         ),
@@ -305,7 +293,6 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
             , "None directly"
             ]
           , sortDesc: true
-	  , singleChoice: false
           },
 	  ``,
         ),
@@ -349,7 +336,6 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
             , "None directly"
             ]
           , sortDesc: true
-	  , singleChoice: false
           },
 	  ``,
         ),
@@ -389,7 +375,6 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
             , "None directly"
             ]
           , sortDesc: true
-	  , singleChoice: false
           },
 	  ``,
         ),
@@ -405,7 +390,6 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
             , "Bespoke protocols"
             ]
           , sortDesc: true
-	  , singleChoice: false
           },
 	  ``,
         ),
@@ -430,7 +414,6 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
             , "None directly"
             ]
           , sortDesc: true
-	  , singleChoice: false
           },
 	  ``,
         ),
@@ -461,7 +444,6 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
             , "Third-Party Services"
             ]
           , sortDesc: true
-	  , singleChoice: false
           },
 	  ``,
         ),
@@ -477,7 +459,6 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
             , "Source code + build instructions"
             ]
           , sortDesc: true
-	  , singleChoice: false
           },
 	  ``,
         ),
@@ -533,7 +514,6 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
             , "No statements apply"
             ]
           , sortDesc: false
-	  , singleChoice: false
           },
 	  ``,
         ),
@@ -550,7 +530,6 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
             , "Twitter/X"
             ]
           , sortDesc: true
-	  , singleChoice: false
           },
 	  ``,
         ),
@@ -572,7 +551,6 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
             , "YouTube"
             ]
           , sortDesc: true
-	  , singleChoice: false
           },
 	  ``,
         ),
@@ -604,7 +582,6 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
             , "Vietnamese"
             ]
           , sortDesc: true
-	  , singleChoice: false
           },
 	  ``,
         ),

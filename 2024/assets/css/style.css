@@ -299,6 +299,7 @@ aside button + button {
 
 /* bars */
 
+ul.dots ,
 ul.bars {
     width: 100%;
     display: flex;
@@ -311,6 +312,7 @@ ul.bars {
     counter-reset: rank 1;
 }
 
+ul.dots > li ,
 ul.bars > li {
     width: 100%;
 }
@@ -327,7 +329,6 @@ ul.bars > li div {
 ul.bars > li > div {
     margin-top: 0.25rem;
 }
-
 
 ul.bars div.bar {
     height: 1em;
@@ -513,16 +514,50 @@ ul.bars div.stack[data-palette='13'] { --color-stack: #a5db36; }
 ul.bars div.stack[data-palette='12'] { --color-stack: #7ad151; }
 ul.bars div.stack[data-palette='11'] { --color-stack: #54c568; }
 ul.bars div.stack[data-palette='10'] { --color-stack: #35b779; }
-ul.bars div.stack[data-palette='9'] { --color-stack: #22a884; }
-ul.bars div.stack[data-palette='8'] { --color-stack: #1f988b; }
-ul.bars div.stack[data-palette='7'] { --color-stack: #23888e; }
-ul.bars div.stack[data-palette='6'] { --color-stack: #2a788e; }
-ul.bars div.stack[data-palette='5'] { --color-stack: #31688e; }
-ul.bars div.stack[data-palette='4'] { --color-stack: #39568c; }
-ul.bars div.stack[data-palette='3'] { --color-stack: #414487; }
-ul.bars div.stack[data-palette='2'] { --color-stack: #472f7d; }
-ul.bars div.stack[data-palette='1'] { --color-stack: #481a6c; }
-ul.bars div.stack[data-palette='0'] { --color-stack: #440154; }
+ul.bars div.stack[data-palette='9']  { --color-stack: #22a884; }
+ul.bars div.stack[data-palette='8']  { --color-stack: #1f988b; }
+ul.bars div.stack[data-palette='7']  { --color-stack: #23888e; }
+ul.bars div.stack[data-palette='6']  { --color-stack: #2a788e; }
+ul.bars div.stack[data-palette='5']  { --color-stack: #31688e; }
+ul.bars div.stack[data-palette='4']  { --color-stack: #39568c; }
+ul.bars div.stack[data-palette='3']  { --color-stack: #414487; }
+ul.bars div.stack[data-palette='2']  { --color-stack: #472f7d; }
+ul.bars div.stack[data-palette='1']  { --color-stack: #481a6c; }
+ul.bars div.stack[data-palette='0']  { --color-stack: #440154; }
+
+ul.dots {
+    display: flex;
+    flex-direction: column;
+}
+
+ul.dots > li > div {
+    display: flex;
+    align-items: center;
+}
+
+ul.dots > li > div > div:first-child {
+  max-width: calc(50 * 1.1rem);
+}
+
+ul.dots div.dot {
+    display: inline-block;
+    background: var(--color-primary);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    margin: 0 0.05rem;
+}
+
+div.dot-labels {
+    display: flex;
+    flex-direction: column;
+    min-width: 10rem;
+    margin-left: 0.5rem;
+}
+
+div.dot-labels label {
+    font-size: 0.85em;
+}
 
 div.stack:before {
     content: '#' attr(data-rank);
@@ -532,8 +567,8 @@ div.stack:before {
 }
 
 p.stack-explainer {
-  margin-top: 0.5rem;
-  margin-bottom: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
 }
 
 div.stack:after {
