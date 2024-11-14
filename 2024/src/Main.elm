@@ -826,7 +826,7 @@ viewDotsPlot :
     -> Html Msg
 viewDotsPlot model toMsg additionalFilters =
     Html.Lazy.lazy <|
-        \{ title, comment, options, answers, sortDesc, selectedFilter } ->
+        \{ title, comment, options, answers, selectedFilter } ->
             let
                 filters =
                     Array.fromList (defaultFilter (total answers) :: additionalFilters)
@@ -838,13 +838,20 @@ viewDotsPlot model toMsg additionalFilters =
                         |> (\{ function } -> function answers)
 
                 ( data, others, yMax ) =
-                    buildDotsPlot { options = options, answers = answers }
+                    buildDotsPlot { options = options, answers = filteredAnswers }
             in
             Html.article
                 []
                 [ viewQuestionTitle title
                 , viewQuestionControls toMsg model.displayOption filters (total answers) (Just yMax)
-                , (data ++ [ others ])
+                , (data
+                    ++ (if others.y > 0 then
+                            [ others ]
+
+                        else
+                            []
+                       )
+                  )
                     |> List.map
                         (\choice ->
                             let
