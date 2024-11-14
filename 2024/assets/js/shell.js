@@ -6,7 +6,7 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
     node,
     flags: {
       title: "State of the Cardano Developer Ecosystem - 2024",
-      introduction: "TODO: Introduction",
+      introduction: "Like the inaugural 2022 survey, this year’s edition gauged the state of the Cardano developer ecosystem, this time presenting respondents with up-to 35 questions. While a total of 196 replies were received, some questions obtained fewer replies than others.<br/><br/>This survey reinforces the Cardano Foundation’s commitment to both empower the Cardano community and support open source initiatives within the ecosystem. As such, the report, as well as the code for rendering it, are <a href='https://github.com/cardano-foundation/state-of-the-developer-ecosystem'>open source <svg class='icon' style='top: 2px; position: relative;'><use xlink:href='#icon-github'/></svg></a> and we eagerly encourage community members to perform supplementary analysis and derive further conclusions from the results. For example, users might want additional filters to complement those already included in the report. In order to help foster debates, [a GitHub discussion board](https://github.com/cardano-foundation/state-of-the-developer-ecosystem/discussions/) has also been created.<br/><br/>Moving forward, we will continue to conduct annual surveys in order to better evaluate what has been accomplished, which steps led to advantageous results, what these results were, and which aspects still require attention. The Cardano Foundation <u>thanks all those who took the time to answer the 2024 survey</u> and hopes to garner even more participation for the forthcoming third edition.",
       questions: {
         question1: question(
           "How many years of experience do you have writing/deploying software?",
@@ -499,7 +499,26 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
         ),
         question27: question(
 	  "What do you think is the biggest pain point of Cardano's developer ecosystem?",
-          { options: []
+          { options:
+	    [ [ [ "Documentation, broken down into different areas:"
+	        , "&nbsp;&nbsp; <code>30.0%</code> → lack of documentation on specific topics (e.g. eUTxO design patterns, economics, hard fork changes, ...);"
+	        , "&nbsp;&nbsp; <code>23.3%</code> → general/unspecified discontent;"
+	        , "&nbsp;&nbsp; <code>13.3%</code> → outdated and/or fragmented documentation;"
+	        , "&nbsp;&nbsp; <code>13.3%</code> → lack of (non-trivial) examples / in-depth explainers;"
+	        , "&nbsp;&nbsp; <code>10.0%</code> → lack of variety in education materials (mostly text, little video or audio);"
+	        , "&nbsp;&nbsp; <code>10.0%</code> → lack of entry-level documentation;"
+	        ].join("<br/>")
+	      , 30
+	      , null
+	      ]
+	    , [ "Overall developer experience around transaction building and submission.", 16, null ]
+	    , [ "Haskell/Nix, especially around tooling and setup.", 12, null ]
+	    , [ "The fragility and immaturity of the ecosystem tooling, in particular for off-chain development.", 12, null ]
+	    , [ "Sustaining the developer ecosystem, in particular open source projects.", 9, null ]
+	    , [ "Wrong focus of efforts which hinders the overall developer experience.", 9, null ]
+	    , [ "Tough onboarding for new developers.", 6, null ]
+	    , [ "Lack of robus Oracle solutions.", 2, null ]
+	    ]
           , link: `${repository}/2024/data/open-questions/what-do-you-think-is-the-biggest-pain-point-of-cardano-s-developer-ecosystem.md`
           },
 	  ``,
@@ -601,8 +620,11 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
         ),
         question35: question(
           "Do you have any ideas on how to improve the next potential Cardano Buidler Fest?",
-          { options: []
-          , link: `${repository}/2024/data/open-questions/what-do-you-think-is-the-most-painful-point-of-cardano-s-developer-ecosystem.md`
+          { options:
+	    [ [ "None, don't change anything.", 10, null ]
+	    , [ "More time and/or shared space without anything planned but developers living the moment.", 6, null ]
+	    ]
+          , link: `${repository}/2024/data/open-questions/do-you-have-any-ideas-on-how-to-improve-the-next-potential-cardano-buidler-fest.md`
           },
 	  ``,
         ),
