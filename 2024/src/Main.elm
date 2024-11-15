@@ -194,7 +194,6 @@ type alias Ranking =
     , comment : String
     , answers : List (Array String)
     , options : List String
-    , sortDesc : Bool
     , selectedFilter : Int
     }
 
@@ -717,29 +716,194 @@ view ({ title, introduction, questions } as model) =
         , questions.question6 |> viewDotsPlot model updateQuestion6 []
         , questions.question7 |> viewBarChart model updateQuestion7 []
         , questions.question8 |> viewBarChart model updateQuestion8 []
-        , questions.question9 |> viewDotsPlot model updateQuestion9 []
-        , questions.question10 |> viewBoxPlot model noUpdate []
-        , questions.question11 |> viewStackBarChart model
-        , questions.question12 |> viewDotsPlot model updateQuestion12 []
+        , questions.question9
+            |> viewDotsPlot model
+                updateQuestion9
+                [ withYearsOfExperience questions "Less than 1 year"
+                , withYearsOfExperience questions "Between 1 and 2 years"
+                , withYearsOfExperience questions "Between 2 and 7 years"
+                , withYearsOfExperience questions "Over 7 years"
+                ]
+        , questions.question10
+            |> viewBoxPlot model
+                updateQuestion10
+                [ withYearsOfExperience questions "Less than 1 year"
+                , withYearsOfExperience questions "Between 1 and 2 years"
+                , withYearsOfExperience questions "Between 2 and 7 years"
+                , withYearsOfExperience questions "Over 7 years"
+                , fromTechnicalSource questions "Discord servers"
+                , fromTechnicalSource questions "Source code"
+                , fromTechnicalSource questions "Blog or website articles & guides"
+                , fromTechnicalSource questions "Cardano docs (https://docs.cardano.org/)"
+                , fromTechnicalSource questions "Cardano's developer portal (https://developers.cardano.org/)"
+                , fromTechnicalSource questions "Friends/colleagues/community members"
+                , fromTechnicalSource questions "Scientific papers/specifications"
+                , fromTechnicalSource questions "(Online) courses"
+                , fromTechnicalSource questions "Cardano forum"
+                , fromTechnicalSource questions "YouTube"
+                , fromTechnicalSource questions "Telegram groups"
+                , fromTechnicalSource questions "Twitter/X"
+                ]
+        , questions.question11
+            |> viewStackBarChart model
+                updateQuestion11
+                [ withYearsOfExperience questions "Less than 1 year"
+                , withYearsOfExperience questions "Between 1 and 2 years"
+                , withYearsOfExperience questions "Between 2 and 7 years"
+                , withYearsOfExperience questions "Over 7 years"
+                , isHobbyist questions
+                , isPro questions
+                , onlyExperts questions
+                ]
+        , questions.question12
+            |> viewDotsPlot model
+                updateQuestion12
+                [ withYearsOfExperience questions "Less than 1 year"
+                , withYearsOfExperience questions "Between 1 and 2 years"
+                , withYearsOfExperience questions "Between 2 and 7 years"
+                , withYearsOfExperience questions "Over 7 years"
+                , isProficientIn questions "C"
+                , isProficientIn questions "C#"
+                , isProficientIn questions "C++"
+                , isProficientIn questions "Go"
+                , isProficientIn questions "Haskell"
+                , isProficientIn questions "Java"
+                , isProficientIn questions "PHP"
+                , isProficientIn questions "Python"
+                , isProficientIn questions "Rust"
+                , isProficientIn questions "TypeScript"
+                , isProficientIn questions "JavaScript"
+                ]
         , questions.question13 |> viewDotsPlot model updateQuestion13 []
-        , questions.question14 |> viewBoxPlot model updateQuestion14 []
-        , questions.question15 |> viewDotsPlot model updateQuestion15 []
-        , questions.question16 |> viewDotsPlot model updateQuestion16 []
+        , questions.question14
+            |> viewBoxPlot model
+                updateQuestion14
+                [ usingOnChain questions "Aiken"
+                , usingOnChain questions "Haskell/Plutus-Tx"
+                , usingOnChain questions "Plu-ts"
+                , usingOnChain questions "OpShin"
+                , usingOnChain questions "Marlowe"
+                , usingOnChain questions "Helios"
+                , usingOnChain questions "Plutarch"
+                , usingOnChain questions "Scalus"
+                , usingOnChain questions "Solidity (with Milkomeda)"
+                , usingOnChain questions "Purus"
+                , usingOnChain questions "Pluto"
+                ]
+        , questions.question15
+            |> viewDotsPlot model
+                updateQuestion15
+                []
+        , questions.question16
+            |> viewDotsPlot model
+                updateQuestion16
+                [ isProficientIn questions "Aiken"
+                , isProficientIn questions "C"
+                , isProficientIn questions "C#"
+                , isProficientIn questions "C++"
+                , isProficientIn questions "Go"
+                , isProficientIn questions "Haskell"
+                , isProficientIn questions "Java"
+                , isProficientIn questions "PHP"
+                , isProficientIn questions "Python"
+                , isProficientIn questions "Rust"
+                , isProficientIn questions "TypeScript"
+                , isProficientIn questions "JavaScript"
+                ]
         , questions.question17 |> viewOpen model
-        , questions.question18 |> viewDotsPlot model updateQuestion18 []
+        , questions.question18
+            |> viewDotsPlot model
+                updateQuestion18
+                [ isProficientIn questions "Aiken"
+                , isProficientIn questions "C"
+                , isProficientIn questions "C#"
+                , isProficientIn questions "C++"
+                , isProficientIn questions "Go"
+                , isProficientIn questions "Haskell"
+                , isProficientIn questions "Java"
+                , isProficientIn questions "PHP"
+                , isProficientIn questions "Python"
+                , isProficientIn questions "Rust"
+                , isProficientIn questions "TypeScript"
+                , isProficientIn questions "JavaScript"
+                ]
         , questions.question19 |> viewOpen model
-        , questions.question20 |> viewDotsPlot model updateQuestion20 []
+        , questions.question20
+            |> viewDotsPlot model
+                updateQuestion20
+                [ isProficientIn questions "Aiken"
+                , isProficientIn questions "C"
+                , isProficientIn questions "C#"
+                , isProficientIn questions "C++"
+                , isProficientIn questions "Go"
+                , isProficientIn questions "Haskell"
+                , isProficientIn questions "Java"
+                , isProficientIn questions "PHP"
+                , isProficientIn questions "Python"
+                , isProficientIn questions "Rust"
+                , isProficientIn questions "TypeScript"
+                , isProficientIn questions "JavaScript"
+                ]
         , questions.question21 |> viewDotsPlot model noUpdate []
         , questions.question22 |> viewDotsPlot model updateQuestion22 []
         , questions.question23 |> viewOpen model
-        , questions.question24 |> viewDotsPlot model noUpdate []
-        , questions.question25 |> viewDotsPlot model noUpdate []
+        , questions.question24
+            |> viewDotsPlot model
+                noUpdate
+                [ withYearsOfExperience questions "Less than 1 year"
+                , withYearsOfExperience questions "Between 1 and 2 years"
+                , withYearsOfExperience questions "Between 2 and 7 years"
+                , withYearsOfExperience questions "Over 7 years"
+                ]
+        , questions.question25
+            |> viewDotsPlot model
+                noUpdate
+                [ withYearsOfExperience questions "Less than 1 year"
+                , withYearsOfExperience questions "Between 1 and 2 years"
+                , withYearsOfExperience questions "Between 2 and 7 years"
+                , withYearsOfExperience questions "Over 7 years"
+                ]
         , questions.question26 |> viewOpen model
         , questions.question27 |> viewOpen model
         , questions.question28 |> viewDotsPlot model noUpdate []
-        , questions.question29 |> viewDotsPlot model noUpdate []
-        , questions.question30 |> viewDotsPlot model noUpdate []
-        , questions.question31 |> viewBoxPlot model noUpdate []
+        , questions.question29
+            |> viewDotsPlot model
+                updateQuestion29
+                [ withYearsOfExperience questions "Less than 1 year"
+                , withYearsOfExperience questions "Between 1 and 2 years"
+                , withYearsOfExperience questions "Between 2 and 7 years"
+                , withYearsOfExperience questions "Over 7 years"
+                , isPro questions
+                , isHobbyist questions
+                , onlyExperts questions
+                ]
+        , questions.question30
+            |> viewDotsPlot model
+                updateQuestion30
+                [ withYearsOfExperience questions "Less than 1 year"
+                , withYearsOfExperience questions "Between 1 and 2 years"
+                , withYearsOfExperience questions "Between 2 and 7 years"
+                , withYearsOfExperience questions "Over 7 years"
+                , isPro questions
+                , isHobbyist questions
+                , onlyExperts questions
+                ]
+        , questions.question31
+            |> viewBoxPlot model
+                updateQuestion31
+                [ fromTechnicalSource questions "Discord servers"
+                , fromTechnicalSource questions "Source code"
+                , fromTechnicalSource questions "Blog or website articles & guides"
+                , fromTechnicalSource questions "Cardano docs (https://docs.cardano.org/)"
+                , fromTechnicalSource questions "Cardano's developer portal (https://developers.cardano.org/)"
+                , fromTechnicalSource questions "Friends/colleagues/community members"
+                , fromTechnicalSource questions "Scientific papers/specifications"
+                , fromTechnicalSource questions "(Online) courses"
+                , fromTechnicalSource questions "Cardano forum"
+                , fromTechnicalSource questions "YouTube"
+                , fromTechnicalSource questions "Telegram groups"
+                , fromTechnicalSource questions "Twitter/X"
+                ]
         , questions.question32 |> viewDotsPlot model noUpdate []
         , questions.question33 |> viewPieChart model noUpdate []
         , questions.question34 |> viewBoxPlot model noUpdate []
@@ -758,12 +922,12 @@ viewBarChart model toMsg additionalFilters =
         \{ title, options, answers, comment, sortDesc, selectedFilter } ->
             let
                 filters =
-                    Array.fromList (defaultFilter (total answers) :: additionalFilters)
+                    Array.fromList (defaultFilter :: additionalFilters)
 
                 filteredAnswers =
                     filters
                         |> Array.get selectedFilter
-                        |> Maybe.withDefault (defaultFilter <| total answers)
+                        |> Maybe.withDefault defaultFilter
                         |> (\{ function } -> function answers)
 
                 data =
@@ -829,12 +993,12 @@ viewDotsPlot model toMsg additionalFilters =
         \{ title, comment, options, answers, selectedFilter } ->
             let
                 filters =
-                    Array.fromList (defaultFilter (total answers) :: additionalFilters)
+                    Array.fromList (defaultFilter :: additionalFilters)
 
                 filteredAnswers =
                     filters
                         |> Array.get selectedFilter
-                        |> Maybe.withDefault (defaultFilter <| total answers)
+                        |> Maybe.withDefault defaultFilter
                         |> (\{ function } -> function answers)
 
                 ( data, others, yMax ) =
@@ -855,7 +1019,7 @@ viewDotsPlot model toMsg additionalFilters =
             Html.article
                 []
                 [ viewQuestionTitle title
-                , viewQuestionControls toMsg model.displayOption filters (total answers) (Just yMax)
+                , viewQuestionControls toMsg model.displayOption filters (total filteredAnswers) (Just yMax)
                 , Html.div [ Html.Attributes.class "stack-legend" ] []
                 , (data
                     ++ (if others.y > 0 then
@@ -894,7 +1058,7 @@ viewDotsPlot model toMsg additionalFilters =
                                             DisplayRelative ->
                                                 [ Html.label []
                                                     [ Html.text <|
-                                                        displayPercent (total answers) choice.y
+                                                        displayPercent (total filteredAnswers) choice.y
                                                             ++ " (of respondents)"
                                                     ]
                                                 , Html.label
@@ -923,12 +1087,12 @@ viewPieChart model toMsg additionalFilters =
         \{ title, answers, comment, selectedFilter } ->
             let
                 filters =
-                    Array.fromList (defaultFilter (total answers) :: additionalFilters)
+                    Array.fromList (defaultFilter :: additionalFilters)
 
                 filteredAnswers =
                     filters
                         |> Array.get selectedFilter
-                        |> Maybe.withDefault (defaultFilter <| total answers)
+                        |> Maybe.withDefault defaultFilter
                         |> (\{ function } -> function answers)
 
                 data =
@@ -995,12 +1159,12 @@ viewBoxPlot model toMsg additionalFilters =
         \{ title, answers, comment, minimum, maximum, selectedFilter } ->
             let
                 filters =
-                    Array.fromList (defaultFilter (total answers) :: additionalFilters)
+                    Array.fromList (defaultFilter :: additionalFilters)
 
                 filteredAnswers =
                     filters
                         |> Array.get selectedFilter
-                        |> Maybe.withDefault (defaultFilter <| total answers)
+                        |> Maybe.withDefault defaultFilter
                         |> (\{ function } -> function answers)
                         |> List.filterMap List.head
                         |> List.sort
@@ -1230,14 +1394,23 @@ viewOpen model =
 
 viewStackBarChart :
     Model
+    -> ({ selectedFilter : Int } -> Msg)
+    -> List (Filter String)
     -> Ranking
     -> Html Msg
-viewStackBarChart model =
+viewStackBarChart model toMsg additionalFilters =
     Html.Lazy.lazy <|
-        \{ title, options, answers } ->
+        \{ title, options, answers, selectedFilter } ->
             let
+                filters =
+                    Array.fromList (defaultFilter :: additionalFilters)
+
                 filteredAnswers =
-                    answers
+                    filters
+                        |> Array.get selectedFilter
+                        |> Maybe.withDefault defaultFilter
+                        |> (\{ function } -> answers |> List.map Array.toList |> function)
+                        |> List.map Array.fromList
 
                 comment =
                     ""
@@ -1251,37 +1424,7 @@ viewStackBarChart model =
             Html.article
                 []
                 [ viewQuestionTitle title
-                , Html.aside
-                    []
-                    [ Html.div
-                        []
-                        [ Html.button
-                            [ Html.Events.onClick (ChangeDisplayOption DisplayRelative)
-                            , Html.Attributes.class <|
-                                case model.displayOption of
-                                    DisplayRelative ->
-                                        "active"
-
-                                    DisplayTotal ->
-                                        ""
-                            ]
-                            [ Html.text "relative (%)" ]
-                        , Html.button
-                            [ Html.Events.onClick (ChangeDisplayOption DisplayTotal)
-                            , Html.Attributes.class <|
-                                case model.displayOption of
-                                    DisplayRelative ->
-                                        ""
-
-                                    DisplayTotal ->
-                                        "active"
-                            ]
-                            [ Html.text "total" ]
-                        , Html.span
-                            [ Html.Attributes.class "filters" ]
-                            [ Html.text <| String.fromInt (totalWith Array.length answers) ++ " answers" ]
-                        ]
-                    ]
+                , viewQuestionControls toMsg model.displayOption filters (totalWith Array.length filteredAnswers) Nothing
                 , Html.div [ Html.Attributes.class "stack-legend" ] []
                 , Html.p [ Html.Attributes.class "stack-explainer", Html.Attributes.class "footnote" ]
                     [ Html.text "The results presented below are ordered using a "
@@ -1300,25 +1443,32 @@ viewStackBarChart model =
                                 Html.li
                                     []
                                     [ Html.label [] [ Html.text x ]
-                                    , Html.div [] <|
-                                        List.indexedMap
-                                            (\i ( y, palette ) ->
-                                                Html.div
-                                                    [ Html.Attributes.class "stack"
-                                                    , Html.Attributes.style "width" (displayPercent yMax y)
-                                                    , Html.Attributes.attribute "data-rank" (String.fromInt (i + 1))
-                                                    , Html.Attributes.attribute "data-palette" (String.fromInt palette)
-                                                    , Html.Attributes.attribute "data-label" <|
-                                                        case model.displayOption of
-                                                            DisplayTotal ->
-                                                                String.fromInt y
+                                    , Html.div []
+                                        (ys
+                                            |> List.indexedMap
+                                                (\i ( y, palette ) ->
+                                                    if y == 0 then
+                                                        []
 
-                                                            DisplayRelative ->
-                                                                displayPercent yMax y
-                                                    ]
-                                                    []
-                                            )
-                                            ys
+                                                    else
+                                                        [ Html.div
+                                                            [ Html.Attributes.class "stack"
+                                                            , Html.Attributes.style "width" (displayPercent yMax y)
+                                                            , Html.Attributes.attribute "data-rank" (String.fromInt (i + 1))
+                                                            , Html.Attributes.attribute "data-palette" (String.fromInt palette)
+                                                            , Html.Attributes.attribute "data-label" <|
+                                                                case model.displayOption of
+                                                                    DisplayTotal ->
+                                                                        String.fromInt y
+
+                                                                    DisplayRelative ->
+                                                                        displayPercent yMax y
+                                                            ]
+                                                            []
+                                                        ]
+                                                )
+                                            |> List.concat
+                                        )
                                     ]
                             )
                     )
@@ -1412,7 +1562,15 @@ viewQuestionControls toMsg displayOption filters totalRespondents whenTotalAnswe
                                 )
                             |> Array.toList
                         )
+                    , Html.text (String.fromInt totalRespondents ++ " respondents")
                     ]
+                        ++ (case whenTotalAnswers of
+                                Nothing ->
+                                    []
+
+                                Just totalAnswers ->
+                                    [ Html.text (" / " ++ String.fromInt totalAnswers ++ " answers") ]
+                           )
 
                 else
                     [ Html.span
@@ -1457,10 +1615,163 @@ viewMenuLink { title } =
 -- Filters
 
 
-defaultFilter : Int -> Filter a
-defaultFilter n =
-    { title = "All answers (" ++ String.fromInt n ++ ")"
+defaultFilter : Filter a
+defaultFilter =
+    { title = "All respondents"
     , function = identity
+    }
+
+
+withYearsOfExperience : Questionnaire -> String -> Filter a
+withYearsOfExperience questions xp =
+    { title = "With " ++ xp ++ " of experience"
+    , function =
+        \answers ->
+            List.zip answers questions.question1.answers
+                |> List.map
+                    (\( a, xps ) ->
+                        if List.member xp xps then
+                            a
+
+                        else
+                            []
+                    )
+    }
+
+
+fromTechnicalSource : Questionnaire -> String -> Filter a
+fromTechnicalSource questions source =
+    { title = "Learning from " ++ source
+    , function =
+        \answers ->
+            List.zip answers questions.question30.answers
+                |> List.map
+                    (\( a, sources ) ->
+                        if List.member source sources then
+                            a
+
+                        else
+                            []
+                    )
+    }
+
+
+isPro : Questionnaire -> Filter a
+isPro questions =
+    { title = "Only professionals"
+    , function =
+        \answers ->
+            List.zip answers questions.question4.answers
+                |> List.map
+                    (\( a, statuses ) ->
+                        if statuses /= [ "Hobby" ] then
+                            a
+
+                        else
+                            []
+                    )
+    }
+
+
+onlyExperts : Questionnaire -> Filter a
+onlyExperts questions =
+    { title = "Only Cardano experts (> 7)"
+    , function =
+        \answers ->
+            List.zip answers questions.question10.answers
+                |> List.map
+                    (\( x, y ) ->
+                        if Maybe.withDefault 0 (List.head y) > 7 then
+                            x
+
+                        else
+                            []
+                    )
+    }
+
+
+isHobbyist : Questionnaire -> Filter a
+isHobbyist questions =
+    { title = "Only hobbyist"
+    , function =
+        \answers ->
+            List.zip answers questions.question4.answers
+                |> List.map
+                    (\( a, statuses ) ->
+                        if statuses == [ "Hobby" ] then
+                            a
+
+                        else
+                            []
+                    )
+    }
+
+
+isProficientIn : Questionnaire -> String -> Filter a
+isProficientIn questions lang =
+    { title = "Proficient in " ++ lang
+    , function =
+        \answers ->
+            List.zip answers questions.question9.answers
+                |> List.map
+                    (\( a, langs ) ->
+                        if List.member lang langs then
+                            a
+
+                        else
+                            []
+                    )
+    }
+
+
+usingOnChain : Questionnaire -> String -> Filter a
+usingOnChain questions lang =
+    { title = "Using " ++ lang ++ " on-chain"
+    , function =
+        \answers ->
+            List.zip answers questions.question12.answers
+                |> List.map
+                    (\( a, langs ) ->
+                        if List.member lang langs then
+                            a
+
+                        else
+                            []
+                    )
+    }
+
+
+experiencedWithCardano : Questionnaire -> Filter a
+experiencedWithCardano questions =
+    { title = "Experienced only with Cardano"
+    , function =
+        \answers ->
+            List.zip answers questions.question5.answers
+                |> List.map
+                    (\( x, y ) ->
+                        if y == [ "I have only ever worked in the Cardano ecosystem" ] then
+                            x
+
+                        else
+                            []
+                    )
+    }
+
+
+experiencedWithOther : Questionnaire -> Filter a
+experiencedWithOther questions =
+    { title = "Experienced with other ecosystems"
+    , function =
+        \answers ->
+            List.zip answers questions.question5.answers
+                |> List.map
+                    (\( x, y ) ->
+                        if y /= [ "I have only ever worked in the Cardano ecosystem" ] then
+                            x
+
+                        else
+                            []
+                    )
     }
 
 

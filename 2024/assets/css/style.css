@@ -258,10 +258,21 @@ aside select {
 
 aside .see-all,
 aside .filters {
-    margin-top: 0;
-    margin-left: 1rem;
+    margin: 0 1rem;
     display: inline-block;
     font-size: 0.9em;
+}
+
+@media(max-width: 700px) {
+    aside .filters {
+      margin: 1rem 0;
+    }
+
+    article > h2 ~ aside {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+    }
 }
 
 aside .see-all svg.icon {
@@ -488,6 +499,7 @@ div.stack-legend {
     height: 1rem;
     background: white;
     margin: 0.5rem auto;
+    margin-top: 2rem;
     background: linear-gradient(
         90deg,
         #fde725 6.25%,
