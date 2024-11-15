@@ -751,6 +751,10 @@ view ({ title, introduction, questions } as model) =
                 , withYearsOfExperience questions "Between 1 and 2 years"
                 , withYearsOfExperience questions "Between 2 and 7 years"
                 , withYearsOfExperience questions "Over 7 years"
+                , withBlockchainExperience questions "Less than 1 year"
+                , withBlockchainExperience questions "Between 1 and 2 years"
+                , withBlockchainExperience questions "Between 2 and 7 years"
+                , withBlockchainExperience questions "Over 7 years"
                 , isHobbyist questions
                 , isPro questions
                 , onlyExperts questions
@@ -793,7 +797,15 @@ view ({ title, introduction, questions } as model) =
         , questions.question15
             |> viewDotsPlot model
                 updateQuestion15
-                []
+                [ withBlockchainExperience questions "Less than 1 year"
+                , withBlockchainExperience questions "Between 1 and 2 years"
+                , withBlockchainExperience questions "Between 2 and 7 years"
+                , withBlockchainExperience questions "Over 7 years"
+                , isHobbyist questions
+                , isPro questions
+                , onlyExperts questions
+                , familiarWithOtherEcosystem questions
+                ]
         , questions.question16
             |> viewDotsPlot model
                 updateQuestion16
@@ -809,6 +821,14 @@ view ({ title, introduction, questions } as model) =
                 , isProficientIn questions "Rust"
                 , isProficientIn questions "TypeScript"
                 , isProficientIn questions "JavaScript"
+                , isInterestedIn questions "Decentralized Finance (DeFi)"
+                , isInterestedIn questions "Identity and Authentication"
+                , isInterestedIn questions "Real-World Asset Tokenization"
+                , isInterestedIn questions "Governance"
+                , isInterestedIn questions "NFT Marketplaces"
+                , isInterestedIn questions "Supply Chain Management"
+                , isInterestedIn questions "Social dApps"
+                , isInterestedIn questions "Gaming and Metaverse"
                 ]
         , questions.question17 |> viewOpen model
         , questions.question18
@@ -826,6 +846,14 @@ view ({ title, introduction, questions } as model) =
                 , isProficientIn questions "Rust"
                 , isProficientIn questions "TypeScript"
                 , isProficientIn questions "JavaScript"
+                , isInterestedIn questions "Decentralized Finance (DeFi)"
+                , isInterestedIn questions "Identity and Authentication"
+                , isInterestedIn questions "Real-World Asset Tokenization"
+                , isInterestedIn questions "Governance"
+                , isInterestedIn questions "NFT Marketplaces"
+                , isInterestedIn questions "Supply Chain Management"
+                , isInterestedIn questions "Social dApps"
+                , isInterestedIn questions "Gaming and Metaverse"
                 ]
         , questions.question19 |> viewOpen model
         , questions.question20
@@ -843,6 +871,14 @@ view ({ title, introduction, questions } as model) =
                 , isProficientIn questions "Rust"
                 , isProficientIn questions "TypeScript"
                 , isProficientIn questions "JavaScript"
+                , isInterestedIn questions "Decentralized Finance (DeFi)"
+                , isInterestedIn questions "Identity and Authentication"
+                , isInterestedIn questions "Real-World Asset Tokenization"
+                , isInterestedIn questions "Governance"
+                , isInterestedIn questions "NFT Marketplaces"
+                , isInterestedIn questions "Supply Chain Management"
+                , isInterestedIn questions "Social dApps"
+                , isInterestedIn questions "Gaming and Metaverse"
                 ]
         , questions.question21 |> viewDotsPlot model noUpdate []
         , questions.question22 |> viewDotsPlot model updateQuestion22 []
@@ -940,7 +976,7 @@ viewBarChart model toMsg additionalFilters =
             Html.article
                 []
                 [ viewQuestionTitle title
-                , viewQuestionControls toMsg model.displayOption filters (total answers) Nothing
+                , viewQuestionControls toMsg model.displayOption filters (total filteredAnswers) Nothing
                 , Html.ul
                     [ Html.Attributes.class "bars" ]
                     (data
@@ -1116,7 +1152,7 @@ viewPieChart model toMsg additionalFilters =
             Html.article
                 []
                 [ viewQuestionTitle title
-                , viewQuestionControls toMsg model.displayOption filters (total answers) Nothing
+                , viewQuestionControls toMsg model.displayOption filters (total filteredAnswers) Nothing
                 , Html.div
                     [ Html.Attributes.class "pie"
                     , Html.Attributes.attribute "data-yes"
@@ -1201,12 +1237,12 @@ viewBoxPlot model toMsg additionalFilters =
 
                 q1 =
                     filteredAnswers
-                        |> Array.get (ceiling (toFloat len / 4))
+                        |> Array.get (floor (toFloat len / 4))
                         |> Maybe.withDefault 0
 
                 q3 =
                     filteredAnswers
-                        |> Array.get (ceiling (3 * toFloat len / 4))
+                        |> Array.get (floor (3 * toFloat len / 4))
                         |> Maybe.withDefault 10
 
                 position n =
@@ -1215,7 +1251,7 @@ viewBoxPlot model toMsg additionalFilters =
             Html.article
                 []
                 [ viewQuestionTitle title
-                , viewQuestionControls toMsg model.displayOption filters (total answers) Nothing
+                , viewQuestionControls toMsg model.displayOption filters (Array.length filteredAnswers) Nothing
                 , Html.div
                     [ Html.Attributes.class "box-plot"
                     ]
@@ -1388,7 +1424,9 @@ viewOpen model =
                                     ]
                             )
                     )
-                , Markdown.toHtmlWith { defaultOptions | sanitize = False } [] comment
+                , Markdown.toHtmlWith { defaultOptions | sanitize = False }
+                    [ Html.Attributes.class "comment" ]
+                    comment
                 ]
 
 
@@ -1400,7 +1438,7 @@ viewStackBarChart :
     -> Html Msg
 viewStackBarChart model toMsg additionalFilters =
     Html.Lazy.lazy <|
-        \{ title, options, answers, selectedFilter } ->
+        \{ title, options, answers, comment, selectedFilter } ->
             let
                 filters =
                     Array.fromList (defaultFilter :: additionalFilters)
@@ -1411,9 +1449,6 @@ viewStackBarChart model toMsg additionalFilters =
                         |> Maybe.withDefault defaultFilter
                         |> (\{ function } -> answers |> List.map Array.toList |> function)
                         |> List.map Array.fromList
-
-                comment =
-                    ""
 
                 data =
                     buildStackBarChart
@@ -1472,7 +1507,9 @@ viewStackBarChart model toMsg additionalFilters =
                                     ]
                             )
                     )
-                , Markdown.toHtmlWith { defaultOptions | sanitize = False } [] comment
+                , Markdown.toHtmlWith { defaultOptions | sanitize = False }
+                    [ Html.Attributes.class "comment" ]
+                    comment
                 ]
 
 
@@ -1591,7 +1628,8 @@ viewQuestionControls toMsg displayOption filters totalRespondents whenTotalAnswe
 
 viewQuestionFooter : String -> Html Msg
 viewQuestionFooter =
-    Markdown.toHtmlWith { defaultOptions | sanitize = False } []
+    Markdown.toHtmlWith { defaultOptions | sanitize = False }
+        [ Html.Attributes.class "comment" ]
 
 
 viewMenuLink : { r | title : String } -> Html a
@@ -1628,6 +1666,23 @@ withYearsOfExperience questions xp =
     , function =
         \answers ->
             List.zip answers questions.question1.answers
+                |> List.map
+                    (\( a, xps ) ->
+                        if List.member xp xps then
+                            a
+
+                        else
+                            []
+                    )
+    }
+
+
+withBlockchainExperience : Questionnaire -> String -> Filter a
+withBlockchainExperience questions xp =
+    { title = "Writing blockchain software for " ++ xp
+    , function =
+        \answers ->
+            List.zip answers questions.question3.answers
                 |> List.map
                     (\( a, xps ) ->
                         if List.member xp xps then
@@ -1690,6 +1745,23 @@ onlyExperts questions =
     }
 
 
+familiarWithOtherEcosystem : Questionnaire -> Filter a
+familiarWithOtherEcosystem questions =
+    { title = "Familiar with other ecosystems"
+    , function =
+        \answers ->
+            List.zip answers questions.question5.answers
+                |> List.map
+                    (\( x, y ) ->
+                        if y == [ "I have only ever worked in the Cardano ecosystem" ] || y == [ "" ] then
+                            x
+
+                        else
+                            []
+                    )
+    }
+
+
 isHobbyist : Questionnaire -> Filter a
 isHobbyist questions =
     { title = "Only hobbyist"
@@ -1713,6 +1785,23 @@ isProficientIn questions lang =
     , function =
         \answers ->
             List.zip answers questions.question9.answers
+                |> List.map
+                    (\( a, langs ) ->
+                        if List.member lang langs then
+                            a
+
+                        else
+                            []
+                    )
+    }
+
+
+isInterestedIn : Questionnaire -> String -> Filter a
+isInterestedIn questions lang =
+    { title = "Interested in " ++ lang
+    , function =
+        \answers ->
+            List.zip answers questions.question15.answers
                 |> List.map
                     (\( a, langs ) ->
                         if List.member lang langs then

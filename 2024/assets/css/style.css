@@ -161,6 +161,26 @@ img.mobile {
   }
 }
 
+div.comment {
+    padding: 2rem;
+    margin-top: 2rem;
+    border: 1px solid var(--color-primary);
+}
+
+div.comment > p:first-child {
+    margin-top: 0;
+}
+
+div.comment > p:last-child {
+    margin-bottom: 0;
+}
+
+@media(max-width: 800px) {
+    div.comment {
+        padding: 1rem;
+    }
+}
+
 /* questions */
 
 article {
@@ -452,6 +472,7 @@ div.box-plot ~ .scale {
   height: 100%;
   width: 100%;
   margin: 0 auto;
+  margin-bottom: 4rem;
 }
 
 div.box-plot ~ .scale > .bucket {
