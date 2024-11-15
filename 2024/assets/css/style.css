@@ -276,14 +276,14 @@ aside select {
     max-width: 15rem;
 }
 
-aside .see-all,
+aside .see-all ,
 aside .filters {
     margin: 0 1rem;
     display: inline-block;
-    font-size: 0.9em;
 }
 
 @media(max-width: 700px) {
+    aside .see-all ,
     aside .filters {
       margin: 1rem 0;
     }
@@ -319,11 +319,13 @@ aside button + button {
 }
 
 @media (max-width: 30rem) {
-    aside button,
+    aside button {
+        min-width: max-content;
+    }
+
+    aside button ,
     aside select {
         max-height: calc(1em + 0.7rem);
-        max-width: 9rem;
-        min-width: max-content;
         overflow: hidden;
     }
 }

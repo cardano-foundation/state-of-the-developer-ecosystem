@@ -920,6 +920,10 @@ view ({ title, introduction, questions } as model) =
                 , withYearsOfExperience questions "Between 1 and 2 years"
                 , withYearsOfExperience questions "Between 2 and 7 years"
                 , withYearsOfExperience questions "Over 7 years"
+                , withBlockchainExperience questions "Less than 1 year"
+                , withBlockchainExperience questions "Between 1 and 2 years"
+                , withBlockchainExperience questions "Between 2 and 7 years"
+                , withBlockchainExperience questions "Over 7 years"
                 , isPro questions
                 , isHobbyist questions
                 , onlyExperts questions
@@ -927,7 +931,11 @@ view ({ title, introduction, questions } as model) =
         , questions.question31
             |> viewBoxPlot model
                 updateQuestion31
-                [ fromTechnicalSource questions "Discord servers"
+                [ withBlockchainExperience questions "Less than 1 year"
+                , withBlockchainExperience questions "Between 1 and 2 years"
+                , withBlockchainExperience questions "Between 2 and 7 years"
+                , withBlockchainExperience questions "Over 7 years"
+                , fromTechnicalSource questions "Discord servers"
                 , fromTechnicalSource questions "Source code"
                 , fromTechnicalSource questions "Blog or website articles & guides"
                 , fromTechnicalSource questions "Cardano docs (https://docs.cardano.org/)"

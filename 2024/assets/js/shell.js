@@ -6,7 +6,7 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
     node,
     flags: {
       title: "State of the Cardano Developer Ecosystem - 2024",
-      introduction: "Like the inaugural 2022 survey, this year’s edition gauged the state of the Cardano developer ecosystem, this time presenting respondents with up-to 35 questions. While a total of 196 replies were received, some questions obtained fewer replies than others.<br/><br/>This survey reinforces the Cardano Foundation’s commitment to both empower the Cardano community and support open source initiatives within the ecosystem. As such, the report, as well as the code for rendering it, are <a href='https://github.com/cardano-foundation/state-of-the-developer-ecosystem'>open source <svg class='icon' style='top: 2px; position: relative;'><use xlink:href='#icon-github'/></svg></a> and we eagerly encourage community members to perform supplementary analysis and derive further conclusions from the results. For example, users might want additional filters to complement those already included in the report. In order to help foster debates, [a GitHub discussion board](https://github.com/cardano-foundation/state-of-the-developer-ecosystem/discussions/) has also been created.<br/><br/>Moving forward, we will continue to conduct annual surveys in order to better evaluate what has been accomplished, which steps led to advantageous results, what these results were, and which aspects still require attention. The Cardano Foundation <u>thanks all those who took the time to answer the 2024 survey</u> and hopes to garner even more participation for the forthcoming third edition.",
+      introduction: "Following the <a href='https://cardano-foundation.github.io/state-of-the-developer-ecosystem/2022/'>2022</a> and <a href='https://cardano-foundation.github.io/state-of-the-developer-ecosystem/2023/'>2023</a> editions, the third Cardano Developer Ecosystem Survey builds on the Cardano Foundation’s annual analysis. With responses from approximately 196 developers on up to 35 questions, the 2024 survey offers valuable insights into the needs and experiences of those building on Cardano.<br/><br/>This year’s survey enhancements enable a more comprehensive exploration of trends and patterns through interactive stacked bar charts, heatmaps, and other visualizations. By better showcasing key trends, these representations reinforce the Foundation’s commitment to community empowerment through transparent, open-source initiatives.<br/><br/>Further emphasizing these efforts, the complete report and the source code used to generate it remain <a href='https://github.com/cardano-foundation/state-of-the-developer-ecosystem'>openly accessible <svg class='icon' style='top: 2px; position: relative;'><use xlink:href='#icon-github'/></svg></a>. We actively encourage community contributions that enable further analysis of results and suggestions for next year’s questions on <a href='https://github.com/cardano-foundation/state-of-the-developer-ecosystem/discussions/'>the collaborative GitHub discussion board</a>. The Foundation thanks all those who participated in the 2024 survey and hopes to generate even more interest for next year’s fourth edition.",
       questions: {
         question1: question(
           "How many years of experience do you have writing/deploying software?",
@@ -608,12 +608,18 @@ The preference for Discord highlights a trend toward real-time communication, wh
             ]
           , sortDesc: true
           },
-	  ``,
+	  `The 2024 survey reveals shifting trends in how developers access technical details about Cardano. Discord servers (69.0%) and source code (66.3%) have become the most relied-upon resources, reflecting a notable increase in reliance on these sources since 2023 (45.6% and 54.9%, respectively). The high dependence on source code highlights its role as the most reliable and detailed information source, likely compensating for persistent issues with fragmented or incomplete documentation. Similarly, Discord's popularity underscores its immediacy but raises concerns about its ephemeral and unstructured nature, which complicates long-term knowledge sharing.
+
+Surprisingly, scientific papers and specifications (24.7%) have seen reduced reliance despite the community’s emphasis on rigor and correctness. This shift suggests a growing preference for practical, accessible resources over theoretical foundations. Meanwhile, official resources like Cardano docs (41.5%) and the developer portal (37.1%) have seen reduced usage compared to 2023, indicating possible dissatisfaction with their depth or organization.
+
+This increased reliance on ephemeral and ad-hoc sources like Discord and code repositories highlights the need for improving and centralizing official documentation to better support both current and future developers.`,
         ),
         question31: question(
           "On average, how satisfied are you with the technical answers/details you find in documentation and within the community?",
           { minimum: "Unsatisfied", maximum: "Pleased" },
-	  ``,
+	  `The overall satisfaction with the technical answers and details in documentation and the community remains moderate, with a median of 6, consistent with 2023. Notably, satisfaction increases to 6.5 among those relying on scientific papers, and to 7 for those using YouTube and Twitter/X, suggesting that developers seeking more accessible or engaging formats may find them more effective.
+
+Experienced developers (7+ years in blockchain) also report higher satisfaction (median of 7), which may reflect their ability to navigate and synthesize disparate information sources effectively. However, the unchanged median overall highlights persistent gaps in documentation and community resources, especially for less experienced or less technical users, emphasizing the need for clearer and more comprehensive support.`,
         ),
         question32: question(
   	  "Which language(s) do you prefer to consume documentation and educational content in?",
@@ -639,17 +645,19 @@ The preference for Discord highlights a trend toward real-time communication, wh
             ]
           , sortDesc: true
           },
-	  ``,
+	  `The overwhelming preference for English (99.0% of respondents, 74.8% of answers) as the primary language for consuming documentation and educational content reflects the dominant role of English in technical resources globally. However, the survey's English-only format likely skews these results, underrepresenting the demand for content in other languages.
+
+Smaller preferences for Spanish (7.2%), German (4.5%), and French, Italian, and Polish (each 3.6%) suggest localized demand for multilingual resources. Expanding high-quality documentation and educational materials in these languages could improve accessibility for non-English-speaking developers and foster broader global participation in the ecosystem.`,
         ),
         question33: question(
 	  "Did you attend the Cardano Buidler Fest in April 2024?",
           {},
-	  ``,
+	  `The survey reveals that 12.3% of respondents attended the Cardano Buidler Fest in April 2024, aligning with the event's attendance of around 100 participants. This represents roughly 25% of Buidler Fest attendees participating in the survey, providing a small but potentially significant subset for insights into the event's impact. While the sample size is limited, this overlap offers valuable feedback from a group actively engaged in the ecosystem, helping identify areas for improvement and gauge the event's influence on developer sentiment.`,
         ),
         question34: question(
           "How satisfied were you with the Cardano Buidler Fest?",
           { minimum: "Unsatisfied", maximum: "Pleased" },
-	  ``,
+	  `The satisfaction levels for the Cardano Buidler Fest are exceptionally high, with a median score of 9 and an interquartile range between 9 and 10. This indicates overwhelmingly positive feedback from attendees, suggesting that the event successfully met or exceeded expectations. Despite the small sample size, this level of satisfaction reflects the event’s strong impact on the engaged participants, reinforcing its value within the Cardano developer ecosystem.`,
         ),
         question35: question(
           "Do you have any ideas on how to improve the next potential Cardano Buidler Fest?",
@@ -659,7 +667,7 @@ The preference for Discord highlights a trend toward real-time communication, wh
 	    ]
           , link: `${repository}/2024/data/open-questions/do-you-have-any-ideas-on-how-to-improve-the-next-potential-cardano-buidler-fest.md`
           },
-	  ``,
+	  `The inaugural Cardano Buidler Fest, held in April 2024, garnered positive feedback from attendees. Participants appreciated the event's technical focus and the opportunity for in-depth discussions. Suggestions for future improvements include allocating more unstructured time and shared spaces to foster spontaneous interactions among developers. These insights align with the [event's retrospective](https://buidl.2024.cardano.org/posts/2024-04-26-it-s-over/), which highlighted the value of impromptu conversations and the unique atmosphere of the Open Space format. `,
         ),
       }
     }
