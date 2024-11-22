@@ -68,7 +68,7 @@ fetch("/state-of-the-developer-ecosystem/2024/data/answers.json").then(res => re
           },
 	  `The survey results show that 59.6% of respondents have exclusively worked within the Cardano ecosystem, demonstrating a significant concentration of "Cardano-first" developers. Meanwhile, 19.3% transitioned from other blockchain ecosystems, and 20.9% actively work in parallel with other ecosystems. This developer distribution suggests strong loyalty among Cardano contributors but also highlights a minority who bring or maintain cross-ecosystem expertise.
 
-In comparison, broader blockchain ecosystems, such as Ethereum, Polygon, and Solana, tend to see higher levels of multi-platform participation due to their widespread tooling compatibility and cross-chain bridging capabilities. For instance, Ethereum's large developer base often explores layer 2 solutions like Arbitrum and Optimism or alternative chains like Polygon, leveraging their shared Ethereum Virtual Machine (EVM) infrastructure. This level of multi-ecosystem involvement is less pronounced in Cardano, potentially leading to more focused innovation but also the risk of "echo chamber" effects where external ideas and practices might be underrepresented`,
+In comparison, broader blockchain ecosystems, such as Ethereum, Polygon, and Solana, tend to see higher levels of multi-platform participation due to their widespread tooling compatibility and cross-chain bridging capabilities. For instance, Ethereum's large developer base often explores layer 2 solutions like Arbitrum and Optimism or alternative chains like Polygon, leveraging their shared Ethereum Virtual Machine (EVM) infrastructure. This level of multi-ecosystem involvement is less pronounced in Cardano, potentially leading to more focused innovation but also the risk of "echo chamber" effects where external ideas and practices might be underrepresented.`,
         ),
         question6: question(
           "Which other blockchain ecosystem(s) are you the most familiar with?",
@@ -126,7 +126,7 @@ This suggests either a lack of crossover interest or awareness within these comm
             ]
           , sortDesc: true
           },
-	  `The profession distribution reflects the developer-centric focus of this survey, with software engineers making up the majority at 41.3%. Other roles include founders or C-suite executives (9.3%), educators (5.3%), and system architects (5.3%), indicating a mix of technical, leadership, and educational expertise. Smaller groups, such as data scientists (4.0%) and academic researchers (2.6%), highlight the broader range of skills contributing to the ecosystem. This distribution aligns with expectations for a developer-oriented survey.`,
+	  `The profession distribution reflects the developer-centric focus of this survey, with software engineers making up the majority at 41.3%. Other roles include founders or C-suite executives (9.3%), educators (5.3%), and system architects (5.3%), indicating a mix of technical, leadership, and educational expertise. Smaller groups, such as data scientists (4.0%) and academic researchers (2.6%), highlight the broader range of skills contributing to the ecosystem.`,
         ),
         question8: question(
           "What is your main development environment?",
@@ -359,7 +359,7 @@ Interestingly, "None directly" ranks high for the "Gaming and Metaverse" subgrou
           "It would be nice if a service provided … ?",
           { options:
 	    [ [ "...additional analytics & content delivery API (assets metadata, raw transactions, stake distribution snapshots, handle resolution, CDNs...).", 13, null ]
-	    , [ "...more transaction handling and construction specific features (e.g. dry submission, better rejection feedback, UTxO management, higher-level abstractions).", 12, null ]
+	    , [ "...more transaction handling and construction specific features (e.g. dry submission, better rejection feedback, UTXO management, higher-level abstractions).", 12, null ]
 	    , [ "...nothing extra, they're good as they are.", 12, null ]
 	    , [ "...better documentation and up-to-date examples of usage and deployment of those services.", 12, null ]
 	    , [ "...easier deployment setup and overall lower barrier to entry.", 9, null ]
@@ -372,7 +372,7 @@ Interestingly, "None directly" ranks high for the "Gaming and Metaverse" subgrou
 	    ]
           , link: `${repository}/2024/data/open-questions/it-would-be-nice-if-a-service-provided.md`
           },
-	  `The survey reveals a variety of improvements developers would like to see in Cardano's service ecosystem. Topping the list is a demand for more comprehensive analytics and content delivery APIs (16.0%), such as support for assets metadata, raw transactions, and stake distribution snapshots. Closely following are calls for better transaction handling and construction features (14.8%), an area repeatedly highlighted as a pain point in earlier questions, reinforcing the need for solutions like streamlined UTxO management and higher-level abstractions.
+	  `The survey reveals a variety of improvements developers would like to see in Cardano's service ecosystem. Topping the list is a demand for more comprehensive analytics and content delivery APIs (16.0%), such as support for assets metadata, raw transactions, and stake distribution snapshots. Closely following are calls for better transaction handling and construction features (14.8%), an area repeatedly highlighted as a pain point in earlier questions, reinforcing the need for solutions like streamlined UTXO management and higher-level abstractions.
 
 An equal percentage (14.8%) of respondents expressed satisfaction with the current services, suggesting that while many developers see room for improvement, a significant minority finds the existing tools sufficient. Another 14.8% emphasized the need for better documentation and updated examples, echoing ongoing concerns about accessibility and learning resources.
 
@@ -520,13 +520,13 @@ The rise of Aiken and the steady adoption of tools like yaci’s devkit suggest 
 
 The emphasis on "rigorous foundations and focus on correctness" (15.0%) and diverse tools/libraries (15.0%) underscores the ecosystem's technical robustness and versatility. However, mentions of community-driven education materials, while still appreciated (6.0%), have declined, possibly due to a growing reliance on emerging tools like Aiken to drive ecosystem innovation.
 
-The shift in focus from community-first to tool- and foundation-driven strengths reflects a maturing ecosystem that increasingly values its technical assets and developer-centric advancements.`,
+The shift in focus from community-first to tool-driven and foundation-driven strengths reflects a maturing ecosystem that increasingly values its technical assets and developer-centric advancements.`,
         ),
         question27: question(
 	  "What do you think is the biggest pain point of Cardano's developer ecosystem?",
           { options:
 	    [ [ [ "Documentation, broken down into different areas:"
-	        , "&nbsp;&nbsp; <code>30.0%</code> → lack of documentation on specific topics (e.g. eUTxO design patterns, economics, hard fork changes, ...);"
+	        , "&nbsp;&nbsp; <code>30.0%</code> → lack of documentation on specific topics (e.g. eUTXO design patterns, economics, hard fork changes, ...);"
 	        , "&nbsp;&nbsp; <code>23.3%</code> → general/unspecified discontent;"
 	        , "&nbsp;&nbsp; <code>13.3%</code> → outdated and/or fragmented documentation;"
 	        , "&nbsp;&nbsp; <code>13.3%</code> → lack of (non-trivial) examples / in-depth explainers;"
