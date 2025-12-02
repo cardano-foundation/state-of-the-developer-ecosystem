@@ -1,5 +1,5 @@
-fetch("/data/answers.json").then(res => res.json()).then(rawData =>
-fetch("/data/survey.json").then(res => res.json()).then(rawSurvey => {
+fetch("/state-of-the-developer-ecosystem/2025/data/answers.json").then(res => res.json()).then(rawData =>
+fetch("/state-of-the-developer-ecosystem/2025/data/survey.json").then(res => res.json()).then(rawSurvey => {
   const repository = "https://github.com/cardano-foundation/state-of-the-developer-ecosystem/blob/main"
   const node = document.createElement("div");
   document.querySelector('body').appendChild(node);
