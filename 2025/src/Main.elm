@@ -597,6 +597,19 @@ updateQuestion25 { selectedFilter } =
             { model | questions = { questions | question25 = { q | selectedFilter = selectedFilter } } }
 
 
+updateQuestion26 :
+    { selectedFilter : Int }
+    -> Msg
+updateQuestion26 { selectedFilter } =
+    ChangeFilter <|
+        \({ questions } as model) ->
+            let
+                q =
+                    questions.question26
+            in
+            { model | questions = { questions | question26 = { q | selectedFilter = selectedFilter } } }
+
+
 updateQuestion29 :
     { selectedFilter : Int }
     -> Msg
@@ -755,11 +768,7 @@ view ({ title, introduction, questions } as model) =
         , questions.question3
             |> viewDotsPlot model
                 updateQuestion3
-                [ withYearsOfExperience questions "Less than 1 year"
-                , withYearsOfExperience questions "Between 1 and 2 years"
-                , withYearsOfExperience questions "Between 2 and 7 years"
-                , withYearsOfExperience questions "Over 7 years"
-                ]
+                (withYearsOfExperienceFilter questions)
         , questions.question4 |> viewBarChart model noUpdate []
         , questions.question5 |> viewBarChart model noUpdate []
         , questions.question6 |> viewBarChart model updateQuestion6 []
@@ -770,226 +779,86 @@ view ({ title, introduction, questions } as model) =
         , questions.question11
             |> viewBoxPlot model
                 updateQuestion11
-                [ withYearsOfExperience questions "Less than 1 year"
-                , withYearsOfExperience questions "Between 1 and 2 years"
-                , withYearsOfExperience questions "Between 2 and 7 years"
-                , withYearsOfExperience questions "Over 7 years"
-                , fromTechnicalSource questions "Discord servers"
-                , fromTechnicalSource questions "Source code"
-                , fromTechnicalSource questions "Blog or website articles & guides"
-                , fromTechnicalSource questions "Cardano docs (https://docs.cardano.org/)"
-                , fromTechnicalSource questions "Cardano's developer portal (https://developers.cardano.org/)"
-                , fromTechnicalSource questions "Friends/colleagues/community members"
-                , fromTechnicalSource questions "Scientific papers/specifications"
-                , fromTechnicalSource questions "(Online) courses"
-                , fromTechnicalSource questions "Cardano forum"
-                , fromTechnicalSource questions "YouTube"
-                , fromTechnicalSource questions "Telegram groups"
-                , fromTechnicalSource questions "Twitter/X"
-                ]
+                (withYearsOfExperienceFilter questions ++ fromTechnicalSourceFilter questions)
         , questions.question12
             |> viewStackBarChart model
                 updateQuestion12
-                [ withYearsOfExperience questions "Less than 1 year"
-                , withYearsOfExperience questions "Between 1 and 2 years"
-                , withYearsOfExperience questions "Between 2 and 7 years"
-                , withYearsOfExperience questions "Over 7 years"
-                , withBlockchainExperience questions "Less than 1 year"
-                , withBlockchainExperience questions "Between 1 and 2 years"
-                , withBlockchainExperience questions "Between 2 and 7 years"
-                , withBlockchainExperience questions "Over 7 years"
-                , isHobbyist questions
-                , isPro questions
-                , onlyExperts questions
-                ]
+                (withYearsOfExperienceFilter questions
+                    ++ withBlockchainExperienceFilter questions
+                    ++ [ isHobbyist questions
+                       , isPro questions
+                       , onlyExperts questions
+                       ]
+                )
         , questions.question13
             |> viewDotsPlot model
                 updateQuestion13
-                [ withYearsOfExperience questions "Less than 1 year"
-                , withYearsOfExperience questions "Between 1 and 2 years"
-                , withYearsOfExperience questions "Between 2 and 7 years"
-                , withYearsOfExperience questions "Over 7 years"
-                , isProficientIn questions "C"
-                , isProficientIn questions "C#"
-                , isProficientIn questions "C++"
-                , isProficientIn questions "Go"
-                , isProficientIn questions "Haskell"
-                , isProficientIn questions "Java"
-                , isProficientIn questions "PHP"
-                , isProficientIn questions "Python"
-                , isProficientIn questions "Rust"
-                , isProficientIn questions "TypeScript"
-                , isProficientIn questions "JavaScript"
-                ]
+                (withYearsOfExperienceFilter questions ++ isProficientInFilter questions)
         , questions.question14 |> viewDotsPlot model updateQuestion14 []
         , questions.question15
             |> viewBoxPlot model
                 updateQuestion15
-                [ usingOnChain questions "Aiken"
-                , usingOnChain questions "Haskell/Plutus-Tx"
-                , usingOnChain questions "Plu-ts"
-                , usingOnChain questions "OpShin"
-                , usingOnChain questions "Marlowe"
-                , usingOnChain questions "Helios"
-                , usingOnChain questions "Plutarch"
-                , usingOnChain questions "Scalus"
-                , usingOnChain questions "Solidity (with Milkomeda)"
-                , usingOnChain questions "Purus"
-                , usingOnChain questions "Pluto"
-                ]
+                (usingOnChainFilter questions)
         , questions.question16
             |> viewStackBarChart model
                 updateQuestion16
-                [ withBlockchainExperience questions "Less than 1 year"
-                , withBlockchainExperience questions "Between 1 and 2 years"
-                , withBlockchainExperience questions "Between 2 and 7 years"
-                , withBlockchainExperience questions "Over 7 years"
-                , isHobbyist questions
-                , isPro questions
-                , onlyExperts questions
-                , familiarWithOtherEcosystem questions
-                ]
+                (withBlockchainExperienceFilter questions
+                    ++ [ isHobbyist questions
+                       , isPro questions
+                       , onlyExperts questions
+                       , familiarWithOtherEcosystem questions
+                       ]
+                )
         , questions.question17
             |> viewDotsPlot model
                 updateQuestion17
-                [ isProficientIn questions "Aiken"
-                , isProficientIn questions "C"
-                , isProficientIn questions "C#"
-                , isProficientIn questions "C++"
-                , isProficientIn questions "Go"
-                , isProficientIn questions "Haskell"
-                , isProficientIn questions "Java"
-                , isProficientIn questions "PHP"
-                , isProficientIn questions "Python"
-                , isProficientIn questions "Rust"
-                , isProficientIn questions "TypeScript"
-                , isProficientIn questions "JavaScript"
-                , isInterestedIn questions "Decentralized Finance (DeFi)"
-                , isInterestedIn questions "Identity and Authentication"
-                , isInterestedIn questions "Real-World Asset Tokenization"
-                , isInterestedIn questions "Governance"
-                , isInterestedIn questions "NFT Marketplaces"
-                , isInterestedIn questions "Supply Chain Management"
-                , isInterestedIn questions "Social dApps"
-                , isInterestedIn questions "Gaming and Metaverse"
-                ]
+                (isProficientInFilter questions ++ isInterestedInFilter questions)
         , questions.question18 |> viewOpen
         , questions.question19
             |> viewDotsPlot model
                 updateQuestion19
-                [ isProficientIn questions "Aiken"
-                , isProficientIn questions "C"
-                , isProficientIn questions "C#"
-                , isProficientIn questions "C++"
-                , isProficientIn questions "Go"
-                , isProficientIn questions "Haskell"
-                , isProficientIn questions "Java"
-                , isProficientIn questions "PHP"
-                , isProficientIn questions "Python"
-                , isProficientIn questions "Rust"
-                , isProficientIn questions "TypeScript"
-                , isProficientIn questions "JavaScript"
-                , isInterestedIn questions "Decentralized Finance (DeFi)"
-                , isInterestedIn questions "Identity and Authentication"
-                , isInterestedIn questions "Real-World Asset Tokenization"
-                , isInterestedIn questions "Governance"
-                , isInterestedIn questions "NFT Marketplaces"
-                , isInterestedIn questions "Supply Chain Management"
-                , isInterestedIn questions "Social dApps"
-                , isInterestedIn questions "Gaming and Metaverse"
-                ]
+                (isProficientInFilter questions ++ isInterestedInFilter questions)
         , questions.question20 |> viewOpen
         , questions.question21
             |> viewDotsPlot model
                 updateQuestion21
-                [ isProficientIn questions "Aiken"
-                , isProficientIn questions "C"
-                , isProficientIn questions "C#"
-                , isProficientIn questions "C++"
-                , isProficientIn questions "Go"
-                , isProficientIn questions "Haskell"
-                , isProficientIn questions "Java"
-                , isProficientIn questions "PHP"
-                , isProficientIn questions "Python"
-                , isProficientIn questions "Rust"
-                , isProficientIn questions "TypeScript"
-                , isProficientIn questions "JavaScript"
-                , isInterestedIn questions "Decentralized Finance (DeFi)"
-                , isInterestedIn questions "Identity and Authentication"
-                , isInterestedIn questions "Real-World Asset Tokenization"
-                , isInterestedIn questions "Governance"
-                , isInterestedIn questions "NFT Marketplaces"
-                , isInterestedIn questions "Supply Chain Management"
-                , isInterestedIn questions "Social dApps"
-                , isInterestedIn questions "Gaming and Metaverse"
-                ]
+                (isProficientInFilter questions ++ isInterestedInFilter questions)
         , questions.question22 |> viewStackBarChart model noUpdate []
         , questions.question23 |> viewDotsPlot model updateQuestion23 []
         , questions.question24 |> viewOpen
         , questions.question25
             |> viewDotsPlot model
-                noUpdate
-                [ withYearsOfExperience questions "Less than 1 year"
-                , withYearsOfExperience questions "Between 1 and 2 years"
-                , withYearsOfExperience questions "Between 2 and 7 years"
-                , withYearsOfExperience questions "Over 7 years"
-                ]
+                updateQuestion25
+                (withYearsOfExperienceFilter questions)
         , questions.question26
             |> viewStackBarChart model
-                noUpdate
-                [ withYearsOfExperience questions "Less than 1 year"
-                , withYearsOfExperience questions "Between 1 and 2 years"
-                , withYearsOfExperience questions "Between 2 and 7 years"
-                , withYearsOfExperience questions "Over 7 years"
-                ]
+                updateQuestion26
+                (withYearsOfExperienceFilter questions)
         , questions.question27 |> viewOpen
         , questions.question28 |> viewOpen
         , questions.question29
             |> viewDotsPlot model
                 updateQuestion29
-                [ withYearsOfExperience questions "Less than 1 year"
-                , withYearsOfExperience questions "Between 1 and 2 years"
-                , withYearsOfExperience questions "Between 2 and 7 years"
-                , withYearsOfExperience questions "Over 7 years"
-                , isPro questions
-                , isHobbyist questions
-                , onlyExperts questions
-                ]
+                (withYearsOfExperienceFilter questions
+                    ++ [ isPro questions
+                       , isHobbyist questions
+                       , onlyExperts questions
+                       ]
+                )
         , questions.question30
             |> viewDotsPlot model
                 updateQuestion30
-                [ withYearsOfExperience questions "Less than 1 year"
-                , withYearsOfExperience questions "Between 1 and 2 years"
-                , withYearsOfExperience questions "Between 2 and 7 years"
-                , withYearsOfExperience questions "Over 7 years"
-                , withBlockchainExperience questions "Less than 1 year"
-                , withBlockchainExperience questions "Between 1 and 2 years"
-                , withBlockchainExperience questions "Between 2 and 7 years"
-                , withBlockchainExperience questions "Over 7 years"
-                , isPro questions
-                , isHobbyist questions
-                , onlyExperts questions
-                ]
+                (withYearsOfExperienceFilter questions
+                    ++ withBlockchainExperienceFilter questions
+                    ++ [ isPro questions
+                       , isHobbyist questions
+                       , onlyExperts questions
+                       ]
+                )
         , questions.question31
             |> viewBoxPlot model
                 updateQuestion31
-                [ withBlockchainExperience questions "Less than 1 year"
-                , withBlockchainExperience questions "Between 1 and 2 years"
-                , withBlockchainExperience questions "Between 2 and 7 years"
-                , withBlockchainExperience questions "Over 7 years"
-                , fromTechnicalSource questions "Discord servers"
-                , fromTechnicalSource questions "Source code"
-                , fromTechnicalSource questions "Blog or website articles & guides"
-                , fromTechnicalSource questions "Cardano docs (https://docs.cardano.org/)"
-                , fromTechnicalSource questions "Cardano's developer portal (https://developers.cardano.org/)"
-                , fromTechnicalSource questions "Friends/colleagues/community members"
-                , fromTechnicalSource questions "Scientific papers/specifications"
-                , fromTechnicalSource questions "(Online) courses"
-                , fromTechnicalSource questions "Cardano forum"
-                , fromTechnicalSource questions "YouTube"
-                , fromTechnicalSource questions "Telegram groups"
-                , fromTechnicalSource questions "Twitter/X"
-                ]
+                (withBlockchainExperienceFilter questions ++ fromTechnicalSourceFilter questions)
         , questions.question32 |> viewDotsPlot model noUpdate []
         , questions.question33 |> viewDotsPlot model noUpdate []
         , questions.question34 |> viewBarChart model noUpdate []
@@ -1575,6 +1444,16 @@ defaultFilter =
     }
 
 
+withYearsOfExperienceFilter : Questionnaire -> List (Filter a)
+withYearsOfExperienceFilter questions =
+    List.map (withYearsOfExperience questions) <|
+        [ "Less than 1 year"
+        , "Between 1 and 2 years"
+        , "Between 2 and 7 years"
+        , "Over 7 years"
+        ]
+
+
 withYearsOfExperience : Questionnaire -> String -> Filter a
 withYearsOfExperience questions xp =
     { title = "With " ++ xp ++ " of experience"
@@ -1592,6 +1471,16 @@ withYearsOfExperience questions xp =
     }
 
 
+withBlockchainExperienceFilter : Questionnaire -> List (Filter a)
+withBlockchainExperienceFilter questions =
+    List.map (withBlockchainExperience questions) <|
+        [ "Less than 1 year"
+        , "Between 1 and 2 years"
+        , "Between 2 and 7 years"
+        , "Over 7 years"
+        ]
+
+
 withBlockchainExperience : Questionnaire -> String -> Filter a
 withBlockchainExperience questions xp =
     { title = "Writing blockchain software for " ++ xp
@@ -1607,6 +1496,26 @@ withBlockchainExperience questions xp =
                             []
                     )
     }
+
+
+fromTechnicalSourceFilter : Questionnaire -> List (Filter a)
+fromTechnicalSourceFilter questions =
+    List.map (fromTechnicalSource questions) <|
+        [ "Blog or website articles"
+        , "Books"
+        , "Cardano Developer portal (https://developers.cardano.org)"
+        , "Cardano Documentation (https://docs.cardano.org)"
+        , "Project-specific Documentation"
+        , "Direct friends/colleagues/community acquaintances"
+        , "Forum (https://forum.cardano.org/)"
+        , "Online courses / videos"
+        , "Scientific papers/specifications"
+        , "Source code"
+        , "Twitter/X"
+        , "Cardano Blueprint (https://cardano-scaling.github.io/cardano-blueprint/)"
+        , "AI/LLM"
+        , "CIPs"
+        ]
 
 
 fromTechnicalSource : Questionnaire -> String -> Filter a
@@ -1665,7 +1574,7 @@ familiarWithOtherEcosystem questions =
     { title = "Familiar with other ecosystems"
     , function =
         \answers ->
-            List.zip answers questions.question9.answers
+            List.zip answers questions.question8.answers
                 |> List.map
                     (\( x, y ) ->
                         if y == [ "I have only ever worked in the Cardano ecosystem" ] || y == [ "" ] then
@@ -1694,6 +1603,24 @@ isHobbyist questions =
     }
 
 
+isProficientInFilter : Questionnaire -> List (Filter a)
+isProficientInFilter questions =
+    List.map (isProficientIn questions) <|
+        [ "C"
+        , "C#"
+        , "C++"
+        , "Go"
+        , "Haskell"
+        , "Java"
+        , "JavaScript"
+        , "PHP"
+        , "Python"
+        , "Rust"
+        , "Scala"
+        , "TypeScript"
+        ]
+
+
 isProficientIn : Questionnaire -> String -> Filter a
 isProficientIn questions lang =
     { title = "Proficient in " ++ lang
@@ -1711,6 +1638,26 @@ isProficientIn questions lang =
     }
 
 
+isInterestedInFilter : Questionnaire -> List (Filter a)
+isInterestedInFilter questions =
+    List.map (isInterestedIn questions) <|
+        [ "Core Infrastructure"
+        , "Decentralized Finance (DeFi) and Stablecoins"
+        , "Identity and Authentication"
+        , "Gaming and Metaverse"
+        , "Governance"
+        , "NFT Marketplaces"
+        , "Real-World Asset Tokenization"
+        , "Education & Community Platforms"
+        , "Supply Chain Management"
+        , "Wallets"
+        , "Payment"
+        , "Bridges and Interoperability"
+        , "Data, Oracles and Analytics"
+        , "Memecoins"
+        ]
+
+
 isInterestedIn : Questionnaire -> String -> Filter a
 isInterestedIn questions lang =
     { title = "Interested in " ++ lang
@@ -1726,6 +1673,20 @@ isInterestedIn questions lang =
                             []
                     )
     }
+
+
+usingOnChainFilter : Questionnaire -> List (Filter a)
+usingOnChainFilter questions =
+    List.map (usingOnChain questions) <|
+        [ "Aiken"
+        , "Helios"
+        , "Marlowe"
+        , "OpShin"
+        , "Plinth (previously known as Plutus-Tx)"
+        , "Plu-ts"
+        , "Plutarch"
+        , "Scalus"
+        ]
 
 
 usingOnChain : Questionnaire -> String -> Filter a
