@@ -1,5 +1,9 @@
-fetch("/data/answers.json").then(res => res.json()).then(rawData =>
-fetch("/data/survey.json").then(res => res.json()).then(rawSurvey => {
+const root = document.location.pathname.endsWith("/")
+  ? document.location.pathname.substring(0, -1)
+  : document.location.pathname;
+
+fetch(`${root}/data/answers.json`).then(res => res.json()).then(rawData =>
+fetch(`${root}/data/survey.json`).then(res => res.json()).then(rawSurvey => {
   const repository = "https://github.com/cardano-foundation/state-of-the-developer-ecosystem/blob/main"
   const node = document.createElement("div");
   document.querySelector('body').appendChild(node);
@@ -145,10 +149,6 @@ fetch("/data/survey.json").then(res => res.json()).then(rawSurvey => {
 
       return acc;
     }, {});
-
-  const root = document.location.pathname.endsWith("/")
-    ? document.location.pathname.substring(0, -1)
-    : document.location.pathname;
 
   const openQuestions = `${root}/data/open-questions`;
 
