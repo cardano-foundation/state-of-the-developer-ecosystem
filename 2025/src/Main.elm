@@ -223,7 +223,7 @@ type alias Open =
     { title : String
     , comment : String
     , link : String
-    , options : List ( String, Int, Maybe String )
+    , options : List ( String, List String )
     , answers : List (List String)
     }
 
@@ -873,7 +873,7 @@ view ({ title, introduction, questions } as model) =
                 , isInterestedIn questions "Social dApps"
                 , isInterestedIn questions "Gaming and Metaverse"
                 ]
-        , questions.question18 |> viewOpen model
+        , questions.question18 |> viewOpen
         , questions.question19
             |> viewDotsPlot model
                 updateQuestion19
@@ -898,7 +898,7 @@ view ({ title, introduction, questions } as model) =
                 , isInterestedIn questions "Social dApps"
                 , isInterestedIn questions "Gaming and Metaverse"
                 ]
-        , questions.question20 |> viewOpen model
+        , questions.question20 |> viewOpen
         , questions.question21
             |> viewDotsPlot model
                 updateQuestion21
@@ -925,7 +925,7 @@ view ({ title, introduction, questions } as model) =
                 ]
         , questions.question22 |> viewStackBarChart model noUpdate []
         , questions.question23 |> viewDotsPlot model updateQuestion23 []
-        , questions.question24 |> viewOpen model
+        , questions.question24 |> viewOpen
         , questions.question25
             |> viewDotsPlot model
                 noUpdate
@@ -942,8 +942,8 @@ view ({ title, introduction, questions } as model) =
                 , withYearsOfExperience questions "Between 2 and 7 years"
                 , withYearsOfExperience questions "Over 7 years"
                 ]
-        , questions.question27 |> viewOpen model
-        , questions.question28 |> viewOpen model
+        , questions.question27 |> viewOpen
+        , questions.question28 |> viewOpen
         , questions.question29
             |> viewDotsPlot model
                 updateQuestion29
@@ -994,7 +994,7 @@ view ({ title, introduction, questions } as model) =
         , questions.question33 |> viewDotsPlot model noUpdate []
         , questions.question34 |> viewBarChart model noUpdate []
         , questions.question35 |> viewBoxPlot model noUpdate []
-        , questions.question36 |> viewOpen model
+        , questions.question36 |> viewOpen
         ]
 
 
@@ -1294,59 +1294,28 @@ viewBoxPlot model toMsg additionalFilters =
 
 
 viewOpen :
-    Model
-    -> Open
+    Open
     -> Html Msg
-viewOpen model =
+viewOpen =
     Html.Lazy.lazy <|
-        \{ title, options, comment, link } ->
+        \{ title, options, comment, link, answers } ->
             let
-                data =
-                    options
-                        |> List.map (\( label, y, extraLink ) -> { x = { label = label, link = extraLink }, y = y })
-                        |> List.sortBy (\{ y } -> -y)
-
                 yMax =
-                    List.foldr (\( _, y, _ ) n -> y + n) 0 options
+                    List.foldr (\answer n -> n + List.length answer) 0 answers
             in
             Html.article
                 []
                 [ viewQuestionTitle title
                 , Html.aside
                     []
-                    [ Html.div
-                        []
-                        [ Html.button
-                            [ Html.Events.onClick (ChangeDisplayOption DisplayRelative)
-                            , Html.Attributes.class <|
-                                case model.displayOption of
-                                    DisplayRelative ->
-                                        "active"
-
-                                    DisplayTotal ->
-                                        ""
-                            ]
-                            [ Html.text "relative (%)" ]
-                        , Html.button
-                            [ Html.Events.onClick (ChangeDisplayOption DisplayTotal)
-                            , Html.Attributes.class <|
-                                case model.displayOption of
-                                    DisplayRelative ->
-                                        ""
-
-                                    DisplayTotal ->
-                                        "active"
-                            ]
-                            [ Html.text "total" ]
-                        ]
-                    , Html.span
+                    [ Html.span
                         [ Html.Attributes.class "see-all" ]
                         [ Html.text <| String.fromInt yMax ++ " answers "
                         , Html.a
                             [ Html.Attributes.href link
                             , Html.Attributes.target "_blank"
                             ]
-                            [ Html.text "(see all)"
+                            [ Html.text "(see raw)"
                             , Svg.svg
                                 [ Svg.Attributes.class "icon"
                                 ]
@@ -1355,48 +1324,15 @@ viewOpen model =
                         ]
                     ]
                 , Html.ul
-                    [ Html.Attributes.class "bars" ]
-                    (data
+                    [ Html.Attributes.class "open" ]
+                    (options
                         |> List.map
-                            (\{ x, y } ->
+                            (\( category, choices ) ->
                                 Html.li
                                     []
-                                    [ Html.label [] <|
-                                        case x.link of
-                                            Nothing ->
-                                                [ Markdown.toHtmlWith { defaultOptions | sanitize = False } [] x.label ]
-
-                                            Just href ->
-                                                [ Markdown.toHtmlWith { defaultOptions | sanitize = False } [] x.label
-                                                , Html.a
-                                                    [ Html.Attributes.href href
-                                                    , Html.Attributes.target "_blank"
-                                                    , Html.Attributes.style "font-size" "0.8em"
-                                                    , Html.Attributes.style "position" "relative"
-                                                    , Html.Attributes.style "top" "-0.5em"
-                                                    ]
-                                                    [ Svg.svg
-                                                        [ Svg.Attributes.class "icon"
-                                                        ]
-                                                        [ Svg.use [ Svg.Attributes.xlinkHref "#icon-external-link" ] [] ]
-                                                    ]
-                                                ]
-                                    , Html.div []
-                                        [ Html.div
-                                            [ Html.Attributes.class "bar"
-                                            , Html.Attributes.style "width" (displayPercent yMax y)
-                                            ]
-                                            []
-                                        , Html.label
-                                            []
-                                            [ Html.text <|
-                                                case model.displayOption of
-                                                    DisplayTotal ->
-                                                        String.fromInt y
-
-                                                    DisplayRelative ->
-                                                        displayPercent yMax y
-                                            ]
+                                    [ Html.div []
+                                        [ Html.span [ Html.Attributes.class "category" ] [ Html.text category ]
+                                        , Html.ul [] (List.map (\choice -> Html.li [] [ Html.text choice ]) choices)
                                         ]
                                     ]
                             )
