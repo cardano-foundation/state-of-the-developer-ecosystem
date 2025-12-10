@@ -1,5 +1,5 @@
 const root = document.location.pathname.endsWith("/")
-  ? document.location.pathname.substring(0, -1)
+  ? document.location.pathname.slice(0, -1)
   : document.location.pathname;
 
 fetch(`${root}/data/answers.json`).then(res => res.json()).then(rawData =>
