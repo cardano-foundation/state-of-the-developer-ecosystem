@@ -956,7 +956,7 @@ viewDotsPlot model toMsg additionalFilters =
                         |> (\{ function } -> function answers)
 
                 ( data, others, yMax ) =
-                    buildDotsPlot { options = options, answers = filteredAnswers, title = title }
+                    buildDotsPlot { options = options, answers = filteredAnswers }
 
                 selectY { y } =
                     y
@@ -1758,19 +1758,18 @@ buildStackBarChart { options, answers } =
                 |> Dict.fromList
 
         condorcet a b =
-            -1
-                * List.foldl
-                    (\items count ->
-                        count
-                            + (if indexOf 0 a items < indexOf 0 b items then
-                                1
+            List.foldl
+                (\items count ->
+                    count
+                        + (if indexOf 0 a items < indexOf 0 b items then
+                            1
 
-                               else
-                                0
-                              )
-                    )
-                    0
-                    answers
+                           else
+                            0
+                          )
+                )
+                0
+                answers
 
         indexOf ix x xs =
             if ix >= len then
@@ -1781,25 +1780,6 @@ buildStackBarChart { options, answers } =
 
             else
                 indexOf (ix + 1) x xs
-
-        byRank n a b =
-            if n >= len then
-                EQ
-
-            else
-                let
-                    at i array =
-                        Array.get i array |> Maybe.withDefault 0
-                in
-                case compare (at n a) (at n b) of
-                    EQ ->
-                        byRank (n + 1) a b
-
-                    LT ->
-                        GT
-
-                    GT ->
-                        LT
 
         stack =
             answers
@@ -1846,20 +1826,82 @@ buildStackBarChart { options, answers } =
 
         scale =
             (toFloat globalMax - toFloat globalMin) / (toFloat maxColors - 1)
+
+        countAtRank ix answer =
+            List.foldl
+                (\items count ->
+                    if Array.get ix items == Just answer then
+                        count + 1
+
+                    else
+                        count
+                )
+                0
+                answers
+
+        compareByRank ix a b =
+            let
+                totalA =
+                    countAtRank ix a
+
+                totalB =
+                    countAtRank ix b
+            in
+            if totalA == totalB then
+                if ix >= len then
+                    EQ
+
+                else
+                    compareByRank (ix + 1) a b
+
+            else
+                compare totalB totalA
     in
     stack
         |> Dict.toList
-        |> List.sortWith (\( a, _ ) ( b, _ ) -> compare (condorcet a b) (condorcet b a))
         |> List.map
-            (\( x, ys ) ->
+            (\( a, bucketsA ) ->
+                let
+                    score =
+                        List.foldl
+                            (\( b, _ ) intermediateScore ->
+                                if a == b then
+                                    intermediateScore
+
+                                else
+                                    case compare (condorcet a b) (condorcet b a) of
+                                        EQ ->
+                                            intermediateScore
+
+                                        LT ->
+                                            intermediateScore - 1
+
+                                        GT ->
+                                            intermediateScore + 1
+                            )
+                            0
+                            (Dict.toList stack)
+                in
+                ( a, score, bucketsA )
+            )
+        |> List.sortWith
+            (\( a, scoreA, _ ) ( b, scoreB, _ ) ->
+                if scoreA == scoreB then
+                    compareByRank 0 a b
+
+                else
+                    compare scoreB scoreA
+            )
+        |> List.map
+            (\( x, _, ys ) ->
                 { x = x, ys = Array.map (\y -> ( y, floor (toFloat (y - globalMin) / scale) )) ys |> Array.toList }
             )
 
 
 buildDotsPlot :
-    { options : List String, answers : List (List String), title : String }
+    { options : List String, answers : List (List String) }
     -> ( List { x : String, y : Int }, { x : String, y : Int }, Int )
-buildDotsPlot { options, answers, title } =
+buildDotsPlot { options, answers } =
     let
         countOne value =
             case value of
@@ -1879,7 +1921,7 @@ buildDotsPlot { options, answers, title } =
                                     ( dict |> Dict.update opt countOne, others )
 
                                 else
-                                    ( dict, Debug.log (title ++ " " ++ opt) (others + 1) )
+                                    ( dict, others + 1 )
                             )
                             ( dict0, others0 )
                             opts
