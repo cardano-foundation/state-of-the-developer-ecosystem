@@ -1,0 +1,20 @@
+{
+  "name": "state-of-the-cardano-developer-ecosystem",
+  "version": "1.0.0",
+  "main": "public/index.js",
+  "repository": "https://github.com/cardano-foundation/state-of-the-developer-ecosystem.git",
+  "author": "KtorZ <matthias.benkort@gmail.com>",
+  "license": "Apache-2.0",
+  "private": false,
+  "scripts": {
+    "dev": "wrangler pages dev .",
+    "count": "count() { wrangler kv key list --binding kv \"$@\" | jq length; }; count",
+    "results": "results() { wrangler kv key list --binding kv \"$@\" > /tmp/kv.json; wrangler kv bulk get /tmp/kv.json --binding kv \"$@\"; }; results"
+  },
+  "dependencies": {
+    "nanoid": "^5.1.6"
+  },
+  "devDependencies": {
+    "wrangler": "^4.40.2"
+  }
+}

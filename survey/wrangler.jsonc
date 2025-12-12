@@ -1,0 +1,25 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "state-of-cardano-developer-survey-2025",
+  "compatibility_date": "2025-09-27",
+  "keep_vars": true,
+  "observability": {
+    "enabled": true
+  },
+  "kv_namespaces": [
+    {
+      "binding": "kv",
+      "id": "38fca760324e46e7b6d1b082fc3fa769"
+    }
+  ],
+  "vars": {
+    /* Always pass */
+    "state-of-the-developer-ecosystem-2025-turnstile": "1x0000000000000000000000000000000AA"
+    /* Always fail */
+    /* "state-of-the-developer-ecosystem-2025-turnstile": "2x0000000000000000000000000000000AA" */
+  }
+}

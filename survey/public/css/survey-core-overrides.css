@@ -1,0 +1,138 @@
+.sd-btn:hover {
+  color: var(--sjs-primary-forecolor);
+}
+
+.sv-header__description .sd-description {
+  padding-bottom: 4rem;
+}
+
+.sv-header__description .sd-description .sv-string-viewer  {
+  font-size: 0.8em;
+}
+
+.sv-header__description .sd-description .sv-string-viewer::after  {
+  content: 'ℹ | Only completed surveys are collected. However, your answers are saved in your local storage so that you can pause and resume the survey at any time.';
+  background-color: var(--sjs-questionpanel-hovercolor);
+  color: var(--sjs-general-backcolor-dim-light);
+  position: relative;
+  width: 100%;
+  top: 2rem;
+  padding: 1rem;
+  display: flex;
+  box-sizing: border-box;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 0.5rem;
+}
+
+.sd-root-modern:lang("ja") .sv-header__description .sd-description .sv-string-viewer::after  {
+  content: 'ℹ | 完了したアンケートのみが収集されます。ただし、回答はローカルストレージに保存されるため、いつでもアンケートを一時停止して再開できます。';
+}
+
+.sd-root-modern:lang("vi") .sv-header__description .sd-description .sv-string-viewer::after  {
+  content: 'ℹ | Chỉ những khảo sát đã hoàn thành mới được thu thập. Tuy nhiên, câu trả lời của bạn sẽ được lưu trong bộ nhớ cục bộ để bạn có thể tạm dừng và tiếp tục khảo sát bất cứ lúc nào.';
+}
+
+.sd-action-bar.sd-footer.sd-body__navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sd-action-bar.sd-footer.sd-body__navigation > div:last-child {
+  margin-left: auto;
+}
+
+.sd-btn.sd-navigation__prev-btn,
+.sd-btn.sd-navigation__next-btn,
+.sd-btn.sd-btn--action.sd-navigation__complete-btn {
+  background-color: var(--sjs-general-backcolor-dim-light);
+  color: var(--sjs-primary-backcolor);
+  box-shadow:
+  	rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  	rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+	rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+	rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+	var(--sjs-questionpanel-hovercolor) 5px 5px 0px 0px;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+}
+
+.sd-btn.sd-navigation__prev-btn:hover,
+.sd-btn.sd-navigation__next-btn:hover,
+.sd-btn.sd-btn--action.sd-navigation__complete-btn:hover {
+  background-color: var(--sjs-general-backcolor-dim-light);
+  color: var(--sjs-questionpanel-hovercolor);
+  translate: 2px 2px;
+  box-shadow:
+  	rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+  	rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+	rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+	rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+	var(--sjs-questionpanel-hovercolor) 3px 3px 0px 0px;
+}
+
+.sd-btn.sd-navigation__prev-btn:active,
+.sd-btn.sd-navigation__next-btn:active,
+.sd-btn.sd-btn--action.sd-navigation__complete-btn:active {
+  translate: 5px 5px;
+  box-shadow: unset;
+}
+
+.sv-list .sv-list__item.sd-list__item--hovered .sv-list__item-body,
+.sv-list .sv-list__item.sd-list__item--hovered:focus .sv-list__item-body,
+.sv-list .sv-list__item.sd-list__item--hovered:active .sv-list__item-body,
+.sv-list .sv-list__item.sd-list__item--hovered:hover .sv-list__item-body,
+.sv-list .sv-list__item.sv-list__item--selected .sv-list__item-body,
+.sv-list .sv-list__item.sv-list__item--selected:focus .sv-list__item-body,
+.sv-list .sv-list__item.sv-list__item--selected:active .sv-list__item-body,
+.sv-list .sv-list__item.sv-list__item--selected:hover .sv-list__item-body,
+.sv-multi-select-list .sv-list__item.sd-list__item--hovered .sv-list__item-body,
+.sv-multi-select-list .sv-list__item.sd-list__item--hovered:focus .sv-list__item-body,
+.sv-multi-select-list .sv-list__item.sd-list__item--hovered:active .sv-list__item-body,
+.sv-multi-select-list .sv-list__item.sd-list__item--hovered:hover .sv-list__item-body,
+.sv-multi-select-list .sv-list__item.sv-list__item--selected .sv-list__item-body,
+.sv-multi-select-list .sv-list__item.sv-list__item--selected:focus .sv-list__item-body,
+.sv-multi-select-list .sv-list__item.sv-list__item--selected:active .sv-list__item-body,
+.sv-multi-select-list .sv-list__item.sv-list__item--selected:hover .sv-list__item-body {
+  background-color: var(--sjs-general-backcolor-dark);
+  color: var(--sjs-primary-forecolor) !important;
+}
+
+.sv-ranking-item__index.sd-ranking-item__index {
+  color: var(--sjs-primary-forecolor);
+}
+
+.sv-ranking-item__index.sd-ranking-item__index > svg {
+  fill: var(--sjs-primary-forecolor);
+}
+
+.sv-ranking-item--error .sv-ranking-item__index.sd-ranking-item__index {
+  color: var(--sjs-special-red);
+}
+
+.sv-ranking-item--error .sv-ranking-item__index.sd-ranking-item__index > svg {
+  fill: var(--sjs-special-red);
+}
+
+.sv-save-data_root.sv-save-data_success {
+  background-color: var(--sjs-questionpanel-hovercolor);
+  color: var(--sjs-general-backcolor-dim-light);
+}
+
+.sd-body.sd-completedpage a:active,
+.sd-body.sd-completedpage a:focus,
+.sd-body.sd-completedpage a:hover,
+.sd-body.sd-completedpage a:visited,
+.sd-body.sd-completedpage a {
+  color: var(--sjs-questionpanel-hovercolor)
+}
+
+.sd-body.sd-completedpage svg {
+  top: 2px;
+  position: relative;
+  width: 1em;
+  min-width: 1em;
+  height: 1em;
+  min-height: 1em;
+}

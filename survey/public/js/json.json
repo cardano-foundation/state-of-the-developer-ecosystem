@@ -1,0 +1,2400 @@
+{
+  "title": {
+    "default": "State Of The Cardano Developer Ecosystem 2025",
+    "vi": "Tình trạng của hệ sinh thái nhà phát triển Cardano 2025",
+    "ja": "カルダノ開発者エコシステムの現状2025"
+  },
+  "showProgressBar": true,
+  "progressBarType": "questions",
+  "description": {
+    "default": "The Cardano developer community has always had an ongoing commitment to innovation and a willingness to share knowledge, nurturing a thriving ecosystem. To ensure not just this continual progress but also create a more secure and resilient blockchain network, developers require optimal tooling and information to identify problems and build robust solutions.\n\nSince its inaugural release in 2022, this annual survey has offered a method for evaluating the broader technical environment while uncovering potential disparities. In addition to providing a comprehensive view of Cardano’s technical landscape, the survey allows the Cardano community to better examine the developer community's composition and preferences.",
+    "vi": "Cộng đồng nhà phát triển Cardano có cam kết liên tục đổi mới và sẵn sàng chia sẻ kiến thức, nuôi dưỡng một hệ sinh thái thịnh vượng. Để đảm bảo tiến bộ liên tục như vậy cũng như một mạng blockchain an toàn và linh hoạt hơn, các nhà phát triển yêu cầu công cụ và thông tin tối ưu để xác định các vấn đề và xây dựng các giải pháp mạnh mẽ.\n\nKể từ khi phát hành lần đầu tiên vào năm 2022, cuộc khảo sát này đã đưa ra một phương pháp để đánh giá môi trường kỹ thuật rộng lớn hơn đồng thời phát hiện ra sự chênh lệch tiềm ẩn. Ngoài việc cung cấp một cái nhìn toàn diện về bối cảnh kỹ thuật của Cardano, cuộc khảo sát cho phép cộng đồng Cardano kiểm tra tốt hơn thành phần và sở thích của cộng đồng nhà phát triển.",
+    "ja": "カルダノ開発者コミュニティは、イノベーションへの継続的な取り組みと知識の共有に意欲的であり、繁栄するエコシステムを育んでいます。このような継続的な進歩と、より安全で回復力のあるブロックチェーン ネットワークを確保するには、開発者は問題を特定し、堅牢なソリューションを構築するための最適なツールと情報を必要としています。\n\nこの調査は、2022 年の最初のリリース以来、潜在的な格差を明らかにしながら、より広範な技術環境を評価する方法を提供してきました。この調査により、カルダノの技術的状況の包括的なビューを提供するだけでなく、カルダノ コミュニティは開発者コミュニティの構成と好みをより適切に調査できるようになります。"
+  },
+  "logo": "./img/cardano.svg",
+  "pages": [
+    {
+      "name": "introduction",
+      "title": {
+        "default": "Introduction",
+        "vi": "Giới thiệu",
+        "ja": "紹介"
+      },
+      "elements": [
+        {
+          "type": "html",
+          "name": "question37",
+          "html": {
+            "default": "By taking this survey, you consent to its <a style='color: var(--sjs-special-blue); text-decoration: none;' target=\"_blank\" href=\"/terms-and-conditions.html\">Terms & Conditions</a>.",
+            "vi": "Bằng cách tham gia và hoàn thành khảo sát này, bạn đồng ý với <a target=\"_blank\" href=\"/terms-and-conditions.html\">Điều khoản & Điều kiện</a> của khảo sát này.",
+            "ja": "このアンケートにご回答いただくことで、<a target=\"_blank\" href=\"/terms-and-conditions.html\">利用規約</a>に同意したものとみなされます。"
+          }
+        },
+        {
+          "type": "radiogroup",
+          "name": "question2",
+          "title": {
+            "default": "How many years of experience do you have writing/deploying software?",
+            "vi": "Bạn có bao nhiêu năm kinh nghiệm viết/triển khai phần mềm?",
+            "ja": "ソフトウェアの作成/展開の経験は何年ありますか?"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 5",
+              "text": {
+                "default": "I do not write or deploy software",
+                "vi": "Tôi không viết hoặc triển khai phần mềm",
+                "ja": "ソフトウェアの作成や展開は行いません"
+              }
+            },
+            {
+              "value": "Item 1",
+              "text": {
+                "default": "Less than 1 year",
+                "vi": "Dưới 1 năm",
+                "ja": "1年未満"
+              }
+            },
+            {
+              "value": "Item 2",
+              "text": {
+                "default": "Between 1 and 2 years",
+                "vi": "Từ 1 đến 2 năm",
+                "ja": "1年から2年の間"
+              }
+            },
+            {
+              "value": "Item 3",
+              "text": {
+                "default": "Between 2 and 7 years",
+                "vi": "Từ 2 đến 7 năm",
+                "ja": "2歳から7歳まで"
+              }
+            },
+            {
+              "value": "Item 4",
+              "text": {
+                "default": "Over 7 years",
+                "vi": "Trên 7 năm",
+                "ja": "7年以上"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "profile",
+      "title": {
+        "default": "Profile",
+        "vi": "Hồ sơ",
+        "ja": "プロフィール"
+      },
+      "elements": [
+        {
+          "type": "dropdown",
+          "name": "question1",
+          "title": {
+            "default": "Which best describes your current profession?",
+            "vi": "Cái nào mô tả tốt nhất nghề nghiệp hiện tại của bạn?",
+            "ja": "あなたの現在の職業を最もよく表しているのはどれですか?"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": {
+                "default": "Academic researcher",
+                "vi": "Nhà nghiên cứu học thuật",
+                "ja": "学術研究者"
+              }
+            },
+            {
+              "value": "Item 2",
+              "text": {
+                "default": "Artist",
+                "vi": "Nghệ sĩ",
+                "ja": "アーティスト"
+              }
+            },
+            {
+              "value": "Item 3",
+              "text": {
+                "default": "Data scientist",
+                "vi": "Nhà khoa học dữ liệu",
+                "ja": "データサイエンティスト"
+              }
+            },
+            {
+              "value": "Item 4",
+              "text": {
+                "default": "Designer",
+                "vi": "Thiết kế",
+                "ja": "デザイナー"
+              }
+            },
+            {
+              "value": "Item 5",
+              "text": {
+                "default": "Educator",
+                "vi": "Giáo dục",
+                "ja": "教育者"
+              }
+            },
+            {
+              "value": "Item 6",
+              "text": {
+                "default": "Financial analyst",
+                "vi": "Chuyên viên phân tích tài chính",
+                "ja": "金融アナリスト"
+              }
+            },
+            {
+              "value": "Item 7",
+              "text": {
+                "default": "Founder/C-Suite",
+                "vi": "Người sáng lập/C-Suite",
+                "ja": "創業者/経営幹部"
+              }
+            },
+            {
+              "value": "Item 8",
+              "text": {
+                "default": "Marketing/sales professional",
+                "vi": "Chuyên gia tiếp thị / bán hàng",
+                "ja": "マーケティング/セールスのプロフェッショナル"
+              }
+            },
+            {
+              "value": "Item 9",
+              "text": {
+                "default": "Product manager",
+                "vi": "Giám đốc sản phẩm",
+                "ja": "プロダクトマネージャー"
+              }
+            },
+            {
+              "value": "Item 10",
+              "text": {
+                "default": "Project manager",
+                "vi": "Quản lý dự án",
+                "ja": "プロジェクトマネージャー"
+              }
+            },
+            {
+              "value": "Item 11",
+              "text": {
+                "default": "R&D engineer",
+                "vi": "Kỹ sư R & D",
+                "ja": "R&Dエンジニア"
+              }
+            },
+            {
+              "value": "Item 12",
+              "text": {
+                "default": "Software engineer",
+                "vi": "Kỹ sư phần mềm",
+                "ja": "ソフトウェアエンジニア"
+              }
+            },
+            {
+              "value": "Item 13",
+              "text": {
+                "default": "Student/apprentice",
+                "vi": "Sinh viên / học việc",
+                "ja": "学生・見習い"
+              }
+            },
+            {
+              "value": "Item 14",
+              "text": {
+                "default": "System administrator",
+                "vi": "Quản trị viên hệ thống",
+                "ja": "システム管理者"
+              }
+            },
+            {
+              "value": "Item 15",
+              "text": {
+                "default": "System architect",
+                "vi": "Kiến trúc sư hệ thống",
+                "ja": "システムアーキテクト"
+              }
+            },
+            {
+              "value": "Item 16",
+              "text": {
+                "default": "Trader",
+                "vi": "Thương gia",
+                "ja": "トレーダー"
+              }
+            },
+            {
+              "value": "Item 17",
+              "text": {
+                "default": "Web developer",
+                "vi": "Nhà phát triển web",
+                "ja": "Web開発者"
+              }
+            }
+          ],
+          "choicesOrder": "asc",
+          "showOtherItem": true
+        },
+        {
+          "type": "tagbox",
+          "name": "question10",
+          "title": {
+            "default": "Which programming language(s) are you proficient in?",
+            "vi": "Bạn thành thạo (các) ngôn ngữ lập trình nào?",
+            "ja": "どのプログラミング言語に習熟していますか?"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "Aiken"
+            },
+            {
+              "value": "Item 2",
+              "text": "Bash"
+            },
+            {
+              "value": "Item 3",
+              "text": "C"
+            },
+            {
+              "value": "Item 4",
+              "text": "C++"
+            },
+            {
+              "value": "Item 5",
+              "text": "C#"
+            },
+            {
+              "value": "Item 6",
+              "text": "Dart"
+            },
+            {
+              "value": "Item 7",
+              "text": "Elixir"
+            },
+            {
+              "value": "Item 8",
+              "text": "Elm"
+            },
+            {
+              "value": "Item 9",
+              "text": "Go"
+            },
+            {
+              "value": "Item 10",
+              "text": "Haskell"
+            },
+            {
+              "value": "Item 11",
+              "text": "Helios"
+            },
+            {
+              "value": "Item 12",
+              "text": "Java"
+            },
+            {
+              "value": "Item 13",
+              "text": "JavaScript"
+            },
+            {
+              "value": "Item 14",
+              "text": "Kotlin"
+            },
+            {
+              "value": "Item 15",
+              "text": "Nix"
+            },
+            {
+              "value": "Item 16",
+              "text": "PureScript"
+            },
+            {
+              "value": "Item 17",
+              "text": "Python"
+            },
+            {
+              "value": "Item 18",
+              "text": "Ruby"
+            },
+            {
+              "value": "Item 19",
+              "text": "Rust"
+            },
+            {
+              "value": "Item 20",
+              "text": "Scala"
+            },
+            {
+              "value": "Item 21",
+              "text": "Solidity"
+            },
+            {
+              "value": "Item 22",
+              "text": "Swift"
+            },
+            {
+              "value": "Item 23",
+              "text": "TypeScript"
+            },
+            {
+              "value": "Item 24",
+              "text": "PHP"
+            }
+          ],
+          "choicesOrder": "asc",
+          "separateSpecialChoices": true,
+          "showOtherItem": true,
+          "showNoneItem": true,
+          "minSelectedChoices": 1
+        },
+        {
+          "type": "radiogroup",
+          "name": "question3",
+          "title": {
+            "default": "How many years of experience do you have writing software using a functional programming stack?",
+            "vi": "Bạn có bao nhiêu năm kinh nghiệm viết phần mềm bằng cách sử dụng ngăn xếp lập trình chức năng?",
+            "ja": "関数型プログラミングスタックを使用してソフトウェアを作成した経験は何年ですか?"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": {
+                "default": "I have never used functional programming",
+                "vi": "Tôi chưa bao giờ sử dụng lập trình chức năng",
+                "ja": "関数型プログラミングを使用したことがありません"
+              }
+            },
+            {
+              "value": "Item 2",
+              "text": {
+                "default": "Less than 1 year",
+                "vi": "Dưới 1 năm",
+                "ja": "1年未満"
+              }
+            },
+            {
+              "value": "Item 3",
+              "text": {
+                "default": "Between 1 and 2 years",
+                "vi": "Từ 1 đến 2 năm",
+                "ja": "1年から2年の間"
+              }
+            },
+            {
+              "value": "Item 4",
+              "text": {
+                "default": "Between 2 and 7 years",
+                "vi": "Từ 2 đến 7 năm",
+                "ja": "2歳から7歳まで"
+              }
+            },
+            {
+              "value": "Item 5",
+              "text": {
+                "default": "Over 7 years",
+                "vi": "Trên 7 năm",
+                "ja": "7年以上"
+              }
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question4",
+          "title": {
+            "default": "How many years of experience do you have writing/deploying software in the blockchain industry?",
+            "vi": "Bạn có bao nhiêu năm kinh nghiệm viết / triển khai phần mềm trong ngành công nghiệp blockchain?",
+            "ja": "ブロックチェーン業界でソフトウェアの作成/展開の経験は何年ありますか?"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": {
+                "default": "I never wrote or deployed blockchain-related software",
+                "vi": "Tôi chưa bao giờ viết hoặc triển khai phần mềm liên quan đến blockchain",
+                "ja": "私はブロックチェーン関連のソフトウェアを書いたり展開したりしたことはありません"
+              }
+            },
+            {
+              "value": "Item 2",
+              "text": {
+                "default": "Less than 1 year",
+                "vi": "Dưới 1 năm",
+                "ja": "1年未満"
+              }
+            },
+            {
+              "value": "Item 3",
+              "text": {
+                "default": "Between 1 and 2 years",
+                "vi": "Từ 1 đến 2 năm",
+                "ja": "1年から2年の間"
+              }
+            },
+            {
+              "value": "Item 4",
+              "text": {
+                "default": "Between 2 and 7 years",
+                "vi": "Từ 2 đến 7 năm",
+                "ja": "2歳から7歳まで"
+              }
+            },
+            {
+              "value": "Item 5",
+              "text": {
+                "default": "Over 7 years",
+                "vi": "Trên 7 năm",
+                "ja": "7年以上"
+              }
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question5",
+          "title": {
+            "default": "Do you work on Cardano as a hobby or professionally?",
+            "vi": "Bạn làm việc trên Cardano như một sở thích hay chuyên nghiệp?",
+            "ja": "趣味としてカルダノに取り組んでいますか、それとも専門的に取り組んでいますか?"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": {
+                "default": "Hobby",
+                "vi": "Sở thích",
+                "ja": "趣味"
+              }
+            },
+            {
+              "value": "Item 2",
+              "text": {
+                "default": "Profession",
+                "vi": "Nghề nghiệp",
+                "ja": "職業"
+              }
+            },
+            {
+              "value": "Item 3",
+              "text": {
+                "default": "Both",
+                "vi": "Cả hai",
+                "ja": "両方とも"
+              }
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "question6",
+          "visibleIf": "{question5} = 'Item 2'",
+          "title": {
+            "default": "As a professional, what is your main source of revenue?",
+            "vi": "Là một chuyên gia, nguồn doanh thu chính của bạn là gì?",
+            "ja": "プロフェッショナルとして、主な収入源は何ですか?"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": {
+                "default": "Cardano's Treasury",
+                "vi": "Kho bạc của Cardano",
+                "ja": "カルダノの財務省"
+              }
+            },
+            {
+              "value": "Item 2",
+              "text": {
+                "default": "Catalyst",
+                "vi": "Chất xúc tác",
+                "ja": "触媒"
+              }
+            },
+            {
+              "value": "Item 3",
+              "text": {
+                "default": "Consulting",
+                "vi": "Tư vấn",
+                "ja": "コンサルティング"
+              }
+            },
+            {
+              "value": "Item 4",
+              "text": {
+                "default": "DeFi (trading, arbitrage, yield farming, lending, ...)",
+                "vi": "DeFi (giao dịch, chênh lệch giá, khai thác lợi suất, cho vay,...)",
+                "ja": "DeFi(取引、裁定取引、イールドファーミング、融資など)"
+              }
+            },
+            {
+              "value": "Item 5",
+              "text": {
+                "default": "Employed by/contracting with a genesis entity (IO[HK,E,G], EMURGO, CF)",
+                "vi": "Được tuyển dụng bởi/ký hợp đồng với một thực thể genesis (IO[HK,E,G], EMURGO, CF)",
+                "ja": "ジェネシス事業体(IO[HK,E,G]、EMURGO、CF)に雇用/契約している"
+              }
+            },
+            {
+              "value": "Item 6",
+              "text": {
+                "default": "Employed by/contracting with a non-genesis entity",
+                "vi": "Được tuyển dụng bởi/ký hợp đồng với một thực thể không phải là genesis",
+                "ja": "非ジェネシス事業体に雇用されている/契約している"
+              }
+            },
+            {
+              "value": "Item 7",
+              "text": {
+                "default": "Initial Token Launch",
+                "vi": "Ra mắt token ban đầu",
+                "ja": "最初のトークンのローンチ"
+              }
+            },
+            {
+              "value": "Item 8",
+              "text": {
+                "default": "Own product/service sales",
+                "vi": "Bán sản phẩm/dịch vụ riêng",
+                "ja": "自社製品・サービス販売"
+              }
+            }
+          ],
+          "separateSpecialChoices": true,
+          "showOtherItem": true,
+          "minSelectedChoices": 1
+        },
+        {
+          "type": "radiogroup",
+          "name": "question8",
+          "title": {
+            "default": "Did you ever contribute, write, or deploy software in other blockchain ecosystems?",
+            "vi": "Bạn đã bao giờ đóng góp, viết hoặc triển khai phần mềm trong các hệ sinh thái blockchain khác chưa?",
+            "ja": "他のブロックチェーンエコシステムでソフトウェアを貢献、作成、または展開したことがありますか?"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": {
+                "default": "I have only ever worked in the Cardano ecosystem",
+                "vi": "Tôi chỉ từng làm việc trong hệ sinh thái Cardano",
+                "ja": "私はカルダノエコシステムでしか働いたことがありません"
+              }
+            },
+            {
+              "value": "Item 2",
+              "text": {
+                "default": "I have worked in other blockchain ecosystems before but moved to Cardano",
+                "vi": "Tôi đã làm việc trong các hệ sinh thái blockchain khác trước đây nhưng đã chuyển sang Cardano",
+                "ja": "以前は他のブロックチェーンエコシステムで働いたことがありますが、カルダノに移りました"
+              }
+            },
+            {
+              "value": "Item 3",
+              "text": {
+                "default": "Besides Cardano I also work in parallel with other blockchain ecosystems",
+                "vi": "Bên cạnh Cardano, tôi cũng làm việc song song với các hệ sinh thái blockchain khác",
+                "ja": "カルダノ以外にも、私は他のブロックチェーンエコシステムと並行して作業しています"
+              }
+            }
+          ]
+        },
+        {
+          "type": "tagbox",
+          "name": "question7",
+          "visibleIf": "{question8} <> 'Item 1'",
+          "title": {
+            "default": "Which other blockchain ecosystem(s) are you the most familiar with?",
+            "vi": "Bạn quen thuộc nhất với (các) hệ sinh thái blockchain nào khác?",
+            "ja": "他に最もよく知っているブロックチェーンエコシステムはどれですか?"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "Algorand"
+            },
+            {
+              "value": "Item 2",
+              "text": "Aptos"
+            },
+            {
+              "value": "Item 3",
+              "text": "Avalanche"
+            },
+            {
+              "value": "Item 4",
+              "text": "Base"
+            },
+            {
+              "value": "Item 5",
+              "text": "Bitcoin (incl. Lightning)"
+            },
+            {
+              "value": "Item 6",
+              "text": "BNB"
+            },
+            {
+              "value": "Item 7",
+              "text": "Chainlink"
+            },
+            {
+              "value": "Item 8",
+              "text": "Cosmos"
+            },
+            {
+              "value": "Item 9",
+              "text": "Ergo"
+            },
+            {
+              "value": "Item 10",
+              "text": "Ethereum"
+            },
+            {
+              "value": "Item 11",
+              "text": "Ethereum L2s (Polygon; Starknet; Arbitrum; Optimism; Scroll; Aztec; etc)"
+            },
+            {
+              "value": "Item 12",
+              "text": "Hedera"
+            },
+            {
+              "value": "Item 13",
+              "text": "Midnight"
+            },
+            {
+              "value": "Item 14",
+              "text": "Mina"
+            },
+            {
+              "value": "Item 15",
+              "text": "Polkadot"
+            },
+            {
+              "value": "Item 16",
+              "text": "Radix"
+            },
+            {
+              "value": "Item 17",
+              "text": "Solana"
+            },
+            {
+              "value": "Item 18",
+              "text": "Sui"
+            },
+            {
+              "value": "Item 19",
+              "text": "Tezos"
+            },
+            {
+              "value": "Item 20",
+              "text": "TON"
+            }
+          ],
+          "choicesOrder": "asc",
+          "separateSpecialChoices": true,
+          "showOtherItem": true,
+          "minSelectedChoices": 1
+        },
+        {
+          "type": "radiogroup",
+          "name": "question9",
+          "title": {
+            "default": "What is your main development environment?",
+            "vi": "Môi trường phát triển chính của bạn là gì?",
+            "ja": "主な開発環境は何ですか?"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 9",
+              "text": "Atom"
+            },
+            {
+              "value": "Item 7",
+              "text": "Emacs"
+            },
+            {
+              "value": "Item 5",
+              "text": "IntelliJ"
+            },
+            {
+              "value": "Item 3",
+              "text": "JetBrains"
+            },
+            {
+              "value": "Item 4",
+              "text": "Notepad++"
+            },
+            {
+              "value": "Item 2",
+              "text": "Vim/NeoVim"
+            },
+            {
+              "value": "Item 6",
+              "text": "Visual Studio"
+            },
+            {
+              "value": "Item 1",
+              "text": "Visual Studio Code"
+            },
+            {
+              "value": "Item 8",
+              "text": "Zed"
+            },
+            {
+              "value": "Item 10",
+              "text": "Cursor"
+            }
+          ],
+          "choicesOrder": "asc",
+          "separateSpecialChoices": true,
+          "showOtherItem": true
+        },
+        {
+          "type": "rating",
+          "name": "question11",
+          "title": {
+            "default": "How would you rate your technical understanding of Cardano?",
+            "vi": "Bạn đánh giá thế nào về sự hiểu biết kỹ thuật của mình về Cardano?",
+            "ja": "Cardano についての技術的な理解をどのように評価しますか?"
+          },
+          "isRequired": true,
+          "autoGenerate": false,
+          "rateCount": 10,
+          "rateValues": [
+            {
+              "value": 1,
+              "text": {
+                "default": "Rookie",
+                "vi": "Rc",
+                "ja": "ルーキー"
+              }
+            },
+            {
+              "value": 2,
+              "text": {
+                "default": "Novice",
+                "vi": "Novice",
+                "ja": "新米"
+              }
+            },
+            {
+              "value": 3,
+              "text": {
+                "default": "Beginner",
+                "vi": "người bắt đầu",
+                "ja": "ビギナー"
+              }
+            },
+            {
+              "value": 4,
+              "text": {
+                "default": "Learner",
+                "vi": "Learner",
+                "ja": "学習者"
+              }
+            },
+            {
+              "value": 5,
+              "text": {
+                "default": "Builder",
+                "vi": "chủ thầu",
+                "ja": "ビルダ"
+              }
+            },
+            {
+              "value": 6,
+              "text": {
+                "default": "Competent",
+                "vi": "Thẩm quyền",
+                "ja": "適任"
+              }
+            },
+            {
+              "value": 7,
+              "text": {
+                "default": "Proficient",
+                "vi": "thạo",
+                "ja": "堪能"
+              }
+            },
+            {
+              "value": 8,
+              "text": {
+                "default": "Highly knowledgeable",
+                "vi": "có kiến thức cao",
+                "ja": "高い知識"
+              }
+            },
+            {
+              "value": 9,
+              "text": {
+                "default": "Pioneer",
+                "vi": "Pioneer",
+                "ja": "パイオニア"
+              }
+            },
+            {
+              "value": 10,
+              "text": {
+                "default": "Expert",
+                "vi": "chuyên gia",
+                "ja": "達人"
+              }
+            }
+          ],
+          "rateMax": 10
+        },
+        {
+          "type": "ranking",
+          "name": "question12",
+          "title": {
+            "default": "What should be the biggest priority on the Cardano technical roadmap?",
+            "vi": "Ưu tiên lớn nhất trong lộ trình kỹ thuật Cardano là gì?",
+            "ja": "カルダノの技術ロードマップの最優先事項は何ですか?"
+          },
+          "description": {
+            "default": "Put first (at the top) the *highest* priority, and last (at the bottom) the *lowest* priority. \n\nOn mobile devices, use two fingers to drag elements.\n",
+            "vi": "Đặt đầu tiên (ở trên cùng), mức độ ưu tiên *cao nhất* và cuối cùng (ở dưới cùng) mức độ ưu tiên *thấp nhất*.",
+            "ja": "最初に (一番上) に *最高* の優先度を置き、最後 (一番下) に *最低* の優先度を配置します。\n\nモバイル デバイスでは、2 本の指を使用して要素をドラッグします。\n"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": {
+                "default": "Accessibility & use cases enablers",
+                "vi": "Khả năng truy cập và các trường hợp sử dụng",
+                "ja": "アクセシビリティとユースケースイネーブラー"
+              }
+            },
+            {
+              "value": "Item 2",
+              "text": {
+                "default": "Cross-chain bridges & interoperability with other ecosystems",
+                "vi": "Cầu nối chuỗi chéo và khả năng tương tác với các hệ sinh thái khác",
+                "ja": "クロスチェーンブリッジと他のエコシステムとの相互運用性"
+              }
+            },
+            {
+              "value": "Item 3",
+              "text": {
+                "default": "Governance",
+                "vi": "Quản trị",
+                "ja": "統治"
+              }
+            },
+            {
+              "value": "Item 4",
+              "text": {
+                "default": "Higher throughput via e.g. Ouroboros Leios",
+                "vi": "Thông lượng cao hơn thông qua ví dụ: Ouroboros Leios",
+                "ja": "Ouroboros Leiosなどによるより高いスループット"
+              }
+            },
+            {
+              "value": "Item 5",
+              "text": {
+                "default": "Smart contracts testing & verification",
+                "vi": "Kiểm tra và xác minh hợp đồng thông minh",
+                "ja": "スマートコントラクトのテストと検証"
+              }
+            },
+            {
+              "value": "Item 6",
+              "text": {
+                "default": "Additional core primitives e.g. zero-knowledge, new virtual machine",
+                "vi": "Các nguyên thủy cốt lõi bổ sung, ví dụ như máy ảo mới, không kiến thức",
+                "ja": "追加のコアプリミティブ(ゼロ知識、新しい仮想マシンなど)"
+              }
+            },
+            {
+              "value": "Item 7",
+              "text": {
+                "default": "Lower finality via e.g. Peras",
+                "vi": "Lower finality thông qua ví dụ: Peras",
+                "ja": "ペラスなどによるファイナリティの低下"
+              }
+            },
+            {
+              "value": "Item 8",
+              "text": {
+                "default": "Nodes diversity via e.g. Amaru, Acropolis, Dingo, ...",
+                "vi": "Đa dạng các nút thông qua ví dụ: Amaru, Acropolis, Dingo,...",
+                "ja": "ノードの多様性は、例えばAmaru、Acropolis、Dingo、..."
+              }
+            },
+            {
+              "value": "Item 9",
+              "text": {
+                "default": "Layer 2s e.g. Hydra, Midgard, ...",
+                "vi": "Lớp 2, ví dụ: Hydra, Midgard,...",
+                "ja": "レイヤー 2 (例: Hydra、Midgard、..."
+              }
+            },
+            {
+              "value": "Item 10",
+              "text": {
+                "default": "Better documentation and explainers",
+                "vi": "Better documentation and explainers",
+                "ja": "より良いドキュメントと説明"
+              }
+            }
+          ],
+          "choicesOrder": "random"
+        }
+      ]
+    },
+    {
+      "name": "cardano_development",
+      "title": {
+        "default": "Development",
+        "vi": "Phát triển",
+        "ja": "発達"
+      },
+      "elements": [
+        {
+          "type": "tagbox",
+          "name": "question13",
+          "title": {
+            "default": "What do you use (or plan to use) for writing Plutus script validators / smart contracts?",
+            "vi": "Bạn sử dụng (hoặc dự định sử dụng) gì để viết trình xác thực tập lệnh Plutus / hợp đồng thông minh?",
+            "ja": "Plutus スクリプト バリデーター / スマート コントラクトを作成するために何を使用していますか (または使用する予定ですか)。"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "Aiken"
+            },
+            {
+              "value": "Item 2",
+              "text": "Helios"
+            },
+            {
+              "value": "Item 3",
+              "text": "Marlowe"
+            },
+            {
+              "value": "Item 4",
+              "text": "OpShin"
+            },
+            {
+              "value": "Item 5",
+              "text": {
+                "default": "Plinth (previously known as Plutus-Tx)",
+                "vi": "Plinth (trước đây được gọi là Plutus-Tx)",
+                "ja": "Plinth はPlutus-Txとして知られていました)"
+              }
+            },
+            {
+              "value": "Item 6",
+              "text": "Plu-ts"
+            },
+            {
+              "value": "Item 7",
+              "text": "Plutarch"
+            },
+            {
+              "value": "Item 8",
+              "text": "Purus"
+            },
+            {
+              "value": "Item 9",
+              "text": "Scalus"
+            }
+          ],
+          "choicesOrder": "asc",
+          "separateSpecialChoices": true,
+          "showOtherItem": true,
+          "showNoneItem": true,
+          "noneText": {
+            "default": "I do not write smart contracts",
+            "vi": "Tôi không viết hợp đồng thông minh",
+            "ja": "スマートコントラクトは書かない"
+          }
+        },
+        {
+          "type": "tagbox",
+          "name": "question14",
+          "visibleIf": "{question13} notcontains 'Item 10'",
+          "title": {
+            "default": "What language(s) do you use (or plan to use) for writing off-chain code?",
+            "vi": "Bạn sử dụng (hoặc dự định sử dụng) ngôn ngữ nào để viết mã off-chain?",
+            "ja": "オフチェーンコードを書くためにどの言語を使用していますか (または使用する予定ですか?"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "Bash"
+            },
+            {
+              "value": "Item 2",
+              "text": "C++"
+            },
+            {
+              "value": "Item 3",
+              "text": "C#"
+            },
+            {
+              "value": "Item 4",
+              "text": "Elixir"
+            },
+            {
+              "value": "Item 5",
+              "text": "Elm"
+            },
+            {
+              "value": "Item 6",
+              "text": "Go"
+            },
+            {
+              "value": "Item 7",
+              "text": "Haskell"
+            },
+            {
+              "value": "Item 8",
+              "text": "Java"
+            },
+            {
+              "value": "Item 9",
+              "text": "JavaScript"
+            },
+            {
+              "value": "Item 10",
+              "text": "Kotlin"
+            },
+            {
+              "value": "Item 11",
+              "text": "PureScript"
+            },
+            {
+              "value": "Item 12",
+              "text": "Python"
+            },
+            {
+              "value": "Item 13",
+              "text": "Rust"
+            },
+            {
+              "value": "Item 14",
+              "text": "Scala"
+            },
+            {
+              "value": "Item 15",
+              "text": "Tx3"
+            },
+            {
+              "value": "Item 16",
+              "text": "TypeScript"
+            }
+          ],
+          "choicesOrder": "asc",
+          "separateSpecialChoices": true,
+          "showOtherItem": true,
+          "showNoneItem": true,
+          "minSelectedChoices": 1
+        },
+        {
+          "type": "rating",
+          "name": "question15",
+          "visibleIf": "{question13} notcontains 'Item 10'",
+          "title": {
+            "default": "How satisfied are you with the current state of the smart contract ecosystem?",
+            "vi": "Bạn hài lòng như thế nào với tình trạng hiện tại của hệ sinh thái hợp đồng thông minh?",
+            "ja": "スマートコントラクトエコシステムの現状にどの程度満足していますか?"
+          },
+          "isRequired": true,
+          "rateType": "smileys",
+          "rateCount": 10,
+          "rateMax": 10
+        },
+        {
+          "type": "ranking",
+          "name": "question16",
+          "title": {
+            "default": "Which category of Cardano decentralized applications (DApps) are you currently working on or most interested in?",
+            "vi": "Bạn hiện đang làm việc hoặc quan tâm nhất đến danh mục ứng dụng phi tập trung Cardano (DApp) nào?",
+            "ja": "現在取り組んでいる、または最も興味を持っているカルダノ分散型アプリケーション(DApps)のどのカテゴリですか?"
+          },
+          "description": {
+            "default": "Put first (at the top) the *highest* interest, and last (at the bottom) the *least* interest. \n\nLeave out categories which you have no interest in.",
+            "vi": "Đặt đầu tiên (ở trên cùng), lãi suất *cao nhất* và cuối cùng (ở dưới cùng) lãi suất *ít nhất*. \n\nBỏ qua các danh mục mà bạn không quan tâm. ",
+            "ja": "最初に(一番上)に*最高*の利息を置き、最後に(一番下)*最小の*利息を置きます。\n\n興味のないカテゴリは除外します。"
+          },
+          "isRequired": true,
+          "showCommentArea": true,
+          "commentText": {
+            "default": "Other, if any",
+            "vi": "Loại khác, nếu có",
+            "ja": "その他(ある場合)"
+          },
+          "choices": [
+            {
+              "value": "Item 10",
+              "text": {
+                "default": "Core Infrastructure",
+                "vi": "Cơ sở hạ tầng cốt lõi",
+                "ja": "コアインフラストラクチャ"
+              }
+            },
+            {
+              "value": "Item 1",
+              "text": {
+                "vi": "Tài chính phi tập trung (DeFi)",
+                "default": "Decentralized Finance (DeFi) and Stablecoins",
+                "ja": "分散型金融(DeFi)とステーブルコイン"
+              }
+            },
+            {
+              "value": "Item 2",
+              "text": {
+                "default": "Identity and Authentication",
+                "vi": "Nhận dạng và xác thực",
+                "ja": "ID と認証"
+              }
+            },
+            {
+              "value": "Item 8",
+              "text": {
+                "default": "Gaming and Metaverse",
+                "vi": "Trò chơi và Metaverse",
+                "ja": "ゲームとメタバース"
+              }
+            },
+            {
+              "value": "Item 4",
+              "text": {
+                "default": "Governance",
+                "vi": "Quản trị",
+                "ja": "統治"
+              }
+            },
+            {
+              "value": "Item 5",
+              "text": {
+                "default": "NFT Marketplaces",
+                "vi": "Thị trường NFT",
+                "ja": "NFTマーケットプレイス"
+              }
+            },
+            {
+              "value": "Item 3",
+              "text": {
+                "default": "Real-World Asset Tokenization",
+                "vi": "Token hóa tài sản trong thế giới thực",
+                "ja": "現実世界の資産トークン化"
+              }
+            },
+            {
+              "value": "Item 7",
+              "text": {
+                "default": "Education & Community Platforms",
+                "vi": "DApp xã hội",
+                "ja": "教育およびコミュニティプラットフォーム"
+              }
+            },
+            {
+              "value": "Item 6",
+              "text": {
+                "default": "Supply Chain Management",
+                "vi": "Quản lý chuỗi cung ứng",
+                "ja": "サプライチェーン管理"
+              }
+            },
+            {
+              "value": "Item 9",
+              "text": {
+                "default": "Wallets",
+                "vi": "Ví",
+                "ja": "財布"
+              }
+            },
+            {
+              "value": "Item 11",
+              "text": {
+                "default": "Payment",
+                "vi": "Sự chi trả",
+                "ja": "支払い"
+              }
+            },
+            {
+              "value": "Item 12",
+              "text": {
+                "default": "Bridges and Interoperability",
+                "vi": "Cầu nối và khả năng tương tác",
+                "ja": "ブリッジと相互運用性"
+              }
+            },
+            {
+              "value": "Item 13",
+              "text": {
+                "default": "Data, Oracles and Analytics",
+                "vi": "Dữ liệu, Oracle và Phân tích",
+                "ja": "データ、オラクル、分析"
+              }
+            },
+            {
+              "value": "Item 14",
+              "text": {
+                "default": "Memecoins",
+                "vi": "Memecoin",
+                "ja": "ミームコイン"
+              }
+            }
+          ],
+          "choicesOrder": "random",
+          "minSelectedChoices": 1,
+          "selectToRankEnabled": true
+        },
+        {
+          "type": "tagbox",
+          "name": "question17",
+          "title": {
+            "default": "Which libraries do you use in your projects?",
+            "vi": "Bạn sử dụng thư viện nào trong các dự án của mình?",
+            "ja": "プロジェクトではどのライブラリを使用していますか?"
+          },
+          "description": {
+            "default": "Libraries refer to reusable pieces of code that are part of a bigger software piece (typically written in the same programming language). \n\nThey are distinct from 'services', which refer to software that runs independently and may be queried or triggered via API by libraries.",
+            "vi": "Được coi là thư viện, đoạn mã có thể tái sử dụng là một phần của phần mềm lớn hơn (thường được viết bằng cùng một ngôn ngữ lập trình). \n\nChúng khác với 'dịch vụ', đề cập đến phần mềm chạy độc lập và có thể được truy vấn hoặc kích hoạt qua API bởi các thư viện.",
+            "ja": "ライブラリ、より大きなソフトウェアの一部である再利用可能なコード(通常は同じプログラミング言語で記述)と見なされます。\n\nこれらは、独立して実行され、ライブラリによってAPIを介してクエリまたはトリガーされる可能性のあるソフトウェアを指す「サービス」とは異なります。"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "Apollo (Go)"
+            },
+            {
+              "value": "Item 2",
+              "text": "Argus (.NET)"
+            },
+            {
+              "value": "Item 3",
+              "text": "Blaze (TypeScript)"
+            },
+            {
+              "value": "Item 4",
+              "text": "Cardano API (Haskell)"
+            },
+            {
+              "value": "Item 5",
+              "text": "Cardano-c (C)"
+            },
+            {
+              "value": "Item 6",
+              "text": "Cardano-js-sdk (TypeScript)"
+            },
+            {
+              "value": "Item 8",
+              "text": "Cardano-python (Python)"
+            },
+            {
+              "value": "Item 11",
+              "text": "Chrysalis (.NET)"
+            },
+            {
+              "value": "Item 12",
+              "text": "Cometta.js (JavaScript)"
+            },
+            {
+              "value": "Item 7",
+              "text": "CML (JavaScript/Rust)"
+            },
+            {
+              "value": "Item 9",
+              "text": "CSL (JavaScript/Rust)"
+            },
+            {
+              "value": "Item 10",
+              "text": "Dendrite (Python)"
+            },
+            {
+              "value": "Item 13",
+              "text": "Dexter (TypeScript)"
+            },
+            {
+              "value": "Item 14",
+              "text": "Elm-Cardano (Elm)"
+            },
+            {
+              "value": "Item 15",
+              "text": "Evolution (TypeScript)"
+            },
+            {
+              "value": "Item 16",
+              "text": "Gouroboros (Go)"
+            },
+            {
+              "value": "Item 17",
+              "text": "Lucid (TypeScript)"
+            },
+            {
+              "value": "Item 18",
+              "text": "Lucid-evolution (TypeScript)"
+            },
+            {
+              "value": "Item 19",
+              "text": "Mesh (JavaScript)"
+            },
+            {
+              "value": "Item 20",
+              "text": "Pallas (Rust)"
+            },
+            {
+              "value": "Item 21",
+              "text": "Sutra (Elixir)"
+            },
+            {
+              "value": "Item 23",
+              "text": "Weld (TypeScript)"
+            },
+            {
+              "value": "Item 22",
+              "text": "Yaci (Java)"
+            },
+            {
+              "value": "Item 24",
+              "text": "Cardano-client-lib (Java)"
+            },
+            {
+              "value": "Item 25",
+              "text": "Buildooor (TypeScript)"
+            },
+            {
+              "value": "Item 26",
+              "text": "Scalus"
+            },
+            {
+              "value": "Item 27",
+              "text": "Helios"
+            }
+          ],
+          "choicesOrder": "asc",
+          "separateSpecialChoices": true,
+          "showOtherItem": true,
+          "showNoneItem": true,
+          "minSelectedChoices": 1
+        },
+        {
+          "type": "multipletext",
+          "name": "question18",
+          "title": {
+            "default": "It would be nice if a library written in <LANGUAGE> implemented <FEATURE>.",
+            "vi": "Sẽ thật tuyệt nếu một thư viện được viết bằng <LANGUAGE> <FEATURE>triển khai .",
+            "ja": "で書かれたライブラリが実装されたといいのですが<LANGUAGE><FEATURE>。"
+          },
+          "items": [
+            {
+              "name": "text1",
+              "title": {
+                "default": "LANGUAGE",
+                "vi": "NGÔN NGỮ",
+                "ja": "言語"
+              }
+            },
+            {
+              "name": "text2",
+              "title": {
+                "default": "FEATURE",
+                "vi": "TÍNH NĂNG",
+                "ja": "特徴"
+              }
+            }
+          ]
+        },
+        {
+          "type": "tagbox",
+          "name": "question19",
+          "title": {
+            "default": "Which self-hosted/local services do you use in your projects?",
+            "vi": "Bạn sử dụng dịch vụ tự lưu trữ/địa phương nào trong các dự án của mình?",
+            "ja": "プロジェクトではどのセルフホスト/ローカルサービスを使用していますか?"
+          },
+          "description": {
+            "default": "Services refer to software that run independently and may be queried or triggered via API by libraries and/or SDK.\n\nThey are distinct from 'hosted services/platforms' which are platforms provided by a 3rd party, but aren't typically runnable locally.",
+            "vi": "Dịch vụ đề cập đến phần mềm chạy độc lập và có thể được truy vấn hoặc kích hoạt qua API bởi thư viện và/hoặc SDK.\n\nChúng khác với 'dịch vụ / nền tảng được lưu trữ' là các nền tảng được cung cấp bởi bên thứ 3, nhưng thường không thể chạy cục bộ.",
+            "ja": "サービスとは、独立して実行され、ライブラリや SDK によって API を介してクエリまたはトリガーされるソフトウェアを指します。\n\nこれらは、サードパーティによって提供されるプラットフォームである「ホストされたサービス/プラットフォーム」とは異なりますが、通常はローカルで実行できません。"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "Adder"
+            },
+            {
+              "value": "Item 2",
+              "text": "Atlas"
+            },
+            {
+              "value": "Item 3",
+              "text": "Blockfrost (backend-ryo)"
+            },
+            {
+              "value": "Item 4",
+              "text": "Cardano-db-sync"
+            },
+            {
+              "value": "Item 5",
+              "text": "Cardano-graphql"
+            },
+            {
+              "value": "Item 6",
+              "text": "Cardano-rosetta"
+            },
+            {
+              "value": "Item 7",
+              "text": "Cardano-transaction-lib"
+            },
+            {
+              "value": "Item 8",
+              "text": "Cardano-wallet"
+            },
+            {
+              "value": "Item 9",
+              "text": "Dingo"
+            },
+            {
+              "value": "Item 10",
+              "text": "Dolos"
+            },
+            {
+              "value": "Item 11",
+              "text": "Hydra"
+            },
+            {
+              "value": "Item 12",
+              "text": "Hydrozoa"
+            },
+            {
+              "value": "Item 13",
+              "text": "Iris"
+            },
+            {
+              "value": "Item 14",
+              "text": "Kupo"
+            },
+            {
+              "value": "Item 15",
+              "text": "Mithril"
+            },
+            {
+              "value": "Item 16",
+              "text": "Ogmios"
+            },
+            {
+              "value": "Item 17",
+              "text": "Oura"
+            },
+            {
+              "value": "Item 18",
+              "text": "Scrolls"
+            },
+            {
+              "value": "Item 19",
+              "text": "Yaci Store"
+            },
+            {
+                "value": "Item 20",
+                "text": "Cardano-node"
+            }
+          ],
+          "choicesOrder": "asc",
+          "separateSpecialChoices": true,
+          "showOtherItem": true,
+          "showNoneItem": true,
+          "minSelectedChoices": 1
+        },
+        {
+          "type": "text",
+          "name": "question20",
+          "title": {
+            "default": "It would be nice if a self-hosted/local service could ...",
+            "vi": "Sẽ thật tuyệt nếu một dịch vụ tự lưu trữ / cục bộ có thể ...",
+            "ja": "セルフホスト/ローカルサービスができればいいですね..."
+          }
+        },
+        {
+          "type": "tagbox",
+          "name": "question21",
+          "title": {
+            "default": "Which hosted service(s)/platform(s) do you use in your projects?",
+            "vi": "Bạn sử dụng (các) dịch vụ / nền tảng lưu trữ nào trong các dự án của mình?",
+            "ja": "プロジェクトではどのホスト型サービス/プラットフォームを使用していますか?"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "Blockfrost"
+            },
+            {
+              "value": "Item 2",
+              "text": "CF’s Token registry"
+            },
+            {
+              "value": "Item 3",
+              "text": "CardanoScan"
+            },
+            {
+              "value": "Item 4",
+              "text": "CExplorer"
+            },
+            {
+              "value": "Item 5",
+              "text": "Charli3"
+            },
+            {
+              "value": "Item 6",
+              "text": "Demeter.run"
+            },
+            {
+              "value": "Item 7",
+              "text": "Freeloaderz"
+            },
+            {
+              "value": "Item 8",
+              "text": "Handle"
+            },
+            {
+              "value": "Item 9",
+              "text": "Koios"
+            },
+            {
+              "value": "Item 10",
+              "text": "Maestro"
+            },
+            {
+              "value": "Item 11",
+              "text": "NMKR"
+            },
+            {
+              "value": "Item 12",
+              "text": "Orcfax"
+            },
+            {
+              "value": "Item 13",
+              "text": "TapTools"
+            }
+          ],
+          "choicesOrder": "asc",
+          "separateSpecialChoices": true,
+          "showOtherItem": true,
+          "showNoneItem": true,
+          "minSelectedChoices": 1
+        },
+        {
+          "type": "ranking",
+          "name": "question22",
+          "title": {
+            "default": "How do you prefer interacting with a local or remote service?",
+            "vi": "Bạn thích tương tác với dịch vụ cục bộ hoặc từ xa như thế nào?",
+            "ja": "ローカルサービスまたはリモートサービスとの対話をどのように好みますか?"
+          },
+          "description": {
+            "default": "Put first (at the top) the *most* preferred approach, and last (at the bottom) the *least* preferred one.\n\nLeave out methods which you don't use.",
+            "vi": "Đặt đầu tiên (ở trên cùng), cách tiếp cận * ưa thích nhất * và cuối cùng (ở dưới cùng) cách tiếp cận * ít nhất * ưa thích.\n\nBỏ qua các phương pháp mà bạn không sử dụng.",
+            "ja": "最初に(一番上)に*最も*好ましいアプローチを置き、最後に(一番下に)*最も好ましい*アプローチを配置します。\n\n使用しないメソッドは省略します。"
+          },
+          "isRequired": true,
+          "showCommentArea": true,
+          "commentText": {
+            "default": "Other, if any",
+            "vi": "Loại khác, nếu có",
+            "ja": "その他(ある場合)"
+          },
+          "choices": [
+            {
+              "value": "Item 6",
+              "text": {
+                "default": "Bespoke Protocols",
+                "vi": "Giao thức riêng",
+                "ja": "オーダーメイドのプロトコル"
+              }
+            },
+            {
+              "value": "Item 1",
+              "text": {
+                "default": "CBOR over TCP/HTTP",
+                "vi": "CBOR qua TCP / HTTP",
+                "ja": "TCP/HTTP 経由の CBOR"
+              }
+            },
+            {
+              "value": "Item 3",
+              "text": {
+                "default": "CBOR over WebSocket",
+                "vi": "CBOR qua WebSocket",
+                "ja": "WebSocket 上の CBOR"
+              }
+            },
+            {
+              "value": "Item 2",
+              "text": {
+                "default": "JSON over WebSocket",
+                "vi": "JSON qua WebSocket",
+                "ja": "WebSocket 経由の JSON"
+              }
+            },
+            {
+              "value": "Item 8",
+              "text": {
+                "default": "JSON over TCP/HTTP",
+                "vi": "JSON qua TCP/HTTP",
+                "ja": "TCP/HTTP 経由の JSON"
+              }
+            },
+            {
+              "value": "Item 4",
+              "text": {
+                "default": "gRPC and/or protocol buffers",
+                "vi": "gRPC và/hoặc bộ đệm giao thức",
+                "ja": "gRPC および/またはプロトコル バッファ"
+              }
+            },
+            {
+              "value": "Item 7",
+              "text": {
+                "default": "GraphQL",
+                "vi": "Đồ thịQL",
+                "ja": "グラフQL"
+              }
+            },
+            {
+              "value": "Item 5",
+              "text": {
+                "default": "MQTT",
+                "ja": "MQTTの"
+              }
+            }
+          ],
+          "minSelectedChoices": 1,
+          "selectToRankEnabled": true
+        },
+        {
+          "type": "tagbox",
+          "name": "question23",
+          "title": {
+            "default": "Which command-line tool(s) do you use in your projects?",
+            "vi": "Bạn sử dụng (các) công cụ dòng lệnh nào trong các dự án của mình?",
+            "ja": "プロジェクトではどのコマンドラインツールを使用していますか?"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "aiken"
+            },
+            {
+              "value": "Item 2",
+              "text": "bech32"
+            },
+            {
+              "value": "Item 3",
+              "text": "bursa"
+            },
+            {
+              "value": "Item 4",
+              "text": "cardano-addresses"
+            },
+            {
+              "value": "Item 5",
+              "text": "cardano-cli"
+            },
+            {
+              "value": "Item 6",
+              "text": "cardano-hw-cli"
+            },
+            {
+              "value": "Item 18",
+              "text": "cardano-signer"
+            },
+            {
+              "value": "Item 7",
+              "text": "cardano-up"
+            },
+            {
+              "value": "Item 8",
+              "text": "cncli"
+            },
+            {
+              "value": "Item 9",
+              "text": "gastronomy"
+            },
+            {
+              "value": "Item 10",
+              "text": "helios"
+            },
+            {
+              "value": "Item 11",
+              "text": "jamb"
+            },
+            {
+              "value": "Item 12",
+              "text": "nview"
+            },
+            {
+              "value": "Item 13",
+              "text": "offchain-metadata-tools"
+            },
+            {
+              "value": "Item 14",
+              "text": "tx3"
+            },
+            {
+              "value": "Item 15",
+              "text": "txtop"
+            },
+            {
+              "value": "Item 16",
+              "text": "yaci"
+            },
+            {
+              "value": "Item 17",
+              "text": "yaci’s devkit"
+            }
+          ],
+          "choicesOrder": "asc",
+          "separateSpecialChoices": true,
+          "showOtherItem": true,
+          "showNoneItem": true,
+          "minSelectedChoices": 1
+        },
+        {
+          "type": "text",
+          "name": "question24",
+          "title": {
+            "default": "It would be nice if there were a CLI for... ",
+            "vi": "Sẽ thật tuyệt nếu có một CLI cho... ",
+            "ja": "CLIがあればいいのですが..."
+          }
+        },
+        {
+          "type": "checkbox",
+          "name": "question25",
+          "title": {
+            "default": "Which type of infrastructure do you currently use or prefer for deploying DApps/blockchain applications?",
+            "vi": "Bạn hiện đang sử dụng hoặc thích loại cơ sở hạ tầng nào để triển khai các ứng dụng DApp/blockchain?",
+            "ja": "DApps/ブロックチェーンアプリケーションのデプロイに現在、どのタイプのインフラストラクチャを使用していますか、または好みますか?"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": {
+                "default": "Public Cloud Service Provider",
+                "vi": "Nhà cung cấp dịch vụ đám mây công cộng",
+                "ja": "パブリッククラウドサービスプロバイダー"
+              }
+            },
+            {
+              "value": "Item 2",
+              "text": {
+                "default": "Private Cloud",
+                "vi": "Đám mây riêng",
+                "ja": "プライベートクラウド"
+              }
+            },
+            {
+              "value": "Item 3",
+              "text": {
+                "default": "Hybrid Cloud (a combination of private and public cloud)",
+                "vi": "Hybrid Cloud (sự kết hợp giữa đám mây riêng và đám mây công cộng)",
+                "ja": "ハイブリッドクラウド(プライベートクラウドとパブリッククラウドの組み合わせ)"
+              }
+            },
+            {
+              "value": "Item 4",
+              "text": {
+                "default": "Decentralized Cloud",
+                "vi": "Đám mây phi tập trung",
+                "ja": "分散型クラウド"
+              }
+            },
+            {
+              "value": "Item 5",
+              "text": {
+                "default": "Third-Party Services",
+                "vi": "Dịch vụ của bên thứ ba",
+                "ja": "サードパーティサービス"
+              }
+            }
+          ],
+          "separateSpecialChoices": true,
+          "showOtherItem": true,
+          "showNoneItem": true,
+          "noneText": {
+            "default": "I do not deploy software",
+            "vi": "Tôi không triển khai phần mềm",
+            "ja": "ソフトウェアを展開しない"
+          },
+          "minSelectedChoices": 1
+        },
+        {
+          "type": "ranking",
+          "name": "question26",
+          "title": {
+            "default": "How would you prefer to consume software?",
+            "vi": "Bạn muốn sử dụng phần mềm như thế nào?",
+            "ja": "ソフトウェアをどのように消費したいですか?"
+          },
+          "description": {
+            "default": "Put first (at the top) the *most* preferred approach, and last (at the bottom) the *least* preferred one.\n\nLeave out the ones you don't use.",
+            "vi": "Đặt đầu tiên (ở trên cùng), cách tiếp cận * ưa thích nhất * và cuối cùng (ở dưới cùng) cách tiếp cận * ít nhất * ưa thích.\n\nBỏ qua những cái bạn không sử dụng.",
+            "ja": "最初に(一番上)に*最も*好ましいアプローチを置き、最後に(一番下に)*最も好ましい*アプローチを配置します。\n\n使わないものは省きます。"
+          },
+          "isRequired": true,
+          "showCommentArea": true,
+          "commentText": {
+            "default": "Other, if any",
+            "vi": "Loại khác, nếu có",
+            "ja": "その他(ある場合)"
+          },
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "Docker"
+            },
+            {
+              "value": "Item 2",
+              "text": {
+                "default": "Language package manager (e.g. npm, cabal, cargo)",
+                "vi": "Trình quản lý gói ngôn ngữ (ví dụ: npm, cabal, cargo)",
+                "ja": "言語パッケージマネージャー (例: npm、cabal、cargo)"
+              }
+            },
+            {
+              "value": "Item 6",
+              "text": "Nix"
+            },
+            {
+              "value": "Item 3",
+              "text": {
+                "default": "OS package manager (e.g. apt, brew, ...)",
+                "vi": "Trình quản lý gói hệ điều hành (ví dụ: apt, brew, ...)",
+                "ja": "OSパッケージマネージャー(例:apt、brewなど)"
+              }
+            },
+            {
+              "value": "Item 5",
+              "text": {
+                "default": "Pre-compiled executable",
+                "vi": "Tệp thực thi được biên dịch sẵn",
+                "ja": "コンパイル済み実行可能ファイル"
+              }
+            },
+            {
+              "value": "Item 4",
+              "text": {
+                "default": "Source code + build instructions",
+                "vi": "Mã nguồn + hướng dẫn xây dựng",
+                "ja": "ソースコード+ビルド手順"
+              }
+            }
+          ],
+          "minSelectedChoices": 1,
+          "selectToRankEnabled": true
+        }
+      ]
+    },
+    {
+      "name": "page1",
+      "title": {
+        "default": "Community",
+        "vi": "Cộng đồng",
+        "ja": "コミュニティ"
+      },
+      "elements": [
+        {
+          "type": "comment",
+          "name": "question27",
+          "title": {
+            "default": "What do you think is the greatest asset of Cardano’s developer ecosystem?",
+            "vi": "Bạn nghĩ tài sản lớn nhất trong hệ sinh thái nhà phát triển của Cardano là gì?",
+            "ja": "カルダノの開発者エコシステムの最大の資産は何だと思いますか?"
+          }
+        },
+        {
+          "type": "comment",
+          "name": "question28",
+          "title": {
+            "default": "What do you think is the biggest pain point of Cardano's developer ecosystem?",
+            "vi": "Bạn nghĩ đâu là điểm khó khăn lớn nhất trong hệ sinh thái nhà phát triển của Cardano?",
+            "ja": "カルダノの開発者エコシステムの最大の問題点は何だと思いますか?"
+          }
+        },
+        {
+          "type": "checkbox",
+          "name": "question30",
+          "title": {
+            "default": "Where do you usually seek help on technical issues?",
+            "vi": "Bạn thường tìm kiếm trợ giúp về các vấn đề kỹ thuật ở đâu?",
+            "ja": "技術的な問題について、通常どこで助けを求めますか?"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": {
+                "default": "Cardano Forum (https://forum.cardano.org/)",
+                "vi": "Diễn đàn (https://forum.cardano.org/)",
+                "ja": "フォーラム (https://forum.cardano.org/)"
+              }
+            },
+            {
+              "value": "Item 2",
+              "text": {
+                "default": "Discord servers",
+                "vi": "Máy chủ Discord",
+                "ja": "Discordサーバー"
+              }
+            },
+            {
+              "value": "Item 3",
+              "text": {
+                "default": "StackExchange",
+                "vi": "Sàn giao dịch ngăn xếp",
+                "ja": "スタックエクスチェンジ"
+              }
+            },
+            {
+              "value": "Item 4",
+              "text": {
+                "default": "Friends/colleagues/community acquaintances",
+                "vi": "Bạn bè/đồng nghiệp/người quen trong cộng đồng",
+                "ja": "友人/同僚/地域の知人"
+              }
+            },
+            {
+              "value": "Item 5",
+              "text": {
+                "default": "GitHub discussions/issues",
+                "vi": "Thảo luận/vấn đề GitHub",
+                "ja": "GitHub のディスカッション/問題"
+              }
+            },
+            {
+              "value": "Item 6",
+              "text": {
+                "default": "Reddit (r/Cardano; r/CardanoDevelopers)",
+                "vi": "Reddit (r / Cardano; r / CardanoDevelopers)"
+              }
+            },
+            {
+              "value": "Item 7",
+              "text": {
+                "default": "Telegram groups",
+                "vi": "Nhóm Telegram",
+                "ja": "電報グループ"
+              }
+            },
+            {
+              "value": "Item 8",
+              "text": {
+                "default": "Twitter/X",
+                "ja": "ツイッター/X"
+              }
+            },
+            {
+              "value": "Item 9",
+              "text": "AI/LLM"
+            }
+          ],
+          "choicesOrder": "asc",
+          "separateSpecialChoices": true,
+          "showOtherItem": true,
+          "minSelectedChoices": 1
+        },
+        {
+          "type": "checkbox",
+          "name": "question31",
+          "title": {
+            "default": "Where/how do you look for technical details on Cardano?",
+            "vi": "Bạn tìm kiếm chi tiết kỹ thuật trên Cardano ở đâu/như thế nào?",
+            "ja": "カルダノの技術的な詳細はどこでどのように探していますか?"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": {
+                "default": "Blog or website articles",
+                "vi": "Bài viết trên blog hoặc trang web",
+                "ja": "ブログまたはウェブサイトの記事"
+              }
+            },
+            {
+              "value": "Item 2",
+              "text": {
+                "default": "Books",
+                "vi": "Sách vở",
+                "ja": "書物"
+              }
+            },
+            {
+              "value": "Item 13",
+              "text": {
+                "default": "Cardano Developer portal (https://developers.cardano.org)",
+                "vi": "Cổng thông tin nhà phát triển (https://developers.cardano.org)",
+                "ja": "開発者ポータル (https://developers.cardano.org)"
+              }
+            },
+            {
+              "value": "Item 4",
+              "text": {
+                "default": "Cardano Documentation (https://docs.cardano.org)",
+                "vi": "(\"Chính thức\") Tài liệu (https://docs.cardano.org)",
+                "ja": "(「公式」といいます)ドキュメント (https://docs.cardano.org)"
+              }
+            },
+            {
+              "value": "Item 10",
+              "text": {
+                "default": "Project-specific Documentation",
+                "vi": "Tài liệu dành riêng cho dự án",
+                "ja": "プロジェクト固有のドキュメント"
+              }
+            },
+            {
+              "value": "Item 5",
+              "text": {
+                "default": "Direct friends/colleagues/community acquaintances",
+                "vi": "Bạn bè/đồng nghiệp/người quen trực tiếp trong cộng đồng",
+                "ja": "直接の友人/同僚/地域の知人"
+              }
+            },
+            {
+              "value": "Item 3",
+              "text": {
+                "default": "Forum (https://forum.cardano.org/)",
+                "vi": "Diễn đàn (https://forum.cardano.org/)",
+                "ja": "フォーラム (https://forum.cardano.org/)"
+              }
+            },
+            {
+              "value": "Item 6",
+              "text": {
+                "default": "Online courses / videos",
+                "vi": "Khóa học / video trực tuyến",
+                "ja": "オンラインコース/ビデオ"
+              }
+            },
+            {
+              "value": "Item 8",
+              "text": {
+                "default": "Scientific papers/specifications",
+                "vi": "Bài báo khoa học / thông số kỹ thuật",
+                "ja": "科学論文/仕様書"
+              }
+            },
+            {
+              "value": "Item 9",
+              "text": {
+                "default": "Source code",
+                "vi": "Mã nguồn",
+                "ja": "ソースコード"
+              }
+            },
+            {
+              "value": "Item 12",
+              "text": {
+                "default": "Twitter/X",
+                "ja": "ツイッター/X"
+              }
+            },
+            {
+              "value": "Item 14",
+              "text": {
+                "default": "Cardano Blueprint (https://cardano-scaling.github.io/cardano-blueprint/)",
+                "ja": "カルダノブループリント"
+              }
+            },
+            {
+              "value": "Item 15",
+              "text": "AI/LLM"
+            },
+            {
+              "value": "Item 16",
+              "text": "CIPs"
+            }
+          ],
+          "choicesOrder": "asc",
+          "separateSpecialChoices": true,
+          "showOtherItem": true,
+          "minSelectedChoices": 1
+        },
+        {
+          "type": "rating",
+          "name": "question32",
+          "title": {
+            "default": "On average, how satisfied are you with the technical answers/details you find in documentation and within the community?",
+            "vi": "Trung bình, bạn hài lòng như thế nào với các câu trả lời/chi tiết kỹ thuật mà bạn tìm thấy trong tài liệu và trong cộng đồng?",
+            "ja": "平均して、ドキュメントやコミュニティ内で見つけた技術的な回答/詳細にどの程度満足していますか?"
+          },
+          "isRequired": true,
+          "rateType": "smileys",
+          "rateCount": 10,
+          "rateMax": 10
+        },
+        {
+          "type": "checkbox",
+          "name": "question29",
+          "title": {
+            "default": "Select any statement(s) that applies to you․",
+            "vi": "Chọn bất kỳ (các) bảng sao kê nào áp dụng cho bạn.",
+            "ja": "自分に該当するステートメントを選択します。"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": {
+                "default": "I have never heard of the Cardano Improvement Proposals (CIPs)",
+                "vi": "Tôi chưa bao giờ nghe nói về Đề xuất cải tiến Cardano (CIP)",
+                "ja": "カルダノ改善提案(CIP)について聞いたことがありません"
+              }
+            },
+            {
+              "value": "Item 2",
+              "text": {
+                "default": "I have read and/or used a CIP",
+                "vi": "Tôi đã đọc và sử dụng CIP",
+                "ja": "CIPを読んで使用しました"
+              }
+            },
+            {
+              "value": "Item 3",
+              "text": {
+                "default": "I have participated in conversations or reviews related to a CIP",
+                "vi": "Tôi đã tham gia vào các cuộc trò chuyện hoặc đánh giá liên quan đến CIP",
+                "ja": "CIPに関連する会話やレビューに参加したことがあります"
+              }
+            },
+            {
+              "value": "Item 4",
+              "text": {
+                "default": "I have written or co-written a CIP",
+                "vi": "Tôi đã viết hoặc đồng viết CIP",
+                "ja": "CIPを書いたことがある、または共同で書いたことがある"
+              }
+            }
+          ],
+          "separateSpecialChoices": true,
+          "showNoneItem": true,
+          "minSelectedChoices": 1
+        },
+        {
+          "type": "checkbox",
+          "name": "question33",
+          "title": {
+            "default": "Which language(s) do you prefer to consume documentation and educational content in?",
+            "vi": "Bạn thích sử dụng tài liệu và nội dung giáo dục bằng ngôn ngữ nào?",
+            "ja": "ドキュメントや教育コンテンツをどの言語で消費することを好みますか?"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 13",
+              "text": {
+                "default": "Arabic",
+                "vi": "Tiếng A-rập",
+                "ja": "アラビア語"
+              }
+            },
+            {
+              "value": "Item 6",
+              "text": {
+                "default": "Dutch",
+                "vi": "Tiếng Hà-Lan",
+                "ja": "オランダ語"
+              }
+            },
+            {
+              "value": "Item 1",
+              "text": {
+                "default": "English",
+                "vi": "Tiếng Anh",
+                "ja": "英語"
+              }
+            },
+            {
+              "value": "Item 2",
+              "text": {
+                "default": "French",
+                "vi": "Pháp",
+                "ja": "フランス語"
+              }
+            },
+            {
+              "value": "Item 14",
+              "text": {
+                "default": "German",
+                "vi": "tiếng Đức",
+                "ja": "ドイツ語"
+              }
+            },
+            {
+              "value": "Item 7",
+              "text": {
+                "default": "Hindi",
+                "vi": "Tiếng Hin-đi",
+                "ja": "ヒンディー語"
+              }
+            },
+            {
+              "value": "Item 4",
+              "text": {
+                "default": "Italian",
+                "vi": "Tiếng Ý",
+                "ja": "イタリア語"
+              }
+            },
+            {
+              "value": "Item 12",
+              "text": {
+                "default": "Japanese",
+                "vi": "Tiếng Nhật",
+                "ja": "日本語"
+              }
+            },
+            {
+              "value": "Item 5",
+              "text": {
+                "default": "Polish",
+                "vi": "Tiếng Ba-lan",
+                "ja": "ポーランド語"
+              }
+            },
+            {
+              "value": "Item 8",
+              "text": {
+                "default": "Portuguese",
+                "vi": "Tiếng Bồ Đào Nha",
+                "ja": "ポルトガル語"
+              }
+            },
+            {
+              "value": "Item 9",
+              "text": {
+                "default": "Russian",
+                "vi": "Tiếng Nga",
+                "ja": "ロシア語"
+              }
+            },
+            {
+              "value": "Item 3",
+              "text": {
+                "default": "Spanish",
+                "vi": "Tiếng Tây Ban Nha",
+                "ja": "スペイン語"
+              }
+            },
+            {
+              "value": "Item 10",
+              "text": {
+                "default": "Ukrainian",
+                "vi": "Tiếng U-kren",
+                "ja": "ウクライナ語"
+              }
+            },
+            {
+              "value": "Item 11",
+              "text": {
+                "default": "Vietnamese",
+                "vi": "Tiếng Việt",
+                "ja": "ベトナム語"
+              }
+            }
+          ],
+          "choicesOrder": "asc",
+          "separateSpecialChoices": true,
+          "showOtherItem": true,
+          "minSelectedChoices": 1
+        },
+        {
+          "type": "radiogroup",
+          "name": "question34",
+          "title": {
+            "default": "Did you attend the Cardano Buidler Fest in April 2025?",
+            "vi": "Bạn đã tham dự Lễ hội Cardano Buidler vào tháng 4 năm 2025 chưa?",
+            "ja": "2025年4月のCardano Buidler Festに参加しましたか?"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": {
+                "default": "Yes",
+                "vi": "Có",
+                "ja": "はい"
+              }
+            },
+            {
+              "value": "Item 2",
+              "text": {
+                "default": "No",
+                "vi": "Không",
+                "ja": "いいえ"
+              }
+            },
+            {
+              "value": "Item 3",
+              "text": {
+                "default": "No, but I wanted to",
+                "vi": "Không, nhưng tôi muốn",
+                "ja": "いや、でもやりたかった"
+              }
+            }
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "question35",
+          "visibleIf": "{question34} = 'Item 1'",
+          "title": {
+            "default": "How satisfied were you with the Cardano Buidler Fest?",
+            "vi": "Bạn hài lòng như thế nào với Cardano Buidler Fest?",
+            "ja": "Cardano Buidler Festにどの程度満足しましたか?"
+          },
+          "isRequired": true,
+          "rateType": "smileys",
+          "rateCount": 10,
+          "rateMax": 10
+        },
+        {
+          "type": "comment",
+          "name": "question36",
+          "visibleIf": "{question34} = 'Item 1'",
+          "title": {
+            "default": "Do you have any ideas on how to improve the next potential Cardano Buidler Fest?",
+            "vi": "Bạn có ý tưởng nào về cách cải thiện Cardano Buidler Fest tiềm năng tiếp theo không?",
+            "ja": "次のCardano Buidler Festを改善する方法について何かアイデアはありますか?"
+          }
+        }
+      ]
+    }
+  ],
+  "triggers": [
+    {
+      "type": "complete",
+      "expression": "{question2} = 'Item 5'"
+    }
+  ],
+  "headerView": "advanced",
+  "showQuestionNumbers": true
+}
