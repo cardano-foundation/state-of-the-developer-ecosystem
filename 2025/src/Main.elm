@@ -778,7 +778,10 @@ view ({ title, introduction, questions } as model) =
         , questions.question7
             |> viewBarChart model
                 updateQuestion7
-                (isInterestedInFilter questions ++ withYearsOfExperienceFilter questions ++ [ onlyExperts questions ])
+                (isInterestedInFilter questions
+                    ++ withYearsOfExperienceFilter questions
+                    ++ [ onlyBeginners questions, onlyExperts questions ]
+                )
         , questions.question8 |> viewBarChart model updateQuestion8 []
         , questions.question9 |> viewDotsPlot model updateQuestion9 []
         , questions.question10 |> viewBarChart model updateQuestion10 (isProficientInFilter questions)
@@ -793,6 +796,7 @@ view ({ title, introduction, questions } as model) =
                     ++ withBlockchainExperienceFilter questions
                     ++ [ isHobbyist questions
                        , isPro questions
+                       , onlyBeginners questions
                        , onlyExperts questions
                        ]
                 )
@@ -809,10 +813,12 @@ view ({ title, introduction, questions } as model) =
             |> viewStackBarChart model
                 updateQuestion16
                 (withBlockchainExperienceFilter questions
+                    ++ withRevenueSourceFilter questions
                     ++ [ isHobbyist questions
                        , isPro questions
-                       , onlyExperts questions
                        , familiarWithOtherEcosystem questions
+                       , onlyBeginners questions
+                       , onlyExperts questions
                        ]
                 )
         , questions.question17
@@ -829,7 +835,15 @@ view ({ title, introduction, questions } as model) =
             |> viewDotsPlot model
                 updateQuestion21
                 (isProficientInFilter questions ++ isInterestedInFilter questions)
-        , questions.question22 |> viewStackBarChart model noUpdate []
+        , questions.question22
+            |> viewStackBarChart model
+                updateQuestion22
+                (isProficientInFilter questions
+                    ++ [ isHobbyist questions
+                       , isPro questions
+                       , familiarWithOtherEcosystem questions
+                       ]
+                )
         , questions.question23 |> viewDotsPlot model updateQuestion23 []
         , questions.question24 |> viewOpen
         , questions.question25
@@ -839,7 +853,7 @@ view ({ title, introduction, questions } as model) =
         , questions.question26
             |> viewStackBarChart model
                 updateQuestion26
-                (withYearsOfExperienceFilter questions)
+                (isProficientInFilter questions ++ [ isPro questions, isHobbyist questions ])
         , questions.question27 |> viewOpen
         , questions.question28 |> viewOpen
         , questions.question29
@@ -848,6 +862,7 @@ view ({ title, introduction, questions } as model) =
                 (withYearsOfExperienceFilter questions
                     ++ [ isPro questions
                        , isHobbyist questions
+                       , onlyBeginners questions
                        , onlyExperts questions
                        ]
                 )
@@ -858,6 +873,7 @@ view ({ title, introduction, questions } as model) =
                     ++ withBlockchainExperienceFilter questions
                     ++ [ isPro questions
                        , isHobbyist questions
+                       , onlyBeginners questions
                        , onlyExperts questions
                        ]
                 )
@@ -1504,6 +1520,32 @@ withBlockchainExperience questions xp =
     }
 
 
+withRevenueSourceFilter : Questionnaire -> List (Filter a)
+withRevenueSourceFilter questions =
+    List.map (withRevenueSource questions) <|
+        [ ( "employment at/contract with a genesis entity", "Employed by/contracting with a genesis entity (IO[HK,E,G], EMURGO, CF)" )
+        , ( "employment at/contract with a non-genesis entity", "Employed by/contracting with a non-genesis entity" )
+        , ( "own product/service sales", "Own product/service sales" )
+        ]
+
+
+withRevenueSource : Questionnaire -> ( String, String ) -> Filter a
+withRevenueSource questions ( sourceTitle, source ) =
+    { title = "Getting revenue from " ++ sourceTitle
+    , function =
+        \answers ->
+            List.zip answers questions.question7.answers
+                |> List.map
+                    (\( a, sources ) ->
+                        if List.member source sources then
+                            a
+
+                        else
+                            []
+                    )
+    }
+
+
 fromTechnicalSourceFilter : Questionnaire -> List (Filter a)
 fromTechnicalSourceFilter questions =
     List.map (fromTechnicalSource questions) <|
@@ -1567,6 +1609,23 @@ onlyExperts questions =
                 |> List.map
                     (\( x, y ) ->
                         if Maybe.withDefault 0 (List.head y) > 7 then
+                            x
+
+                        else
+                            []
+                    )
+    }
+
+
+onlyBeginners : Questionnaire -> Filter a
+onlyBeginners questions =
+    { title = "Only Cardano beginners (< 4)"
+    , function =
+        \answers ->
+            List.zip answers questions.question11.answers
+                |> List.map
+                    (\( x, y ) ->
+                        if Maybe.withDefault 0 (List.head y) < 4 then
                             x
 
                         else
