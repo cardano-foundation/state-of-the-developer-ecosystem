@@ -1707,8 +1707,7 @@
     "question5": "Item 2",
     "question6": "Item 7",
     "question8": "Item 1",
-    "question9": "other",
-    "question9-Comment": "Cursor (VSCode Fork)",
+    "question9": "Item 10",
     "question11": 10,
     "question12": [
       "Item 5",
@@ -1819,8 +1818,7 @@
       "Item 10",
       "Item 11"
     ],
-    "question9": "other",
-    "question9-Comment": "cursor",
+    "question9": "Item 10",
     "question11": 5,
     "question12": [
       "Item 9",
@@ -3562,8 +3560,7 @@
     "question4": "Item 3",
     "question5": "Item 1",
     "question8": "Item 1",
-    "question9": "other",
-    "question9-Comment": "Cursor",
+    "question9": "Item 10",
     "question11": 1,
     "question12": [
       "Item 4",
@@ -4052,8 +4049,7 @@
     "question4": "Item 2",
     "question5": "Item 1",
     "question8": "Item 1",
-    "question9": "other",
-    "question9-Comment": "Cursor",
+    "question9": "Item 10",
     "question11": 3,
     "question12": [
       "Item 4",
@@ -4542,8 +4538,7 @@
     "question7": [
       "Item 10"
     ],
-    "question9": "other",
-    "question9-Comment": "Cursor",
+    "question9": "Item 10",
     "question11": 10,
     "question12": [
       "Item 4",
@@ -5809,8 +5804,7 @@
       "Item 9",
       "Item 10"
     ],
-    "question9": "other",
-    "question9-Comment": "Mostly vim/nano/notepad in either mingw64/Win11 or Linux.",
+    "question9": "Item 2",
     "question11": 5,
     "question12": [
       "Item 9",
@@ -7384,8 +7378,7 @@
       "other"
     ],
     "question7-Comment": "QRL",
-    "question9": "other",
-    "question9-Comment": "Cursor with Vim bindings",
+    "question9": "Item 10",
     "question11": 6,
     "question12": [
       "Item 10",
@@ -11141,8 +11134,7 @@
     "question5": "Item 2",
     "question6": "Item 6",
     "question8": "Item 1",
-    "question9": "other",
-    "question9-Comment": "Cursor",
+    "question9": "Item 10",
     "question11": 7,
     "question12": [
       "Item 1",

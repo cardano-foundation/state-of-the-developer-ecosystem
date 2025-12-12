@@ -753,6 +753,10 @@
             {
               "value": "Item 8",
               "text": "Zed"
+            },
+            {
+              "value": "Item 10",
+              "text": "Cursor"
             }
           ],
           "choicesOrder": "asc",

@@ -768,14 +768,20 @@ view ({ title, introduction, questions } as model) =
         , questions.question3
             |> viewDotsPlot model
                 updateQuestion3
-                (withYearsOfExperienceFilter questions)
+                (withYearsOfExperienceFilter questions ++ [ familiarWithOtherEcosystem questions ])
         , questions.question4 |> viewBarChart model noUpdate []
         , questions.question5 |> viewBarChart model noUpdate []
-        , questions.question6 |> viewBarChart model updateQuestion6 []
-        , questions.question7 |> viewBarChart model noUpdate []
+        , questions.question6
+            |> viewBarChart model
+                updateQuestion6
+                (isProficientInFilter questions)
+        , questions.question7
+            |> viewBarChart model
+                updateQuestion7
+                (isInterestedInFilter questions ++ withYearsOfExperienceFilter questions ++ [ onlyExperts questions ])
         , questions.question8 |> viewBarChart model updateQuestion8 []
         , questions.question9 |> viewDotsPlot model updateQuestion9 []
-        , questions.question10 |> viewBarChart model updateQuestion10 []
+        , questions.question10 |> viewBarChart model updateQuestion10 (isProficientInFilter questions)
         , questions.question11
             |> viewBoxPlot model
                 updateQuestion11
@@ -1606,7 +1612,8 @@ isHobbyist questions =
 isProficientInFilter : Questionnaire -> List (Filter a)
 isProficientInFilter questions =
     List.map (isProficientIn questions) <|
-        [ "C"
+        [ "Aiken"
+        , "C"
         , "C#"
         , "C++"
         , "Go"
