@@ -8,6 +8,12 @@ This repository holds data submitted as part of previous _State of the Cardano D
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md)
 
+## Survey (self-hosted) Platform
+
+The source code for running the survey is fully open-source and leverage the great [SurveyJS](https://surveyjs.io/) library. We've built a small backend that can be deployed easily on [CloudFlare](https://www.cloudflare.com/) to provides both persistence and bot/spam-protection. 
+
+See [survey/](./survey) for more details.
+
 ## Past Editions
 
 <table> <tr> <td>
@@ -21,7 +27,9 @@ The answers expressed in these surveys by the community are not intended to refl
 | 2022 | [HTML report][results-2022] | [source](./2022) |
 | 2023 | [HTML report][results-2023] | [source](./2023) |
 | 2024 | [HTML report][results-2024] | [source](./2024) |
+| 2025 | [HTML report][results-2025] | [source](./2025) |
 
 [results-2022]: https://cardano-foundation.github.io/state-of-the-developer-ecosystem/2022
 [results-2023]: https://cardano-foundation.github.io/state-of-the-developer-ecosystem/2023
 [results-2024]: https://cardano-foundation.github.io/state-of-the-developer-ecosystem/2024
+[results-2025]: https://cardano-foundation.github.io/state-of-the-developer-ecosystem/2025
