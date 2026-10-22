@@ -4,4 +4,5 @@ temp/
 .wrangler
 _worker.bundle
 node_modules
+.dev.vars
 survey/definition.metadata.json

@@ -16,10 +16,23 @@
       "id": "38fca760324e46e7b6d1b082fc3fa769"
     }
   ],
+  /* The sponsor's state (cip179/sponsor-store.js), one database per network. */
+  "d1_databases": [
+    {
+      "binding": "db",
+      "database_name": "cip179-sponsor-preprod",
+      "database_id": "4d9021bb-b8ce-4a37-8cad-21e562416c0f",
+      "migrations_dir": "migrations"
+    }
+  ],
   "vars": {
     /* Always pass */
-    "state-of-the-developer-ecosystem-2025-turnstile": "1x0000000000000000000000000000000AA"
+    "state-of-the-developer-ecosystem-2025-turnstile": "1x0000000000000000000000000000000AA",
     /* Always fail */
     /* "state-of-the-developer-ecosystem-2025-turnstile": "2x0000000000000000000000000000000AA" */
+    /* The sponsor (cip179/sponsor.js); its SPONSOR_MNEMONIC is a secret. */
+    "SPONSOR_NETWORK": "preprod",
+    "SPONSOR_KOIOS": "https://preprod.koios.rest/api/v1",
+    "SPONSOR_SURVEY": "0d1ca0e63fd9d5f10668aae2225575ce88099056038c49a2b1cf32f9de350e1c#0"
   }
 }

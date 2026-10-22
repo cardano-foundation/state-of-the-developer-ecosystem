@@ -12,9 +12,12 @@
     "count": "count() { wrangler kv key list --binding kv \"$@\" | jq length; }; count",
     "results": "results() { wrangler kv key list --binding kv \"$@\" > /tmp/kv.json; wrangler kv bulk get /tmp/kv.json --binding kv \"$@\"; }; results",
     "cip179": "node cip179/build.js",
+    "db:migrate": "wrangler d1 migrations apply db",
     "test": "node --test 'cip179/test/*.test.js'"
   },
   "dependencies": {
+    "@evolution-sdk/evolution": "0.5.16",
+    "@noble/curves": "^2.4.0",
     "@noble/hashes": "^2.4.0",
     "cip-179": "0.6.0",
     "nanoid": "^5.1.6"
