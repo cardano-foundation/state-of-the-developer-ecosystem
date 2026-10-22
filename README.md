@@ -10,7 +10,7 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ## Survey (self-hosted) Platform
 
-The source code for running the survey is fully open-source and leverage the great [SurveyJS](https://surveyjs.io/) library. We've built a small backend that can be deployed easily on [CloudFlare](https://www.cloudflare.com/) to provides both persistence and bot/spam-protection. 
+The source code for running the survey is fully open-source. Since 2026, responses are published on the Cardano chain as a [CIP-179](https://github.com/mpizenberg/Tessera/blob/main/frontend/cip-179.md) survey, and the questions are still written in the [SurveyJS](https://surveyjs.io/) format. A small backend on [CloudFlare](https://www.cloudflare.com/) pays the respondents' transaction fees, with bot/spam-protection.
 
 See [survey/](./survey) for more details.
 

@@ -12,6 +12,10 @@ A comment on the approach, the questions or the conclusions drawn from the resul
 
 You've spotted a typo or something that could be worded better? Please make a suggestion through [Github discussions][Proof-reading] or simply open a [pull request](https://github.com/cardano-foundation/state-of-the-developer-ecosystem/pulls).
 
+### Reviewing translations
+
+The 2026 survey is in nine languages. A native speaker can review one: see [Reviewing the translations](survey/TRANSLATIONS.md).
+
 ### Suggesting new filters
 
 Some questions have pre-defined filters to allow seeing potential correlations with other questions. If there's new filters you'd like to see, come forth through [Github discussions][New filter] and tell us about it!
