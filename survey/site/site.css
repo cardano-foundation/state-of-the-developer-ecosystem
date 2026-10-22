@@ -1,0 +1,266 @@
+/* The look of the 2025 survey: a white sheet on Cardano's dark blue. */
+
+:root {
+  --blue: #001d3e;
+  --bright: #487fff;
+  --ink: #0b2545;
+  --muted: #55657c;
+  --line: #d9e0ea;
+  --tint: #edf2ff;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --radius: 11px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--blue);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 54rem;
+  min-height: 100vh;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 0.25rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+header span {
+  flex: 1;
+}
+
+select {
+  font: inherit;
+  padding: 0.3rem 0.5rem;
+  border-radius: 7px;
+  border: 1px solid rgb(255 255 255 / 0.4);
+  background: var(--blue);
+  color: #fff;
+}
+
+main {
+  background: #fff;
+  border-radius: 18px;
+  padding: 2.5rem;
+}
+
+section:focus {
+  outline: none;
+}
+
+h1 {
+  margin: 0 0 0.75rem;
+  font-size: 1.9rem;
+  line-height: 1.2;
+}
+
+h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: #1d4ed8;
+}
+
+.survey-description {
+  color: var(--muted);
+  font-size: 1.1rem;
+  white-space: pre-line;
+}
+
+.facts {
+  margin: 1.5rem 0;
+  padding-left: 1.2rem;
+}
+
+.facts li {
+  margin-bottom: 0.35rem;
+}
+
+.notice {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--bright);
+  border-radius: 4px var(--radius) var(--radius) 4px;
+  background: var(--tint);
+}
+
+.notice p:last-child {
+  margin-bottom: 0;
+}
+
+.problem {
+  padding: 1rem 1.25rem;
+  border-left: 4px solid #b42318;
+  border-radius: 4px var(--radius) var(--radius) 4px;
+  background: #fdecea;
+  color: #7a1a12;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+button {
+  font: inherit;
+  font-weight: 600;
+  padding: 0.7rem 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: var(--bright);
+}
+
+button.primary {
+  border-color: var(--blue);
+  background: var(--blue);
+  color: #fff;
+  /* The offset shadow of the 2025 buttons. */
+  box-shadow: 4px 4px 0 var(--bright);
+  transition:
+    translate 0.15s,
+    box-shadow 0.15s;
+}
+
+button.primary:hover {
+  translate: 2px 2px;
+  box-shadow: 2px 2px 0 var(--bright);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+  translate: none;
+}
+
+button:focus-visible,
+a:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--bright);
+  outline-offset: 2px;
+}
+
+/* The answers that end the survey, as buttons beside "Start": those they apply to must see them. */
+.exits {
+  display: contents;
+}
+
+.exits button {
+  border-color: var(--ink);
+}
+
+/* The survey closes within a week. */
+.soon {
+  font-weight: 600;
+  color: #9a3412;
+}
+
+.remind {
+  margin: 1.5rem 0 0;
+  color: var(--muted);
+}
+
+.remind a {
+  white-space: nowrap;
+}
+
+#progress {
+  margin: 1rem 0 0;
+  color: var(--muted);
+}
+
+#challenge:not(:empty) {
+  margin-top: 1rem;
+}
+
+.results {
+  margin-top: 1.5rem;
+  color: var(--muted);
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1.5rem 0.25rem 2rem;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: rgb(255 255 255 / 0.75);
+}
+
+/* The widget has its own space above its title. */
+#questions {
+  margin-top: -1.5rem;
+}
+
+/* The widget, in the page's colours and fonts. */
+tessera-respond {
+  --tessera-sans: var(--sans);
+  --tessera-serif: var(--sans);
+  --tessera-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --tessera-ink: var(--ink);
+  --tessera-body: #1f3552;
+  --tessera-muted: var(--muted);
+  --tessera-faint: #8493a8;
+  --tessera-dim: #9aa7b8;
+  --tessera-line: var(--line);
+  --tessera-line2: #e3e8f0;
+  --tessera-hair: #eef1f6;
+  --tessera-surface2: #f6f8fb;
+  --tessera-surface3: #eef1f6;
+  --tessera-header-line: var(--line);
+  --tessera-card-bg: #fff;
+  --tessera-card-line: var(--line);
+  --tessera-label: var(--muted);
+  --tessera-accent: var(--blue);
+  --tessera-accent-bg: var(--tint);
+  --tessera-accent-line: #bccdf7;
+}
+
+@media (max-width: 40rem) {
+  body {
+    padding: 0 0.5rem;
+  }
+
+  main {
+    padding: 1.5rem 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}

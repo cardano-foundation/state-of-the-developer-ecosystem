@@ -410,6 +410,11 @@ blake3-wasm@2.1.5:
   resolved "https://registry.yarnpkg.com/blake3-wasm/-/blake3-wasm-2.1.5.tgz#b22dbb84bc9419ed0159caa76af4b1b132e6ba52"
   integrity sha512-F1+K8EbfOZE49dtoPtmxUQrpXaBIl3ICvasLh+nJta0xkz+9kF/7uet9fLnwKqhDrmj6g+6K3Tw9yQPUg2ka5g==
 
+cardano-tessera-respond@0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/cardano-tessera-respond/-/cardano-tessera-respond-0.8.0.tgz#9985c92a5994e7f251f55ea3ae1f446112a064f4"
+  integrity sha512-mB6RUpqPBiWTkIls+snhNFVpSMtXMyeZ9Ir3lyVC7WWWNr+2frSBf7H58P8Mv8mPUTYUIgGAoxyY93jyvYLELg==
+
 cip-179@0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/cip-179/-/cip-179-0.6.0.tgz#e040c1219e69d21b391526f4d1a456aafbc4ceeb"
@@ -554,11 +559,6 @@ miniflare@4.20251210.0:
     ws "8.18.0"
     youch "4.1.0-beta.10"
     zod "3.22.3"
-
-nanoid@^5.1.6:
-  version "5.1.6"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-5.1.6.tgz#30363f664797e7d40429f6c16946d6bd7a3f26c9"
-  integrity sha512-c7+7RQ+dMB5dPwwCp4ee1/iV/q2P6aK1mTZcfr1BTuVlyW9hJYiMPybJCcnBlQtuSmTIWNeazm/zqNoZSSElBg==
 
 path-to-regexp@6.3.0:
   version "6.3.0"

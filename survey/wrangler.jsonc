@@ -1,21 +1,13 @@
 /**
- * For more details on how to configure Wrangler, refer to:
- * https://developers.cloudflare.com/workers/wrangler/configuration/
+ * The Cloudflare Pages project: `yarn wrangler pages deploy` deploys `dist/`
+ * with these bindings and vars. See the README's deployment steps.
+ * https://developers.cloudflare.com/pages/functions/wrangler-configuration/
  */
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "state-of-cardano-developer-survey-2025",
+  "name": "state-of-cardano-developer-survey-2026",
+  "pages_build_output_dir": "dist",
   "compatibility_date": "2025-09-27",
-  "keep_vars": true,
-  "observability": {
-    "enabled": true
-  },
-  "kv_namespaces": [
-    {
-      "binding": "kv",
-      "id": "38fca760324e46e7b6d1b082fc3fa769"
-    }
-  ],
   /* The sponsor's state (cip179/sponsor-store.js), one database per network. */
   "d1_databases": [
     {
@@ -26,10 +18,9 @@
     }
   ],
   "vars": {
-    /* Always pass */
-    "state-of-the-developer-ecosystem-2025-turnstile": "1x0000000000000000000000000000000AA",
-    /* Always fail */
-    /* "state-of-the-developer-ecosystem-2025-turnstile": "2x0000000000000000000000000000000AA" */
+    /* The Turnstile widget of the site's hostname. Its TURNSTILE_SECRET is a
+       secret; locally, the test secret in .dev.vars. */
+    "TURNSTILE_SITE_KEY": "0x4AAAAAAFYzWeyCVNJMl0nI",
     /* The sponsor (cip179/sponsor.js); its SPONSOR_MNEMONIC is a secret. */
     "SPONSOR_NETWORK": "preprod",
     "SPONSOR_KOIOS": "https://preprod.koios.rest/api/v1",
