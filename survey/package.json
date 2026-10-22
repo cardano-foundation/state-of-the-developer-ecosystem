@@ -6,12 +6,17 @@
   "author": "KtorZ <matthias.benkort@gmail.com>",
   "license": "Apache-2.0",
   "private": false,
+  "type": "module",
   "scripts": {
     "dev": "wrangler pages dev .",
     "count": "count() { wrangler kv key list --binding kv \"$@\" | jq length; }; count",
-    "results": "results() { wrangler kv key list --binding kv \"$@\" > /tmp/kv.json; wrangler kv bulk get /tmp/kv.json --binding kv \"$@\"; }; results"
+    "results": "results() { wrangler kv key list --binding kv \"$@\" > /tmp/kv.json; wrangler kv bulk get /tmp/kv.json --binding kv \"$@\"; }; results",
+    "cip179": "node cip179/build.js",
+    "test": "node --test 'cip179/test/*.test.js'"
   },
   "dependencies": {
+    "@noble/hashes": "^2.4.0",
+    "cip-179": "0.6.0",
     "nanoid": "^5.1.6"
   },
   "devDependencies": {

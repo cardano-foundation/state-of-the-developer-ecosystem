@@ -1,0 +1,3733 @@
+{
+  "title": {
+    "default": "State of the Cardano Developer Ecosystem - 2026 Survey",
+    "fr": "État de l'écosystème des développeurs Cardano - Enquête 2026",
+    "es": "Estado del ecosistema de desarrolladores de Cardano - Encuesta 2026",
+    "pt": "Estado do Ecossistema de Desenvolvedores Cardano - Pesquisa 2026",
+    "it": "Stato dell'ecosistema degli sviluppatori Cardano - Sondaggio 2026",
+    "de": "Stand des Cardano-Entwickler-Ökosystems - Umfrage 2026",
+    "ja": "Cardano開発者エコシステムの現状 - 2026年アンケート",
+    "vi": "Hiện trạng hệ sinh thái lập trình viên Cardano - Khảo sát 2026",
+    "zh": "Cardano 开发者生态现状 - 2026 年调查"
+  },
+  "description": {
+    "default": "About 15 minutes. The results tell tool builders, documentation writers and funders what to work on first.",
+    "fr": "Environ 15 minutes. Les résultats montrent aux créateurs d'outils, aux auteurs de documentation et aux financeurs sur quoi travailler en priorité.",
+    "es": "Unos 15 minutos. Los resultados indican a quienes crean herramientas, escriben documentación o financian proyectos en qué trabajar primero.",
+    "pt": "Cerca de 15 minutos. Os resultados mostram a quem cria ferramentas, escreve documentação e financia projetos no que trabalhar primeiro.",
+    "it": "Circa 15 minuti. I risultati indicano a chi crea strumenti, scrive documentazione o finanzia progetti su cosa lavorare per primo.",
+    "de": "Etwa 15 Minuten. Die Ergebnisse zeigen Tool-Entwicklern, Dokumentationsautoren und Geldgebern, woran zuerst gearbeitet werden sollte.",
+    "ja": "所要時間は約15分です。結果は、ツール開発者、ドキュメント執筆者、資金提供者が何に優先して取り組むべきかを示します。",
+    "vi": "Khoảng 15 phút. Kết quả cho những người xây dựng công cụ, viết tài liệu và cấp vốn biết nên ưu tiên làm gì trước.",
+    "zh": "大约需要 15 分钟。调查结果会告诉工具开发者、文档作者和资助方应该优先做什么。"
+  },
+  "triggers": [
+    { "type": "complete", "expression": "{experience} = 'not-a-developer'" }
+  ],
+  "pages": [
+    {
+      "name": "what_you_build",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "experience",
+          "title": {
+            "default": "How long have you been writing or deploying software?",
+            "fr": "Depuis combien de temps écrivez-vous ou déployez-vous des logiciels ?",
+            "es": "¿Cuánto tiempo llevas escribiendo o desplegando software?",
+            "pt": "Há quanto tempo você escreve ou faz deploy de software?",
+            "it": "Da quanto tempo scrivi o fai il deploy di software?",
+            "de": "Wie lange schreiben oder deployen Sie schon Software?",
+            "ja": "ソフトウェアを書いたりデプロイしたりするようになって、どのくらい経ちますか？",
+            "vi": "Bạn đã viết hoặc triển khai phần mềm được bao lâu?",
+            "zh": "你编写或部署软件有多长时间了？"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "not-a-developer",
+              "text": {
+                "default": "I don't write or deploy software",
+                "fr": "Je n'écris ni ne déploie de logiciels",
+                "es": "No escribo ni despliego software",
+                "pt": "Não escrevo nem faço deploy de software",
+                "it": "Non scrivo né faccio il deploy di software",
+                "de": "Ich schreibe und deploye keine Software",
+                "ja": "ソフトウェアを書いたりデプロイしたりはしない",
+                "vi": "Tôi không viết hay triển khai phần mềm",
+                "zh": "我不编写也不部署软件"
+              }
+            },
+            {
+              "value": "under-2",
+              "text": {
+                "default": "Less than 2 years",
+                "fr": "Moins de 2 ans",
+                "es": "Menos de 2 años",
+                "pt": "Menos de 2 anos",
+                "it": "Meno di 2 anni",
+                "de": "Weniger als 2 Jahre",
+                "ja": "2年未満",
+                "vi": "Dưới 2 năm",
+                "zh": "不到 2 年"
+              }
+            },
+            {
+              "value": "2-4",
+              "text": {
+                "default": "2 to 4 years",
+                "fr": "2 à 4 ans",
+                "es": "De 2 a 4 años",
+                "pt": "2 a 4 anos",
+                "it": "Da 2 a 4 anni",
+                "de": "2 bis 4 Jahre",
+                "ja": "2〜4年",
+                "vi": "2 đến 4 năm",
+                "zh": "2 到 4 年"
+              }
+            },
+            {
+              "value": "5-9",
+              "text": {
+                "default": "5 to 9 years",
+                "fr": "5 à 9 ans",
+                "es": "De 5 a 9 años",
+                "pt": "5 a 9 anos",
+                "it": "Da 5 a 9 anni",
+                "de": "5 bis 9 Jahre",
+                "ja": "5〜9年",
+                "vi": "5 đến 9 năm",
+                "zh": "5 到 9 年"
+              }
+            },
+            {
+              "value": "10-plus",
+              "text": {
+                "default": "10 years or more",
+                "fr": "10 ans ou plus",
+                "es": "10 años o más",
+                "pt": "10 anos ou mais",
+                "it": "10 anni o più",
+                "de": "10 Jahre oder mehr",
+                "ja": "10年以上",
+                "vi": "10 năm trở lên",
+                "zh": "10 年或以上"
+              }
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "building_on_cardano",
+          "title": {
+            "default": "Do you build on Cardano today?",
+            "fr": "Développez-vous sur Cardano aujourd'hui ?",
+            "es": "¿Desarrollas en Cardano actualmente?",
+            "pt": "Você desenvolve na Cardano hoje?",
+            "it": "Sviluppi su Cardano oggi?",
+            "de": "Entwickeln Sie heute auf Cardano?",
+            "ja": "現在、Cardano上で開発していますか？",
+            "vi": "Hiện nay bạn có phát triển trên Cardano không?",
+            "zh": "你目前在 Cardano 上进行开发吗？"
+          },
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "yes",
+              "text": {
+                "default": "Yes (including learning or experimenting)",
+                "fr": "Oui (y compris pour apprendre ou expérimenter)",
+                "es": "Sí (incluido aprender o experimentar)",
+                "pt": "Sim (inclusive para aprender ou experimentar)",
+                "it": "Sì (anche solo per imparare o sperimentare)",
+                "de": "Ja (auch zum Lernen oder Experimentieren)",
+                "ja": "はい（学習や実験も含む）",
+                "vi": "Có (kể cả học hoặc thử nghiệm)",
+                "zh": "是（包括学习或试验）"
+              }
+            },
+            {
+              "value": "stopped",
+              "text": {
+                "default": "I did, but I stopped",
+                "fr": "Je l'ai fait, mais j'ai arrêté",
+                "es": "Lo hice, pero lo dejé",
+                "pt": "Já desenvolvi, mas parei",
+                "it": "L'ho fatto, ma ho smesso",
+                "de": "Früher ja, aber ich habe aufgehört",
+                "ja": "以前はしていたが、やめた",
+                "vi": "Đã từng, nhưng tôi đã dừng",
+                "zh": "以前有，但已经停止了"
+              }
+            },
+            {
+              "value": "considered",
+              "text": {
+                "default": "I considered it, but haven't built on it",
+                "fr": "J'y ai pensé, mais je ne m'y suis pas mis",
+                "es": "Lo consideré, pero no llegué a hacerlo",
+                "pt": "Pensei nisso, mas não cheguei a desenvolver",
+                "it": "Ci ho pensato, ma non ho mai iniziato",
+                "de": "Ich habe es erwogen, aber nicht angefangen",
+                "ja": "検討したが、開発には至っていない",
+                "vi": "Đã cân nhắc, nhưng chưa phát triển trên đó",
+                "zh": "考虑过，但还没有动手"
+              }
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "why_stopped",
+          "visibleIf": "{building_on_cardano} = 'stopped'",
+          "title": {
+            "default": "What made you stop building on Cardano?",
+            "fr": "Qu'est-ce qui vous a fait arrêter de développer sur Cardano ?",
+            "es": "¿Qué te hizo dejar de desarrollar en Cardano?",
+            "pt": "O que fez você parar de desenvolver na Cardano?",
+            "it": "Cosa ti ha fatto smettere di sviluppare su Cardano?",
+            "de": "Warum haben Sie aufgehört, auf Cardano zu entwickeln?",
+            "ja": "Cardano上での開発をやめた理由は何ですか？",
+            "vi": "Điều gì khiến bạn dừng phát triển trên Cardano?",
+            "zh": "是什么让你停止在 Cardano 上开发？"
+          }
+        },
+        {
+          "type": "comment",
+          "name": "why_not_started",
+          "visibleIf": "{building_on_cardano} = 'considered'",
+          "title": {
+            "default": "What has kept you from building on Cardano?",
+            "fr": "Qu'est-ce qui vous a empêché de développer sur Cardano ?",
+            "es": "¿Qué te ha impedido desarrollar en Cardano?",
+            "pt": "O que impediu você de desenvolver na Cardano?",
+            "it": "Cosa ti ha trattenuto dallo sviluppare su Cardano?",
+            "de": "Was hat Sie davon abgehalten, auf Cardano zu entwickeln?",
+            "ja": "Cardano上での開発に踏み出せなかった理由は何ですか？",
+            "vi": "Điều gì đã cản bạn phát triển trên Cardano?",
+            "zh": "是什么让你一直没有在 Cardano 上开发？"
+          }
+        },
+        {
+          "type": "checkbox",
+          "name": "work",
+          "visibleIf": "{building_on_cardano} = 'yes'",
+          "title": {
+            "default": "What do you work on?",
+            "fr": "Sur quoi travaillez-vous ?",
+            "es": "¿En qué trabajas?",
+            "pt": "Em que você trabalha?",
+            "it": "Di cosa ti occupi?",
+            "de": "Woran arbeiten Sie?",
+            "ja": "どのような分野に取り組んでいますか？",
+            "vi": "Bạn làm việc trong mảng nào?",
+            "zh": "你从事哪些方面的工作？"
+          },
+          "choices": [
+            {
+              "value": "audits",
+              "text": {
+                "default": "Audits and security",
+                "fr": "Audits et sécurité",
+                "es": "Auditorías y seguridad",
+                "pt": "Auditorias e segurança",
+                "it": "Audit e sicurezza",
+                "de": "Audits und Sicherheit",
+                "ja": "監査とセキュリティ",
+                "vi": "Audit và bảo mật",
+                "zh": "审计与安全"
+              }
+            },
+            {
+              "value": "core",
+              "text": {
+                "default": "Core protocol (node, ledger, consensus)",
+                "fr": "Protocole de base (nœud, ledger, consensus)",
+                "es": "Protocolo base (nodo, ledger, consenso)",
+                "pt": "Protocolo central (nó, ledger, consenso)",
+                "it": "Protocollo di base (nodo, ledger, consenso)",
+                "de": "Kernprotokoll (Node, Ledger, Konsens)",
+                "ja": "コアプロトコル（ノード、レジャー、コンセンサス）",
+                "vi": "Giao thức lõi (node, ledger, đồng thuận)",
+                "zh": "核心协议（节点、账本、共识）"
+              }
+            },
+            {
+              "value": "dev-tools",
+              "text": {
+                "default": "Developer tools and libraries",
+                "fr": "Outils de développement et bibliothèques",
+                "es": "Herramientas y bibliotecas para desarrolladores",
+                "pt": "Ferramentas e bibliotecas para desenvolvedores",
+                "it": "Strumenti e librerie per sviluppatori",
+                "de": "Entwicklertools und Bibliotheken",
+                "ja": "開発者ツールとライブラリ",
+                "vi": "Công cụ và thư viện cho lập trình viên",
+                "zh": "开发者工具与库"
+              }
+            },
+            {
+              "value": "economics",
+              "text": {
+                "default": "Economics and incentive design (tokenomics, fees, rewards)",
+                "fr": "Économie et incitations (tokenomics, frais, récompenses)",
+                "es": "Economía y diseño de incentivos (tokenomics, comisiones, recompensas)",
+                "pt": "Economia e design de incentivos (tokenomics, taxas, recompensas)",
+                "it": "Economia e incentivi (tokenomics, commissioni, ricompense)",
+                "de": "Ökonomie und Anreizdesign (Tokenomics, Gebühren, Rewards)",
+                "ja": "経済・インセンティブ設計（トークノミクス、手数料、報酬）",
+                "vi": "Kinh tế và thiết kế khuyến khích (tokenomics, phí, phần thưởng)",
+                "zh": "经济与激励设计（代币经济、手续费、奖励）"
+              }
+            },
+            {
+              "value": "front-ends",
+              "text": {
+                "default": "Front ends and wallet integration",
+                "fr": "Front-end et intégration des portefeuilles",
+                "es": "Front-end e integración de wallets",
+                "pt": "Front-ends e integração com carteiras",
+                "it": "Front end e integrazione dei wallet",
+                "de": "Frontends und Wallet-Integration",
+                "ja": "フロントエンドとウォレット連携",
+                "vi": "Front-end và tích hợp ví",
+                "zh": "前端与钱包集成"
+              }
+            },
+            {
+              "value": "infrastructure",
+              "text": {
+                "default": "Infrastructure (nodes, indexers, APIs)",
+                "fr": "Infrastructure (nœuds, indexeurs, API)",
+                "es": "Infraestructura (nodos, indexadores, API)",
+                "pt": "Infraestrutura (nós, indexadores, APIs)",
+                "it": "Infrastruttura (nodi, indexer, API)",
+                "de": "Infrastruktur (Nodes, Indexer, APIs)",
+                "ja": "インフラ（ノード、インデクサー、API）",
+                "vi": "Hạ tầng (node, indexer, API)",
+                "zh": "基础设施（节点、索引器、API）"
+              }
+            },
+            {
+              "value": "mobile",
+              "text": {
+                "default": "Mobile apps",
+                "fr": "Applications mobiles",
+                "es": "Aplicaciones móviles",
+                "pt": "Aplicativos móveis",
+                "it": "App mobili",
+                "de": "Mobile Apps",
+                "ja": "モバイルアプリ",
+                "vi": "Ứng dụng di động",
+                "zh": "移动应用"
+              }
+            },
+            {
+              "value": "off-chain",
+              "text": {
+                "default": "Off-chain code and back ends",
+                "fr": "Code off-chain et back-end",
+                "es": "Código off-chain y back-end",
+                "pt": "Código off-chain e back-ends",
+                "it": "Codice off-chain e back end",
+                "de": "Off-Chain-Code und Backends",
+                "ja": "オフチェーンコードとバックエンド",
+                "vi": "Code off-chain và back-end",
+                "zh": "链下代码与后端"
+              }
+            },
+            {
+              "value": "research",
+              "text": {
+                "default": "Research",
+                "fr": "Recherche",
+                "es": "Investigación",
+                "pt": "Pesquisa",
+                "it": "Ricerca",
+                "de": "Forschung",
+                "ja": "研究",
+                "vi": "Nghiên cứu",
+                "zh": "研究"
+              }
+            },
+            {
+              "value": "smart-contracts",
+              "text": {
+                "default": "Smart contracts (on-chain code)",
+                "fr": "Smart contracts (code on-chain)",
+                "es": "Smart contracts (código on-chain)",
+                "pt": "Smart contracts (código on-chain)",
+                "it": "Smart contract (codice on-chain)",
+                "de": "Smart Contracts (On-Chain-Code)",
+                "ja": "スマートコントラクト（オンチェーンコード）",
+                "vi": "Smart contract (code on-chain)",
+                "zh": "智能合约（链上代码）"
+              }
+            },
+            {
+              "value": "stake-pool",
+              "text": {
+                "default": "Stake pool operation",
+                "fr": "Opération d'un stake pool",
+                "es": "Operación de stake pool",
+                "pt": "Operação de stake pool",
+                "it": "Gestione di uno stake pool",
+                "de": "Betrieb eines Stake Pools",
+                "ja": "ステークプール運営",
+                "vi": "Vận hành stake pool",
+                "zh": "质押池运营"
+              }
+            },
+            {
+              "value": "teaching",
+              "text": {
+                "default": "Teaching, documentation and community",
+                "fr": "Enseignement, documentation et communauté",
+                "es": "Enseñanza, documentación y comunidad",
+                "pt": "Ensino, documentação e comunidade",
+                "it": "Formazione, documentazione e community",
+                "de": "Lehre, Dokumentation und Community",
+                "ja": "教育、ドキュメント、コミュニティ",
+                "vi": "Giảng dạy, tài liệu và cộng đồng",
+                "zh": "教学、文档与社区"
+              }
+            }
+          ],
+          "showOtherItem": true
+        },
+        {
+          "type": "checkbox",
+          "name": "building",
+          "visibleIf": "{work} anyof ['front-ends', 'mobile', 'off-chain', 'smart-contracts']",
+          "title": {
+            "default": "What kinds of applications are you building?",
+            "fr": "Quels types d'applications développez-vous ?",
+            "es": "¿Qué tipos de aplicaciones estás desarrollando?",
+            "pt": "Que tipos de aplicações você está desenvolvendo?",
+            "it": "Che tipo di applicazioni stai sviluppando?",
+            "de": "Welche Arten von Anwendungen entwickeln Sie?",
+            "ja": "どのような種類のアプリケーションを開発していますか？",
+            "vi": "Bạn đang xây dựng những loại ứng dụng nào?",
+            "zh": "你正在构建哪些类型的应用？"
+          },
+          "description": {
+            "default": "Choose up to 4.",
+            "fr": "Choisissez-en jusqu'à 4.",
+            "es": "Elige hasta 4.",
+            "pt": "Escolha até 4.",
+            "it": "Scegline fino a 4.",
+            "de": "Wählen Sie bis zu 4.",
+            "ja": "4つまで選択できます。",
+            "vi": "Chọn tối đa 4.",
+            "zh": "最多选 4 项。"
+          },
+          "maxSelectedChoices": 4,
+          "choices": [
+            {
+              "value": "accounting",
+              "text": {
+                "default": "Accounting and financial reporting",
+                "fr": "Comptabilité et reporting financier",
+                "es": "Contabilidad e informes financieros",
+                "pt": "Contabilidade e relatórios financeiros",
+                "it": "Contabilità e rendicontazione finanziaria",
+                "de": "Buchhaltung und Finanzberichterstattung",
+                "ja": "会計・財務報告",
+                "vi": "Kế toán và báo cáo tài chính",
+                "zh": "会计与财务报告"
+              }
+            },
+            {
+              "value": "ai-agents",
+              "text": {
+                "default": "AI agents",
+                "fr": "Agents d'IA",
+                "es": "Agentes de IA",
+                "pt": "Agentes de IA",
+                "it": "Agenti IA",
+                "de": "KI-Agenten",
+                "ja": "AIエージェント",
+                "vi": "Tác tử AI",
+                "zh": "AI 智能体"
+              }
+            },
+            {
+              "value": "bridges",
+              "text": {
+                "default": "Bridges and interoperability",
+                "fr": "Bridges et interopérabilité",
+                "es": "Bridges e interoperabilidad",
+                "pt": "Bridges e interoperabilidade",
+                "it": "Bridge e interoperabilità",
+                "de": "Bridges und Interoperabilität",
+                "ja": "ブリッジと相互運用性",
+                "vi": "Bridge và khả năng tương tác",
+                "zh": "跨链桥与互操作性"
+              }
+            },
+            { "value": "defi", "text": "DeFi" },
+            {
+              "value": "gaming",
+              "text": {
+                "default": "Gaming",
+                "fr": "Jeux",
+                "es": "Juegos",
+                "pt": "Jogos",
+                "it": "Gaming",
+                "de": "Gaming",
+                "ja": "ゲーム",
+                "vi": "Game",
+                "zh": "游戏"
+              }
+            },
+            {
+              "value": "governance",
+              "text": {
+                "default": "Governance tools",
+                "fr": "Outils de gouvernance",
+                "es": "Herramientas de gobernanza",
+                "pt": "Ferramentas de governança",
+                "it": "Strumenti di governance",
+                "de": "Governance-Tools",
+                "ja": "ガバナンスツール",
+                "vi": "Công cụ quản trị",
+                "zh": "治理工具"
+              }
+            },
+            {
+              "value": "identity",
+              "text": {
+                "default": "Identity",
+                "fr": "Identité",
+                "es": "Identidad",
+                "pt": "Identidade",
+                "it": "Identità",
+                "de": "Identität",
+                "ja": "アイデンティティ",
+                "vi": "Định danh",
+                "zh": "身份"
+              }
+            },
+            {
+              "value": "layer-2",
+              "text": {
+                "default": "Layer 2s",
+                "fr": "Layer 2",
+                "es": "Layer 2",
+                "pt": "Layer 2",
+                "it": "Layer 2",
+                "de": "Layer 2",
+                "ja": "レイヤー2",
+                "vi": "Layer 2",
+                "zh": "Layer 2"
+              }
+            },
+            {
+              "value": "nfts",
+              "text": {
+                "default": "NFTs",
+                "fr": "NFT",
+                "es": "NFT",
+                "pt": "NFTs",
+                "it": "NFT",
+                "de": "NFTs",
+                "ja": "NFT",
+                "vi": "NFT",
+                "zh": "NFT"
+              }
+            },
+            {
+              "value": "oracles",
+              "text": {
+                "default": "Oracles and data",
+                "fr": "Oracles et données",
+                "es": "Oráculos y datos",
+                "pt": "Oráculos e dados",
+                "it": "Oracoli e dati",
+                "de": "Oracles und Daten",
+                "ja": "オラクルとデータ",
+                "vi": "Oracle và dữ liệu",
+                "zh": "预言机与数据"
+              }
+            },
+            {
+              "value": "payments",
+              "text": {
+                "default": "Payments and stablecoins",
+                "fr": "Paiements et stablecoins",
+                "es": "Pagos y stablecoins",
+                "pt": "Pagamentos e stablecoins",
+                "it": "Pagamenti e stablecoin",
+                "de": "Zahlungen und Stablecoins",
+                "ja": "決済とステーブルコイン",
+                "vi": "Thanh toán và stablecoin",
+                "zh": "支付与稳定币"
+              }
+            },
+            {
+              "value": "privacy",
+              "text": {
+                "default": "Privacy and zero-knowledge",
+                "fr": "Confidentialité et zero-knowledge",
+                "es": "Privacidad y zero-knowledge",
+                "pt": "Privacidade e zero-knowledge",
+                "it": "Privacy e zero-knowledge",
+                "de": "Privatsphäre und Zero-Knowledge",
+                "ja": "プライバシーとゼロ知識証明",
+                "vi": "Quyền riêng tư và zero-knowledge",
+                "zh": "隐私与零知识证明"
+              }
+            },
+            {
+              "value": "real-world-assets",
+              "text": {
+                "default": "Real-world assets",
+                "fr": "Actifs du monde réel",
+                "es": "Activos del mundo real",
+                "pt": "Ativos do mundo real",
+                "it": "Asset del mondo reale",
+                "de": "Real-World Assets",
+                "ja": "現実資産（RWA）",
+                "vi": "Tài sản thế giới thực",
+                "zh": "现实世界资产"
+              }
+            },
+            {
+              "value": "supply-chain",
+              "text": {
+                "default": "Supply chain and traceability",
+                "fr": "Chaîne d'approvisionnement et traçabilité",
+                "es": "Cadena de suministro y trazabilidad",
+                "pt": "Cadeia de suprimentos e rastreabilidade",
+                "it": "Supply chain e tracciabilità",
+                "de": "Lieferkette und Rückverfolgbarkeit",
+                "ja": "サプライチェーンとトレーサビリティ",
+                "vi": "Chuỗi cung ứng và truy xuất nguồn gốc",
+                "zh": "供应链与溯源"
+              }
+            },
+            {
+              "value": "wallets",
+              "text": {
+                "default": "Wallets",
+                "fr": "Portefeuilles",
+                "es": "Wallets",
+                "pt": "Carteiras",
+                "it": "Wallet",
+                "de": "Wallets",
+                "ja": "ウォレット",
+                "vi": "Ví",
+                "zh": "钱包"
+              }
+            }
+          ],
+          "showOtherItem": true
+        },
+        {
+          "type": "radiogroup",
+          "name": "stage",
+          "visibleIf": "{building_on_cardano} = 'yes'",
+          "title": {
+            "default": "How far along is your main Cardano project?",
+            "fr": "Où en est votre principal projet Cardano ?",
+            "es": "¿En qué fase está tu principal proyecto en Cardano?",
+            "pt": "Em que estágio está o seu principal projeto Cardano?",
+            "it": "A che punto è il tuo progetto Cardano principale?",
+            "de": "Wie weit ist Ihr wichtigstes Cardano-Projekt?",
+            "ja": "主なCardanoプロジェクトはどの段階にありますか？",
+            "vi": "Dự án Cardano chính của bạn đang ở giai đoạn nào?",
+            "zh": "你的主要 Cardano 项目进展到哪一步了？"
+          },
+          "choices": [
+            {
+              "value": "learning",
+              "text": {
+                "default": "Learning or experimenting",
+                "fr": "Apprentissage ou expérimentation",
+                "es": "Aprendizaje o experimentación",
+                "pt": "Aprendendo ou experimentando",
+                "it": "Apprendimento o sperimentazione",
+                "de": "Lernen oder Experimentieren",
+                "ja": "学習・実験中",
+                "vi": "Đang học hoặc thử nghiệm",
+                "zh": "学习或试验中"
+              }
+            },
+            {
+              "value": "development",
+              "text": {
+                "default": "In development (testnet)",
+                "fr": "En développement (testnet)",
+                "es": "En desarrollo (testnet)",
+                "pt": "Em desenvolvimento (testnet)",
+                "it": "In sviluppo (testnet)",
+                "de": "In Entwicklung (Testnet)",
+                "ja": "開発中（テストネット）",
+                "vi": "Đang phát triển (testnet)",
+                "zh": "开发中（测试网）"
+              }
+            },
+            {
+              "value": "released",
+              "text": {
+                "default": "Released (mainnet, or a published tool)",
+                "fr": "Déployé (mainnet, ou outil publié)",
+                "es": "Lanzado (mainnet, o herramienta publicada)",
+                "pt": "Lançado (mainnet, ou ferramenta publicada)",
+                "it": "Rilasciato (mainnet, o strumento pubblicato)",
+                "de": "Veröffentlicht (Mainnet oder ein veröffentlichtes Tool)",
+                "ja": "リリース済み（メインネット、または公開済みのツール）",
+                "vi": "Đã phát hành (mainnet, hoặc công cụ đã công bố)",
+                "zh": "已发布（主网，或已发布的工具）"
+              }
+            },
+            {
+              "value": "users",
+              "text": {
+                "default": "Released, with regular users",
+                "fr": "Déployé, et utilisé régulièrement",
+                "es": "Lanzado, con usuarios habituales",
+                "pt": "Lançado, com usuários regulares",
+                "it": "Rilasciato, con utenti regolari",
+                "de": "Veröffentlicht, mit regelmäßigen Nutzern",
+                "ja": "リリース済みで、継続的に利用されている",
+                "vi": "Đã phát hành, có người dùng thường xuyên",
+                "zh": "已发布，并有固定用户"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "project_link",
+          "visibleIf": "{stage} anyof ['released', 'users']",
+          "title": {
+            "default": "Where can we find this project (website or repository link)?",
+            "fr": "Où peut-on trouver ce projet (lien vers le site web ou le dépôt) ?",
+            "es": "¿Dónde podemos encontrar este proyecto (enlace al sitio web o al repositorio)?",
+            "pt": "Onde podemos encontrar esse projeto (link do site ou do repositório)?",
+            "it": "Dove possiamo trovare questo progetto (link al sito web o al repository)?",
+            "de": "Wo finden wir dieses Projekt (Link zur Website oder zum Repository)?",
+            "ja": "このプロジェクトはどこで見られますか（ウェブサイトまたはリポジトリのリンク）？",
+            "vi": "Chúng tôi có thể tìm thấy dự án này ở đâu (liên kết đến website hoặc repository)?",
+            "zh": "我们可以在哪里找到这个项目（网站或代码仓库链接）？"
+          },
+          "description": {
+            "default": "This link is public and ties all your answers to this project.",
+            "fr": "Ce lien est public et associe toutes vos réponses à ce projet.",
+            "es": "Este enlace es público y vincula todas tus respuestas a este proyecto.",
+            "pt": "Este link é público e associa todas as suas respostas a este projeto.",
+            "it": "Questo link è pubblico e collega tutte le tue risposte a questo progetto.",
+            "de": "Dieser Link ist öffentlich und verknüpft alle Ihre Antworten mit diesem Projekt.",
+            "ja": "このリンクは公開され、あなたのすべての回答をこのプロジェクトに結び付けます。",
+            "vi": "Liên kết này công khai và gắn toàn bộ câu trả lời của bạn với dự án này.",
+            "zh": "此链接是公开的，并会把你的所有回答与这个项目关联起来。"
+          }
+        },
+        {
+          "type": "radiogroup",
+          "name": "started",
+          "visibleIf": "{building_on_cardano} = 'yes'",
+          "title": {
+            "default": "When did you start building on Cardano?",
+            "fr": "Quand avez-vous commencé à développer sur Cardano ?",
+            "es": "¿Cuándo empezaste a desarrollar en Cardano?",
+            "pt": "Quando você começou a desenvolver na Cardano?",
+            "it": "Quando hai iniziato a sviluppare su Cardano?",
+            "de": "Wann haben Sie angefangen, auf Cardano zu entwickeln?",
+            "ja": "Cardano上での開発を始めたのはいつですか？",
+            "vi": "Bạn bắt đầu phát triển trên Cardano từ khi nào?",
+            "zh": "你是什么时候开始在 Cardano 上开发的？"
+          },
+          "choices": [
+            "2026",
+            "2025",
+            { "value": "2023-2024", "text": "2023–2024" },
+            { "value": "2021-2022", "text": "2021–2022" },
+            {
+              "value": "2020-or-earlier",
+              "text": {
+                "default": "2020 or earlier",
+                "fr": "2020 ou avant",
+                "es": "2020 o antes",
+                "pt": "2020 ou antes",
+                "it": "2020 o prima",
+                "de": "2020 oder früher",
+                "ja": "2020年以前",
+                "vi": "2020 hoặc trước đó",
+                "zh": "2020 年或更早"
+              }
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "weekly_hours",
+          "visibleIf": "{building_on_cardano} = 'yes'",
+          "title": {
+            "default": "In a typical week, how much time do you spend building on Cardano?",
+            "fr": "Lors d'une semaine type, combien de temps passez-vous à développer sur Cardano ?",
+            "es": "En una semana típica, ¿cuánto tiempo dedicas a desarrollar en Cardano?",
+            "pt": "Em uma semana típica, quanto tempo você passa desenvolvendo na Cardano?",
+            "it": "In una settimana tipica, quanto tempo dedichi allo sviluppo su Cardano?",
+            "de": "Wie viel Zeit verbringen Sie in einer typischen Woche mit der Entwicklung auf Cardano?",
+            "ja": "典型的な1週間で、Cardano上での開発にどのくらいの時間を使っていますか？",
+            "vi": "Trong một tuần thông thường, bạn dành bao nhiêu thời gian để phát triển trên Cardano?",
+            "zh": "在通常的一周里，你花多少时间在 Cardano 上开发？"
+          },
+          "choices": [
+            {
+              "value": "under-5",
+              "text": {
+                "default": "Less than 5 hours",
+                "fr": "Moins de 5 heures",
+                "es": "Menos de 5 horas",
+                "pt": "Menos de 5 horas",
+                "it": "Meno di 5 ore",
+                "de": "Weniger als 5 Stunden",
+                "ja": "5時間未満",
+                "vi": "Dưới 5 giờ",
+                "zh": "不到 5 小时"
+              }
+            },
+            {
+              "value": "5-19",
+              "text": {
+                "default": "5 to 19 hours",
+                "fr": "5 à 19 heures",
+                "es": "De 5 a 19 horas",
+                "pt": "5 a 19 horas",
+                "it": "Da 5 a 19 ore",
+                "de": "5 bis 19 Stunden",
+                "ja": "5〜19時間",
+                "vi": "5 đến 19 giờ",
+                "zh": "5 到 19 小时"
+              }
+            },
+            {
+              "value": "20-34",
+              "text": {
+                "default": "20 to 34 hours",
+                "fr": "20 à 34 heures",
+                "es": "De 20 a 34 horas",
+                "pt": "20 a 34 horas",
+                "it": "Da 20 a 34 ore",
+                "de": "20 bis 34 Stunden",
+                "ja": "20〜34時間",
+                "vi": "20 đến 34 giờ",
+                "zh": "20 到 34 小时"
+              }
+            },
+            {
+              "value": "35-plus",
+              "text": {
+                "default": "35 hours or more",
+                "fr": "35 heures ou plus",
+                "es": "35 horas o más",
+                "pt": "35 horas ou mais",
+                "it": "35 ore o più",
+                "de": "35 Stunden oder mehr",
+                "ja": "35時間以上",
+                "vi": "35 giờ trở lên",
+                "zh": "35 小时或以上"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "how_it_is_going",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "satisfaction",
+          "visibleIf": "{building_on_cardano} = 'yes'",
+          "title": {
+            "default": "Overall, how satisfied are you with building on Cardano?",
+            "fr": "Dans l'ensemble, comment jugez-vous votre expérience de développement sur Cardano ?",
+            "es": "En general, ¿cómo valoras tu experiencia de desarrollo en Cardano?",
+            "pt": "No geral, como você avalia sua experiência de desenvolvimento na Cardano?",
+            "it": "Nel complesso, come valuti la tua esperienza di sviluppo su Cardano?",
+            "de": "Wie zufrieden sind Sie insgesamt mit der Entwicklung auf Cardano?",
+            "ja": "全体として、Cardano上での開発にどの程度満足していますか？",
+            "vi": "Nhìn chung, bạn hài lòng đến mức nào với việc phát triển trên Cardano?",
+            "zh": "总体而言，你对在 Cardano 上开发的满意度如何？"
+          },
+          "choices": [
+            {
+              "value": "very-satisfied",
+              "text": {
+                "default": "Very satisfied",
+                "fr": "Très satisfaisante",
+                "es": "Muy satisfactoria",
+                "pt": "Muito satisfatória",
+                "it": "Molto soddisfacente",
+                "de": "Sehr zufrieden",
+                "ja": "とても満足",
+                "vi": "Rất hài lòng",
+                "zh": "非常满意"
+              }
+            },
+            {
+              "value": "satisfied",
+              "text": {
+                "default": "Satisfied",
+                "fr": "Satisfaisante",
+                "es": "Satisfactoria",
+                "pt": "Satisfatória",
+                "it": "Soddisfacente",
+                "de": "Zufrieden",
+                "ja": "満足",
+                "vi": "Hài lòng",
+                "zh": "满意"
+              }
+            },
+            {
+              "value": "neutral",
+              "text": {
+                "default": "Neither satisfied nor dissatisfied",
+                "fr": "Ni satisfaisante ni insatisfaisante",
+                "es": "Ni satisfactoria ni insatisfactoria",
+                "pt": "Nem satisfatória nem insatisfatória",
+                "it": "Né soddisfacente né insoddisfacente",
+                "de": "Weder zufrieden noch unzufrieden",
+                "ja": "どちらともいえない",
+                "vi": "Bình thường",
+                "zh": "一般"
+              }
+            },
+            {
+              "value": "dissatisfied",
+              "text": {
+                "default": "Dissatisfied",
+                "fr": "Insatisfaisante",
+                "es": "Insatisfactoria",
+                "pt": "Insatisfatória",
+                "it": "Insoddisfacente",
+                "de": "Unzufrieden",
+                "ja": "不満",
+                "vi": "Không hài lòng",
+                "zh": "不满意"
+              }
+            },
+            {
+              "value": "very-dissatisfied",
+              "text": {
+                "default": "Very dissatisfied",
+                "fr": "Très insatisfaisante",
+                "es": "Muy insatisfactoria",
+                "pt": "Muito insatisfatória",
+                "it": "Molto insoddisfacente",
+                "de": "Sehr unzufrieden",
+                "ja": "とても不満",
+                "vi": "Rất không hài lòng",
+                "zh": "非常不满意"
+              }
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "trend",
+          "visibleIf": "{building_on_cardano} = 'yes'",
+          "title": {
+            "default": "Compared with a year ago, building on Cardano is:",
+            "fr": "Par rapport à il y a un an, développer sur Cardano est :",
+            "es": "En comparación con hace un año, desarrollar en Cardano es:",
+            "pt": "Em comparação com um ano atrás, desenvolver na Cardano está:",
+            "it": "Rispetto a un anno fa, sviluppare su Cardano è:",
+            "de": "Im Vergleich zu vor einem Jahr ist die Entwicklung auf Cardano:",
+            "ja": "1年前と比べて、Cardano上での開発は：",
+            "vi": "So với một năm trước, việc phát triển trên Cardano giờ:",
+            "zh": "与一年前相比，在 Cardano 上开发变得："
+          },
+          "choices": [
+            {
+              "value": "much-easier",
+              "text": {
+                "default": "Much easier",
+                "fr": "Beaucoup plus facile",
+                "es": "Mucho más fácil",
+                "pt": "Muito mais fácil",
+                "it": "Molto più facile",
+                "de": "Viel einfacher",
+                "ja": "かなり簡単になった",
+                "vi": "Dễ hơn nhiều",
+                "zh": "容易多了"
+              }
+            },
+            {
+              "value": "easier",
+              "text": {
+                "default": "Somewhat easier",
+                "fr": "Un peu plus facile",
+                "es": "Algo más fácil",
+                "pt": "Um pouco mais fácil",
+                "it": "Un po' più facile",
+                "de": "Etwas einfacher",
+                "ja": "やや簡単になった",
+                "vi": "Dễ hơn một chút",
+                "zh": "容易了一些"
+              }
+            },
+            {
+              "value": "same",
+              "text": {
+                "default": "About the same",
+                "fr": "À peu près pareil",
+                "es": "Más o menos igual",
+                "pt": "Mais ou menos igual",
+                "it": "Più o meno uguale",
+                "de": "Etwa gleich",
+                "ja": "ほぼ変わらない",
+                "vi": "Gần như không đổi",
+                "zh": "差不多"
+              }
+            },
+            {
+              "value": "harder",
+              "text": {
+                "default": "Somewhat harder",
+                "fr": "Un peu plus difficile",
+                "es": "Algo más difícil",
+                "pt": "Um pouco mais difícil",
+                "it": "Un po' più difficile",
+                "de": "Etwas schwieriger",
+                "ja": "やや難しくなった",
+                "vi": "Khó hơn một chút",
+                "zh": "难了一些"
+              }
+            },
+            {
+              "value": "much-harder",
+              "text": {
+                "default": "Much harder",
+                "fr": "Beaucoup plus difficile",
+                "es": "Mucho más difícil",
+                "pt": "Muito mais difícil",
+                "it": "Molto più difficile",
+                "de": "Viel schwieriger",
+                "ja": "かなり難しくなった",
+                "vi": "Khó hơn nhiều",
+                "zh": "难多了"
+              }
+            },
+            {
+              "value": "new",
+              "text": {
+                "default": "I wasn't building on Cardano a year ago",
+                "fr": "Je ne développais pas sur Cardano il y a un an",
+                "es": "Hace un año no desarrollaba en Cardano",
+                "pt": "Eu não desenvolvia na Cardano há um ano",
+                "it": "Un anno fa non sviluppavo su Cardano",
+                "de": "Vor einem Jahr habe ich noch nicht auf Cardano entwickelt",
+                "ja": "1年前はCardano上で開発していなかった",
+                "vi": "Một năm trước tôi chưa phát triển trên Cardano",
+                "zh": "一年前我还没有在 Cardano 上开发"
+              }
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "best",
+          "visibleIf": "{building_on_cardano} = 'yes'",
+          "title": {
+            "default": "What is the best thing about building on Cardano?",
+            "fr": "Quel est le meilleur aspect du développement sur Cardano ?",
+            "es": "¿Qué es lo mejor de desarrollar en Cardano?",
+            "pt": "Qual é a melhor coisa de desenvolver na Cardano?",
+            "it": "Qual è la cosa migliore dello sviluppare su Cardano?",
+            "de": "Was ist das Beste an der Entwicklung auf Cardano?",
+            "ja": "Cardano上で開発する上で、最も良い点は何ですか？",
+            "vi": "Điều tuyệt nhất khi phát triển trên Cardano là gì?",
+            "zh": "在 Cardano 上开发，最好的一点是什么？"
+          }
+        },
+        {
+          "type": "comment",
+          "name": "most_painful",
+          "visibleIf": "{building_on_cardano} = 'yes'",
+          "title": {
+            "default": "What is the most painful thing about building on Cardano?",
+            "fr": "Quel est l'aspect le plus pénible du développement sur Cardano ?",
+            "es": "¿Qué es lo más frustrante de desarrollar en Cardano?",
+            "pt": "Qual é a sua maior dor ao desenvolver na Cardano?",
+            "it": "Qual è la cosa più frustrante dello sviluppare su Cardano?",
+            "de": "Was ist das Mühsamste an der Entwicklung auf Cardano?",
+            "ja": "Cardano上で開発する上で、最もつらい点は何ですか？",
+            "vi": "Điều khó chịu nhất khi phát triển trên Cardano là gì?",
+            "zh": "在 Cardano 上开发，最痛苦的一点是什么？"
+          }
+        }
+      ]
+    },
+    {
+      "name": "what_you_build_with",
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "onchain_languages",
+          "visibleIf": "{building_on_cardano} = 'yes'",
+          "title": {
+            "default": "Which languages have you used for on-chain code in the last 12 months?",
+            "fr": "Quels langages avez-vous utilisés pour du code on-chain au cours des 12 derniers mois ?",
+            "es": "¿Qué lenguajes has usado para código on-chain en los últimos 12 meses?",
+            "pt": "Quais linguagens você usou para código on-chain nos últimos 12 meses?",
+            "it": "Quali linguaggi hai usato per il codice on-chain negli ultimi 12 mesi?",
+            "de": "Welche Sprachen haben Sie in den letzten 12 Monaten für On-Chain-Code verwendet?",
+            "ja": "過去12か月間に、オンチェーンコードにどの言語を使いましたか？",
+            "vi": "Trong 12 tháng qua, bạn đã dùng những ngôn ngữ nào để viết code on-chain?",
+            "zh": "过去 12 个月里，你用过哪些语言编写链上代码？"
+          },
+          "choices": ["Aiken","Helios","JuLC","Marlowe","OpShin","Pebble","Plinth (Plutus-Tx)","Plu-ts","Plutarch","Scalus"],
+          "showOtherItem": true,
+          "showNoneItem": true,
+          "noneText": {
+            "default": "None",
+            "fr": "Aucun",
+            "es": "Ninguno",
+            "pt": "Nenhuma",
+            "it": "Nessuno",
+            "de": "Keine",
+            "ja": "なし",
+            "vi": "Không có",
+            "zh": "没有"
+          }
+        },
+        {
+          "type": "checkbox",
+          "name": "onchain_libraries",
+          "visibleIf": "{onchain_languages} anyof ['Aiken', 'Helios', 'JuLC', 'Marlowe', 'OpShin', 'Pebble', 'Plinth (Plutus-Tx)', 'Plu-ts', 'Plutarch', 'Scalus', 'other']",
+          "title": {
+            "default": "Which on-chain libraries have you used in the last 12 months?",
+            "fr": "Quelles bibliothèques on-chain avez-vous utilisées au cours des 12 derniers mois ?",
+            "es": "¿Qué bibliotecas on-chain has usado en los últimos 12 meses?",
+            "pt": "Quais bibliotecas on-chain você usou nos últimos 12 meses?",
+            "it": "Quali librerie on-chain hai usato negli ultimi 12 mesi?",
+            "de": "Welche On-Chain-Bibliotheken haben Sie in den letzten 12 Monaten verwendet?",
+            "ja": "過去12か月間に、どのオンチェーンライブラリを使いましたか？",
+            "vi": "Trong 12 tháng qua, bạn đã dùng những thư viện on-chain nào?",
+            "zh": "过去 12 个月里，你用过哪些链上库？"
+          },
+          "description": {
+            "default": "Not counting standard libraries.",
+            "fr": "Sans compter les bibliothèques standard.",
+            "es": "Sin contar las bibliotecas estándar.",
+            "pt": "Sem contar as bibliotecas padrão.",
+            "it": "Escluse le librerie standard.",
+            "de": "Ohne Standardbibliotheken.",
+            "ja": "標準ライブラリは除きます。",
+            "vi": "Không tính các thư viện chuẩn.",
+            "zh": "不包括标准库。"
+          },
+          "choices": [
+            {
+              "value": "Aicone, with Sundae multisig (Aiken)",
+              "text": {
+                "default": "Aicone, with Sundae multisig (Aiken)",
+                "fr": "Aicone, avec Sundae multisig (Aiken)",
+                "es": "Aicone, con Sundae multisig (Aiken)",
+                "pt": "Aicone, com Sundae multisig (Aiken)",
+                "it": "Aicone, con Sundae multisig (Aiken)",
+                "de": "Aicone, mit Sundae multisig (Aiken)",
+                "ja": "Aicone、Sundae multisig付き（Aiken）",
+                "vi": "Aicone, với Sundae multisig (Aiken)",
+                "zh": "Aicone，含 Sundae multisig（Aiken）"
+              }
+            },
+            "ak-381 (Aiken)",
+            "Assist (Aiken)",
+            "Design Patterns (Aiken)",
+            "Fuzz (Aiken)",
+            "Merkle Patricia Forestry (Aiken)",
+            "Oakshield (Aiken)",
+            "Vodka (Aiken)",
+            "ZeroJ (JuLC)",
+            "plutus-script-utils (Plinth)",
+            "Plutus Simple Model (Plinth)",
+            "catalyst-onchain-libs (Plutarch)",
+            "Liqwid libs (Plutarch)",
+            "Ply (Plutarch)",
+            "Design Patterns (Scalus)"
+          ],
+          "showOtherItem": true,
+          "showNoneItem": true,
+          "noneText": {
+            "default": "None",
+            "fr": "Aucune",
+            "es": "Ninguna",
+            "pt": "Nenhuma",
+            "it": "Nessuna",
+            "de": "Keine",
+            "ja": "なし",
+            "vi": "Không có",
+            "zh": "没有"
+          }
+        },
+        {
+          "type": "checkbox",
+          "name": "offchain_libraries",
+          "visibleIf": "{building_on_cardano} = 'yes'",
+          "title": {
+            "default": "Which off-chain libraries have you used in the last 12 months?",
+            "fr": "Quelles bibliothèques off-chain avez-vous utilisées au cours des 12 derniers mois ?",
+            "es": "¿Qué bibliotecas off-chain has usado en los últimos 12 meses?",
+            "pt": "Quais bibliotecas off-chain você usou nos últimos 12 meses?",
+            "it": "Quali librerie off-chain hai usato negli ultimi 12 mesi?",
+            "de": "Welche Off-Chain-Bibliotheken haben Sie in den letzten 12 Monaten verwendet?",
+            "ja": "過去12か月間に、どのオフチェーンライブラリを使いましたか？",
+            "vi": "Trong 12 tháng qua, bạn đã dùng những thư viện off-chain nào?",
+            "zh": "过去 12 个月里，你用过哪些链下库？"
+          },
+          "choices": [
+            "Chrysalis (.NET)",
+            "elm-cardano (Elm)",
+            "Apollo (Go)",
+            "gOuroboros (Go)",
+            "Atlas (Haskell)",
+            "cardano-api (Haskell)",
+            "sc-tools (Haskell)",
+            "cardano-client-lib (Java)",
+            "Yaci (Java)",
+            "cardano-transaction-lib (PureScript)",
+            "PyCardano (Python)",
+            "Pallas (Rust)",
+            "CML, cardano-multiplatform-lib (Rust, JS)",
+            "CSL, cardano-serialization-lib (Rust, JS)",
+            "Scalus (Scala)",
+            "Tx3",
+            "Blaze (TypeScript)",
+            "Cardano JS SDK (TypeScript)",
+            "Cometa (TypeScript)",
+            "Dexter (TypeScript)",
+            "Evolution SDK (TypeScript)",
+            "Lucid (TypeScript)",
+            "Mesh (TypeScript)"
+          ],
+          "showOtherItem": true,
+          "showNoneItem": true,
+          "noneText": {
+            "default": "None",
+            "fr": "Aucune",
+            "es": "Ninguna",
+            "pt": "Nenhuma",
+            "it": "Nessuna",
+            "de": "Keine",
+            "ja": "なし",
+            "vi": "Không có",
+            "zh": "没有"
+          }
+        },
+        {
+          "type": "checkbox",
+          "name": "self_hosted",
+          "visibleIf": "{building_on_cardano} = 'yes'",
+          "title": {
+            "default": "Which of these have you run yourself in the last 12 months, locally or on your servers?",
+            "fr": "Lesquels de ces logiciels avez-vous fait tourner vous-même au cours des 12 derniers mois, en local ou sur vos serveurs ?",
+            "es": "¿Cuáles de estos has ejecutado por tu cuenta en los últimos 12 meses, en local o en tus propios servidores?",
+            "pt": "Quais destes você mesmo rodou nos últimos 12 meses, localmente ou nos seus servidores?",
+            "it": "Quali di questi hai fatto girare in prima persona negli ultimi 12 mesi, in locale o sui tuoi server?",
+            "de": "Welche davon haben Sie in den letzten 12 Monaten selbst betrieben, lokal oder auf Ihren Servern?",
+            "ja": "過去12か月間に、次のうちどれをローカルや自分のサーバーで自ら動かしましたか？",
+            "vi": "Trong 12 tháng qua, bạn đã tự chạy những phần mềm nào sau đây, trên máy cá nhân hoặc trên máy chủ của bạn?",
+            "zh": "过去 12 个月里，你自己在本地或自己的服务器上运行过以下哪些软件？"
+          },
+          "choices": [
+            "Adder",
+            "Amaru",
+            "Blockfrost",
+            "cardano-db-sync",
+            "cardano-graphql",
+            "cardano-node",
+            "cardano-wallet",
+            "Dingo",
+            "Dolos",
+            "Gummiworm",
+            "Hydra",
+            "Kupo",
+            "Mithril",
+            "Ogmios",
+            "Oura",
+            "Scrolls",
+            "Yaci DevKit",
+            "Yaci Store"
+          ],
+          "showOtherItem": true,
+          "showNoneItem": true,
+          "noneText": {
+            "default": "None",
+            "fr": "Aucun",
+            "es": "Ninguno",
+            "pt": "Nenhum",
+            "it": "Nessuno",
+            "de": "Keine",
+            "ja": "なし",
+            "vi": "Không có",
+            "zh": "没有"
+          }
+        },
+        {
+          "type": "checkbox",
+          "name": "dev_tools",
+          "visibleIf": "{building_on_cardano} = 'yes'",
+          "title": {
+            "default": "Which developer tools have you used in the last 12 months?",
+            "fr": "Quels outils de développement avez-vous utilisés au cours des 12 derniers mois ?",
+            "es": "¿Qué herramientas de desarrollo has usado en los últimos 12 meses?",
+            "pt": "Quais ferramentas de desenvolvimento você usou nos últimos 12 meses?",
+            "it": "Quali strumenti per sviluppatori hai usato negli ultimi 12 mesi?",
+            "de": "Welche Entwicklertools haben Sie in den letzten 12 Monaten verwendet?",
+            "ja": "過去12か月間に、どの開発者ツールを使いましたか？",
+            "vi": "Trong 12 tháng qua, bạn đã dùng những công cụ lập trình nào?",
+            "zh": "过去 12 个月里，你用过哪些开发者工具？"
+          },
+          "description": {
+            "default": "Including stake pool tools.",
+            "fr": "Y compris les outils pour les stake pools.",
+            "es": "Incluidas las herramientas para stake pools.",
+            "pt": "Incluindo ferramentas para stake pools.",
+            "it": "Compresi gli strumenti per stake pool.",
+            "de": "Einschließlich Stake-Pool-Tools.",
+            "ja": "ステークプール向けツールも含みます。",
+            "vi": "Kể cả các công cụ cho stake pool.",
+            "zh": "包括质押池工具。"
+          },
+          "choices": [
+            "bech32",
+            "Cardano Dev Wallet",
+            "cardano-addresses",
+            "cardano-cli",
+            "cardano-hw-cli",
+            "cardano-signer",
+            "cardano-up",
+            "cncli",
+            "Cquisitor",
+            "CShell",
+            "Gastronomy",
+            "Lace Anatomy",
+            "nview",
+            "offchain-metadata-tools",
+            "Sorbet",
+            {
+              "value": "SPO scripts (gitmachtl)",
+              "text": {
+                "default": "SPO scripts (gitmachtl)",
+                "fr": "Scripts SPO (gitmachtl)",
+                "es": "Scripts para SPO (gitmachtl)",
+                "pt": "Scripts SPO (gitmachtl)",
+                "it": "Script SPO (gitmachtl)",
+                "de": "SPO-Skripte (gitmachtl)",
+                "ja": "SPOスクリプト（gitmachtl）",
+                "vi": "Script SPO (gitmachtl)",
+                "zh": "SPO 脚本（gitmachtl）"
+              }
+            },
+            "txtop"
+          ],
+          "showOtherItem": true,
+          "showNoneItem": true,
+          "noneText": {
+            "default": "None",
+            "fr": "Aucun",
+            "es": "Ninguna",
+            "pt": "Nenhuma",
+            "it": "Nessuno",
+            "de": "Keine",
+            "ja": "なし",
+            "vi": "Không có",
+            "zh": "没有"
+          }
+        },
+        {
+          "type": "checkbox",
+          "name": "hosted_apis",
+          "visibleIf": "{building_on_cardano} = 'yes'",
+          "title": {
+            "default": "Which hosted API services have you used in the last 12 months?",
+            "fr": "Quels services d'API avez-vous utilisés au cours des 12 derniers mois ?",
+            "es": "¿Qué servicios de API alojados has usado en los últimos 12 meses?",
+            "pt": "Quais serviços de API hospedados você usou nos últimos 12 meses?",
+            "it": "Quali servizi API in hosting hai usato negli ultimi 12 mesi?",
+            "de": "Welche gehosteten API-Dienste haben Sie in den letzten 12 Monaten verwendet?",
+            "ja": "過去12か月間に、どのホスト型APIサービスを使いましたか？",
+            "vi": "Trong 12 tháng qua, bạn đã dùng những dịch vụ API nào?",
+            "zh": "过去 12 个月里，你用过哪些托管 API 服务？"
+          },
+          "choices": [
+            "AdaStat",
+            "Blockfrost",
+            "Cardanoscan",
+            "Cexplorer",
+            "Charli3",
+            "Demeter",
+            "Dune",
+            "IAG Insight",
+            "Koios",
+            "Maestro",
+            "Nexus",
+            "NMKR",
+            "Orcfax",
+            "Pyth",
+            "SteelSwap",
+            "TapTools",
+            "Token registry"
+          ],
+          "showOtherItem": true,
+          "showNoneItem": true,
+          "noneText": {
+            "default": "None",
+            "fr": "Aucun",
+            "es": "Ninguno",
+            "pt": "Nenhum",
+            "it": "Nessuno",
+            "de": "Keine",
+            "ja": "なし",
+            "vi": "Không có",
+            "zh": "没有"
+          }
+        },
+        {
+          "type": "checkbox",
+          "name": "testing",
+          "visibleIf": "{building_on_cardano} = 'yes'",
+          "title": {
+            "default": "How have you tested your Cardano code in the last 12 months?",
+            "fr": "Comment avez-vous testé votre code Cardano au cours des 12 derniers mois ?",
+            "es": "¿Cómo has probado tu código Cardano en los últimos 12 meses?",
+            "pt": "Como você testou seu código Cardano nos últimos 12 meses?",
+            "it": "Come hai testato il tuo codice Cardano negli ultimi 12 mesi?",
+            "de": "Wie haben Sie Ihren Cardano-Code in den letzten 12 Monaten getestet?",
+            "ja": "過去12か月間に、Cardanoのコードをどのようにテストしましたか？",
+            "vi": "Trong 12 tháng qua, bạn đã kiểm thử code Cardano của mình bằng cách nào?",
+            "zh": "过去 12 个月里，你是如何测试 Cardano 代码的？"
+          },
+          "choices": [
+            {
+              "value": "unit",
+              "text": {
+                "default": "Unit tests",
+                "fr": "Tests unitaires",
+                "es": "Pruebas unitarias",
+                "pt": "Testes unitários",
+                "it": "Test unitari",
+                "de": "Unit-Tests",
+                "ja": "ユニットテスト",
+                "vi": "Unit test",
+                "zh": "单元测试"
+              }
+            },
+            {
+              "value": "property",
+              "text": {
+                "default": "Property-based tests or fuzzing",
+                "fr": "Tests basés sur les propriétés ou fuzzing",
+                "es": "Pruebas basadas en propiedades o fuzzing",
+                "pt": "Testes baseados em propriedades ou fuzzing",
+                "it": "Test property-based o fuzzing",
+                "de": "Property-based Tests oder Fuzzing",
+                "ja": "プロパティベーステストまたはファジング",
+                "vi": "Property-based test hoặc fuzzing",
+                "zh": "基于属性的测试或模糊测试"
+              }
+            },
+            {
+              "value": "emulator",
+              "text": {
+                "default": "Emulator, no node (Lucid Evolution, Scalus, sc-tools…)",
+                "fr": "Émulateur, sans nœud (Lucid Evolution, Scalus, sc-tools…)",
+                "es": "Emulador, sin nodo (Lucid Evolution, Scalus, sc-tools…)",
+                "pt": "Emulador, sem nó (Lucid Evolution, Scalus, sc-tools…)",
+                "it": "Emulatore, senza nodo (Lucid Evolution, Scalus, sc-tools…)",
+                "de": "Emulator, ohne Node (Lucid Evolution, Scalus, sc-tools…)",
+                "ja": "エミュレーター、ノードなし（Lucid Evolution、Scalus、sc-tools…）",
+                "vi": "Emulator, không cần node (Lucid Evolution, Scalus, sc-tools…)",
+                "zh": "模拟器，不用节点（Lucid Evolution、Scalus、sc-tools…）"
+              }
+            },
+            {
+              "value": "devnet",
+              "text": {
+                "default": "Local devnet (Yaci DevKit, cardano-testnet…)",
+                "fr": "Devnet local (Yaci DevKit, cardano-testnet…)",
+                "es": "Devnet local (Yaci DevKit, cardano-testnet…)",
+                "pt": "Devnet local (Yaci DevKit, cardano-testnet…)",
+                "it": "Devnet locale (Yaci DevKit, cardano-testnet…)",
+                "de": "Lokales Devnet (Yaci DevKit, cardano-testnet…)",
+                "ja": "ローカルdevnet（Yaci DevKit、cardano-testnet…）",
+                "vi": "Devnet cục bộ (Yaci DevKit, cardano-testnet…)",
+                "zh": "本地 devnet（Yaci DevKit、cardano-testnet…）"
+              }
+            },
+            {
+              "value": "testnet",
+              "text": {
+                "default": "Public testnet (Preview, Preprod)",
+                "fr": "Testnet public (Preview, Preprod)",
+                "es": "Testnet pública (Preview, Preprod)",
+                "pt": "Testnet pública (Preview, Preprod)",
+                "it": "Testnet pubblica (Preview, Preprod)",
+                "de": "Öffentliches Testnet (Preview, Preprod)",
+                "ja": "公開テストネット（Preview、Preprod）",
+                "vi": "Testnet công khai (Preview, Preprod)",
+                "zh": "公共测试网（Preview、Preprod）"
+              }
+            },
+            {
+              "value": "mainnet",
+              "text": {
+                "default": "Mainnet, with small amounts",
+                "fr": "Mainnet, avec de petits montants",
+                "es": "Mainnet, con cantidades pequeñas",
+                "pt": "Mainnet, com valores pequenos",
+                "it": "Mainnet, con piccoli importi",
+                "de": "Mainnet, mit kleinen Beträgen",
+                "ja": "メインネットで、少額を使って",
+                "vi": "Mainnet, với số tiền nhỏ",
+                "zh": "主网，用小额资金"
+              }
+            },
+            {
+              "value": "by-hand",
+              "text": {
+                "default": "By hand, with a wallet or the command line",
+                "fr": "À la main, avec un portefeuille ou en ligne de commande",
+                "es": "A mano, con una wallet o desde la línea de comandos",
+                "pt": "Manualmente, com uma carteira ou pela linha de comando",
+                "it": "A mano, con un wallet o da riga di comando",
+                "de": "Von Hand, mit einer Wallet oder der Kommandozeile",
+                "ja": "手動で、ウォレットやコマンドラインを使って",
+                "vi": "Thủ công, bằng ví hoặc dòng lệnh",
+                "zh": "手动，用钱包或命令行"
+              }
+            },
+            {
+              "value": "formal-verification",
+              "text": {
+                "default": "Formal verification",
+                "fr": "Vérification formelle",
+                "es": "Verificación formal",
+                "pt": "Verificação formal",
+                "it": "Verifica formale",
+                "de": "Formale Verifikation",
+                "ja": "形式検証",
+                "vi": "Kiểm chứng hình thức",
+                "zh": "形式化验证"
+              }
+            },
+            {
+              "value": "audit",
+              "text": {
+                "default": "Audit by another team",
+                "fr": "Audit par une autre équipe",
+                "es": "Auditoría por otro equipo",
+                "pt": "Auditoria por outra equipe",
+                "it": "Audit da parte di un altro team",
+                "de": "Audit durch ein anderes Team",
+                "ja": "他チームによる監査",
+                "vi": "Audit bởi một đội khác",
+                "zh": "由其他团队审计"
+              }
+            }
+          ],
+          "showOtherItem": true,
+          "showNoneItem": true,
+          "noneText": {
+            "default": "None",
+            "fr": "Aucun",
+            "es": "De ninguna forma",
+            "pt": "Nenhum",
+            "it": "In nessun modo",
+            "de": "Gar nicht",
+            "ja": "なし",
+            "vi": "Không có",
+            "zh": "没有"
+          }
+        },
+        {
+          "type": "radiogroup",
+          "name": "ai_frequency",
+          "visibleIf": "{building_on_cardano} = 'yes'",
+          "title": {
+            "default": "In the past month, how often did you use AI coding tools for Cardano work?",
+            "fr": "Au cours du dernier mois, à quelle fréquence avez-vous utilisé des outils d'IA pour coder sur Cardano ?",
+            "es": "En el último mes, ¿con qué frecuencia usaste herramientas de IA para programar en Cardano?",
+            "pt": "No último mês, com que frequência você usou ferramentas de IA para programar na Cardano?",
+            "it": "Nell'ultimo mese, con che frequenza hai usato strumenti di IA per programmare su Cardano?",
+            "de": "Wie oft haben Sie im letzten Monat KI-Coding-Tools für Ihre Arbeit an Cardano verwendet?",
+            "ja": "この1か月間に、Cardano関連の作業でAIコーディングツールをどのくらいの頻度で使いましたか？",
+            "vi": "Trong tháng vừa qua, bạn dùng công cụ AI hỗ trợ lập trình cho công việc Cardano thường xuyên đến mức nào?",
+            "zh": "过去一个月里，你在 Cardano 相关工作中使用 AI 编程工具的频率如何？"
+          },
+          "choices": [
+            {
+              "value": "daily",
+              "text": {
+                "default": "Daily or nearly so",
+                "fr": "Tous les jours ou presque",
+                "es": "A diario o casi",
+                "pt": "Todo dia ou quase",
+                "it": "Ogni giorno o quasi",
+                "de": "Täglich oder fast täglich",
+                "ja": "ほぼ毎日",
+                "vi": "Hằng ngày hoặc gần như vậy",
+                "zh": "每天或几乎每天"
+              }
+            },
+            {
+              "value": "weekly",
+              "text": {
+                "default": "Weekly or nearly so",
+                "fr": "Toutes les semaines ou presque",
+                "es": "Cada semana o casi",
+                "pt": "Toda semana ou quase",
+                "it": "Ogni settimana o quasi",
+                "de": "Wöchentlich oder fast wöchentlich",
+                "ja": "ほぼ毎週",
+                "vi": "Hằng tuần hoặc gần như vậy",
+                "zh": "每周或几乎每周"
+              }
+            },
+            {
+              "value": "less",
+              "text": {
+                "default": "Less often",
+                "fr": "Moins souvent",
+                "es": "Con menos frecuencia",
+                "pt": "Com menos frequência",
+                "it": "Meno spesso",
+                "de": "Seltener",
+                "ja": "それより少ない",
+                "vi": "Ít hơn",
+                "zh": "更少"
+              }
+            },
+            {
+              "value": "never",
+              "text": {
+                "default": "Never",
+                "fr": "Jamais",
+                "es": "Nunca",
+                "pt": "Nunca",
+                "it": "Mai",
+                "de": "Nie",
+                "ja": "使っていない",
+                "vi": "Không bao giờ",
+                "zh": "从不"
+              }
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "ai_worst",
+          "visibleIf": "{ai_frequency} anyof ['daily', 'weekly', 'less']",
+          "title": {
+            "default": "Which Cardano language, library or tool does AI handle worst, and what goes wrong?",
+            "fr": "Quel langage, bibliothèque ou outil Cardano l'IA maîtrise-t-elle le moins bien, et qu'est-ce qui ne va pas ?",
+            "es": "¿Qué lenguaje, biblioteca o herramienta de Cardano maneja peor la IA, y qué es lo que falla?",
+            "pt": "Com qual linguagem, biblioteca ou ferramenta Cardano a IA se sai pior, e o que dá errado?",
+            "it": "Quale linguaggio, libreria o strumento Cardano l'IA gestisce peggio, e cosa va storto?",
+            "de": "Mit welcher Cardano-Sprache, -Bibliothek oder welchem Cardano-Tool kommt KI am schlechtesten zurecht, und was geht dabei schief?",
+            "ja": "Cardanoの言語・ライブラリ・ツールのうち、AIが最も苦手とするものはどれですか？また、どのような問題が起きますか？",
+            "vi": "AI xử lý kém nhất ngôn ngữ, thư viện hay công cụ Cardano nào, và nó sai ở đâu?",
+            "zh": "AI 处理得最差的 Cardano 语言、库或工具是哪个？具体哪里出了问题？"
+          }
+        }
+      ]
+    },
+    {
+      "name": "what_gets_in_the_way",
+      "elements": [
+        {
+          "type": "matrix",
+          "name": "problems",
+          "visibleIf": "{building_on_cardano} = 'yes'",
+          "title": {
+            "default": "How much of a problem is each of these for you?",
+            "fr": "Dans quelle mesure chacun de ces points vous pose-t-il problème ?",
+            "es": "¿Hasta qué punto supone un problema para ti cada uno de estos aspectos?",
+            "pt": "Quanto cada um destes pontos é um problema para você?",
+            "it": "Quanto è un problema per te ciascuno di questi punti?",
+            "de": "Wie sehr ist jeder dieser Punkte für Sie ein Problem?",
+            "ja": "次の各項目は、あなたにとってどの程度問題になっていますか？",
+            "vi": "Mỗi điểm sau đây gây khó khăn cho bạn đến mức nào?",
+            "zh": "以下每一项对你来说问题有多大？"
+          },
+          "columns": [
+            {
+              "value": "big",
+              "text": {
+                "default": "Big problem",
+                "fr": "Gros problème",
+                "es": "Gran problema",
+                "pt": "Grande problema",
+                "it": "Grosso problema",
+                "de": "Großes Problem",
+                "ja": "大きな問題",
+                "vi": "Vấn đề lớn",
+                "zh": "大问题"
+              }
+            },
+            {
+              "value": "could-be-better",
+              "text": {
+                "default": "Could be better",
+                "fr": "Pourrait être mieux",
+                "es": "Podría mejorar",
+                "pt": "Poderia ser melhor",
+                "it": "Potrebbe andare meglio",
+                "de": "Könnte besser sein",
+                "ja": "改善の余地あり",
+                "vi": "Có thể tốt hơn",
+                "zh": "有待改进"
+              }
+            },
+            {
+              "value": "good",
+              "text": {
+                "default": "All good",
+                "fr": "Tout va bien",
+                "es": "Todo bien",
+                "pt": "Tudo bem",
+                "it": "Tutto bene",
+                "de": "Alles gut",
+                "ja": "問題なし",
+                "vi": "Ổn cả",
+                "zh": "没问题"
+              }
+            },
+            {
+              "value": "not-relevant",
+              "text": {
+                "default": "Not relevant",
+                "fr": "Non pertinent",
+                "es": "No aplica",
+                "pt": "Não se aplica",
+                "it": "Non mi riguarda",
+                "de": "Nicht relevant",
+                "ja": "該当しない",
+                "vi": "Không liên quan",
+                "zh": "不相关"
+              }
+            }
+          ],
+          "rows": [
+            {
+              "value": "choosing-tools",
+              "text": {
+                "default": "Knowing which tools and libraries to choose",
+                "fr": "Savoir quels outils et bibliothèques choisir",
+                "es": "Saber qué herramientas y bibliotecas elegir",
+                "pt": "Saber quais ferramentas e bibliotecas escolher",
+                "it": "Sapere quali strumenti e librerie scegliere",
+                "de": "Wissen, welche Tools und Bibliotheken man wählen soll",
+                "ja": "どのツールやライブラリを選ぶべきか分かること",
+                "vi": "Biết nên chọn công cụ và thư viện nào",
+                "zh": "知道该选哪些工具和库"
+              }
+            },
+            {
+              "value": "documentation",
+              "text": {
+                "default": "Finding up-to-date documentation",
+                "fr": "Trouver une documentation à jour",
+                "es": "Encontrar documentación actualizada",
+                "pt": "Encontrar documentação atualizada",
+                "it": "Trovare documentazione aggiornata",
+                "de": "Aktuelle Dokumentation finden",
+                "ja": "最新のドキュメントを見つけること",
+                "vi": "Tìm tài liệu cập nhật",
+                "zh": "找到最新的文档"
+              }
+            },
+            {
+              "value": "examples",
+              "text": {
+                "default": "Finding working examples",
+                "fr": "Trouver des exemples qui fonctionnent",
+                "es": "Encontrar ejemplos que funcionen",
+                "pt": "Encontrar exemplos que funcionam",
+                "it": "Trovare esempi funzionanti",
+                "de": "Funktionierende Beispiele finden",
+                "ja": "動作する実例を見つけること",
+                "vi": "Tìm ví dụ chạy được",
+                "zh": "找到能用的示例"
+              }
+            },
+            {
+              "value": "help",
+              "text": {
+                "default": "Getting help when I am stuck",
+                "fr": "Obtenir de l'aide en cas de blocage",
+                "es": "Conseguir ayuda cuando me atasco",
+                "pt": "Conseguir ajuda quando travo",
+                "it": "Ricevere aiuto quando mi blocco",
+                "de": "Hilfe bekommen, wenn ich feststecke",
+                "ja": "行き詰まったときに助けを得ること",
+                "vi": "Được trợ giúp khi bị kẹt",
+                "zh": "卡住时获得帮助"
+              }
+            },
+            {
+              "value": "eutxo-design",
+              "text": {
+                "default": "Designing for eUTxO (state, concurrency)",
+                "fr": "Concevoir pour l'eUTxO (état, concurrence)",
+                "es": "Diseñar para eUTxO (estado, concurrencia)",
+                "pt": "Projetar para o eUTxO (estado, concorrência)",
+                "it": "Progettare per eUTxO (stato, concorrenza)",
+                "de": "Für eUTxO entwerfen (Zustand, Nebenläufigkeit)",
+                "ja": "eUTxO向けの設計（状態、並行性）",
+                "vi": "Thiết kế cho eUTxO (trạng thái, xử lý đồng thời)",
+                "zh": "面向 eUTxO 的设计（状态、并发）"
+              }
+            },
+            {
+              "value": "composition",
+              "text": {
+                "default": "Composing with other protocols (DEXes, oracles…)",
+                "fr": "Composer avec d'autres protocoles (DEX, oracles…)",
+                "es": "Componer con otros protocolos (DEX, oráculos…)",
+                "pt": "Compor com outros protocolos (DEXs, oráculos…)",
+                "it": "Comporre con altri protocolli (DEX, oracoli…)",
+                "de": "Zusammenspiel mit anderen Protokollen (DEXes, Oracles…)",
+                "ja": "他のプロトコルとの組み合わせ（DEX、オラクル…）",
+                "vi": "Kết hợp với các giao thức khác (DEX, oracle…)",
+                "zh": "与其他协议组合（DEX、预言机…）"
+              }
+            },
+            {
+              "value": "limits",
+              "text": {
+                "default": "Execution budget and transaction size limits",
+                "fr": "Limites d'exécution et de taille des transactions",
+                "es": "Límites de presupuesto de ejecución y de tamaño de transacción",
+                "pt": "Limites de orçamento de execução e de tamanho de transação",
+                "it": "Limiti di budget di esecuzione e di dimensione delle transazioni",
+                "de": "Ausführungsbudget und Limits der Transaktionsgröße",
+                "ja": "実行予算とトランザクションサイズの上限",
+                "vi": "Giới hạn ngân sách thực thi và kích thước giao dịch",
+                "zh": "执行预算与交易大小限制"
+              }
+            },
+            {
+              "value": "minimum-ada",
+              "text": {
+                "default": "Minimum ada in each output (micropayments, airdrops)",
+                "fr": "Le minimum d'ada par UTxO (micropaiements, airdrops)",
+                "es": "El mínimo de ada en cada output (micropagos, airdrops)",
+                "pt": "Mínimo de ada em cada output (micropagamentos, airdrops)",
+                "it": "Il minimo di ada per output (micropagamenti, airdrop)",
+                "de": "Mindestmenge an ada pro Output (Mikrozahlungen, Airdrops)",
+                "ja": "各出力の最小ada（マイクロペイメント、エアドロップ）",
+                "vi": "Lượng ada tối thiểu trong mỗi output (thanh toán vi mô, airdrop)",
+                "zh": "每个输出的最低 ADA 数量（小额支付、空投）"
+              }
+            },
+            {
+              "value": "building-transactions",
+              "text": {
+                "default": "Building transactions",
+                "fr": "Construire des transactions",
+                "es": "Construir transacciones",
+                "pt": "Construir transações",
+                "it": "Costruire transazioni",
+                "de": "Transaktionen bauen",
+                "ja": "トランザクションの構築",
+                "vi": "Xây dựng giao dịch",
+                "zh": "构建交易"
+              }
+            },
+            {
+              "value": "wallets",
+              "text": {
+                "default": "Connecting to wallets (CIP-30 issues, mobile wallets)",
+                "fr": "Se connecter aux portefeuilles (CIP-30, portefeuilles mobiles)",
+                "es": "Conectar con wallets (problemas con CIP-30, wallets móviles)",
+                "pt": "Conectar com carteiras (problemas com CIP-30, carteiras móveis)",
+                "it": "Connettersi ai wallet (problemi CIP-30, wallet mobili)",
+                "de": "Verbindung zu Wallets (CIP-30-Probleme, mobile Wallets)",
+                "ja": "ウォレットへの接続（CIP-30の問題、モバイルウォレット）",
+                "vi": "Kết nối với ví (vấn đề CIP-30, ví di động)",
+                "zh": "连接钱包（CIP-30 问题、移动端钱包）"
+              }
+            },
+            {
+              "value": "testing",
+              "text": {
+                "default": "Testing validators",
+                "fr": "Tester les validateurs",
+                "es": "Probar validadores",
+                "pt": "Testar validadores",
+                "it": "Testare i validator",
+                "de": "Validatoren testen",
+                "ja": "バリデータのテスト",
+                "vi": "Kiểm thử validator",
+                "zh": "测试验证器"
+              }
+            },
+            {
+              "value": "debugging",
+              "text": {
+                "default": "Debugging validators",
+                "fr": "Déboguer les validateurs",
+                "es": "Depurar validadores",
+                "pt": "Depurar validadores",
+                "it": "Fare il debug dei validator",
+                "de": "Validatoren debuggen",
+                "ja": "バリデータのデバッグ",
+                "vi": "Gỡ lỗi validator",
+                "zh": "调试验证器"
+              }
+            },
+            {
+              "value": "libraries",
+              "text": {
+                "default": "Incomplete or unmaintained libraries",
+                "fr": "Bibliothèques incomplètes ou non maintenues",
+                "es": "Bibliotecas incompletas o sin mantenimiento",
+                "pt": "Bibliotecas incompletas ou sem manutenção",
+                "it": "Librerie incomplete o non mantenute",
+                "de": "Unvollständige oder nicht gepflegte Bibliotheken",
+                "ja": "不完全またはメンテナンスされていないライブラリ",
+                "vi": "Thư viện chưa hoàn thiện hoặc không được bảo trì",
+                "zh": "不完整或无人维护的库"
+              }
+            },
+            {
+              "value": "breaking-changes",
+              "text": {
+                "default": "Breaking changes in tools and libraries",
+                "fr": "Changements incompatibles des outils et bibliothèques",
+                "es": "Cambios incompatibles en herramientas y bibliotecas",
+                "pt": "Breaking changes em ferramentas e bibliotecas",
+                "it": "Breaking change in strumenti e librerie",
+                "de": "Breaking Changes in Tools und Bibliotheken",
+                "ja": "ツールやライブラリの破壊的変更",
+                "vi": "Thay đổi gây mất tương thích trong công cụ và thư viện",
+                "zh": "工具和库的破坏性变更"
+              }
+            },
+            {
+              "value": "chain-data",
+              "text": {
+                "default": "Getting chain data (indexers, APIs)",
+                "fr": "Obtenir les données de la chaîne (indexeurs, API)",
+                "es": "Obtener datos de la cadena (indexadores, API)",
+                "pt": "Obter dados da blockchain (indexadores, APIs)",
+                "it": "Ottenere dati dalla chain (indexer, API)",
+                "de": "Chain-Daten abrufen (Indexer, APIs)",
+                "ja": "チェーンデータの取得（インデクサー、API）",
+                "vi": "Lấy dữ liệu chuỗi (indexer, API)",
+                "zh": "获取链上数据（索引器、API）"
+              }
+            },
+            {
+              "value": "api-limits",
+              "text": {
+                "default": "Limits and pricing of hosted APIs",
+                "fr": "Limites et tarifs des API hébergées",
+                "es": "Límites y precios de las API alojadas",
+                "pt": "Limites e preços das APIs hospedadas",
+                "it": "Limiti e prezzi delle API in hosting",
+                "de": "Limits und Preise gehosteter APIs",
+                "ja": "ホスト型APIの制限と料金",
+                "vi": "Giới hạn và giá của các dịch vụ API",
+                "zh": "托管 API 的限制与价格"
+              }
+            },
+            {
+              "value": "infrastructure",
+              "text": {
+                "default": "Running infrastructure (node, indexer)",
+                "fr": "Faire tourner l'infrastructure (nœud, indexeur)",
+                "es": "Operar infraestructura (nodo, indexador)",
+                "pt": "Rodar infraestrutura (nó, indexador)",
+                "it": "Gestire l'infrastruttura (nodo, indexer)",
+                "de": "Infrastruktur betreiben (Node, Indexer)",
+                "ja": "インフラの運用（ノード、インデクサー）",
+                "vi": "Vận hành hạ tầng (node, indexer)",
+                "zh": "运行基础设施（节点、索引器）"
+              }
+            },
+            {
+              "value": "ai",
+              "text": {
+                "default": "Getting good results from AI tools on Cardano code",
+                "fr": "Obtenir de bons résultats des outils d'IA sur du code Cardano",
+                "es": "Obtener buenos resultados de las herramientas de IA con código Cardano",
+                "pt": "Obter bons resultados de ferramentas de IA em código Cardano",
+                "it": "Ottenere buoni risultati dagli strumenti di IA sul codice Cardano",
+                "de": "Gute Ergebnisse von KI-Tools bei Cardano-Code bekommen",
+                "ja": "CardanoのコードでAIツールから良い結果を得ること",
+                "vi": "Đạt kết quả tốt từ công cụ AI với code Cardano",
+                "zh": "让 AI 工具在 Cardano 代码上给出好结果"
+              }
+            },
+            {
+              "value": "first-app",
+              "text": {
+                "default": "Getting a first application working end to end",
+                "fr": "Faire fonctionner une première application de bout en bout",
+                "es": "Conseguir que una primera aplicación funcione de principio a fin",
+                "pt": "Fazer uma primeira aplicação funcionar de ponta a ponta",
+                "it": "Far funzionare una prima applicazione end-to-end",
+                "de": "Eine erste Anwendung durchgängig zum Laufen bringen",
+                "ja": "最初のアプリケーションを一通り動かすこと",
+                "vi": "Làm một ứng dụng đầu tiên chạy được từ đầu đến cuối",
+                "zh": "让第一个应用端到端跑起来"
+              }
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "answer_sources",
+          "visibleIf": "{building_on_cardano} = 'yes'",
+          "title": {
+            "default": "Where do you get answers to technical questions about Cardano?",
+            "fr": "Où trouvez-vous des réponses à vos questions techniques sur Cardano ?",
+            "es": "¿Dónde encuentras respuestas a tus preguntas técnicas sobre Cardano?",
+            "pt": "Onde você encontra respostas para perguntas técnicas sobre a Cardano?",
+            "it": "Dove trovi le risposte alle domande tecniche su Cardano?",
+            "de": "Wo finden Sie Antworten auf technische Fragen zu Cardano?",
+            "ja": "Cardanoに関する技術的な質問の答えをどこで得ていますか？",
+            "vi": "Bạn tìm câu trả lời cho các câu hỏi kỹ thuật về Cardano ở đâu?",
+            "zh": "你在哪里获得 Cardano 技术问题的解答？"
+          },
+          "description": {
+            "default": "Choose up to 5, the ones you rely on most.",
+            "fr": "Choisissez-en jusqu'à 5, les sources sur lesquelles vous comptez le plus.",
+            "es": "Elige hasta 5, las fuentes en las que más confías.",
+            "pt": "Escolha até 5, as fontes que você mais usa.",
+            "it": "Scegline fino a 5, quelle su cui conti di più.",
+            "de": "Wählen Sie bis zu 5, die Quellen, auf die Sie sich am meisten verlassen.",
+            "ja": "最も頼りにしているものを5つまで選択してください。",
+            "vi": "Chọn tối đa 5, những nguồn bạn dựa vào nhiều nhất.",
+            "zh": "最多选 5 项，选你最依赖的。"
+          },
+          "maxSelectedChoices": 5,
+          "choices": [
+            {
+              "value": "ai",
+              "text": {
+                "default": "AI assistants",
+                "fr": "Assistants d'IA",
+                "es": "Asistentes de IA",
+                "pt": "Assistentes de IA",
+                "it": "Assistenti IA",
+                "de": "KI-Assistenten",
+                "ja": "AIアシスタント",
+                "vi": "Trợ lý AI",
+                "zh": "AI 助手"
+              }
+            },
+            {
+              "value": "blogs",
+              "text": {
+                "default": "Blogs and articles",
+                "fr": "Blogs et articles",
+                "es": "Blogs y artículos",
+                "pt": "Blogs e artigos",
+                "it": "Blog e articoli",
+                "de": "Blogs und Artikel",
+                "ja": "ブログや記事",
+                "vi": "Blog và bài viết",
+                "zh": "博客与文章"
+              }
+            },
+            "Cardano Blueprint",
+            {
+              "value": "cardano-docs",
+              "text": {
+                "default": "Cardano docs (docs.cardano.org)",
+                "fr": "Documentation Cardano (docs.cardano.org)",
+                "es": "Documentación de Cardano (docs.cardano.org)",
+                "pt": "Documentação da Cardano (docs.cardano.org)",
+                "it": "Documentazione Cardano (docs.cardano.org)",
+                "de": "Cardano-Dokumentation (docs.cardano.org)",
+                "ja": "Cardanoドキュメント（docs.cardano.org）",
+                "vi": "Tài liệu Cardano (docs.cardano.org)",
+                "zh": "Cardano 文档（docs.cardano.org）"
+              }
+            },
+            "Cardano Forum",
+            {
+              "value": "specifications",
+              "text": {
+                "default": "CIPs, papers and specifications",
+                "fr": "CIP, articles de recherche et spécifications",
+                "es": "CIP, artículos de investigación y especificaciones",
+                "pt": "CIPs, papers e especificações",
+                "it": "CIP, paper e specifiche",
+                "de": "CIPs, Papers und Spezifikationen",
+                "ja": "CIP、論文、仕様書",
+                "vi": "CIP, bài báo khoa học và đặc tả",
+                "zh": "CIP、论文与规范"
+              }
+            },
+            {
+              "value": "colleagues",
+              "text": {
+                "default": "Colleagues and friends",
+                "fr": "Collègues et proches",
+                "es": "Colegas y amistades",
+                "pt": "Colegas e amigos",
+                "it": "Colleghi e amici",
+                "de": "Kollegen und Freunde",
+                "ja": "同僚や友人",
+                "vi": "Đồng nghiệp và bạn bè",
+                "zh": "同事与朋友"
+              }
+            },
+            {
+              "value": "developer-portal",
+              "text": {
+                "default": "Developer portal (developers.cardano.org)",
+                "fr": "Portail des développeurs (developers.cardano.org)",
+                "es": "Portal de desarrolladores (developers.cardano.org)",
+                "pt": "Portal do desenvolvedor (developers.cardano.org)",
+                "it": "Portale per sviluppatori (developers.cardano.org)",
+                "de": "Entwicklerportal (developers.cardano.org)",
+                "ja": "開発者ポータル（developers.cardano.org）",
+                "vi": "Cổng lập trình viên (developers.cardano.org)",
+                "zh": "开发者门户（developers.cardano.org）"
+              }
+            },
+            "Discord",
+            {
+              "value": "github",
+              "text": {
+                "default": "GitHub issues and discussions",
+                "fr": "Issues et discussions GitHub",
+                "es": "Issues y discusiones de GitHub",
+                "pt": "Issues e discussões no GitHub",
+                "it": "Issue e discussioni su GitHub",
+                "de": "GitHub-Issues und -Diskussionen",
+                "ja": "GitHubのIssueやDiscussion",
+                "vi": "Issue và thảo luận trên GitHub",
+                "zh": "GitHub issue 与讨论"
+              }
+            },
+            {
+              "value": "project-docs",
+              "text": {
+                "default": "Project documentation",
+                "fr": "Documentation des projets",
+                "es": "Documentación de los proyectos",
+                "pt": "Documentação dos projetos",
+                "it": "Documentazione dei progetti",
+                "de": "Projektdokumentation",
+                "ja": "プロジェクトのドキュメント",
+                "vi": "Tài liệu của dự án",
+                "zh": "项目文档"
+              }
+            },
+            "Reddit",
+            {
+              "value": "source-code",
+              "text": {
+                "default": "Source code",
+                "fr": "Code source",
+                "es": "Código fuente",
+                "pt": "Código-fonte",
+                "it": "Codice sorgente",
+                "de": "Quellcode",
+                "ja": "ソースコード",
+                "vi": "Mã nguồn",
+                "zh": "源代码"
+              }
+            },
+            "Stack Exchange",
+            "Telegram",
+            {
+              "value": "videos",
+              "text": {
+                "default": "Videos and courses",
+                "fr": "Vidéos et cours",
+                "es": "Videos y cursos",
+                "pt": "Vídeos e cursos",
+                "it": "Video e corsi",
+                "de": "Videos und Kurse",
+                "ja": "動画や講座",
+                "vi": "Video và khóa học",
+                "zh": "视频与课程"
+              }
+            },
+            "X (Twitter)"
+          ],
+          "showOtherItem": true
+        }
+      ]
+    },
+    {
+      "name": "where_it_should_go",
+      "elements": [
+        {
+          "type": "matrix",
+          "name": "roadmap",
+          "visibleIf": "{building_on_cardano} = 'yes'",
+          "title": {
+            "default": "How much would each of these help what you are building?",
+            "fr": "Dans quelle mesure chacun de ces points aiderait-il ce que vous développez ?",
+            "es": "¿Cuánto ayudaría cada uno de estos puntos a lo que estás desarrollando?",
+            "pt": "Quanto cada um destes pontos ajudaria o que você está desenvolvendo?",
+            "it": "Quanto aiuterebbe ciascuno di questi punti ciò che stai sviluppando?",
+            "de": "Wie sehr würde jeder dieser Punkte dem helfen, was Sie entwickeln?",
+            "ja": "次の各項目は、あなたが開発しているものにどの程度役立ちますか？",
+            "vi": "Mỗi điểm sau đây sẽ giúp ích đến mức nào cho thứ bạn đang xây dựng?",
+            "zh": "以下每一项对你正在构建的东西会有多大帮助？"
+          },
+          "columns": [
+            {
+              "value": "unblock",
+              "text": {
+                "default": "Would unblock me",
+                "fr": "Me débloquerait",
+                "es": "Me desbloquearía",
+                "pt": "Me desbloquearia",
+                "it": "Mi sbloccherebbe",
+                "de": "Würde mich entblocken",
+                "ja": "行き詰まりが解消される",
+                "vi": "Gỡ kẹt cho tôi",
+                "zh": "能解除阻碍"
+              }
+            },
+            {
+              "value": "help",
+              "text": {
+                "default": "Would help",
+                "fr": "M'aiderait",
+                "es": "Ayudaría",
+                "pt": "Ajudaria",
+                "it": "Aiuterebbe",
+                "de": "Würde helfen",
+                "ja": "役立つ",
+                "vi": "Có ích",
+                "zh": "有帮助"
+              }
+            },
+            {
+              "value": "not-needed",
+              "text": {
+                "default": "No need",
+                "fr": "Pas besoin",
+                "es": "No lo necesito",
+                "pt": "Não preciso",
+                "it": "Non serve",
+                "de": "Kein Bedarf",
+                "ja": "必要ない",
+                "vi": "Không cần",
+                "zh": "不需要"
+              }
+            },
+            {
+              "value": "unknown",
+              "text": {
+                "default": "What is it?",
+                "fr": "C'est quoi ?",
+                "es": "¿Qué es eso?",
+                "pt": "O que é isso?",
+                "it": "Cos'è?",
+                "de": "Was ist das?",
+                "ja": "知らない",
+                "vi": "Đó là gì?",
+                "zh": "这是什么？"
+              }
+            }
+          ],
+          "rows": [
+            {
+              "value": "throughput",
+              "text": {
+                "default": "Higher throughput",
+                "fr": "Un débit plus élevé",
+                "es": "Mayor throughput",
+                "pt": "Maior throughput",
+                "it": "Throughput più alto",
+                "de": "Höherer Durchsatz",
+                "ja": "より高いスループット",
+                "vi": "Thông lượng cao hơn",
+                "zh": "更高的吞吐量"
+              }
+            },
+            {
+              "value": "finality",
+              "text": {
+                "default": "Faster finality",
+                "fr": "Une finalité plus rapide",
+                "es": "Finalidad más rápida",
+                "pt": "Finalidade mais rápida",
+                "it": "Finalità più rapida",
+                "de": "Schnellere Finalität",
+                "ja": "より速いファイナリティ",
+                "vi": "Finality nhanh hơn",
+                "zh": "更快的最终性"
+              }
+            },
+            {
+              "value": "lower-fees",
+              "text": {
+                "default": "Lower transaction fees",
+                "fr": "Des frais de transaction plus bas",
+                "es": "Comisiones de transacción más bajas",
+                "pt": "Taxas de transação mais baixas",
+                "it": "Commissioni di transazione più basse",
+                "de": "Niedrigere Transaktionsgebühren",
+                "ja": "より安いトランザクション手数料",
+                "vi": "Phí giao dịch thấp hơn",
+                "zh": "更低的交易手续费"
+              }
+            },
+            {
+              "value": "bridges",
+              "text": {
+                "default": "Bridges to other chains",
+                "fr": "Des bridges vers d'autres chaînes",
+                "es": "Bridges a otras cadenas",
+                "pt": "Bridges para outras chains",
+                "it": "Bridge verso altre chain",
+                "de": "Bridges zu anderen Chains",
+                "ja": "他チェーンへのブリッジ",
+                "vi": "Bridge sang các chuỗi khác",
+                "zh": "通往其他链的跨链桥"
+              }
+            },
+            {
+              "value": "zero-knowledge",
+              "text": {
+                "default": "Zero-knowledge proof verification on chain",
+                "fr": "La vérification de preuves zero-knowledge on-chain",
+                "es": "Verificación on-chain de pruebas zero-knowledge",
+                "pt": "Verificação de provas zero-knowledge on-chain",
+                "it": "Verifica on-chain di prove zero-knowledge",
+                "de": "Verifikation von Zero-Knowledge-Beweisen on-chain",
+                "ja": "オンチェーンでのゼロ知識証明の検証",
+                "vi": "Xác minh bằng chứng zero-knowledge on-chain",
+                "zh": "链上零知识证明验证"
+              }
+            },
+            {
+              "value": "nested-transactions",
+              "text": {
+                "default": "Nested transactions",
+                "fr": "Les transactions imbriquées",
+                "es": "Transacciones anidadas",
+                "pt": "Transações aninhadas",
+                "it": "Transazioni annidate",
+                "de": "Verschachtelte Transaktionen",
+                "ja": "ネストされたトランザクション",
+                "vi": "Giao dịch lồng nhau",
+                "zh": "嵌套交易"
+              }
+            },
+            {
+              "value": "fee-tokens",
+              "text": {
+                "default": "Paying fees in other tokens",
+                "fr": "Payer les frais avec d'autres tokens",
+                "es": "Pagar comisiones con otros tokens",
+                "pt": "Pagar taxas com outros tokens",
+                "it": "Pagare le commissioni con altri token",
+                "de": "Gebühren in anderen Tokens zahlen",
+                "ja": "他のトークンでの手数料支払い",
+                "vi": "Trả phí bằng token khác",
+                "zh": "用其他代币支付手续费"
+              }
+            },
+            {
+              "value": "programmable-tokens",
+              "text": {
+                "default": "Programmable tokens",
+                "fr": "Les tokens programmables",
+                "es": "Tokens programables",
+                "pt": "Tokens programáveis",
+                "it": "Token programmabili",
+                "de": "Programmierbare Tokens",
+                "ja": "プログラマブルトークン",
+                "vi": "Token lập trình được",
+                "zh": "可编程代币"
+              }
+            },
+            {
+              "value": "global-state",
+              "text": {
+                "default": "Global state with concurrent updates (as on EVM chains)",
+                "fr": "Un état global à accès concurrents (comme les chaînes EVM)",
+                "es": "Estado global con actualizaciones concurrentes (como en las cadenas EVM)",
+                "pt": "Estado global com atualizações concorrentes (como nas chains EVM)",
+                "it": "Stato globale con aggiornamenti concorrenti (come sulle chain EVM)",
+                "de": "Globaler Zustand mit nebenläufigen Updates (wie auf EVM-Chains)",
+                "ja": "並行更新できるグローバルステート（EVMチェーンのような）",
+                "vi": "Trạng thái toàn cục với cập nhật đồng thời (như các chuỗi EVM)",
+                "zh": "支持并发更新的全局状态（像 EVM 链那样）"
+              }
+            },
+            {
+              "value": "light-clients",
+              "text": {
+                "default": "Light clients",
+                "fr": "Les clients légers",
+                "es": "Clientes ligeros",
+                "pt": "Clientes leves (light clients)",
+                "it": "Light client",
+                "de": "Light Clients",
+                "ja": "ライトクライアント",
+                "vi": "Light client",
+                "zh": "轻客户端"
+              }
+            },
+            {
+              "value": "alternative-nodes",
+              "text": {
+                "default": "Alternative nodes",
+                "fr": "Des nœuds alternatifs",
+                "es": "Nodos alternativos",
+                "pt": "Nós alternativos",
+                "it": "Nodi alternativi",
+                "de": "Alternative Nodes",
+                "ja": "代替ノード実装",
+                "vi": "Các node thay thế",
+                "zh": "替代节点实现"
+              }
+            },
+            {
+              "value": "formal-verification",
+              "text": {
+                "default": "Formal verification of smart contracts",
+                "fr": "La vérification formelle des smart contracts",
+                "es": "Verificación formal de smart contracts",
+                "pt": "Verificação formal de smart contracts",
+                "it": "Verifica formale degli smart contract",
+                "de": "Formale Verifikation von Smart Contracts",
+                "ja": "スマートコントラクトの形式検証",
+                "vi": "Kiểm chứng hình thức cho smart contract",
+                "zh": "智能合约的形式化验证"
+              }
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "blockers",
+          "visibleIf": "{building_on_cardano} = 'yes'",
+          "title": {
+            "default": "Beyond technology, what holds your project back the most?",
+            "fr": "Au-delà de la technique, qu'est-ce qui freine le plus votre projet ?",
+            "es": "Más allá de la tecnología, ¿qué es lo que más frena tu proyecto?",
+            "pt": "Além da tecnologia, o que mais freia o seu projeto?",
+            "it": "Oltre alla tecnologia, cosa frena di più il tuo progetto?",
+            "de": "Was bremst Ihr Projekt jenseits der Technik am meisten?",
+            "ja": "技術面以外で、プロジェクトの最大の妨げになっているものは何ですか？",
+            "vi": "Ngoài công nghệ, điều gì kìm hãm dự án của bạn nhiều nhất?",
+            "zh": "除了技术之外，什么最拖累你的项目？"
+          },
+          "description": {
+            "default": "Choose up to 3.",
+            "fr": "Choisissez-en jusqu'à 3.",
+            "es": "Elige hasta 3.",
+            "pt": "Escolha até 3.",
+            "it": "Scegline fino a 3.",
+            "de": "Wählen Sie bis zu 3.",
+            "ja": "3つまで選択できます。",
+            "vi": "Chọn tối đa 3.",
+            "zh": "最多选 3 项。"
+          },
+          "maxSelectedChoices": 3,
+          "choices": [
+            {
+              "value": "audits",
+              "text": {
+                "default": "Cost and availability of audits",
+                "fr": "Le coût et la disponibilité des audits",
+                "es": "Costo y disponibilidad de auditorías",
+                "pt": "Custo e disponibilidade de auditorias",
+                "it": "Costo e disponibilità degli audit",
+                "de": "Kosten und Verfügbarkeit von Audits",
+                "ja": "監査のコストと受けやすさ",
+                "vi": "Chi phí và khả năng tìm được audit",
+                "zh": "审计的成本与可用性"
+              }
+            },
+            {
+              "value": "users",
+              "text": {
+                "default": "Finding users",
+                "fr": "Trouver des utilisateurs",
+                "es": "Encontrar usuarios",
+                "pt": "Encontrar usuários",
+                "it": "Trovare utenti",
+                "de": "Nutzer finden",
+                "ja": "ユーザーの獲得",
+                "vi": "Tìm người dùng",
+                "zh": "找到用户"
+              }
+            },
+            {
+              "value": "funding",
+              "text": {
+                "default": "Funding",
+                "fr": "Le financement",
+                "es": "Financiación",
+                "pt": "Financiamento",
+                "it": "Finanziamenti",
+                "de": "Finanzierung",
+                "ja": "資金調達",
+                "vi": "Vốn",
+                "zh": "资金"
+              }
+            },
+            {
+              "value": "visibility",
+              "text": {
+                "default": "Getting noticed (visibility, marketing)",
+                "fr": "Se faire connaître (visibilité, marketing)",
+                "es": "Darse a conocer (visibilidad, marketing)",
+                "pt": "Ganhar visibilidade (divulgação, marketing)",
+                "it": "Farsi notare (visibilità, marketing)",
+                "de": "Bekannt werden (Sichtbarkeit, Marketing)",
+                "ja": "認知の獲得（知名度、マーケティング）",
+                "vi": "Được biết đến (độ nhận diện, marketing)",
+                "zh": "获得关注（曝光、营销）"
+              }
+            },
+            {
+              "value": "hiring",
+              "text": {
+                "default": "Hiring experienced developers",
+                "fr": "Recruter des développeurs expérimentés",
+                "es": "Contratar desarrolladores con experiencia",
+                "pt": "Contratar desenvolvedores experientes",
+                "it": "Assumere sviluppatori esperti",
+                "de": "Erfahrene Entwickler einstellen",
+                "ja": "経験豊富な開発者の採用",
+                "vi": "Tuyển lập trình viên có kinh nghiệm",
+                "zh": "招聘有经验的开发者"
+              }
+            },
+            {
+              "value": "integrations",
+              "text": {
+                "default": "Integrations (exchanges, wallets, custodians)",
+                "fr": "Les intégrations (exchanges, portefeuilles, dépositaires)",
+                "es": "Integraciones (exchanges, wallets, custodios)",
+                "pt": "Integrações (exchanges, carteiras, custodiantes)",
+                "it": "Integrazioni (exchange, wallet, custodi)",
+                "de": "Integrationen (Börsen, Wallets, Verwahrer)",
+                "ja": "連携（取引所、ウォレット、カストディアン）",
+                "vi": "Tích hợp (sàn giao dịch, ví, bên lưu ký)",
+                "zh": "集成（交易所、钱包、托管机构）"
+              }
+            },
+            {
+              "value": "time",
+              "text": {
+                "default": "Lack of time",
+                "fr": "Le manque de temps",
+                "es": "Falta de tiempo",
+                "pt": "Falta de tempo",
+                "it": "Mancanza di tempo",
+                "de": "Zeitmangel",
+                "ja": "時間不足",
+                "vi": "Thiếu thời gian",
+                "zh": "缺少时间"
+              }
+            },
+            {
+              "value": "legal",
+              "text": {
+                "default": "Legal and regulatory uncertainty",
+                "fr": "L'incertitude juridique et réglementaire",
+                "es": "Incertidumbre legal y regulatoria",
+                "pt": "Incerteza jurídica e regulatória",
+                "it": "Incertezza legale e normativa",
+                "de": "Rechtliche und regulatorische Unsicherheit",
+                "ja": "法規制の不確実性",
+                "vi": "Bất định về pháp lý và quy định",
+                "zh": "法律与监管的不确定性"
+              }
+            },
+            {
+              "value": "liquidity",
+              "text": {
+                "default": "Liquidity on chain",
+                "fr": "La liquidité on-chain",
+                "es": "Liquidez on-chain",
+                "pt": "Liquidez on-chain",
+                "it": "Liquidità on-chain",
+                "de": "Liquidität on-chain",
+                "ja": "オンチェーンの流動性",
+                "vi": "Thanh khoản on-chain",
+                "zh": "链上流动性"
+              }
+            }
+          ],
+          "showOtherItem": true,
+          "showNoneItem": true,
+          "noneText": {
+            "default": "Nothing significant",
+            "fr": "Rien de notable",
+            "es": "Nada significativo",
+            "pt": "Nada significativo",
+            "it": "Niente di rilevante",
+            "de": "Nichts Nennenswertes",
+            "ja": "特にない",
+            "vi": "Không có gì đáng kể",
+            "zh": "没有明显的阻碍"
+          }
+        },
+        {
+          "type": "checkbox",
+          "name": "motives",
+          "visibleIf": "{building_on_cardano} = 'yes'",
+          "title": {
+            "default": "Why do you build on Cardano?",
+            "fr": "Pourquoi développez-vous sur Cardano ?",
+            "es": "¿Por qué desarrollas en Cardano?",
+            "pt": "Por que você desenvolve na Cardano?",
+            "it": "Perché sviluppi su Cardano?",
+            "de": "Warum entwickeln Sie auf Cardano?",
+            "ja": "なぜCardano上で開発しているのですか？",
+            "vi": "Vì sao bạn phát triển trên Cardano?",
+            "zh": "你为什么在 Cardano 上开发？"
+          },
+          "description": {
+            "default": "Choose up to 3.",
+            "fr": "Choisissez-en jusqu'à 3.",
+            "es": "Elige hasta 3.",
+            "pt": "Escolha até 3.",
+            "it": "Scegline fino a 3.",
+            "de": "Wählen Sie bis zu 3.",
+            "ja": "3つまで選択できます。",
+            "vi": "Chọn tối đa 3.",
+            "zh": "最多选 3 项。"
+          },
+          "maxSelectedChoices": 3,
+          "choices": [
+            {
+              "value": "curiosity",
+              "text": {
+                "default": "Curiosity, learning",
+                "fr": "Curiosité, apprentissage",
+                "es": "Curiosidad, aprendizaje",
+                "pt": "Curiosidade, aprendizado",
+                "it": "Curiosità, apprendimento",
+                "de": "Neugier, Lernen",
+                "ja": "好奇心、学習",
+                "vi": "Tò mò, học hỏi",
+                "zh": "好奇、学习"
+              }
+            },
+            {
+              "value": "values",
+              "text": {
+                "default": "Decentralisation and values",
+                "fr": "Décentralisation et valeurs",
+                "es": "Descentralización y valores",
+                "pt": "Descentralização e valores",
+                "it": "Decentralizzazione e valori",
+                "de": "Dezentralisierung und Werte",
+                "ja": "分散化と価値観",
+                "vi": "Phi tập trung và giá trị",
+                "zh": "去中心化与价值观"
+              }
+            },
+            {
+              "value": "funding",
+              "text": {
+                "default": "Funding (Catalyst, treasury, grants)",
+                "fr": "Financement (Catalyst, trésorerie, subventions)",
+                "es": "Financiación (Catalyst, tesorería, subvenciones)",
+                "pt": "Financiamento (Catalyst, tesouro, grants)",
+                "it": "Finanziamenti (Catalyst, tesoreria, grant)",
+                "de": "Finanzierung (Catalyst, Treasury, Grants)",
+                "ja": "資金（Catalyst、トレジャリー、助成金）",
+                "vi": "Vốn (Catalyst, ngân khố, tài trợ)",
+                "zh": "资金（Catalyst、国库、资助）"
+              }
+            },
+            {
+              "value": "tooling",
+              "text": {
+                "default": "Languages and tooling",
+                "fr": "Langages et outillage",
+                "es": "Lenguajes y herramientas",
+                "pt": "Linguagens e ferramentas",
+                "it": "Linguaggi e strumenti",
+                "de": "Sprachen und Tooling",
+                "ja": "言語とツール",
+                "vi": "Ngôn ngữ và công cụ",
+                "zh": "语言与工具链"
+              }
+            },
+            {
+              "value": "market",
+              "text": {
+                "default": "Market opportunity",
+                "fr": "Opportunité de marché",
+                "es": "Oportunidad de mercado",
+                "pt": "Oportunidade de mercado",
+                "it": "Opportunità di mercato",
+                "de": "Marktchance",
+                "ja": "市場機会",
+                "vi": "Cơ hội thị trường",
+                "zh": "市场机会"
+              }
+            },
+            {
+              "value": "employer",
+              "text": {
+                "default": "My employer or client chose it",
+                "fr": "Choix de mon employeur ou de mon client",
+                "es": "Lo eligió mi empleador o mi cliente",
+                "pt": "Meu empregador ou cliente escolheu",
+                "it": "L'ha scelto il mio datore di lavoro o il mio cliente",
+                "de": "Mein Arbeitgeber oder Kunde hat es gewählt",
+                "ja": "雇用主またはクライアントの選択",
+                "vi": "Công ty hoặc khách hàng của tôi chọn",
+                "zh": "雇主或客户的选择"
+              }
+            },
+            {
+              "value": "research",
+              "text": {
+                "default": "Research-driven approach",
+                "fr": "Approche fondée sur la recherche",
+                "es": "Enfoque basado en la investigación",
+                "pt": "Abordagem baseada em pesquisa",
+                "it": "Approccio basato sulla ricerca",
+                "de": "Forschungsbasierter Ansatz",
+                "ja": "研究に基づくアプローチ",
+                "vi": "Cách tiếp cận dựa trên nghiên cứu",
+                "zh": "研究驱动的方法"
+              }
+            },
+            {
+              "value": "security",
+              "text": {
+                "default": "Security and reliability of the chain",
+                "fr": "Sécurité et fiabilité de la chaîne",
+                "es": "Seguridad y fiabilidad de la cadena",
+                "pt": "Segurança e confiabilidade da chain",
+                "it": "Sicurezza e affidabilità della chain",
+                "de": "Sicherheit und Zuverlässigkeit der Chain",
+                "ja": "チェーンのセキュリティと信頼性",
+                "vi": "Tính bảo mật và độ tin cậy của chuỗi",
+                "zh": "链的安全性与可靠性"
+              }
+            },
+            {
+              "value": "community",
+              "text": {
+                "default": "The community",
+                "fr": "La communauté",
+                "es": "La comunidad",
+                "pt": "A comunidade",
+                "it": "La community",
+                "de": "Die Community",
+                "ja": "コミュニティ",
+                "vi": "Cộng đồng",
+                "zh": "社区"
+              }
+            },
+            {
+              "value": "eutxo",
+              "text": {
+                "default": "The eUTxO model and deterministic transactions",
+                "fr": "Le modèle eUTxO et les transactions déterministes",
+                "es": "El modelo eUTxO y las transacciones deterministas",
+                "pt": "O modelo eUTxO e as transações determinísticas",
+                "it": "Il modello eUTxO e le transazioni deterministiche",
+                "de": "Das eUTxO-Modell und deterministische Transaktionen",
+                "ja": "eUTxOモデルと決定論的なトランザクション",
+                "vi": "Mô hình eUTxO và giao dịch tất định",
+                "zh": "eUTxO 模型与确定性交易"
+              }
+            }
+          ],
+          "showOtherItem": true
+        },
+        {
+          "type": "radiogroup",
+          "name": "retention",
+          "visibleIf": "{building_on_cardano} = 'yes'",
+          "title": {
+            "default": "How likely are you to still be building on Cardano a year from now?",
+            "fr": "Quelle est la probabilité que vous développiez encore sur Cardano dans un an ?",
+            "es": "¿Qué probabilidad hay de que sigas desarrollando en Cardano dentro de un año?",
+            "pt": "Qual é a probabilidade de você ainda estar desenvolvendo na Cardano daqui a um ano?",
+            "it": "Quanto è probabile che tu stia ancora sviluppando su Cardano tra un anno?",
+            "de": "Wie wahrscheinlich ist es, dass Sie in einem Jahr noch auf Cardano entwickeln?",
+            "ja": "1年後もCardano上で開発している可能性はどのくらいですか？",
+            "vi": "Khả năng bạn vẫn phát triển trên Cardano sau một năm nữa là bao nhiêu?",
+            "zh": "一年后你还在 Cardano 上开发的可能性有多大？"
+          },
+          "choices": [
+            {
+              "value": "very-likely",
+              "text": {
+                "default": "Very likely",
+                "fr": "Très probable",
+                "es": "Muy probable",
+                "pt": "Muito provável",
+                "it": "Molto probabile",
+                "de": "Sehr wahrscheinlich",
+                "ja": "とても高い",
+                "vi": "Rất có khả năng",
+                "zh": "非常可能"
+              }
+            },
+            {
+              "value": "likely",
+              "text": {
+                "default": "Likely",
+                "fr": "Probable",
+                "es": "Probable",
+                "pt": "Provável",
+                "it": "Probabile",
+                "de": "Wahrscheinlich",
+                "ja": "高い",
+                "vi": "Có khả năng",
+                "zh": "可能"
+              }
+            },
+            {
+              "value": "not-sure",
+              "text": {
+                "default": "Not sure",
+                "fr": "Incertain",
+                "es": "No lo sé",
+                "pt": "Não sei",
+                "it": "Non so",
+                "de": "Unsicher",
+                "ja": "分からない",
+                "vi": "Không chắc",
+                "zh": "不确定"
+              }
+            },
+            {
+              "value": "unlikely",
+              "text": {
+                "default": "Unlikely",
+                "fr": "Peu probable",
+                "es": "Poco probable",
+                "pt": "Improvável",
+                "it": "Poco probabile",
+                "de": "Unwahrscheinlich",
+                "ja": "低い",
+                "vi": "Ít khả năng",
+                "zh": "不太可能"
+              }
+            },
+            {
+              "value": "very-unlikely",
+              "text": {
+                "default": "Very unlikely",
+                "fr": "Très peu probable",
+                "es": "Muy poco probable",
+                "pt": "Muito improvável",
+                "it": "Molto poco probabile",
+                "de": "Sehr unwahrscheinlich",
+                "ja": "とても低い",
+                "vi": "Rất ít khả năng",
+                "zh": "非常不可能"
+              }
+            }
+          ]
+        },
+        {
+          "type": "matrix",
+          "name": "spo_cycle",
+          "visibleIf": "{work} anyof ['stake-pool']",
+          "title": {
+            "default": "As a stake pool operator, how well does each of these work for you?",
+            "fr": "En tant qu'opérateur de stake pool, comment chacun de ces points se passe-t-il pour vous ?",
+            "es": "Como operador de stake pool, ¿qué tal te funciona cada uno de estos puntos?",
+            "pt": "Como operador de stake pool, como cada um destes pontos funciona para você?",
+            "it": "Come stake pool operator, quanto bene funziona per te ciascuno di questi punti?",
+            "de": "Wie gut funktioniert jeder dieser Punkte für Sie als Stake-Pool-Operator?",
+            "ja": "ステークプールオペレーターとして、次の各項目はどの程度うまくいっていますか？",
+            "vi": "Với tư cách nhà điều hành stake pool, mỗi việc sau đây diễn ra với bạn thế nào?",
+            "zh": "作为质押池运营者，以下每一项对你来说运作得如何？"
+          },
+          "columns": [
+            {
+              "value": "works-well",
+              "text": {
+                "default": "Works well",
+                "fr": "Bien",
+                "es": "Bien",
+                "pt": "Funciona bem",
+                "it": "Bene",
+                "de": "Gut",
+                "ja": "うまくいっている",
+                "vi": "Tốt",
+                "zh": "良好"
+              }
+            },
+            {
+              "value": "could-be-better",
+              "text": {
+                "default": "Could be better",
+                "fr": "Pourrait être mieux",
+                "es": "Podría mejorar",
+                "pt": "Poderia ser melhor",
+                "it": "Potrebbe andare meglio",
+                "de": "Könnte besser sein",
+                "ja": "改善の余地あり",
+                "vi": "Có thể tốt hơn",
+                "zh": "有待改进"
+              }
+            },
+            {
+              "value": "poorly",
+              "text": {
+                "default": "Poorly",
+                "fr": "Mal",
+                "es": "Mal",
+                "pt": "Mal",
+                "it": "Male",
+                "de": "Schlecht",
+                "ja": "うまくいっていない",
+                "vi": "Kém",
+                "zh": "糟糕"
+              }
+            }
+          ],
+          "rows": [
+            {
+              "value": "release-news",
+              "text": {
+                "default": "Hearing about node releases in time",
+                "fr": "Être informé à temps des nouvelles versions du nœud",
+                "es": "Enterarme a tiempo de las nuevas versiones del nodo",
+                "pt": "Ficar sabendo a tempo das novas versões do nó",
+                "it": "Venire a sapere in tempo delle nuove release del nodo",
+                "de": "Rechtzeitig von neuen Node-Releases erfahren",
+                "ja": "ノードの新リリースを早めに知ること",
+                "vi": "Biết kịp thời về các bản phát hành node",
+                "zh": "及时得知节点新版本的发布"
+              }
+            },
+            {
+              "value": "release-changes",
+              "text": {
+                "default": "Understanding what a release changes",
+                "fr": "Comprendre ce que change une version",
+                "es": "Entender qué cambia en cada versión",
+                "pt": "Entender o que muda em uma versão",
+                "it": "Capire cosa cambia in una release",
+                "de": "Verstehen, was ein Release ändert",
+                "ja": "リリースによる変更点を理解すること",
+                "vi": "Hiểu một bản phát hành thay đổi những gì",
+                "zh": "了解一个版本改了什么"
+              }
+            },
+            {
+              "value": "release-testing",
+              "text": {
+                "default": "Testing a release before mainnet",
+                "fr": "Tester une version avant le mainnet",
+                "es": "Probar una versión antes de mainnet",
+                "pt": "Testar uma versão antes da mainnet",
+                "it": "Testare una release prima della mainnet",
+                "de": "Ein Release vor dem Mainnet testen",
+                "ja": "メインネット前にリリースをテストすること",
+                "vi": "Thử một bản phát hành trước khi lên mainnet",
+                "zh": "在上主网前测试新版本"
+              }
+            },
+            {
+              "value": "being-heard",
+              "text": {
+                "default": "Being heard before hard forks and parameter changes",
+                "fr": "Être consulté avant les hard forks et changements de paramètres",
+                "es": "Que me escuchen antes de los hard forks y los cambios de parámetros",
+                "pt": "Ser ouvido antes de hard forks e mudanças de parâmetros",
+                "it": "Essere ascoltati prima di hard fork e modifiche ai parametri",
+                "de": "Vor Hard Forks und Parameteränderungen gehört werden",
+                "ja": "ハードフォークやパラメータ変更の前に意見を聞いてもらえること",
+                "vi": "Được lắng nghe trước các hard fork và thay đổi tham số",
+                "zh": "在硬分叉和参数变更前被征求意见"
+              }
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "wish",
+          "visibleIf": "{building_on_cardano} = 'yes'",
+          "title": {
+            "default": "Which tool, library or feature that doesn't exist yet would help you the most?",
+            "fr": "Quel outil, bibliothèque ou fonctionnalité qui n'existe pas encore vous aiderait le plus ?",
+            "es": "¿Qué herramienta, biblioteca o funcionalidad que aún no existe te ayudaría más?",
+            "pt": "Qual ferramenta, biblioteca ou funcionalidade que ainda não existe ajudaria mais você?",
+            "it": "Quale strumento, libreria o funzionalità che ancora non esiste ti aiuterebbe di più?",
+            "de": "Welches Tool, welche Bibliothek oder welche Funktion, die es noch nicht gibt, würde Ihnen am meisten helfen?",
+            "ja": "まだ存在しないツール、ライブラリ、機能のうち、あなたに最も役立つものは何ですか？",
+            "vi": "Công cụ, thư viện hoặc tính năng nào chưa tồn tại sẽ giúp bạn nhiều nhất?",
+            "zh": "哪个尚不存在的工具、库或功能对你帮助最大？"
+          }
+        }
+      ]
+    },
+    {
+      "name": "about_you",
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "role",
+          "title": {
+            "default": "Which of these describe your role?",
+            "fr": "Lesquels de ces rôles vous décrivent ?",
+            "es": "¿Cuáles de estos describen tu rol?",
+            "pt": "Quais destes descrevem o seu papel?",
+            "it": "Quali di questi ruoli ti descrivono?",
+            "de": "Welche dieser Rollen beschreiben Sie?",
+            "ja": "あなたの役割に当てはまるものはどれですか？",
+            "vi": "Những vai trò nào sau đây mô tả đúng bạn?",
+            "zh": "以下哪些描述符合你的角色？"
+          },
+          "description": {
+            "default": "The last questions are about you: skip any you'd rather not answer.",
+            "fr": "Les dernières questions portent sur vous : ignorez celles auxquelles vous préférez ne pas répondre.",
+            "es": "Las últimas preguntas son sobre ti: omite las que prefieras no responder.",
+            "pt": "As últimas perguntas são sobre você: pule as que preferir não responder.",
+            "it": "Le ultime domande riguardano te: salta quelle a cui preferisci non rispondere.",
+            "de": "Die letzten Fragen betreffen Sie selbst: Überspringen Sie, was Sie lieber nicht beantworten möchten.",
+            "ja": "最後の質問はあなた自身についてです。答えたくないものはスキップしてください。",
+            "vi": "Các câu hỏi cuối cùng là về bạn: hãy bỏ qua câu nào bạn không muốn trả lời.",
+            "zh": "最后几个问题是关于你自己的：不想回答的可以跳过。"
+          },
+          "choices": [
+            {
+              "value": "architect",
+              "text": {
+                "default": "Architect or technical lead",
+                "fr": "Architecture ou direction technique",
+                "es": "Arquitectura o liderazgo técnico",
+                "pt": "Arquitetura ou liderança técnica",
+                "it": "Architettura o direzione tecnica",
+                "de": "Architektur oder technische Leitung",
+                "ja": "アーキテクトまたはテックリード",
+                "vi": "Kiến trúc sư hoặc trưởng nhóm kỹ thuật",
+                "zh": "架构师或技术负责人"
+              }
+            },
+            {
+              "value": "data",
+              "text": {
+                "default": "Data scientist or analyst",
+                "fr": "Data science ou analyse de données",
+                "es": "Ciencia o análisis de datos",
+                "pt": "Ciência ou análise de dados",
+                "it": "Data science o analisi dati",
+                "de": "Data Science oder Datenanalyse",
+                "ja": "データサイエンティストまたはアナリスト",
+                "vi": "Nhà khoa học hoặc chuyên viên phân tích dữ liệu",
+                "zh": "数据科学家或分析师"
+              }
+            },
+            {
+              "value": "devops",
+              "text": {
+                "default": "DevOps or system administrator",
+                "fr": "DevOps ou administration système",
+                "es": "DevOps o administración de sistemas",
+                "pt": "DevOps ou administração de sistemas",
+                "it": "DevOps o amministrazione di sistema",
+                "de": "DevOps oder Systemadministration",
+                "ja": "DevOpsまたはシステム管理者",
+                "vi": "DevOps hoặc quản trị hệ thống",
+                "zh": "DevOps 或系统管理员"
+              }
+            },
+            {
+              "value": "educator",
+              "text": {
+                "default": "Educator",
+                "fr": "Enseignement ou formation",
+                "es": "Docencia o formación",
+                "pt": "Ensino ou formação",
+                "it": "Formazione o insegnamento",
+                "de": "Lehre oder Ausbildung",
+                "ja": "教育者",
+                "vi": "Giảng viên hoặc người đào tạo",
+                "zh": "教育工作者"
+              }
+            },
+            {
+              "value": "founder",
+              "text": {
+                "default": "Founder or executive",
+                "fr": "Création ou direction d'entreprise",
+                "es": "Creación o dirección de empresa",
+                "pt": "Fundação ou direção de empresa",
+                "it": "Founder o dirigente",
+                "de": "Gründung oder Geschäftsführung",
+                "ja": "創業者または経営者",
+                "vi": "Nhà sáng lập hoặc lãnh đạo",
+                "zh": "创始人或高管"
+              }
+            },
+            {
+              "value": "manager",
+              "text": {
+                "default": "Product or project manager",
+                "fr": "Gestion de produit ou de projet",
+                "es": "Gestión de producto o de proyectos",
+                "pt": "Gestão de produto ou de projeto",
+                "it": "Product o project management",
+                "de": "Produkt- oder Projektmanagement",
+                "ja": "プロダクトマネージャーまたはプロジェクトマネージャー",
+                "vi": "Quản lý sản phẩm hoặc dự án",
+                "zh": "产品或项目经理"
+              }
+            },
+            {
+              "value": "researcher",
+              "text": {
+                "default": "Researcher",
+                "fr": "Recherche",
+                "es": "Investigación",
+                "pt": "Pesquisa",
+                "it": "Ricerca",
+                "de": "Forschung",
+                "ja": "研究者",
+                "vi": "Nhà nghiên cứu",
+                "zh": "研究员"
+              }
+            },
+            {
+              "value": "engineer",
+              "text": {
+                "default": "Software engineer",
+                "fr": "Développement logiciel",
+                "es": "Ingeniería de software",
+                "pt": "Engenharia de software",
+                "it": "Sviluppo software",
+                "de": "Softwareentwicklung",
+                "ja": "ソフトウェアエンジニア",
+                "vi": "Kỹ sư phần mềm",
+                "zh": "软件工程师"
+              }
+            },
+            {
+              "value": "student",
+              "text": {
+                "default": "Student",
+                "fr": "Études",
+                "es": "Estudiante",
+                "pt": "Estudante",
+                "it": "Studente o studentessa",
+                "de": "Studium",
+                "ja": "学生",
+                "vi": "Sinh viên",
+                "zh": "学生"
+              }
+            }
+          ],
+          "showOtherItem": true
+        },
+        {
+          "type": "checkbox",
+          "name": "other_chains",
+          "title": {
+            "default": "Which other blockchain ecosystems have you built on?",
+            "fr": "Sur quels autres écosystèmes blockchain avez-vous développé ?",
+            "es": "¿En qué otros ecosistemas blockchain has desarrollado?",
+            "pt": "Em quais outros ecossistemas blockchain você já desenvolveu?",
+            "it": "Su quali altri ecosistemi blockchain hai sviluppato?",
+            "de": "Auf welchen anderen Blockchain-Ökosystemen haben Sie entwickelt?",
+            "ja": "他にどのブロックチェーンエコシステムで開発したことがありますか？",
+            "vi": "Bạn đã từng phát triển trên những hệ sinh thái blockchain nào khác?",
+            "zh": "你还在哪些其他区块链生态上开发过？"
+          },
+          "choices": [
+            "Algorand",
+            "Avalanche",
+            {
+              "value": "Bitcoin (incl. Lightning)",
+              "text": {
+                "default": "Bitcoin (incl. Lightning)",
+                "fr": "Bitcoin (y compris Lightning)",
+                "es": "Bitcoin (incluido Lightning)",
+                "pt": "Bitcoin (incl. Lightning)",
+                "it": "Bitcoin (incl. Lightning)",
+                "de": "Bitcoin (inkl. Lightning)",
+                "ja": "Bitcoin（Lightningを含む）",
+                "vi": "Bitcoin (kể cả Lightning)",
+                "zh": "Bitcoin（含 Lightning）"
+              }
+            },
+            "BNB",
+            "Ergo",
+            "Ethereum",
+            {
+              "value": "evm",
+              "text": {
+                "default": "Ethereum L2s and other EVM chains",
+                "fr": "L2 d'Ethereum et autres chaînes EVM",
+                "es": "L2 de Ethereum y otras cadenas EVM",
+                "pt": "L2s da Ethereum e outras chains EVM",
+                "it": "L2 di Ethereum e altre chain EVM",
+                "de": "Ethereum-L2s und andere EVM-Chains",
+                "ja": "EthereumのL2やその他のEVMチェーン",
+                "vi": "Các L2 của Ethereum và chuỗi EVM khác",
+                "zh": "Ethereum L2 与其他 EVM 链"
+              }
+            },
+            "Midnight",
+            "Solana",
+            "Sui"
+          ],
+          "showOtherItem": true,
+          "showNoneItem": true,
+          "noneText": {
+            "default": "None",
+            "fr": "Aucun",
+            "es": "Ninguno",
+            "pt": "Nenhum",
+            "it": "Nessuno",
+            "de": "Keine",
+            "ja": "なし",
+            "vi": "Không có",
+            "zh": "没有"
+          }
+        },
+        {
+          "type": "checkbox",
+          "name": "funding",
+          "visibleIf": "{building_on_cardano} = 'yes'",
+          "title": {
+            "default": "How is your Cardano work funded?",
+            "fr": "Comment votre travail sur Cardano est-il financé ?",
+            "es": "¿Cómo se financia tu trabajo en Cardano?",
+            "pt": "Como o seu trabalho na Cardano é financiado?",
+            "it": "Come è finanziato il tuo lavoro su Cardano?",
+            "de": "Wie wird Ihre Arbeit an Cardano finanziert?",
+            "ja": "Cardanoでの活動資金はどのように賄われていますか？",
+            "vi": "Công việc Cardano của bạn được cấp vốn như thế nào?",
+            "zh": "你的 Cardano 工作的资金来源是什么？"
+          },
+          "description": {
+            "default": "Choose up to 3, the main sources.",
+            "fr": "Choisissez-en jusqu'à 3, les principales sources.",
+            "es": "Elige hasta 3, las fuentes principales.",
+            "pt": "Escolha até 3, as principais fontes.",
+            "it": "Scegline fino a 3, le fonti principali.",
+            "de": "Wählen Sie bis zu 3, die Hauptquellen.",
+            "ja": "主なものを3つまで選択してください。",
+            "vi": "Chọn tối đa 3, những nguồn chính.",
+            "zh": "最多选 3 项，主要来源。"
+          },
+          "maxSelectedChoices": 3,
+          "choices": [
+            {
+              "value": "unfunded",
+              "text": {
+                "default": "Not funded (my own time)",
+                "fr": "Non financé (sur mon temps personnel)",
+                "es": "Sin financiación (mi propio tiempo)",
+                "pt": "Não é financiado (meu próprio tempo)",
+                "it": "Non finanziato (tempo personale)",
+                "de": "Nicht finanziert (meine eigene Zeit)",
+                "ja": "資金提供なし（自分の時間で）",
+                "vi": "Không có vốn (thời gian của riêng tôi)",
+                "zh": "没有资金（自己的时间）"
+              }
+            },
+            {
+              "value": "founding-entity",
+              "text": {
+                "default": "Salary from a founding entity (IOG, EMURGO, CF)",
+                "fr": "Salaire d'une entité fondatrice (IOG, EMURGO, CF)",
+                "es": "Salario de una entidad fundadora (IOG, EMURGO, CF)",
+                "pt": "Salário de uma entidade fundadora (IOG, EMURGO, CF)",
+                "it": "Stipendio da un'entità fondatrice (IOG, EMURGO, CF)",
+                "de": "Gehalt von einer Gründungsorganisation (IOG, EMURGO, CF)",
+                "ja": "創設団体からの給与（IOG、EMURGO、CF）",
+                "vi": "Lương từ một tổ chức sáng lập (IOG, EMURGO, CF)",
+                "zh": "创始实体的薪水（IOG、EMURGO、CF）"
+              }
+            },
+            {
+              "value": "company",
+              "text": {
+                "default": "Salary from another company",
+                "fr": "Salaire d'une autre entreprise",
+                "es": "Salario de otra empresa",
+                "pt": "Salário de outra empresa",
+                "it": "Stipendio da un'altra azienda",
+                "de": "Gehalt von einem anderen Unternehmen",
+                "ja": "他の企業からの給与",
+                "vi": "Lương từ một công ty khác",
+                "zh": "其他公司的薪水"
+              }
+            },
+            {
+              "value": "revenue",
+              "text": {
+                "default": "My own product or service revenue",
+                "fr": "Revenus de mon propre produit ou service",
+                "es": "Ingresos de mi propio producto o servicio",
+                "pt": "Receita do meu próprio produto ou serviço",
+                "it": "Ricavi del mio prodotto o servizio",
+                "de": "Einnahmen aus meinem eigenen Produkt oder Dienst",
+                "ja": "自分のプロダクトやサービスの収益",
+                "vi": "Doanh thu từ sản phẩm hoặc dịch vụ của riêng tôi",
+                "zh": "我自己的产品或服务收入"
+              }
+            },
+            {
+              "value": "clients",
+              "text": {
+                "default": "Client work or consulting",
+                "fr": "Missions pour des clients ou conseil",
+                "es": "Trabajo para clientes o consultoría",
+                "pt": "Trabalho para clientes ou consultoria",
+                "it": "Lavoro per clienti o consulenza",
+                "de": "Kundenaufträge oder Beratung",
+                "ja": "クライアントワークやコンサルティング",
+                "vi": "Làm cho khách hàng hoặc tư vấn",
+                "zh": "客户项目或咨询"
+              }
+            },
+            "Catalyst",
+            {
+              "value": "treasury",
+              "text": {
+                "default": "Treasury (Intersect budget, governance action)",
+                "fr": "Trésorerie (budget Intersect, action de gouvernance)",
+                "es": "Tesorería (presupuesto de Intersect, acción de gobernanza)",
+                "pt": "Tesouro (orçamento da Intersect, ação de governança)",
+                "it": "Tesoreria (budget Intersect, azione di governance)",
+                "de": "Treasury (Intersect-Budget, Governance-Aktion)",
+                "ja": "トレジャリー（Intersect予算、ガバナンスアクション）",
+                "vi": "Ngân khố (ngân sách Intersect, hành động quản trị)",
+                "zh": "国库（Intersect 预算、治理行动）"
+              }
+            },
+            {
+              "value": "grants",
+              "text": {
+                "default": "Other grants",
+                "fr": "Autres subventions",
+                "es": "Otras subvenciones",
+                "pt": "Outros grants",
+                "it": "Altri grant",
+                "de": "Andere Grants",
+                "ja": "その他の助成金",
+                "vi": "Tài trợ khác",
+                "zh": "其他资助"
+              }
+            },
+            {
+              "value": "investors",
+              "text": {
+                "default": "Investors or token sale",
+                "fr": "Investisseurs ou vente de tokens",
+                "es": "Inversores o venta de tokens",
+                "pt": "Investidores ou venda de tokens",
+                "it": "Investitori o vendita di token",
+                "de": "Investoren oder Token-Verkauf",
+                "ja": "投資家またはトークンセール",
+                "vi": "Nhà đầu tư hoặc bán token",
+                "zh": "投资者或代币销售"
+              }
+            }
+          ],
+          "showOtherItem": true
+        },
+        {
+          "type": "radiogroup",
+          "name": "region",
+          "title": {
+            "default": "Where are you based?",
+            "fr": "Où vivez-vous ?",
+            "es": "¿Dónde vives?",
+            "pt": "Onde você mora?",
+            "it": "Dove vivi?",
+            "de": "Wo leben Sie?",
+            "ja": "お住まいの地域はどこですか？",
+            "vi": "Bạn đang ở đâu?",
+            "zh": "你在哪个地区？"
+          },
+          "choices": [
+            {
+              "value": "africa",
+              "text": {
+                "default": "Africa",
+                "fr": "Afrique",
+                "es": "África",
+                "pt": "África",
+                "it": "Africa",
+                "de": "Afrika",
+                "ja": "アフリカ",
+                "vi": "Châu Phi",
+                "zh": "非洲"
+              }
+            },
+            {
+              "value": "north-america",
+              "text": {
+                "default": "North America (USA, Canada)",
+                "fr": "Amérique du Nord (États-Unis, Canada)",
+                "es": "América del Norte (EE. UU., Canadá)",
+                "pt": "América do Norte (EUA, Canadá)",
+                "it": "America del Nord (USA, Canada)",
+                "de": "Nordamerika (USA, Kanada)",
+                "ja": "北米（アメリカ、カナダ）",
+                "vi": "Bắc Mỹ (Hoa Kỳ, Canada)",
+                "zh": "北美（美国、加拿大）"
+              }
+            },
+            {
+              "value": "latin-america",
+              "text": {
+                "default": "Latin America and the Caribbean (incl. Mexico)",
+                "fr": "Amérique latine et Caraïbes (y compris le Mexique)",
+                "es": "América Latina y el Caribe (incluido México)",
+                "pt": "América Latina e Caribe (incl. México)",
+                "it": "America Latina e Caraibi (incl. Messico)",
+                "de": "Lateinamerika und Karibik (inkl. Mexiko)",
+                "ja": "中南米・カリブ海諸国（メキシコを含む）",
+                "vi": "Mỹ Latinh và Caribe (kể cả Mexico)",
+                "zh": "拉丁美洲与加勒比地区（含墨西哥）"
+              }
+            },
+            {
+              "value": "east-asia",
+              "text": {
+                "default": "East Asia (China, Japan, Korea)",
+                "fr": "Asie de l'Est (Chine, Japon, Corée)",
+                "es": "Asia Oriental (China, Japón, Corea)",
+                "pt": "Leste Asiático (China, Japão, Coreia)",
+                "it": "Asia orientale (Cina, Giappone, Corea)",
+                "de": "Ostasien (China, Japan, Korea)",
+                "ja": "東アジア（中国、日本、韓国）",
+                "vi": "Đông Á (Trung Quốc, Nhật Bản, Hàn Quốc)",
+                "zh": "东亚（中国、日本、韩国）"
+              }
+            },
+            {
+              "value": "southeast-asia",
+              "text": {
+                "default": "Southeast Asia (Indonesia, Philippines, Singapore, Vietnam)",
+                "fr": "Asie du Sud-Est (Indonésie, Philippines, Singapour, Vietnam)",
+                "es": "Sudeste Asiático (Indonesia, Filipinas, Singapur, Vietnam)",
+                "pt": "Sudeste Asiático (Indonésia, Filipinas, Singapura, Vietnã)",
+                "it": "Sud-est asiatico (Indonesia, Filippine, Singapore, Vietnam)",
+                "de": "Südostasien (Indonesien, Philippinen, Singapur, Vietnam)",
+                "ja": "東南アジア（インドネシア、フィリピン、シンガポール、ベトナム）",
+                "vi": "Đông Nam Á (Indonesia, Philippines, Singapore, Việt Nam)",
+                "zh": "东南亚（印度尼西亚、菲律宾、新加坡、越南）"
+              }
+            },
+            {
+              "value": "south-asia",
+              "text": {
+                "default": "South Asia (India, Pakistan, Bangladesh)",
+                "fr": "Asie du Sud (Inde, Pakistan, Bangladesh)",
+                "es": "Asia del Sur (India, Pakistán, Bangladés)",
+                "pt": "Sul da Ásia (Índia, Paquistão, Bangladesh)",
+                "it": "Asia meridionale (India, Pakistan, Bangladesh)",
+                "de": "Südasien (Indien, Pakistan, Bangladesch)",
+                "ja": "南アジア（インド、パキスタン、バングラデシュ）",
+                "vi": "Nam Á (Ấn Độ, Pakistan, Bangladesh)",
+                "zh": "南亚（印度、巴基斯坦、孟加拉国）"
+              }
+            },
+            {
+              "value": "middle-east",
+              "text": {
+                "default": "Middle East and Central Asia",
+                "fr": "Moyen-Orient et Asie centrale",
+                "es": "Oriente Medio y Asia Central",
+                "pt": "Oriente Médio e Ásia Central",
+                "it": "Medio Oriente e Asia centrale",
+                "de": "Naher Osten und Zentralasien",
+                "ja": "中東・中央アジア",
+                "vi": "Trung Đông và Trung Á",
+                "zh": "中东与中亚"
+              }
+            },
+            {
+              "value": "europe",
+              "text": {
+                "default": "Europe",
+                "fr": "Europe",
+                "es": "Europa",
+                "pt": "Europa",
+                "it": "Europa",
+                "de": "Europa",
+                "ja": "ヨーロッパ",
+                "vi": "Châu Âu",
+                "zh": "欧洲"
+              }
+            },
+            {
+              "value": "oceania",
+              "text": {
+                "default": "Oceania",
+                "fr": "Océanie",
+                "es": "Oceanía",
+                "pt": "Oceania",
+                "it": "Oceania",
+                "de": "Ozeanien",
+                "ja": "オセアニア",
+                "vi": "Châu Đại Dương",
+                "zh": "大洋洲"
+              }
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "dapps_used",
+          "title": {
+            "default": "How many Cardano dApps, other than your own, have you used in the last 12 months?",
+            "fr": "Combien de dApps Cardano, autres que les vôtres, avez-vous utilisées au cours des 12 derniers mois ?",
+            "es": "¿Cuántas dApps de Cardano, aparte de las tuyas, has usado en los últimos 12 meses?",
+            "pt": "Quantos dApps da Cardano, além dos seus, você usou nos últimos 12 meses?",
+            "it": "Quante dApp Cardano, oltre alle tue, hai usato negli ultimi 12 mesi?",
+            "de": "Wie viele Cardano-dApps, außer Ihren eigenen, haben Sie in den letzten 12 Monaten genutzt?",
+            "ja": "過去12か月間に、自分のもの以外のCardano dAppをいくつ使いましたか？",
+            "vi": "Trong 12 tháng qua, bạn đã dùng bao nhiêu dApp Cardano, không tính của chính bạn?",
+            "zh": "过去 12 个月里，除了你自己的以外，你用过多少个 Cardano dApp？"
+          },
+          "choices": [
+            {
+              "value": "none",
+              "text": {
+                "default": "None",
+                "fr": "Aucune",
+                "es": "Ninguna",
+                "pt": "Nenhum",
+                "it": "Nessuna",
+                "de": "Keine",
+                "ja": "なし",
+                "vi": "Không có",
+                "zh": "没有"
+              }
+            },
+            {
+              "value": "1-2",
+              "text": {
+                "default": "1 or 2",
+                "fr": "1 ou 2",
+                "es": "1 o 2",
+                "pt": "1 ou 2",
+                "it": "1 o 2",
+                "de": "1 oder 2",
+                "ja": "1〜2個",
+                "vi": "1 hoặc 2",
+                "zh": "1 或 2 个"
+              }
+            },
+            {
+              "value": "3-9",
+              "text": {
+                "default": "3 to 9",
+                "fr": "3 à 9",
+                "es": "De 3 a 9",
+                "pt": "3 a 9",
+                "it": "Da 3 a 9",
+                "de": "3 bis 9",
+                "ja": "3〜9個",
+                "vi": "3 đến 9",
+                "zh": "3 到 9 个"
+              }
+            },
+            {
+              "value": "10-plus",
+              "text": {
+                "default": "10 or more",
+                "fr": "10 ou plus",
+                "es": "10 o más",
+                "pt": "10 ou mais",
+                "it": "10 o più",
+                "de": "10 oder mehr",
+                "ja": "10個以上",
+                "vi": "10 trở lên",
+                "zh": "10 个或以上"
+              }
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "participation",
+          "title": {
+            "default": "Which of these did you do in the last 12 months?",
+            "fr": "Lesquelles de ces actions avez-vous faites au cours des 12 derniers mois ?",
+            "es": "¿Cuáles de estas actividades realizaste en los últimos 12 meses?",
+            "pt": "Quais destas coisas você fez nos últimos 12 meses?",
+            "it": "Quali di queste cose hai fatto negli ultimi 12 mesi?",
+            "de": "Was davon haben Sie in den letzten 12 Monaten getan?",
+            "ja": "過去12か月間に、次のうちどれをしましたか？",
+            "vi": "Trong 12 tháng qua, bạn đã làm những việc nào sau đây?",
+            "zh": "过去 12 个月里，你做过以下哪些事？"
+          },
+          "choices": [
+            {
+              "value": "read-cip",
+              "text": {
+                "default": "Read or used a CIP",
+                "fr": "Lu ou utilisé une CIP",
+                "es": "Leí o usé una CIP",
+                "pt": "Li ou usei uma CIP",
+                "it": "Letto o usato una CIP",
+                "de": "Eine CIP gelesen oder verwendet",
+                "ja": "CIPを読んだ、または使った",
+                "vi": "Đọc hoặc dùng một CIP",
+                "zh": "阅读或使用过 CIP"
+              }
+            },
+            {
+              "value": "reviewed-cip",
+              "text": {
+                "default": "Commented on or reviewed a CIP",
+                "fr": "Commenté ou relu une CIP",
+                "es": "Comenté o revisé una CIP",
+                "pt": "Comentei ou revisei uma CIP",
+                "it": "Commentato o revisionato una CIP",
+                "de": "Eine CIP kommentiert oder reviewt",
+                "ja": "CIPにコメントした、またはレビューした",
+                "vi": "Bình luận hoặc review một CIP",
+                "zh": "评论或评审过 CIP"
+              }
+            },
+            {
+              "value": "wrote-cip",
+              "text": {
+                "default": "Wrote or co-wrote a CIP",
+                "fr": "Rédigé ou corédigé une CIP",
+                "es": "Escribí o coescribí una CIP",
+                "pt": "Escrevi ou coescrevi uma CIP",
+                "it": "Scritto o co-scritto una CIP",
+                "de": "Eine CIP geschrieben oder mitgeschrieben",
+                "ja": "CIPを書いた、または共同で書いた",
+                "vi": "Viết hoặc đồng viết một CIP",
+                "zh": "撰写或合著过 CIP"
+              }
+            },
+            {
+              "value": "open-source",
+              "text": {
+                "default": "Contributed to an open-source Cardano project that isn't mine",
+                "fr": "Contribué à un projet Cardano open source autre que le mien",
+                "es": "Contribuí a un proyecto open source de Cardano que no es mío",
+                "pt": "Contribuí para um projeto Cardano open source que não é meu",
+                "it": "Contribuito a un progetto Cardano open source non mio",
+                "de": "Zu einem fremden Open-Source-Cardano-Projekt beigetragen",
+                "ja": "自分のものではないCardanoのオープンソースプロジェクトに貢献した",
+                "vi": "Đóng góp cho một dự án Cardano mã nguồn mở không phải của tôi",
+                "zh": "为不属于我的 Cardano 开源项目做过贡献"
+              }
+            },
+            {
+              "value": "voted",
+              "text": {
+                "default": "Voted on a governance action (as DRep or SPO)",
+                "fr": "Voté sur une action de gouvernance (en tant que DRep ou SPO)",
+                "es": "Voté en una acción de gobernanza (como DRep o SPO)",
+                "pt": "Votei em uma ação de governança (como DRep ou SPO)",
+                "it": "Votato su un'azione di governance (come DRep o SPO)",
+                "de": "Über eine Governance-Aktion abgestimmt (als DRep oder SPO)",
+                "ja": "ガバナンスアクションに投票した（DRepまたはSPOとして）",
+                "vi": "Bỏ phiếu cho một hành động quản trị (với tư cách DRep hoặc SPO)",
+                "zh": "对治理行动投过票（作为 DRep 或 SPO）"
+              }
+            },
+            {
+              "value": "stake-pool",
+              "text": {
+                "default": "Ran a stake pool",
+                "fr": "Opéré un stake pool",
+                "es": "Operé un stake pool",
+                "pt": "Operei um stake pool",
+                "it": "Gestito uno stake pool",
+                "de": "Einen Stake Pool betrieben",
+                "ja": "ステークプールを運営した",
+                "vi": "Vận hành một stake pool",
+                "zh": "运营过质押池"
+              }
+            },
+            {
+              "value": "applied-funding",
+              "text": {
+                "default": "Applied for funding (Catalyst, treasury, grants)",
+                "fr": "Demandé un financement (Catalyst, trésorerie, subventions)",
+                "es": "Solicité financiación (Catalyst, tesorería, subvenciones)",
+                "pt": "Pedi financiamento (Catalyst, tesouro, grants)",
+                "it": "Richiesto finanziamenti (Catalyst, tesoreria, grant)",
+                "de": "Finanzierung beantragt (Catalyst, Treasury, Grants)",
+                "ja": "資金を申請した（Catalyst、トレジャリー、助成金）",
+                "vi": "Xin cấp vốn (Catalyst, ngân khố, tài trợ)",
+                "zh": "申请过资金（Catalyst、国库、资助）"
+              }
+            },
+            {
+              "value": "intersect",
+              "text": {
+                "default": "Took part in an Intersect committee or working group",
+                "fr": "Participé à un comité ou groupe de travail d'Intersect",
+                "es": "Participé en un comité o grupo de trabajo de Intersect",
+                "pt": "Participei de um comitê ou grupo de trabalho da Intersect",
+                "it": "Partecipato a un comitato o gruppo di lavoro di Intersect",
+                "de": "An einem Intersect-Komitee oder einer Arbeitsgruppe teilgenommen",
+                "ja": "Intersectの委員会やワーキンググループに参加した",
+                "vi": "Tham gia một ủy ban hoặc nhóm làm việc của Intersect",
+                "zh": "参加过 Intersect 的委员会或工作组"
+              }
+            },
+            {
+              "value": "event",
+              "text": {
+                "default": "Attended a Cardano developer event or hackathon",
+                "fr": "Assisté à un événement développeurs Cardano ou un hackathon",
+                "es": "Asistí a un evento o hackathon para desarrolladores de Cardano",
+                "pt": "Participei de um evento ou hackathon para desenvolvedores Cardano",
+                "it": "Partecipato a un evento o hackathon per sviluppatori Cardano",
+                "de": "Ein Cardano-Entwicklerevent oder einen Hackathon besucht",
+                "ja": "Cardano開発者イベントやハッカソンに参加した",
+                "vi": "Tham dự một sự kiện lập trình viên Cardano hoặc hackathon",
+                "zh": "参加过 Cardano 开发者活动或黑客松"
+              }
+            },
+            {
+              "value": "taught",
+              "text": {
+                "default": "Wrote a tutorial, taught or mentored",
+                "fr": "Écrit un tutoriel, enseigné ou fait du mentorat",
+                "es": "Escribí un tutorial, di clases o hice mentoría",
+                "pt": "Escrevi um tutorial, ensinei ou fiz mentoria",
+                "it": "Scritto un tutorial, insegnato o fatto da mentor",
+                "de": "Ein Tutorial geschrieben, unterrichtet oder gementort",
+                "ja": "チュートリアルを書いた、教えた、またはメンターをした",
+                "vi": "Viết hướng dẫn, giảng dạy hoặc cố vấn",
+                "zh": "写过教程、教过课或做过导师"
+              }
+            }
+          ],
+          "showNoneItem": true,
+          "noneText": {
+            "default": "None of these",
+            "fr": "Aucune de ces actions",
+            "es": "Ninguna de estas",
+            "pt": "Nenhuma destas",
+            "it": "Nessuna di queste",
+            "de": "Nichts davon",
+            "ja": "いずれもしていない",
+            "vi": "Không việc nào trong số này",
+            "zh": "都没有"
+          }
+        }
+      ]
+    }
+  ]
+}

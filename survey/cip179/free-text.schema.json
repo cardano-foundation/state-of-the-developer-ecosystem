@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CIP-179 free-text answer",
+  "description": "The answer to a CIP-179 custom (tag 0) question that asks for free text. The answer metadatum is the text as chunked_text: either one text string of at most 64 UTF-8 bytes, or a non-empty array of such strings whose concatenation is the answer. The full text is at most maxUtf8Bytes UTF-8 bytes long.",
+  "maxUtf8Bytes": 1024,
+  "oneOf": [
+    { "type": "string" },
+    { "type": "array", "minItems": 1, "items": { "type": "string" } }
+  ]
+}

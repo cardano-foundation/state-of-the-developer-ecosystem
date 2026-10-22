@@ -4,3 +4,4 @@ temp/
 .wrangler
 _worker.bundle
 node_modules
+survey/definition.metadata.json
