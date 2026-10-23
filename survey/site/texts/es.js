@@ -21,14 +21,14 @@ export default {
     publicTitle: "Tus respuestas serán públicas",
     public:
       "Se publican en la blockchain de Cardano, donde cualquiera puede leerlas y nada se puede modificar ni eliminar. Se firman con una clave aleatoria creada en este navegador, que no está vinculada a ti. No escribas nada personal en las respuestas de texto.",
-    consent: "Al publicar tus respuestas, reconoces que se tratarán según lo descrito en los",
+    consent: "Al publicar tus respuestas, aceptas los",
     start: "Empezar",
     continue: "Continuar",
     restart: "Empezar de nuevo",
     remind: "¿No tienes tiempo ahora? Añade un recordatorio:",
     calendar: "App de calendario",
     google: "Google Calendar",
-    email: "Correo",
+    email: "Correo electrónico",
     // In the reminder, before the closing date.
     minutes: "Unos 15 minutos.",
   },
@@ -58,7 +58,7 @@ export default {
       budget: "El presupuesto de hoy para comisiones de transacción se ha agotado. Tus respuestas se conservan en este navegador: vuelve mañana.",
       tooLong: "Tus respuestas de texto son demasiado largas para publicarse. Vuelve a tus respuestas, acórtalas e inténtalo de nuevo.",
       offline: "No se puede conectar con el servidor. Comprueba tu conexión e inténtalo de nuevo.",
-      check: "La comprobación de que no eres un robot no se ha superado. Inténtalo de nuevo.",
+      check: "No hemos podido comprobar que no eres un robot. Inténtalo de nuevo.",
       failed: "Algo ha salido mal y tus respuestas no se han publicado. Se conservan en este navegador: inténtalo de nuevo más tarde.",
       unpublished: "Esta encuesta aún no está publicada: esta página solo permite probarla y no puede publicar respuestas.",
     },
@@ -68,7 +68,7 @@ export default {
     title: "¡Gracias!",
     body: "Tus respuestas están publicadas. Aparecerán en la blockchain de Cardano en menos de un minuto.",
     repeated: "Este navegador ya había publicado una respuesta, así que las respuestas que acabas de revisar no se han publicado.",
-    transaction: "Ver tu respuesta en la cadena",
+    transaction: "Ver tu respuesta en la blockchain",
   },
 
   closed: {
