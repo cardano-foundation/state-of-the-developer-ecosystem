@@ -15,6 +15,9 @@
 //
 // With `--unpublished`, there is no published survey: the page shows the
 // survey open until the end of the next epoch, and can't publish answers.
+//
+// Built by Vercel, the page runs BotID's check before publishing; built on our
+// machine, it doesn't, as the sponsor there doesn't check.
 
 import * as Transaction from "@evolution-sdk/evolution/Transaction";
 import { decodeMetadata, encodeMetadata } from "cip-179";
@@ -71,6 +74,7 @@ const baked = {
   // keeps the browser's respondent key and answers for it apart.
   survey: args.unpublished ? `${createHash("sha256").update(JSON.stringify(toDetailedJson(metadatum))).digest("hex")}#0` : survey,
   unpublished: args.unpublished,
+  botCheck: Boolean(process.env.VERCEL),
   definition: toDetailedJson(metadatum),
   conditions,
   noneLabels,

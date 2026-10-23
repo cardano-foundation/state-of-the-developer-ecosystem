@@ -53,6 +53,7 @@ export default {
     soon: (rel) => `Il sondaggio chiude ${rel}: pubblica le tue risposte prima.`,
     publish: "Pubblica le mie risposte",
     back: "Torna alle mie risposte",
+    checking: "Verifica che non sei un robot…",
     sending: "Pubblicazione…",
     retrying: (attempt) => `Pubblicazione ancora in corso… (tentativo ${attempt})`,
     retry: "Riprova",

@@ -280,6 +280,11 @@
   dependencies:
     "@types/node" "*"
 
+botid@1.5.11:
+  version "1.5.11"
+  resolved "https://registry.yarnpkg.com/botid/-/botid-1.5.11.tgz#6ad27a45cb96f14c66fc40be813eeff3f6534305"
+  integrity sha512-KOO1A3+/vFVJk5aFoG3sNwiogKFPVR+x4aw4gQ1b2e0XoE+i5xp48/EZn+WqR07jRHeDGwHWQUOtV5WVm7xiww==
+
 cardano-tessera-respond@0.8.0:
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/cardano-tessera-respond/-/cardano-tessera-respond-0.8.0.tgz#9985c92a5994e7f251f55ea3ae1f446112a064f4"

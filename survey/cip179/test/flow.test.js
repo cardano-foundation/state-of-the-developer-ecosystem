@@ -24,6 +24,10 @@ test("from the welcome to the published response", () => {
   assert.deepEqual(after({ type: "start" }, finish), { screen: "submit", step: "review", answered: 12 });
   assert.deepEqual(after({ type: "start" }, finish, publish), { screen: "submit", step: "sending", attempt: 1, answered: 12 });
   assert.deepEqual(after({ type: "start" }, finish, publish, { type: "attempt", attempt: 2 }).attempt, 2);
+  // Waiting for the bot check, then the first attempt.
+  const checking = after({ type: "start" }, finish, publish, { type: "checking" });
+  assert.deepEqual(checking, { screen: "submit", step: "sending", attempt: 1, checking: true, answered: 12 });
+  assert.deepEqual(next(checking, { type: "attempt", attempt: 1 }), { screen: "submit", step: "sending", attempt: 1, answered: 12 });
   assert.deepEqual(after({ type: "start" }, finish, publish, { type: "published", txId: TX }), { screen: "thanks", txId: TX });
 });
 
@@ -49,6 +53,7 @@ test("each refusal has its problem, or its screen", () => {
     ["budget", "budget"],
     ["too-long", "tooLong"],
     ["offline", "offline"],
+    ["bot", "check"],
     ["unpublished", "unpublished"],
     ["invalid", "failed"],
     ["failed", "failed"],
@@ -65,7 +70,7 @@ test("each refusal has its problem, or its screen", () => {
 
 test("an event out of place changes nothing", () => {
   const welcome = { screen: "welcome" };
-  for (const type of ["return", "finish", "back", "publish", "attempt", "published", "refused", "unknown"]) {
+  for (const type of ["return", "finish", "back", "publish", "checking", "attempt", "published", "refused", "unknown"]) {
     assert.equal(next(welcome, { type }), welcome, type);
   }
   // While sending, the buttons do nothing; before it, the sponsor's replies don't.
@@ -76,6 +81,7 @@ test("an event out of place changes nothing", () => {
   assert.equal(next(review, { type: "published", txId: TX }), review);
   assert.equal(next(review, { type: "refused", code: "busy" }), review);
   assert.equal(next(review, { type: "attempt", attempt: 2 }), review);
+  assert.equal(next(review, { type: "checking" }), review);
   const thanks = { screen: "thanks", txId: TX };
   assert.equal(next(thanks, { type: "start" }), thanks);
 });

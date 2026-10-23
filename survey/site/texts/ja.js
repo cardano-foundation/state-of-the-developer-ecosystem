@@ -53,6 +53,7 @@ export default {
     soon: (rel) => `アンケートは${rel}に締め切られます。それまでに回答を公開してください。`,
     publish: "回答を公開する",
     back: "回答に戻る",
+    checking: "ロボットでないことを確認しています…",
     sending: "公開中…",
     retrying: (attempt) => `まだ公開中です…（${attempt}回目）`,
     retry: "もう一度試す",

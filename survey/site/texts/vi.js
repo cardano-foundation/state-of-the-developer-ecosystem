@@ -53,6 +53,7 @@ export default {
     soon: (rel) => `Khảo sát đóng ${rel}: hãy công bố câu trả lời của bạn trước thời điểm đó.`,
     publish: "Công bố câu trả lời của tôi",
     back: "Quay lại câu trả lời",
+    checking: "Đang kiểm tra bạn không phải robot…",
     sending: "Đang công bố…",
     retrying: (attempt) => `Vẫn đang công bố… (lần thử ${attempt})`,
     retry: "Thử lại",

@@ -18,6 +18,7 @@
     "@libsql/client": "0.18.0",
     "@noble/curves": "^2.4.0",
     "@noble/hashes": "^2.4.0",
+    "botid": "1.5.11",
     "cardano-tessera-respond": "0.8.0",
     "cip-179": "0.6.0"
   },

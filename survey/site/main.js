@@ -10,7 +10,7 @@ import built from "built-survey";
 
 import { fromDetailedJson } from "../cip179/metadatum.js";
 import { epochAt, epochEnd, transactionUrl } from "../cip179/network.js";
-import { respondent } from "../cip179/respondent.js";
+import { botCheck, respondent } from "../cip179/respondent.js";
 import { next, start } from "./flow.js";
 import { googleCalendarUrl, icsFile, mailtoUrl, reminderTime } from "./reminder.js";
 import de from "./texts/de.js";
@@ -36,6 +36,8 @@ const endEpoch = Number(definition.endEpoch);
 const close = epochEnd(built.network, endEpoch);
 // Each survey has its own respondent: key, answers and language.
 const me = respondent(`survey.${built.survey}.`);
+// Deployed on Vercel, BotID's check, started on the submit screen.
+const bot = botCheck({ enabled: built.botCheck });
 
 // The languages the page and the survey both have.
 const { defaultLanguage, translations } = built.translations;
@@ -102,6 +104,7 @@ async function publish() {
   // A survey built before it is published (`site.js --unpublished`) is only tried.
   if (built.unpublished) return dispatch({ type: "refused", code: "unpublished" });
   try {
+    await bot.ready(() => dispatch({ type: "checking" }));
     const published = await me.submit(payload, { onAttempt: (attempt) => dispatch({ type: "attempt", attempt }) });
     dispatch({ type: "published", txId: published });
   } catch (error) {
@@ -208,13 +211,20 @@ function show() {
       break;
     case "submit": {
       const sending = state.step === "sending";
+      bot.load();
       $("#answered").textContent = texts.submit.answered(state.answered);
       showClosing();
       $("#problem").hidden = state.step !== "failed";
       $("#problem").textContent = state.step === "failed" ? texts.submit.problems[state.problem] : "";
       $("#publish").textContent = state.step === "failed" ? texts.submit.retry : texts.submit.publish;
       $("#publish").disabled = $("#back").disabled = sending;
-      $("#progress").textContent = !sending ? "" : state.attempt === 1 ? texts.submit.sending : texts.submit.retrying(state.attempt);
+      $("#progress").textContent = !sending
+        ? ""
+        : state.checking
+          ? texts.submit.checking
+          : state.attempt === 1
+            ? texts.submit.sending
+            : texts.submit.retrying(state.attempt);
       break;
     }
     case "thanks":

@@ -1,6 +1,6 @@
 // The respondent's side of a sponsored response, in the browser (see
-// `sponsor.js`): their key, their unsent answers, and the submission through
-// the sponsor functions.
+// `sponsor.js`): their key, their unsent answers, BotID's check, and the
+// submission through the sponsor functions.
 //
 // The key is random, made on the first visit and kept in localStorage with
 // the rest, under a prefix. When localStorage doesn't persist (private
@@ -9,6 +9,7 @@
 import { ed25519 } from "@noble/curves/ed25519.js";
 import { blake2b } from "@noble/hashes/blake2.js";
 import { bytesToHex, hexToBytes } from "@noble/hashes/utils.js";
+import { initBotId } from "botid/client/core";
 
 import { toCbor } from "./metadatum.js";
 
@@ -18,6 +19,14 @@ import { toCbor } from "./metadatum.js";
 const RETRIABLE = ["busy", "refused", "expired"];
 const RETRIES = 2;
 const RETRY_MS = 5000;
+
+// The sponsor's step 1, which BotID protects (`api/sponsor/index.js`): the
+// page's `GET` waits for BotID's challenge, at most BOT_CHECK_MS.
+const PROTECTED = [
+  { path: "/api/sponsor", method: "POST" },
+  { path: "/api/sponsor", method: "GET" },
+];
+const BOT_CHECK_MS = 20 * 1000;
 
 /**
  * The respondent on this device. `prefix` names what is kept in `storage`: a
@@ -86,6 +95,48 @@ export function respondent(prefix, { storage = deviceStorage(), retryMs = RETRY_
           await new Promise((resolve) => setTimeout(resolve, retryMs));
         }
       }
+    },
+  };
+}
+
+/**
+ * Vercel BotID, which adds its headers to the page's requests to
+ * `/api/sponsor` once its challenge is done in the browser. `load()` starts
+ * the challenge, and `ready(waiting)` resolves once it is done, calling
+ * `waiting` first if it isn't yet. A challenge not done within BOT_CHECK_MS
+ * is refused with the code "bot", and starts afresh at the next call. Off
+ * Vercel (`enabled` false), there is no challenge.
+ */
+export function botCheck({ enabled }) {
+  const failed = (reason) => Object.assign(new Error(`the bot check failed (${reason})`), { code: "bot" });
+  let done = !enabled;
+  let started = false;
+  let challenge;
+  const load = () => {
+    if (done) return Promise.resolve();
+    if (!started) initBotId({ protect: PROTECTED });
+    started = true;
+    return (challenge ??= new Promise((resolve, reject) => {
+      const timer = setTimeout(() => reject(failed("it took too long")), BOT_CHECK_MS);
+      // A script that didn't load rejects with an event.
+      fetch("/api/sponsor")
+        .then(resolve, (error) => reject(failed(error?.message ?? "its script didn't load")))
+        .finally(() => clearTimeout(timer));
+    }).then(
+      () => void (done = true),
+      (error) => {
+        challenge = undefined;
+        // BotID starts its challenge afresh when the page shows again.
+        dispatchEvent(new Event("visibilitychange"));
+        throw error;
+      },
+    ));
+  };
+  return {
+    load: () => void load().catch(() => {}),
+    async ready(waiting = () => {}) {
+      if (!done) waiting();
+      await load();
     },
   };
 }

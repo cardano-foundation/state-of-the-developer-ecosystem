@@ -53,6 +53,7 @@ export default {
     soon: (rel) => `A pesquisa fecha ${rel}: publique suas respostas antes disso.`,
     publish: "Publicar minhas respostas",
     back: "Voltar às minhas respostas",
+    checking: "Verificando se você não é um robô…",
     sending: "Publicando…",
     retrying: (attempt) => `Ainda publicando… (tentativa ${attempt})`,
     retry: "Tentar de novo",

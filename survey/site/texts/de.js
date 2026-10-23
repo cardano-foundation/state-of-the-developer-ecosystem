@@ -53,6 +53,7 @@ export default {
     soon: (rel) => `Die Umfrage endet ${rel}: Veröffentliche deine Antworten bis dahin.`,
     publish: "Meine Antworten veröffentlichen",
     back: "Zurück zu meinen Antworten",
+    checking: "Wir prüfen, dass du kein Roboter bist…",
     sending: "Wird veröffentlicht…",
     retrying: (attempt) => `Veröffentlichung läuft noch… (Versuch ${attempt})`,
     retry: "Erneut versuchen",

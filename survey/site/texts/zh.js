@@ -53,6 +53,7 @@ export default {
     soon: (rel) => `问卷将于${rel}截止：请在此之前发布你的回答。`,
     publish: "发布我的回答",
     back: "返回修改",
+    checking: "正在进行人机验证…",
     sending: "发布中…",
     retrying: (attempt) => `仍在发布中…（第 ${attempt} 次尝试）`,
     retry: "重试",

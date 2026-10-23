@@ -54,6 +54,7 @@ export default {
     soon: (rel) => `The survey closes ${rel}: publish your answers before then.`,
     publish: "Publish my answers",
     back: "Back to my answers",
+    checking: "Checking that you aren't a robot…",
     sending: "Publishing…",
     retrying: (attempt) => `Still publishing… (attempt ${attempt})`,
     retry: "Try again",

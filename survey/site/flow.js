@@ -11,7 +11,8 @@
 // while sending, the sponsor's reply decides.
 //
 // The submit screen has three steps: "review" before publishing, "sending",
-// and "failed" with the problem to tell.
+// and "failed" with the problem to tell. While sending, it may first be
+// `checking`: waiting for the bot check, before the first attempt.
 
 // What the respondent is told for each of the sponsor's refusals
 // (`sponsor.js`) and of the page's own (`respondent.js`, and `unpublished` for
@@ -24,6 +25,7 @@ const PROBLEMS = {
   budget: "budget",
   "too-long": "tooLong",
   offline: "offline",
+  bot: "check",
   unpublished: "unpublished",
 };
 
@@ -35,6 +37,7 @@ const FROM = {
   finish: ["questions"],
   back: ["submit"],
   publish: ["submit"],
+  checking: ["submit"],
   attempt: ["submit"],
   published: ["submit"],
   refused: ["submit"],
@@ -68,8 +71,10 @@ export function next(state, event) {
       return sending ? state : { screen: "questions" };
     case "publish":
       return sending ? state : { screen: "submit", step: "sending", attempt: 1, answered: state.answered };
+    case "checking":
+      return sending ? { ...state, checking: true } : state;
     case "attempt":
-      return sending ? { ...state, attempt: event.attempt } : state;
+      return sending ? { screen: "submit", step: "sending", attempt: event.attempt, answered: state.answered } : state;
     case "published":
       return sending ? { screen: "thanks", txId: event.txId } : state;
     case "ended":

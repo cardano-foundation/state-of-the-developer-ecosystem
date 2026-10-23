@@ -53,6 +53,7 @@ export default {
     soon: (rel) => `L'enquête ferme ${rel} : publiez vos réponses d'ici là.`,
     publish: "Publier mes réponses",
     back: "Revenir à mes réponses",
+    checking: "Vérification que vous n'êtes pas un robot…",
     sending: "Publication…",
     retrying: (attempt) => `Publication toujours en cours… (essai ${attempt})`,
     retry: "Réessayer",
