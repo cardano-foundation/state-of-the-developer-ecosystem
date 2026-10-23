@@ -11,15 +11,15 @@
     "zh": "Cardano 开发者生态现状 - 2026 年调查"
   },
   "description": {
-    "default": "About 15 minutes. The results tell tool builders, documentation writers and funders what to work on first.",
-    "fr": "Environ 15 minutes. Les résultats montrent aux créateurs d'outils, aux auteurs de documentation et aux financeurs sur quoi travailler en priorité.",
-    "es": "Unos 15 minutos. Los resultados indican a quienes crean herramientas, escriben documentación o financian proyectos en qué trabajar primero.",
-    "pt": "Cerca de 15 minutos. Os resultados mostram a quem cria ferramentas, escreve documentação e financia projetos no que trabalhar primeiro.",
-    "it": "Circa 15 minuti. I risultati indicano a chi crea strumenti, scrive documentazione o finanzia progetti a cosa dare priorità.",
-    "de": "Etwa 15 Minuten. Die Ergebnisse zeigen Tool-Entwicklern, technischen Redakteuren und Förderern, woran zuerst gearbeitet werden sollte.",
-    "ja": "所要時間は約15分です。結果は、ツール開発者、ドキュメント執筆者、資金提供者が何に優先して取り組むべきかを示します。",
-    "vi": "Khoảng 15 phút. Kết quả cho những người xây dựng công cụ, viết tài liệu và cấp vốn biết nên ưu tiên làm gì trước.",
-    "zh": "大约需要 15 分钟。调查结果会告诉工具开发者、文档作者和资助方应该优先做什么。"
+    "default": "About 15 minutes. The results help tool builders, documentation writers and funders decide what to work on first.",
+    "fr": "Environ 15 minutes. Les résultats aident les créateurs d'outils, les auteurs de documentation et les financeurs à décider sur quoi travailler en priorité.",
+    "es": "Unos 15 minutos. Los resultados ayudan a quienes crean herramientas, escriben documentación o financian proyectos a decidir en qué trabajar primero.",
+    "pt": "Cerca de 15 minutos. Os resultados ajudam quem cria ferramentas, escreve documentação e financia projetos a decidir no que trabalhar primeiro.",
+    "it": "Circa 15 minuti. I risultati aiutano chi crea strumenti, scrive documentazione o finanzia progetti a decidere a cosa dare priorità.",
+    "de": "Etwa 15 Minuten. Die Ergebnisse helfen Tool-Entwicklern, technischen Redakteuren und Förderern zu entscheiden, woran zuerst gearbeitet werden sollte.",
+    "ja": "所要時間は約15分です。結果は、ツール開発者、ドキュメント執筆者、資金提供者が何に優先して取り組むべきかを決める助けになります。",
+    "vi": "Khoảng 15 phút. Kết quả giúp những người xây dựng công cụ, viết tài liệu và cấp vốn quyết định nên ưu tiên làm gì trước.",
+    "zh": "大约需要 15 分钟。调查结果将帮助工具开发者、文档作者和资助方决定应该优先做什么。"
   },
   "triggers": [
     { "type": "complete", "expression": "{experience} = 'not-a-developer'" }
@@ -1646,10 +1646,10 @@
           "name": "problems",
           "visibleIf": "{building_on_cardano} = 'yes'",
           "title": {
-            "default": "How much of a problem is each of these for you?",
+            "default": "How problematic is each of these for you?",
             "fr": "Dans quelle mesure chacun de ces points vous pose-t-il problème ?",
             "es": "¿Hasta qué punto supone un problema para ti cada uno de estos aspectos?",
-            "pt": "O quanto cada um destes pontos é um problema para você?",
+            "pt": "Quão problemáticos são cada um destes pontos para você?",
             "it": "Quanto è problematico per te ciascuno di questi aspetti?",
             "de": "Wie sehr ist jeder dieser Punkte für dich ein Problem?",
             "ja": "次の各項目は、あなたにとってどの程度問題になっていますか？",
@@ -1970,7 +1970,7 @@
             {
               "value": "first-app",
               "text": {
-                "default": "Getting a first application working end to end",
+                "default": "Getting a first application working end-to-end",
                 "fr": "Faire fonctionner une première application de bout en bout",
                 "es": "Conseguir que una primera aplicación funcione de principio a fin",
                 "pt": "Fazer uma primeira aplicação funcionar de ponta a ponta",
@@ -1999,10 +1999,10 @@
             "zh": "你在哪里获得 Cardano 技术问题的解答？"
           },
           "description": {
-            "default": "Choose up to 5, the ones you rely on most.",
+            "default": "Choose up to 5; pick the ones you rely on most.",
             "fr": "Choisissez-en jusqu'à 5, les sources sur lesquelles vous comptez le plus.",
             "es": "Elige hasta 5, las fuentes en las que más confías.",
-            "pt": "Escolha até 5, as fontes que você mais usa.",
+            "pt": "Escolha até 5; selecione os que você mais usa.",
             "it": "Massimo 5: le fonti su cui fai più affidamento.",
             "de": "Wähle bis zu 5 Quellen aus, auf die du dich am meisten verlässt.",
             "ja": "最も頼りにしているものを5つまで選択してください。",
@@ -2992,10 +2992,10 @@
             "zh": "以下哪些描述符合你的角色？"
           },
           "description": {
-            "default": "The last questions are about you: skip any you'd rather not answer.",
+            "default": "The last questions are about you. Skip any you'd rather not answer.",
             "fr": "Les dernières questions portent sur vous : ignorez celles auxquelles vous préférez ne pas répondre.",
             "es": "Las últimas preguntas son sobre ti: omite las que prefieras no responder.",
-            "pt": "As últimas perguntas são sobre você: pule as que preferir não responder.",
+            "pt": "As últimas perguntas são sobre você. Pule as que preferir não responder.",
             "it": "Le ultime domande sono personali: puoi saltare quelle a cui preferisci non rispondere.",
             "de": "Die letzten Fragen betreffen dich selbst: Überspringe, was du lieber nicht beantworten möchtest.",
             "ja": "最後の質問はあなた自身についてです。答えたくないものはスキップしてください。",
@@ -3214,10 +3214,10 @@
             "zh": "你的 Cardano 工作的资金来源是什么？"
           },
           "description": {
-            "default": "Choose up to 3, the main sources.",
+            "default": "Choose up to 3; pick the main sources.",
             "fr": "Choisissez-en jusqu'à 3, les principales sources.",
             "es": "Elige hasta 3, las fuentes principales.",
-            "pt": "Escolha até 3, as principais fontes.",
+            "pt": "Escolha até 3; selecione as principais fontes.",
             "it": "Massimo 3: le fonti principali.",
             "de": "Wähle bis zu 3, die Hauptquellen.",
             "ja": "主なものを3つまで選択してください。",
@@ -3243,15 +3243,15 @@
             {
               "value": "founding-entity",
               "text": {
-                "default": "Salary from a founding entity (IOG, EMURGO, CF)",
-                "fr": "Salaire d'une entité fondatrice (IOG, EMURGO, CF)",
-                "es": "Salario de una entidad fundadora (IOG, EMURGO, CF)",
-                "pt": "Salário de uma entidade fundadora (IOG, EMURGO, CF)",
-                "it": "Stipendio da un'entità fondatrice (IOG, EMURGO, CF)",
-                "de": "Gehalt von einer Gründungsorganisation (IOG, EMURGO, CF)",
-                "ja": "創設団体からの給与（IOG、EMURGO、CF）",
-                "vi": "Lương từ một tổ chức sáng lập (IOG, EMURGO, CF)",
-                "zh": "创始实体的薪水（IOG、EMURGO、CF）"
+                "default": "Salary from a founding entity (IOG, EMURGO, Cardano Foundation)",
+                "fr": "Salaire d'une entité fondatrice (IOG, EMURGO, Cardano Foundation)",
+                "es": "Salario de una entidad fundadora (IOG, EMURGO, Cardano Foundation)",
+                "pt": "Salário de uma entidade fundadora (IOG, EMURGO, Cardano Foundation)",
+                "it": "Stipendio da un'entità fondatrice (IOG, EMURGO, Cardano Foundation)",
+                "de": "Gehalt von einer Gründungsorganisation (IOG, EMURGO, Cardano Foundation)",
+                "ja": "創設団体からの給与（IOG、EMURGO、Cardano Foundation）",
+                "vi": "Lương từ một tổ chức sáng lập (IOG, EMURGO, Cardano Foundation)",
+                "zh": "创始实体的薪水（IOG、EMURGO、Cardano Foundation）"
               }
             },
             {
@@ -3489,15 +3489,15 @@
           "type": "radiogroup",
           "name": "dapps_used",
           "title": {
-            "default": "How many Cardano dApps, other than your own, have you used in the last 12 months?",
-            "fr": "Combien de dApps Cardano, autres que les vôtres, avez-vous utilisées au cours des 12 derniers mois ?",
-            "es": "¿Cuántas dApps de Cardano, aparte de las tuyas, has usado en los últimos 12 meses?",
-            "pt": "Quantos dApps da Cardano, além dos seus, você usou nos últimos 12 meses?",
-            "it": "Quante dApp su Cardano, oltre alle tue, hai usato negli ultimi 12 mesi?",
-            "de": "Wie viele Cardano-dApps, außer deinen eigenen, hast du in den letzten 12 Monaten genutzt?",
-            "ja": "過去12か月間に、自分のもの以外のCardano dAppをいくつ使いましたか？",
-            "vi": "Trong 12 tháng qua, bạn đã dùng bao nhiêu dApp Cardano, không tính của chính bạn?",
-            "zh": "过去 12 个月里，除了你自己的以外，你用过多少个 Cardano dApp？"
+            "default": "How many Cardano DApps, other than your own, have you used in the last 12 months?",
+            "fr": "Combien de DApps Cardano, autres que les vôtres, avez-vous utilisées au cours des 12 derniers mois ?",
+            "es": "¿Cuántas DApps de Cardano, aparte de las tuyas, has usado en los últimos 12 meses?",
+            "pt": "Quantos DApps da Cardano, além dos seus, você usou nos últimos 12 meses?",
+            "it": "Quante DApp su Cardano, oltre alle tue, hai usato negli ultimi 12 mesi?",
+            "de": "Wie viele Cardano-DApps, außer deinen eigenen, hast du in den letzten 12 Monaten genutzt?",
+            "ja": "過去12か月間に、自分のもの以外のCardano DAppをいくつ使いましたか？",
+            "vi": "Trong 12 tháng qua, bạn đã dùng bao nhiêu DApp Cardano, không tính của chính bạn?",
+            "zh": "过去 12 个月里，除了你自己的以外，你用过多少个 Cardano DApp？"
           },
           "choices": [
             {
