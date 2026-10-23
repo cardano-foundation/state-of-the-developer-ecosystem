@@ -66,14 +66,14 @@ export default {
 
   thanks: {
     title: "Grazie!",
-    body: "Le tue risposte sono pubblicate. Compaiono sulla blockchain Cardano entro un minuto.",
+    body: "Le tue risposte sono pubblicate. Compariranno sulla blockchain Cardano entro un minuto.",
     repeated: "Questo browser aveva già pubblicato una risposta, quindi le risposte che hai appena rivisto non sono state pubblicate.",
     transaction: "Vedi la tua risposta on-chain",
   },
 
   closed: {
     title: "Il sondaggio è chiuso",
-    body: "Grazie a tutti coloro che hanno risposto.",
+    body: "Grazie a tutti coloro che hanno partecipato.",
     cancelled: "Questo sondaggio è stato annullato e non accetta più risposte.",
   },
 
@@ -84,7 +84,7 @@ export default {
       closedCancelledBody: "Il proprietario lo ha ritirato con un annullamento tag-2. Le nuove risposte vengono rifiutate. La definizione resta on-chain come riferimento.",
       closedBody: "La sua epoch finale è passata, quindi non vengono più accettate nuove risposte. Puoi comunque leggere i risultati.",
       ineligibleTitle: "Non puoi rispondere a questo sondaggio",
-      ineligibleLead: "È aperto solo ai ruoli qui sotto, e la tua identità non può rivendicarne nessuno qui. Ecco cosa significa ciascuno:",
+      ineligibleLead: "È aperto solo ai ruoli qui sotto, ma nessuno di questi è associato alla tua identità. Ecco cosa significano:",
       notClaimable: " I wallet browser non possono contenere questa credenziale: deve fornirla il sito.",
       untitledSurvey: "Sondaggio senza titolo",
       respondingAs: "Rispondi come",
@@ -168,11 +168,11 @@ export default {
       optionFallback: "Opzione {n}",
     },
     roles: {
-      drep: "Un delegate representative registrato: rivendicato nel browser tramite la chiave DRep CIP-95 del tuo wallet.",
-      spo: "Uno stake pool operator: dimostrato con le chiavi cold/hot del pool, che un wallet browser non può contenere.",
-      cc: "Un membro del Constitutional Committee: dimostrato con le chiavi del comitato, che un wallet browser non può contenere.",
-      stakeholder: "Qualsiasi detentore di ada con una stake key: rivendicato nel browser dal wallet connesso.",
-      keyholder: "Chiunque abbia un wallet: rivendicato nel browser con la tua chiave di pagamento (spending key); non servono registrazione né attività on-chain.",
+      drep: "Un delegate representative registrato: verificato nel browser tramite la chiave DRep CIP-95 del tuo wallet.",
+      spo: "Uno stake pool operator: verificato con le chiavi cold/hot del pool, che un wallet browser non può contenere.",
+      cc: "Un membro del Constitutional Committee: verificato con le chiavi del comitato, che un wallet browser non può contenere.",
+      stakeholder: "Qualsiasi detentore di ada con una stake key: verificato nel browser dal wallet connesso.",
+      keyholder: "Chiunque abbia un wallet: verificato nel browser con la tua chiave di pagamento (spending key); non servono né registrazione né attività on-chain.",
     },
   },
 };
