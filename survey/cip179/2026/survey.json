@@ -16,7 +16,7 @@
     "es": "Unos 15 minutos. Los resultados indican a quienes crean herramientas, escriben documentación o financian proyectos en qué trabajar primero.",
     "pt": "Cerca de 15 minutos. Os resultados mostram a quem cria ferramentas, escreve documentação e financia projetos no que trabalhar primeiro.",
     "it": "Circa 15 minuti. I risultati indicano a chi crea strumenti, scrive documentazione o finanzia progetti su cosa lavorare per primo.",
-    "de": "Etwa 15 Minuten. Die Ergebnisse zeigen Tool-Entwicklern, Dokumentationsautoren und Geldgebern, woran zuerst gearbeitet werden sollte.",
+    "de": "Etwa 15 Minuten. Die Ergebnisse zeigen Tool-Entwicklern, technischen Redakteuren und Förderern, woran zuerst gearbeitet werden sollte.",
     "ja": "所要時間は約15分です。結果は、ツール開発者、ドキュメント執筆者、資金提供者が何に優先して取り組むべきかを示します。",
     "vi": "Khoảng 15 phút. Kết quả cho những người xây dựng công cụ, viết tài liệu và cấp vốn biết nên ưu tiên làm gì trước.",
     "zh": "大约需要 15 分钟。调查结果会告诉工具开发者、文档作者和资助方应该优先做什么。"
@@ -37,7 +37,7 @@
             "es": "¿Cuánto tiempo llevas escribiendo o desplegando software?",
             "pt": "Há quanto tempo você escreve ou faz deploy de software?",
             "it": "Da quanto tempo scrivi o fai il deploy di software?",
-            "de": "Wie lange schreiben oder deployen Sie schon Software?",
+            "de": "Wie lange schreibst oder betreibst du schon Software?",
             "ja": "ソフトウェアを書いたりデプロイしたりするようになって、どのくらい経ちますか？",
             "vi": "Bạn đã viết hoặc triển khai phần mềm được bao lâu?",
             "zh": "你编写或部署软件有多长时间了？"
@@ -52,7 +52,7 @@
                 "es": "No escribo ni despliego software",
                 "pt": "Não escrevo nem faço deploy de software",
                 "it": "Non scrivo né faccio il deploy di software",
-                "de": "Ich schreibe und deploye keine Software",
+                "de": "Ich schreibe und betreibe keine Software",
                 "ja": "ソフトウェアを書いたりデプロイしたりはしない",
                 "vi": "Tôi không viết hay triển khai phần mềm",
                 "zh": "我不编写也不部署软件"
@@ -125,7 +125,7 @@
             "es": "¿Desarrollas en Cardano actualmente?",
             "pt": "Você desenvolve na Cardano hoje?",
             "it": "Sviluppi su Cardano oggi?",
-            "de": "Entwickeln Sie heute auf Cardano?",
+            "de": "Entwickelst du derzeit auf Cardano?",
             "ja": "現在、Cardano上で開発していますか？",
             "vi": "Hiện nay bạn có phát triển trên Cardano không?",
             "zh": "你目前在 Cardano 上进行开发吗？"
@@ -186,7 +186,7 @@
             "es": "¿Qué te hizo dejar de desarrollar en Cardano?",
             "pt": "O que fez você parar de desenvolver na Cardano?",
             "it": "Cosa ti ha fatto smettere di sviluppare su Cardano?",
-            "de": "Warum haben Sie aufgehört, auf Cardano zu entwickeln?",
+            "de": "Warum hast du aufgehört, auf Cardano zu entwickeln?",
             "ja": "Cardano上での開発をやめた理由は何ですか？",
             "vi": "Điều gì khiến bạn dừng phát triển trên Cardano?",
             "zh": "是什么让你停止在 Cardano 上开发？"
@@ -202,7 +202,7 @@
             "es": "¿Qué te ha impedido desarrollar en Cardano?",
             "pt": "O que impediu você de desenvolver na Cardano?",
             "it": "Cosa ti ha trattenuto dallo sviluppare su Cardano?",
-            "de": "Was hat Sie davon abgehalten, auf Cardano zu entwickeln?",
+            "de": "Was hat dich davon abgehalten, auf Cardano zu entwickeln?",
             "ja": "Cardano上での開発に踏み出せなかった理由は何ですか？",
             "vi": "Điều gì đã cản bạn phát triển trên Cardano?",
             "zh": "是什么让你一直没有在 Cardano 上开发？"
@@ -218,7 +218,7 @@
             "es": "¿En qué trabajas?",
             "pt": "Em que você trabalha?",
             "it": "Di cosa ti occupi?",
-            "de": "Woran arbeiten Sie?",
+            "de": "Woran arbeitest du?",
             "ja": "どのような分野に取り組んでいますか？",
             "vi": "Bạn làm việc trong mảng nào?",
             "zh": "你从事哪些方面的工作？"
@@ -246,7 +246,7 @@
                 "es": "Protocolo base (nodo, ledger, consenso)",
                 "pt": "Protocolo central (nó, ledger, consenso)",
                 "it": "Protocollo di base (nodo, ledger, consenso)",
-                "de": "Kernprotokoll (Node, Ledger, Konsens)",
+                "de": "Kernprotokoll (Node, Ledger, Consensus)",
                 "ja": "コアプロトコル（ノード、レジャー、コンセンサス）",
                 "vi": "Giao thức lõi (node, ledger, đồng thuận)",
                 "zh": "核心协议（节点、账本、共识）"
@@ -274,7 +274,7 @@
                 "es": "Economía y diseño de incentivos (tokenomics, comisiones, recompensas)",
                 "pt": "Economia e design de incentivos (tokenomics, taxas, recompensas)",
                 "it": "Economia e incentivi (tokenomics, commissioni, ricompense)",
-                "de": "Ökonomie und Anreizdesign (Tokenomics, Gebühren, Rewards)",
+                "de": "Ökonomie und Anreizmechanismen (Tokenomics, Gebühren, Rewards)",
                 "ja": "経済・インセンティブ設計（トークノミクス、手数料、報酬）",
                 "vi": "Kinh tế và thiết kế khuyến khích (tokenomics, phí, phần thưởng)",
                 "zh": "经济与激励设计（代币经济、手续费、奖励）"
@@ -405,7 +405,7 @@
             "es": "¿Qué tipos de aplicaciones estás desarrollando?",
             "pt": "Que tipos de aplicações você está desenvolvendo?",
             "it": "Che tipo di applicazioni stai sviluppando?",
-            "de": "Welche Arten von Anwendungen entwickeln Sie?",
+            "de": "Welche Arten von Anwendungen entwickelst du?",
             "ja": "どのような種類のアプリケーションを開発していますか？",
             "vi": "Bạn đang xây dựng những loại ứng dụng nào?",
             "zh": "你正在构建哪些类型的应用？"
@@ -416,7 +416,7 @@
             "es": "Elige hasta 4.",
             "pt": "Escolha até 4.",
             "it": "Scegline fino a 4.",
-            "de": "Wählen Sie bis zu 4.",
+            "de": "Wähle bis zu 4.",
             "ja": "4つまで選択できます。",
             "vi": "Chọn tối đa 4.",
             "zh": "最多选 4 项。"
@@ -633,7 +633,7 @@
             "es": "¿En qué fase está tu principal proyecto en Cardano?",
             "pt": "Em que estágio está o seu principal projeto Cardano?",
             "it": "A che punto è il tuo progetto Cardano principale?",
-            "de": "Wie weit ist Ihr wichtigstes Cardano-Projekt?",
+            "de": "Wie weit ist dein Cardano-Hauptprojekt?",
             "ja": "主なCardanoプロジェクトはどの段階にありますか？",
             "vi": "Dự án Cardano chính của bạn đang ở giai đoạn nào?",
             "zh": "你的主要 Cardano 项目进展到哪一步了？"
@@ -718,7 +718,7 @@
             "es": "Este enlace es público y vincula todas tus respuestas a este proyecto.",
             "pt": "Este link é público e associa todas as suas respostas a este projeto.",
             "it": "Questo link è pubblico e collega tutte le tue risposte a questo progetto.",
-            "de": "Dieser Link ist öffentlich und verknüpft alle Ihre Antworten mit diesem Projekt.",
+            "de": "Dieser Link ist öffentlich und verknüpft alle deine Antworten mit diesem Projekt.",
             "ja": "このリンクは公開され、あなたのすべての回答をこのプロジェクトに結び付けます。",
             "vi": "Liên kết này công khai và gắn toàn bộ câu trả lời của bạn với dự án này.",
             "zh": "此链接是公开的，并会把你的所有回答与这个项目关联起来。"
@@ -734,7 +734,7 @@
             "es": "¿Cuándo empezaste a desarrollar en Cardano?",
             "pt": "Quando você começou a desenvolver na Cardano?",
             "it": "Quando hai iniziato a sviluppare su Cardano?",
-            "de": "Wann haben Sie angefangen, auf Cardano zu entwickeln?",
+            "de": "Wann hast du angefangen, auf Cardano zu entwickeln?",
             "ja": "Cardano上での開発を始めたのはいつですか？",
             "vi": "Bạn bắt đầu phát triển trên Cardano từ khi nào?",
             "zh": "你是什么时候开始在 Cardano 上开发的？"
@@ -770,7 +770,7 @@
             "es": "En una semana típica, ¿cuánto tiempo dedicas a desarrollar en Cardano?",
             "pt": "Em uma semana típica, quanto tempo você passa desenvolvendo na Cardano?",
             "it": "In una settimana tipica, quanto tempo dedichi allo sviluppo su Cardano?",
-            "de": "Wie viel Zeit verbringen Sie in einer typischen Woche mit der Entwicklung auf Cardano?",
+            "de": "Wie viel Zeit verbringst du in einer typischen Woche mit dem Entwickeln auf Cardano?",
             "ja": "典型的な1週間で、Cardano上での開発にどのくらいの時間を使っていますか？",
             "vi": "Trong một tuần thông thường, bạn dành bao nhiêu thời gian để phát triển trên Cardano?",
             "zh": "在通常的一周里，你花多少时间在 Cardano 上开发？"
@@ -849,7 +849,7 @@
             "es": "En general, ¿cómo valoras tu experiencia de desarrollo en Cardano?",
             "pt": "No geral, como você avalia sua experiência de desenvolvimento na Cardano?",
             "it": "Nel complesso, come valuti la tua esperienza di sviluppo su Cardano?",
-            "de": "Wie zufrieden sind Sie insgesamt mit der Entwicklung auf Cardano?",
+            "de": "Wie zufrieden bist du insgesamt mit dem Entwickeln auf Cardano?",
             "ja": "全体として、Cardano上での開発にどの程度満足していますか？",
             "vi": "Nhìn chung, bạn hài lòng đến mức nào với việc phát triển trên Cardano?",
             "zh": "总体而言，你对在 Cardano 上开发的满意度如何？"
@@ -937,7 +937,7 @@
             "es": "En comparación con hace un año, desarrollar en Cardano es:",
             "pt": "Em comparação com um ano atrás, desenvolver na Cardano está:",
             "it": "Rispetto a un anno fa, sviluppare su Cardano è:",
-            "de": "Im Vergleich zu vor einem Jahr ist die Entwicklung auf Cardano:",
+            "de": "Im Vergleich zu vor einem Jahr ist das Entwickeln auf Cardano:",
             "ja": "1年前と比べて、Cardano上での開発は：",
             "vi": "So với một năm trước, việc phát triển trên Cardano giờ:",
             "zh": "与一年前相比，在 Cardano 上开发变得："
@@ -1039,7 +1039,7 @@
             "es": "¿Qué es lo mejor de desarrollar en Cardano?",
             "pt": "Qual é a melhor coisa de desenvolver na Cardano?",
             "it": "Qual è la cosa migliore dello sviluppare su Cardano?",
-            "de": "Was ist das Beste an der Entwicklung auf Cardano?",
+            "de": "Was ist das Beste am Entwickeln auf Cardano?",
             "ja": "Cardano上で開発する上で、最も良い点は何ですか？",
             "vi": "Điều tuyệt nhất khi phát triển trên Cardano là gì?",
             "zh": "在 Cardano 上开发，最好的一点是什么？"
@@ -1055,7 +1055,7 @@
             "es": "¿Qué es lo más frustrante de desarrollar en Cardano?",
             "pt": "Qual é a sua maior dor ao desenvolver na Cardano?",
             "it": "Qual è la cosa più frustrante dello sviluppare su Cardano?",
-            "de": "Was ist das Mühsamste an der Entwicklung auf Cardano?",
+            "de": "Was ist das Mühsamste am Entwickeln auf Cardano?",
             "ja": "Cardano上で開発する上で、最もつらい点は何ですか？",
             "vi": "Điều khó chịu nhất khi phát triển trên Cardano là gì?",
             "zh": "在 Cardano 上开发，最痛苦的一点是什么？"
@@ -1076,7 +1076,7 @@
             "es": "¿Qué lenguajes has usado para código on-chain en los últimos 12 meses?",
             "pt": "Quais linguagens você usou para código on-chain nos últimos 12 meses?",
             "it": "Quali linguaggi hai usato per il codice on-chain negli ultimi 12 mesi?",
-            "de": "Welche Sprachen haben Sie in den letzten 12 Monaten für On-Chain-Code verwendet?",
+            "de": "Welche Sprachen hast du in den letzten 12 Monaten für On-Chain-Code verwendet?",
             "ja": "過去12か月間に、オンチェーンコードにどの言語を使いましたか？",
             "vi": "Trong 12 tháng qua, bạn đã dùng những ngôn ngữ nào để viết code on-chain?",
             "zh": "过去 12 个月里，你用过哪些语言编写链上代码？"
@@ -1106,7 +1106,7 @@
             "es": "¿Qué bibliotecas on-chain has usado en los últimos 12 meses?",
             "pt": "Quais bibliotecas on-chain você usou nos últimos 12 meses?",
             "it": "Quali librerie on-chain hai usato negli ultimi 12 mesi?",
-            "de": "Welche On-Chain-Bibliotheken haben Sie in den letzten 12 Monaten verwendet?",
+            "de": "Welche On-Chain-Bibliotheken hast du in den letzten 12 Monaten verwendet?",
             "ja": "過去12か月間に、どのオンチェーンライブラリを使いましたか？",
             "vi": "Trong 12 tháng qua, bạn đã dùng những thư viện on-chain nào?",
             "zh": "过去 12 个月里，你用过哪些链上库？"
@@ -1176,7 +1176,7 @@
             "es": "¿Qué bibliotecas off-chain has usado en los últimos 12 meses?",
             "pt": "Quais bibliotecas off-chain você usou nos últimos 12 meses?",
             "it": "Quali librerie off-chain hai usato negli ultimi 12 mesi?",
-            "de": "Welche Off-Chain-Bibliotheken haben Sie in den letzten 12 Monaten verwendet?",
+            "de": "Welche Off-Chain-Bibliotheken hast du in den letzten 12 Monaten verwendet?",
             "ja": "過去12か月間に、どのオフチェーンライブラリを使いましたか？",
             "vi": "Trong 12 tháng qua, bạn đã dùng những thư viện off-chain nào?",
             "zh": "过去 12 个月里，你用过哪些链下库？"
@@ -1230,7 +1230,7 @@
             "es": "¿Cuáles de estos has ejecutado por tu cuenta en los últimos 12 meses, en local o en tus propios servidores?",
             "pt": "Quais destes você mesmo rodou nos últimos 12 meses, localmente ou nos seus servidores?",
             "it": "Quali di questi hai fatto girare in prima persona negli ultimi 12 mesi, in locale o sui tuoi server?",
-            "de": "Welche davon haben Sie in den letzten 12 Monaten selbst betrieben, lokal oder auf Ihren Servern?",
+            "de": "Welche davon hast du in den letzten 12 Monaten selbst betrieben, lokal oder auf deinen Servern?",
             "ja": "過去12か月間に、次のうちどれをローカルや自分のサーバーで自ら動かしましたか？",
             "vi": "Trong 12 tháng qua, bạn đã tự chạy những phần mềm nào sau đây, trên máy cá nhân hoặc trên máy chủ của bạn?",
             "zh": "过去 12 个月里，你自己在本地或自己的服务器上运行过以下哪些软件？"
@@ -1279,7 +1279,7 @@
             "es": "¿Qué herramientas de desarrollo has usado en los últimos 12 meses?",
             "pt": "Quais ferramentas de desenvolvimento você usou nos últimos 12 meses?",
             "it": "Quali strumenti per sviluppatori hai usato negli ultimi 12 mesi?",
-            "de": "Welche Entwicklertools haben Sie in den letzten 12 Monaten verwendet?",
+            "de": "Welche Entwicklertools hast du in den letzten 12 Monaten verwendet?",
             "ja": "過去12か月間に、どの開発者ツールを使いましたか？",
             "vi": "Trong 12 tháng qua, bạn đã dùng những công cụ lập trình nào?",
             "zh": "过去 12 个月里，你用过哪些开发者工具？"
@@ -1351,7 +1351,7 @@
             "es": "¿Qué servicios de API alojados has usado en los últimos 12 meses?",
             "pt": "Quais serviços de API hospedados você usou nos últimos 12 meses?",
             "it": "Quali servizi API in hosting hai usato negli ultimi 12 mesi?",
-            "de": "Welche gehosteten API-Dienste haben Sie in den letzten 12 Monaten verwendet?",
+            "de": "Welche gehosteten API-Dienste hast du in den letzten 12 Monaten verwendet?",
             "ja": "過去12か月間に、どのホスト型APIサービスを使いましたか？",
             "vi": "Trong 12 tháng qua, bạn đã dùng những dịch vụ API nào?",
             "zh": "过去 12 个月里，你用过哪些托管 API 服务？"
@@ -1399,7 +1399,7 @@
             "es": "¿Cómo has probado tu código Cardano en los últimos 12 meses?",
             "pt": "Como você testou seu código Cardano nos últimos 12 meses?",
             "it": "Come hai testato il tuo codice Cardano negli ultimi 12 mesi?",
-            "de": "Wie haben Sie Ihren Cardano-Code in den letzten 12 Monaten getestet?",
+            "de": "Wie hast du deinen Cardano-Code in den letzten 12 Monaten getestet?",
             "ja": "過去12か月間に、Cardanoのコードをどのようにテストしましたか？",
             "vi": "Trong 12 tháng qua, bạn đã kiểm thử code Cardano của mình bằng cách nào?",
             "zh": "过去 12 个月里，你是如何测试 Cardano 代码的？"
@@ -1556,7 +1556,7 @@
             "es": "En el último mes, ¿con qué frecuencia usaste herramientas de IA para programar en Cardano?",
             "pt": "No último mês, com que frequência você usou ferramentas de IA para programar na Cardano?",
             "it": "Nell'ultimo mese, con che frequenza hai usato strumenti di IA per programmare su Cardano?",
-            "de": "Wie oft haben Sie im letzten Monat KI-Coding-Tools für Ihre Arbeit an Cardano verwendet?",
+            "de": "Wie oft hast du im letzten Monat KI-Coding-Tools für deine Arbeit an Cardano verwendet?",
             "ja": "この1か月間に、Cardano関連の作業でAIコーディングツールをどのくらいの頻度で使いましたか？",
             "vi": "Trong tháng vừa qua, bạn dùng công cụ AI hỗ trợ lập trình cho công việc Cardano thường xuyên đến mức nào?",
             "zh": "过去一个月里，你在 Cardano 相关工作中使用 AI 编程工具的频率如何？"
@@ -1651,7 +1651,7 @@
             "es": "¿Hasta qué punto supone un problema para ti cada uno de estos aspectos?",
             "pt": "Quanto cada um destes pontos é um problema para você?",
             "it": "Quanto è un problema per te ciascuno di questi punti?",
-            "de": "Wie sehr ist jeder dieser Punkte für Sie ein Problem?",
+            "de": "Wie sehr ist jeder dieser Punkte für dich ein Problem?",
             "ja": "次の各項目は、あなたにとってどの程度問題になっていますか？",
             "vi": "Mỗi điểm sau đây gây khó khăn cho bạn đến mức nào?",
             "zh": "以下每一项对你来说问题有多大？"
@@ -1723,7 +1723,7 @@
                 "es": "Saber qué herramientas y bibliotecas elegir",
                 "pt": "Saber quais ferramentas e bibliotecas escolher",
                 "it": "Sapere quali strumenti e librerie scegliere",
-                "de": "Wissen, welche Tools und Bibliotheken man wählen soll",
+                "de": "Wissen, welche Tools und Bibliotheken man wählen sollte",
                 "ja": "どのツールやライブラリを選ぶべきか分かること",
                 "vi": "Biết nên chọn công cụ và thư viện nào",
                 "zh": "知道该选哪些工具和库"
@@ -1993,7 +1993,7 @@
             "es": "¿Dónde encuentras respuestas a tus preguntas técnicas sobre Cardano?",
             "pt": "Onde você encontra respostas para perguntas técnicas sobre a Cardano?",
             "it": "Dove trovi le risposte alle domande tecniche su Cardano?",
-            "de": "Wo finden Sie Antworten auf technische Fragen zu Cardano?",
+            "de": "Wo findest du Antworten auf technische Fragen zu Cardano?",
             "ja": "Cardanoに関する技術的な質問の答えをどこで得ていますか？",
             "vi": "Bạn tìm câu trả lời cho các câu hỏi kỹ thuật về Cardano ở đâu?",
             "zh": "你在哪里获得 Cardano 技术问题的解答？"
@@ -2004,7 +2004,7 @@
             "es": "Elige hasta 5, las fuentes en las que más confías.",
             "pt": "Escolha até 5, as fontes que você mais usa.",
             "it": "Scegline fino a 5, quelle su cui conti di più.",
-            "de": "Wählen Sie bis zu 5, die Quellen, auf die Sie sich am meisten verlassen.",
+            "de": "Wähle bis zu 5 Quellen aus, auf die du dich am meisten verlässt.",
             "ja": "最も頼りにしているものを5つまで選択してください。",
             "vi": "Chọn tối đa 5, những nguồn bạn dựa vào nhiều nhất.",
             "zh": "最多选 5 项，选你最依赖的。"
@@ -2176,7 +2176,7 @@
             "es": "¿Cuánto ayudaría cada uno de estos puntos a lo que estás desarrollando?",
             "pt": "Quanto cada um destes pontos ajudaria o que você está desenvolvendo?",
             "it": "Quanto aiuterebbe ciascuno di questi punti ciò che stai sviluppando?",
-            "de": "Wie sehr würde jeder dieser Punkte dem helfen, was Sie entwickeln?",
+            "de": "Wie sehr würde jeder dieser Punkte dem helfen, was du entwickelst?",
             "ja": "次の各項目は、あなたが開発しているものにどの程度役立ちますか？",
             "vi": "Mỗi điểm sau đây sẽ giúp ích đến mức nào cho thứ bạn đang xây dựng?",
             "zh": "以下每一项对你正在构建的东西会有多大帮助？"
@@ -2190,7 +2190,7 @@
                 "es": "Me desbloquearía",
                 "pt": "Me desbloquearia",
                 "it": "Mi sbloccherebbe",
-                "de": "Würde mich entblocken",
+                "de": "Würde mich nicht mehr aufhalten",
                 "ja": "行き詰まりが解消される",
                 "vi": "Gỡ kẹt cho tôi",
                 "zh": "能解除阻碍"
@@ -2420,7 +2420,7 @@
             "es": "Más allá de la tecnología, ¿qué es lo que más frena tu proyecto?",
             "pt": "Além da tecnologia, o que mais freia o seu projeto?",
             "it": "Oltre alla tecnologia, cosa frena di più il tuo progetto?",
-            "de": "Was bremst Ihr Projekt jenseits der Technik am meisten?",
+            "de": "Was bremst dein Projekt jenseits der Technik am meisten?",
             "ja": "技術面以外で、プロジェクトの最大の妨げになっているものは何ですか？",
             "vi": "Ngoài công nghệ, điều gì kìm hãm dự án của bạn nhiều nhất?",
             "zh": "除了技术之外，什么最拖累你的项目？"
@@ -2431,7 +2431,7 @@
             "es": "Elige hasta 3.",
             "pt": "Escolha até 3.",
             "it": "Scegline fino a 3.",
-            "de": "Wählen Sie bis zu 3.",
+            "de": "Wähle bis zu 3.",
             "ja": "3つまで選択できます。",
             "vi": "Chọn tối đa 3.",
             "zh": "最多选 3 项。"
@@ -2516,7 +2516,7 @@
                 "es": "Integraciones (exchanges, wallets, custodios)",
                 "pt": "Integrações (exchanges, carteiras, custodiantes)",
                 "it": "Integrazioni (exchange, wallet, custodi)",
-                "de": "Integrationen (Börsen, Wallets, Verwahrer)",
+                "de": "Integrationen (Kryptobörsen, Wallets, Verwahrer)",
                 "ja": "連携（取引所、ウォレット、カストディアン）",
                 "vi": "Tích hợp (sàn giao dịch, ví, bên lưu ký)",
                 "zh": "集成（交易所、钱包、托管机构）"
@@ -2589,7 +2589,7 @@
             "es": "¿Por qué desarrollas en Cardano?",
             "pt": "Por que você desenvolve na Cardano?",
             "it": "Perché sviluppi su Cardano?",
-            "de": "Warum entwickeln Sie auf Cardano?",
+            "de": "Warum entwickelst du auf Cardano?",
             "ja": "なぜCardano上で開発しているのですか？",
             "vi": "Vì sao bạn phát triển trên Cardano?",
             "zh": "你为什么在 Cardano 上开发？"
@@ -2600,7 +2600,7 @@
             "es": "Elige hasta 3.",
             "pt": "Escolha até 3.",
             "it": "Scegline fino a 3.",
-            "de": "Wählen Sie bis zu 3.",
+            "de": "Wähle bis zu 3.",
             "ja": "3つまで選択できます。",
             "vi": "Chọn tối đa 3.",
             "zh": "最多选 3 项。"
@@ -2643,7 +2643,7 @@
                 "es": "Financiación (Catalyst, tesorería, subvenciones)",
                 "pt": "Financiamento (Catalyst, tesouro, grants)",
                 "it": "Finanziamenti (Catalyst, tesoreria, grant)",
-                "de": "Finanzierung (Catalyst, Treasury, Grants)",
+                "de": "Finanzierung (Catalyst, Treasury, Fördermittel)",
                 "ja": "資金（Catalyst、トレジャリー、助成金）",
                 "vi": "Vốn (Catalyst, ngân khố, tài trợ)",
                 "zh": "资金（Catalyst、国库、资助）"
@@ -2760,7 +2760,7 @@
             "es": "¿Qué probabilidad hay de que sigas desarrollando en Cardano dentro de un año?",
             "pt": "Qual é a probabilidade de você ainda estar desenvolvendo na Cardano daqui a um ano?",
             "it": "Quanto è probabile che tu stia ancora sviluppando su Cardano tra un anno?",
-            "de": "Wie wahrscheinlich ist es, dass Sie in einem Jahr noch auf Cardano entwickeln?",
+            "de": "Wie wahrscheinlich ist es, dass du in einem Jahr noch auf Cardano entwickelst?",
             "ja": "1年後もCardano上で開発している可能性はどのくらいですか？",
             "vi": "Khả năng bạn vẫn phát triển trên Cardano sau một năm nữa là bao nhiêu?",
             "zh": "一年后你还在 Cardano 上开发的可能性有多大？"
@@ -2848,7 +2848,7 @@
             "es": "Como operador de stake pool, ¿qué tal te funciona cada uno de estos puntos?",
             "pt": "Como operador de stake pool, como cada um destes pontos funciona para você?",
             "it": "Come stake pool operator, quanto bene funziona per te ciascuno di questi punti?",
-            "de": "Wie gut funktioniert jeder dieser Punkte für Sie als Stake-Pool-Operator?",
+            "de": "Wie gut funktioniert jeder dieser Punkte für dich als Stake-Pool-Operator?",
             "ja": "ステークプールオペレーターとして、次の各項目はどの程度うまくいっていますか？",
             "vi": "Với tư cách nhà điều hành stake pool, mỗi việc sau đây diễn ra với bạn thế nào?",
             "zh": "作为质押池运营者，以下每一项对你来说运作得如何？"
@@ -2966,7 +2966,7 @@
             "es": "¿Qué herramienta, biblioteca o funcionalidad que aún no existe te ayudaría más?",
             "pt": "Qual ferramenta, biblioteca ou funcionalidade que ainda não existe ajudaria mais você?",
             "it": "Quale strumento, libreria o funzionalità che ancora non esiste ti aiuterebbe di più?",
-            "de": "Welches Tool, welche Bibliothek oder welche Funktion, die es noch nicht gibt, würde Ihnen am meisten helfen?",
+            "de": "Welches Tool, Bibliothek oder Funktion, die es noch nicht gibt, würde dir am meisten helfen?",
             "ja": "まだ存在しないツール、ライブラリ、機能のうち、あなたに最も役立つものは何ですか？",
             "vi": "Công cụ, thư viện hoặc tính năng nào chưa tồn tại sẽ giúp bạn nhiều nhất?",
             "zh": "哪个尚不存在的工具、库或功能对你帮助最大？"
@@ -2986,7 +2986,7 @@
             "es": "¿Cuáles de estos describen tu rol?",
             "pt": "Quais destes descrevem o seu papel?",
             "it": "Quali di questi ruoli ti descrivono?",
-            "de": "Welche dieser Rollen beschreiben Sie?",
+            "de": "Welche dieser Rollen beschreibt dich?",
             "ja": "あなたの役割に当てはまるものはどれですか？",
             "vi": "Những vai trò nào sau đây mô tả đúng bạn?",
             "zh": "以下哪些描述符合你的角色？"
@@ -2997,7 +2997,7 @@
             "es": "Las últimas preguntas son sobre ti: omite las que prefieras no responder.",
             "pt": "As últimas perguntas são sobre você: pule as que preferir não responder.",
             "it": "Le ultime domande riguardano te: salta quelle a cui preferisci non rispondere.",
-            "de": "Die letzten Fragen betreffen Sie selbst: Überspringen Sie, was Sie lieber nicht beantworten möchten.",
+            "de": "Die letzten Fragen betreffen dich selbst: Überspringe, was du lieber nicht beantworten möchtest.",
             "ja": "最後の質問はあなた自身についてです。答えたくないものはスキップしてください。",
             "vi": "Các câu hỏi cuối cùng là về bạn: hãy bỏ qua câu nào bạn không muốn trả lời.",
             "zh": "最后几个问题是关于你自己的：不想回答的可以跳过。"
@@ -3141,7 +3141,7 @@
             "es": "¿En qué otros ecosistemas blockchain has desarrollado?",
             "pt": "Em quais outros ecossistemas blockchain você já desenvolveu?",
             "it": "Su quali altri ecosistemi blockchain hai sviluppato?",
-            "de": "Auf welchen anderen Blockchain-Ökosystemen haben Sie entwickelt?",
+            "de": "Auf welchen anderen Blockchain-Ökosystemen hast du entwickelt?",
             "ja": "他にどのブロックチェーンエコシステムで開発したことがありますか？",
             "vi": "Bạn đã từng phát triển trên những hệ sinh thái blockchain nào khác?",
             "zh": "你还在哪些其他区块链生态上开发过？"
@@ -3208,7 +3208,7 @@
             "es": "¿Cómo se financia tu trabajo en Cardano?",
             "pt": "Como o seu trabalho na Cardano é financiado?",
             "it": "Come è finanziato il tuo lavoro su Cardano?",
-            "de": "Wie wird Ihre Arbeit an Cardano finanziert?",
+            "de": "Wie wird deine Arbeit an Cardano finanziert?",
             "ja": "Cardanoでの活動資金はどのように賄われていますか？",
             "vi": "Công việc Cardano của bạn được cấp vốn như thế nào?",
             "zh": "你的 Cardano 工作的资金来源是什么？"
@@ -3219,7 +3219,7 @@
             "es": "Elige hasta 3, las fuentes principales.",
             "pt": "Escolha até 3, as principais fontes.",
             "it": "Scegline fino a 3, le fonti principali.",
-            "de": "Wählen Sie bis zu 3, die Hauptquellen.",
+            "de": "Wähle bis zu 3, die Hauptquellen.",
             "ja": "主なものを3つまで選択してください。",
             "vi": "Chọn tối đa 3, những nguồn chính.",
             "zh": "最多选 3 项，主要来源。"
@@ -3319,7 +3319,7 @@
                 "es": "Otras subvenciones",
                 "pt": "Outros grants",
                 "it": "Altri grant",
-                "de": "Andere Grants",
+                "de": "Andere Förderung",
                 "ja": "その他の助成金",
                 "vi": "Tài trợ khác",
                 "zh": "其他资助"
@@ -3351,7 +3351,7 @@
             "es": "¿Dónde vives?",
             "pt": "Onde você mora?",
             "it": "Dove vivi?",
-            "de": "Wo leben Sie?",
+            "de": "Wo lebst du?",
             "ja": "お住まいの地域はどこですか？",
             "vi": "Bạn đang ở đâu?",
             "zh": "你在哪个地区？"
@@ -3494,7 +3494,7 @@
             "es": "¿Cuántas dApps de Cardano, aparte de las tuyas, has usado en los últimos 12 meses?",
             "pt": "Quantos dApps da Cardano, além dos seus, você usou nos últimos 12 meses?",
             "it": "Quante dApp Cardano, oltre alle tue, hai usato negli ultimi 12 mesi?",
-            "de": "Wie viele Cardano-dApps, außer Ihren eigenen, haben Sie in den letzten 12 Monaten genutzt?",
+            "de": "Wie viele Cardano-dApps, außer deinen eigenen, hast du in den letzten 12 Monaten genutzt?",
             "ja": "過去12か月間に、自分のもの以外のCardano dAppをいくつ使いましたか？",
             "vi": "Trong 12 tháng qua, bạn đã dùng bao nhiêu dApp Cardano, không tính của chính bạn?",
             "zh": "过去 12 个月里，除了你自己的以外，你用过多少个 Cardano dApp？"
@@ -3567,7 +3567,7 @@
             "es": "¿Cuáles de estas actividades realizaste en los últimos 12 meses?",
             "pt": "Quais destas coisas você fez nos últimos 12 meses?",
             "it": "Quali di queste cose hai fatto negli ultimi 12 mesi?",
-            "de": "Was davon haben Sie in den letzten 12 Monaten getan?",
+            "de": "Was davon hast du in den letzten 12 Monaten getan?",
             "ja": "過去12か月間に、次のうちどれをしましたか？",
             "vi": "Trong 12 tháng qua, bạn đã làm những việc nào sau đây?",
             "zh": "过去 12 个月里，你做过以下哪些事？"
@@ -3581,7 +3581,7 @@
                 "es": "Leí o usé una CIP",
                 "pt": "Li ou usei uma CIP",
                 "it": "Letto o usato una CIP",
-                "de": "Eine CIP gelesen oder verwendet",
+                "de": "Einen CIP gelesen oder verwendet",
                 "ja": "CIPを読んだ、または使った",
                 "vi": "Đọc hoặc dùng một CIP",
                 "zh": "阅读或使用过 CIP"
@@ -3595,7 +3595,7 @@
                 "es": "Comenté o revisé una CIP",
                 "pt": "Comentei ou revisei uma CIP",
                 "it": "Commentato o revisionato una CIP",
-                "de": "Eine CIP kommentiert oder reviewt",
+                "de": "Einen CIP kommentiert oder bewertet",
                 "ja": "CIPにコメントした、またはレビューした",
                 "vi": "Bình luận hoặc review một CIP",
                 "zh": "评论或评审过 CIP"
@@ -3609,7 +3609,7 @@
                 "es": "Escribí o coescribí una CIP",
                 "pt": "Escrevi ou coescrevi uma CIP",
                 "it": "Scritto o co-scritto una CIP",
-                "de": "Eine CIP geschrieben oder mitgeschrieben",
+                "de": "Einen CIP geschrieben oder mitgeschrieben",
                 "ja": "CIPを書いた、または共同で書いた",
                 "vi": "Viết hoặc đồng viết một CIP",
                 "zh": "撰写或合著过 CIP"
@@ -3707,7 +3707,7 @@
                 "es": "Escribí un tutorial, di clases o hice mentoría",
                 "pt": "Escrevi um tutorial, ensinei ou fiz mentoria",
                 "it": "Scritto un tutorial, insegnato o fatto da mentor",
-                "de": "Ein Tutorial geschrieben, unterrichtet oder gementort",
+                "de": "Ein Tutorial geschrieben, unterrichtet oder Mentoring angeboten",
                 "ja": "チュートリアルを書いた、教えた、またはメンターをした",
                 "vi": "Viết hướng dẫn, giảng dạy hoặc cố vấn",
                 "zh": "写过教程、教过课或做过导师"
