@@ -20,7 +20,7 @@ export default {
     kept: "Suas respostas ficam neste navegador até você publicá-las, então você pode parar e voltar depois.",
     publicTitle: "Suas respostas serão públicas",
     public:
-      "Elas são publicadas na blockchain Cardano, onde qualquer pessoa pode lê-las e nada pode ser alterado ou removido. Elas são assinadas com uma chave aleatória gerada neste navegador, que não está ligada a você. Não escreva nada pessoal nas respostas em texto.",
+      "Elas serão publicadas na blockchain Cardano, onde qualquer pessoa pode lê-las e nada pode ser alterado ou removido. Elas serão assinadas com uma chave aleatória gerada neste navegador, que não está ligada a você. Não escreva nada pessoal nas respostas em texto.",
     consent: "Ao publicar suas respostas, você reconhece que elas serão tratadas conforme descrito nos",
     start: "Começar",
     continue: "Continuar",
