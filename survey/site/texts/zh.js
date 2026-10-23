@@ -8,8 +8,11 @@ export default {
   loading: "加载中…",
   terms: "条款与条件",
   source: "源代码",
-  results: "结果将发布在 2026 年报告中。在此之前，你可以先看看",
-  previous: "2025 年报告",
+  results: {
+    out: (year) => ["结果已发布在", `${year} 年报告`, "中。"],
+    coming: (year, latest) => [`结果将发布在 ${year} 年报告中。在此之前，你可以先看看`, `${latest} 年报告`, "。"],
+    all: "全部报告：",
+  },
   period: "。",
 
   welcome: {

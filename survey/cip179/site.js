@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Builds the survey site into `dist/`: the page in `site/`, with the survey
-// baked in.
+// baked in, the reports of the repository's `<year>/` folders, as GitHub Pages
+// serves them, and the free-text schema the definition names.
 //
 //   node cip179/site.js [--unpublished]
 //
@@ -20,12 +21,12 @@ import { decodeMetadata, encodeMetadata } from "cip-179";
 import { build } from "esbuild";
 import { createHash } from "node:crypto";
 import { cpSync, readdirSync, readFileSync, rmSync, statSync } from "node:fs";
-import { basename, dirname, join, relative } from "node:path";
+import { basename, dirname, join, relative, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { isDeepStrictEqual, parseArgs } from "node:util";
 import { gzipSync } from "node:zlib";
 
-import { readSurvey } from "./definition.js";
+import { SCHEMA_PATH, SURVEY_YEAR, readSurvey } from "./definition.js";
 import { toDetailedJson } from "./metadatum.js";
 import { epochAt } from "./network.js";
 
@@ -34,6 +35,12 @@ const { values: args } = parseArgs({ options: { unpublished: { type: "boolean", 
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const site = join(root, "site");
+const repository = join(root, "..");
+// The reports, newest first.
+const reports = readdirSync(repository)
+  .filter((name) => /^\d{4}$/.test(name) && statSync(join(repository, name, "index.html"), { throwIfNoEntry: false })?.isFile())
+  .map(Number)
+  .sort((a, b) => b - a);
 const { SPONSOR_NETWORK: network, SPONSOR_KOIOS: koios, SPONSOR_SURVEY: survey, TURNSTILE_SITE_KEY: turnstileSiteKey } = wranglerVars();
 const [, txId, index] = /^([0-9a-f]{64})#(\d+)$/.exec(survey ?? "") ?? [];
 if (!txId) fail(`SPONSOR_SURVEY isn't "<tx id>#<index>": ${survey}`);
@@ -71,11 +78,17 @@ const baked = {
   translations,
   maxTextBytes,
   exits,
+  year: SURVEY_YEAR,
+  reports,
 };
 
 rmSync(OUT, { recursive: true, force: true });
 // Everything but the scripts is served as it is.
 cpSync(site, OUT, { recursive: true, filter: (file) => !file.endsWith(".js") && basename(file) !== "texts" });
+for (const year of reports) {
+  cpSync(join(repository, String(year)), join(OUT, String(year)), { recursive: true, filter: (file) => basename(file) !== "elm-stuff" });
+}
+cpSync(join(root, "cip179", "free-text.schema.json"), join(OUT, SCHEMA_PATH));
 await build({
   entryPoints: [join(site, "main.js")],
   outdir: OUT,
@@ -104,8 +117,9 @@ console.log(`${definition.title}: ${definition.questions.length} questions, ${ar
 if (args.unpublished) console.log("answers can't be published from this build: it is to try the survey");
 console.log(open > 0 ? `open for ${open} more epoch${open > 1 ? "s" : ""}, to the end of epoch ${definition.endEpoch}` : `closed since epoch ${definition.endEpoch}`);
 console.log(`languages: ${[translations.defaultLanguage, ...Object.keys(translations.translations)].join(", ")}`);
+console.log(`reports: ${reports.join(", ")}`);
 console.log(`written to ${OUT}:`);
-for (const file of files(OUT)) {
+for (const file of files(OUT).filter((file) => !reports.includes(Number(relative(OUT, file).split(sep)[0])))) {
   const bytes = readFileSync(file);
   const text = /\.(js|css|html|svg|json)$/.test(file);
   console.log(`  ${relative(OUT, file).padEnd(40)} ${kb(bytes.length)}${text ? `, ${kb(gzipSync(bytes).length)} gzipped` : ""}`);

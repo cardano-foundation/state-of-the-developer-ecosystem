@@ -59,10 +59,10 @@ You need:
 
 ### Before Mainnet
 
-- **Merge into `main`.** The definition names the free-text schema by its address on GitHub Pages, which serves `main`, and by its hash. Before publishing, check that the address serves the same file:
+- **The free-text schema.** The definition names it by its address on the site's [custom domain](#custom-domain), and by its hash. Every build of the site serves it, on any network: before publishing, check that the domain serves the same file:
 
   ```
-  curl -sf https://cardano-foundation.github.io/state-of-the-developer-ecosystem/survey/cip179/free-text.schema.json | diff - cip179/free-text.schema.json && echo same
+  curl -sf https://devsurvey.cardano.org/cip179/free-text.schema.json | diff - cip179/free-text.schema.json && echo same
   ```
 
 - **The owner's wallet**: the one that publishes the survey, and alone can cancel it.
@@ -148,7 +148,7 @@ yarn site
 yarn wrangler pages deploy --branch main
 ```
 
-`yarn site` reads the survey published as `SPONSOR_SURVEY`, and stops unless `survey.json` makes that same definition. The site is at the project's address, `https://<name>.pages.dev/`, and at its custom domain once set up.
+`yarn site` reads the survey published as `SPONSOR_SURVEY`, and stops unless `survey.json` makes that same definition. It also copies the reports of the repository's `<year>/` folders, served at `/<year>/`, and the free-text schema. The site is at the project's address, `https://<name>.pages.dev/`, and at its custom domain once set up.
 
 Commit `survey.json` and `wrangler.jsonc`: the repository says what is deployed.
 
@@ -162,9 +162,9 @@ yarn wrangler pages deployment tail --project-name state-of-cardano-developer-su
 
 ### Custom domain
 
-Once, on the account that runs Mainnet. For a domain whose DNS isn't on Cloudflare, such as `cardano.org`:
+Once, on the account that runs Mainnet. The domain, `devsurvey.cardano.org`, is permanent: the home page has the current survey, `/<year>/` the reports, and the definitions on chain name the free-text schema there. For a domain whose DNS isn't on Cloudflare, such as `cardano.org`:
 
-1. In the Cloudflare dashboard (Workers & Pages, the project, Custom domains), set up a domain with the hostname, such as `state-of-the-developer-ecosystem.cardano.org`.
+1. In the Cloudflare dashboard (Workers & Pages, the project, Custom domains), set up a domain with the hostname, `devsurvey.cardano.org`.
 2. At the DNS provider, add a CNAME record from that hostname to the project's `<name>.pages.dev`. Only after step 1: before it, the domain answers with error 522.
 3. Add the hostname to the Turnstile widget (Turnstile, the widget, Hostname management).
 
@@ -173,6 +173,8 @@ Cloudflare then issues the certificate, and the dashboard shows the domain as ac
 ### Update the deployed site
 
 Step 4. It stops if the definition changed: the English texts, the questions and their options, their order and limits. The page, its texts, the translations and the display conditions can change at any time.
+
+A new report shows on GitHub Pages once merged into `main`, and on the custom domain at the next deploy, which also links it from the thank-you and closed screens.
 
 A new definition is a new survey:
 
@@ -194,7 +196,7 @@ A display condition changed while the survey is open also changes the export: it
 
 **Files.**
 
-- `site/`: the page respondents use, built into `dist/` by `yarn site`, with the survey baked in.
+- `site/`: the page respondents use, built into `dist/` by `yarn site`, with the survey baked in, beside the reports and the free-text schema. `_headers` lets other sites read the schema, and `404.html` answers the paths with nothing.
 - `cip179/`: the survey builder (`build.js`), the site's build (`site.js`), the sponsor (`sponsor*.js`) and the tests.
 - `cip179/2026/survey.json`: the 2026 survey.
 - `functions/api/sponsor/`: the sponsor's endpoints.
@@ -208,7 +210,7 @@ A display condition changed while the survey is open also changes the export: it
 3. A submit screen: Turnstile, then the sponsor. A refusal is told there, and the answers are kept.
 4. A thank-you, with a link to the transaction.
 
-A survey past its end epoch, or cancelled, shows as closed. In its last week, the welcome says how soon it closes, and in its last day the submit screen too; an open page closes when the survey does. The page has its texts in nine languages (`site/texts/`, one file each, with the widget's texts for the languages the widget doesn't ship), and offers those the survey also has. A link can choose one: `?lang=es`. The browser keeps the respondent's key, unsent answers and language, for each survey. It requests nothing from other sites before the submit screen.
+A survey past its end epoch, or cancelled, shows as closed. The thank-you and closed screens link to the survey's report, or until it is out to the latest, and to all the reports. In its last week, the welcome says how soon it closes, and in its last day the submit screen too; an open page closes when the survey does. The page has its texts in nine languages (`site/texts/`, one file each, with the widget's texts for the languages the widget doesn't ship), and offers those the survey also has. A link can choose one: `?lang=es`. The browser keeps the respondent's key, unsent answers and language, for each survey. It requests nothing from other sites before the submit screen.
 
 **The sponsor.** The browser makes a key, and the response's credential is that key.
 

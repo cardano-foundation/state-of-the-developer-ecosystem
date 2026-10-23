@@ -8,8 +8,11 @@ export default {
   loading: "Wird geladen…",
   terms: "Allgemeine Geschäftsbedingungen",
   source: "Quellcode",
-  results: "Die Ergebnisse erscheinen im Bericht 2026. Bis dahin findest du hier",
-  previous: "den Bericht 2025",
+  results: {
+    out: (year) => ["Die Ergebnisse findest du im ", `Bericht ${year}`, "."],
+    coming: (year, latest) => [`Die Ergebnisse erscheinen im Bericht ${year}. Bis dahin findest du hier `, `den Bericht ${latest}`, "."],
+    all: "Alle Berichte:",
+  },
   period: ".",
 
   welcome: {

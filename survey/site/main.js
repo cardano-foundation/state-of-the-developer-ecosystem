@@ -225,12 +225,36 @@ function show() {
       widget = undefined;
       $("#published").textContent = state.repeated ? texts.thanks.repeated : texts.thanks.body;
       $("#transaction").href = transactionUrl(built.network, state.txId);
+      showResults("#thanks");
       break;
     case "closed":
       $("#closed-body").textContent = state.cancelled ? texts.closed.cancelled : texts.closed.body;
-      $("#closed .results").hidden = Boolean(state.cancelled);
+      // A cancelled survey has no report to come.
+      showResults("#closed", { report: !state.cancelled });
       break;
   }
+}
+
+/**
+ * The reports the site serves (`site.js`), on a screen: the survey's own, or
+ * until it is out the latest, and all of them.
+ */
+function showResults(screen, { report = true } = {}) {
+  const { results } = TEXTS[language];
+  const [latest] = built.reports;
+  const out = built.reports.includes(built.year);
+  const [before, text, after] = out ? results.out(built.year) : results.coming(built.year, latest);
+  $(`${screen} .report`).hidden = !report || latest === undefined;
+  $(`${screen} .report`).replaceChildren(before, reportLink(out ? built.year : latest, text), after);
+  $(`${screen} .reports`).hidden = latest === undefined;
+  $(`${screen} .reports`).replaceChildren(
+    `${results.all} `,
+    ...built.reports.flatMap((year, i) => [...(i > 0 ? [" · "] : []), reportLink(year, String(year))]),
+  );
+}
+
+function reportLink(year, text) {
+  return Object.assign(document.createElement("a"), { href: `/${year}/`, textContent: text });
 }
 
 /**

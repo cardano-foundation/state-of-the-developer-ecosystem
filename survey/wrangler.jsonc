@@ -24,6 +24,6 @@
     /* The sponsor (cip179/sponsor.js); its SPONSOR_MNEMONIC is a secret. */
     "SPONSOR_NETWORK": "preprod",
     "SPONSOR_KOIOS": "https://preprod.koios.rest/api/v1",
-    "SPONSOR_SURVEY": "0d1ca0e63fd9d5f10668aae2225575ce88099056038c49a2b1cf32f9de350e1c#0"
+    "SPONSOR_SURVEY": "e10037bc105bc36481156b3fc34ef9a037eaee45f72212b42ab68afcfe87bd4d#0"
   }
 }

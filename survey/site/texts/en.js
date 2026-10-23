@@ -8,8 +8,12 @@ export default {
   loading: "Loading…",
   terms: "Terms and conditions",
   source: "Source code",
-  results: "The results will be in the 2026 report. Until then, here is",
-  previous: "the 2025 report",
+  // Around the link to a report: before it, its text, after it.
+  results: {
+    out: (year) => ["The results are in ", `the ${year} report`, "."],
+    coming: (year, latest) => [`The results will be in the ${year} report. Until then, here is `, `the ${latest} report`, "."],
+    all: "All reports:",
+  },
   period: ".",
 
   welcome: {

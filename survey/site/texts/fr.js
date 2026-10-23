@@ -8,8 +8,11 @@ export default {
   loading: "Chargement…",
   terms: "Conditions générales",
   source: "Code source",
-  results: "Les résultats seront dans le rapport 2026. En attendant, voici",
-  previous: "le rapport 2025",
+  results: {
+    out: (year) => ["Les résultats sont dans ", `le rapport ${year}`, "."],
+    coming: (year, latest) => [`Les résultats seront dans le rapport ${year}. En attendant, voici `, `le rapport ${latest}`, "."],
+    all: "Tous les rapports :",
+  },
   period: ".",
 
   welcome: {

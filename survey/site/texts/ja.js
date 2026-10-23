@@ -8,8 +8,11 @@ export default {
   loading: "読み込み中…",
   terms: "利用規約",
   source: "ソースコード",
-  results: "結果は2026年のレポートに掲載されます。それまでは、こちらをご覧ください：",
-  previous: "2025年のレポート",
+  results: {
+    out: (year) => ["結果は", `${year}年のレポート`, "に掲載されています。"],
+    coming: (year, latest) => [`結果は${year}年のレポートに掲載されます。それまでは、こちらをご覧ください：`, `${latest}年のレポート`, "。"],
+    all: "すべてのレポート：",
+  },
   period: "。",
 
   welcome: {

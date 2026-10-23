@@ -20,11 +20,15 @@ import { MAX_CHUNK_BYTES, Role, SPEC_VERSION, describeProblem, utf8ByteLength, v
 import { readFileSync } from "node:fs";
 
 const DEFAULT_LANGUAGE = "en";
-const SURVEY_FILE = new URL("./2026/survey.json", import.meta.url);
+/** The edition: its report will be in the repository's `<year>/` folder. */
+export const SURVEY_YEAR = 2026;
+const SURVEY_FILE = new URL(`./${SURVEY_YEAR}/survey.json`, import.meta.url);
 const SCHEMA_FILE = new URL("./free-text.schema.json", import.meta.url);
-// GitHub Pages serves `main`: the schema is there once merged.
-const SCHEMA_URI =
-  "https://cardano-foundation.github.io/state-of-the-developer-ecosystem/survey/cip179/free-text.schema.json";
+// The site serves the schema at this path (`site.js`), on its permanent
+// domain. Definitions on chain name it, with its hash: it stays there, as it
+// is, for good. A changed schema gets a new name.
+export const SCHEMA_PATH = "cip179/free-text.schema.json";
+const SCHEMA_URI = `https://devsurvey.cardano.org/${SCHEMA_PATH}`;
 
 // The SurveyJS features the survey uses. Any other is reported rather than
 // silently lost.

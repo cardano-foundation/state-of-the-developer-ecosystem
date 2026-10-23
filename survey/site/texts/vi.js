@@ -8,8 +8,11 @@ export default {
   loading: "Đang tải…",
   terms: "Điều khoản và điều kiện",
   source: "Mã nguồn",
-  results: "Kết quả sẽ có trong báo cáo 2026. Trong lúc chờ, mời bạn xem",
-  previous: "báo cáo 2025",
+  results: {
+    out: (year) => ["Kết quả có trong ", `báo cáo ${year}`, "."],
+    coming: (year, latest) => [`Kết quả sẽ có trong báo cáo ${year}. Trong lúc chờ, mời bạn xem `, `báo cáo ${latest}`, "."],
+    all: "Tất cả báo cáo:",
+  },
   period: ".",
 
   welcome: {
