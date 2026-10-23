@@ -66,7 +66,7 @@ export default {
 
   thanks: {
     title: "¡Gracias!",
-    body: "Tus respuestas están publicadas. Aparecen en la blockchain de Cardano en menos de un minuto.",
+    body: "Tus respuestas están publicadas. Aparecerán en la blockchain de Cardano en menos de un minuto.",
     repeated: "Este navegador ya había publicado una respuesta, así que las respuestas que acabas de revisar no se han publicado.",
     transaction: "Ver tu respuesta en la cadena",
   },
@@ -82,7 +82,7 @@ export default {
       closedCancelledTitle: "Esta encuesta fue cancelada",
       closedTitle: "Esta encuesta ha cerrado",
       closedCancelledBody: "Su propietario la retiró con una cancelación de tag 2. Las nuevas respuestas se rechazan. La definición permanece on-chain como referencia.",
-      closedBody: "Su época de cierre ya ha pasado, así que ya no se aceptan nuevas respuestas. Aún puedes consultar los resultados.",
+      closedBody: "Su fecha de cierre ya ha pasado, así que ya no se aceptan nuevas respuestas. Aún puedes consultar los resultados.",
       ineligibleTitle: "No puedes responder a esta encuesta",
       ineligibleLead: "Solo está abierta a los roles indicados abajo, y tu identidad no puede reclamar ninguno de ellos aquí. Esto es lo que significa cada uno:",
       notClaimable: " Las wallets de navegador no pueden tener esta credencial: debe proporcionarla el sitio.",
