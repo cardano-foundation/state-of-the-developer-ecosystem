@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 // Generates the sponsor wallet: a 24-word seed phrase, written to the
-// gitignored `.dev.vars` as SPONSOR_MNEMONIC for `wrangler pages dev`, and
-// importable in any Cardano wallet to fund it. Prints its first address.
+// gitignored `.env` as SPONSOR_MNEMONIC for `yarn dev`, and importable in any
+// Cardano wallet to fund it. Prints its first address.
 //
 //   node cip179/sponsor-key.js [--network preview|preprod|mainnet]
 //
-// The phrase isn't printed: read it from `.dev.vars`. For a deployment, set
-// it as a secret instead (`wrangler pages secret put SPONSOR_MNEMONIC`).
+// The phrase isn't printed: read it from `.env`. For a deployment, it is a
+// sensitive variable of the Vercel project instead.
 
 import * as PrivateKey from "@evolution-sdk/evolution/PrivateKey";
 import * as Address from "@evolution-sdk/evolution/Address";
@@ -18,7 +18,7 @@ const { values: args } = parseArgs({ options: { network: { type: "string", defau
 const networkId = { preview: 0, preprod: 0, mainnet: 1 }[args.network];
 if (networkId === undefined) throw new Error(`unknown network ${args.network}`);
 
-const VARS = ".dev.vars";
+const VARS = ".env";
 const vars = existsSync(VARS) ? readFileSync(VARS, "utf8") : "";
 if (/^SPONSOR_MNEMONIC=/m.test(vars)) {
   console.error(`${VARS} already has a SPONSOR_MNEMONIC; remove it first to make a new one.`);

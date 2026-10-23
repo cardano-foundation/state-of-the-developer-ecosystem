@@ -1,4 +1,0 @@
-# Cloudflare Pages headers. CIP-179 tools read the free-text schema from their
-# own pages, as GitHub Pages allows.
-/cip179/*
-  Access-Control-Allow-Origin: *

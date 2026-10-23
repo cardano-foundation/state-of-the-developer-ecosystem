@@ -1,6 +1,6 @@
 // The transaction sponsor: puts survey responses on chain with the sponsor
 // wallet paying the fee, so respondents need neither a wallet nor ada. Used by
-// the Pages Functions in `functions/api/sponsor/`.
+// the Vercel Functions in `api/sponsor/`.
 //
 // Two steps:
 //
@@ -16,7 +16,7 @@
 // per respondent key; a respondent pays their own fee to change their answer.
 // It stops once the survey is cancelled, checking the chain every few minutes.
 //
-// The sponsor's state is in D1 (`sponsor-store.js`): its coins, the
+// The sponsor's state is in its database (`sponsor-store.js`): its coins, the
 // sponsorships, and what it read from the chain. It tracks its coins itself,
 // each submission replacing a coin by its change, so a response costs no
 // Koios read but its submission: Koios confirms the coins every half hour, or
@@ -24,10 +24,9 @@
 // parameters read once per epoch. `sponsor-split.js` splits the wallet into
 // coins, so that several respondents can submit at once.
 //
-// Config (`env`): SPONSOR_MNEMONIC (a secret), SPONSOR_NETWORK (preview,
-// preprod or mainnet), SPONSOR_KOIOS (the Koios API URL), SPONSOR_SURVEY (the
-// survey's "<tx id>#<index>"), the `db` binding, and optionally
-// SPONSOR_DAILY_CAP: the most the sponsor spends in 24 hours, in lovelace.
+// Config: the network, its Koios, the survey and the daily cap of
+// `config.js`, and from `env`, the secrets: SPONSOR_MNEMONIC, and
+// TURSO_DATABASE_URL and TURSO_AUTH_TOKEN for the database.
 
 import { ed25519 } from "@noble/curves/ed25519.js";
 import { blake2b } from "@noble/hashes/blake2.js";
@@ -49,6 +48,7 @@ import { inSurveyWindow, mechanismAProven } from "cip-179/domain";
 import { cborToMetadatum, evolutionCodec, toTxMetadatum } from "cip-179/evolution";
 import { decodeTxProof } from "cip-179/txproof";
 
+import deployed from "../config.js";
 import { epochAt, epochEnd, slotTime } from "./network.js";
 import * as store from "./sponsor-store.js";
 
@@ -108,7 +108,7 @@ export async function reply(work) {
 
 /** Step 1: a signed transaction for a response payload (CBOR hex). */
 export async function sponsor(env, payloadHex) {
-  const config = configOf(env);
+  const config = await configOf(env);
   const { db } = config;
   const now = Date.now();
   const payloadBytes = fromHex(payloadHex, "payload");
@@ -165,7 +165,7 @@ export async function sponsor(env, payloadHex) {
  * `{ vkey, signature }` in hex. Returns the transaction id.
  */
 export async function submit(env, txHex, { vkey, signature }) {
-  const config = configOf(env);
+  const config = await configOf(env);
   const { db } = config;
   const now = Date.now();
   const txBytes = fromHex(txHex, "transaction");
@@ -230,22 +230,22 @@ export async function submit(env, txHex, { vkey, signature }) {
 
 // ----------------------------------------------------------------------------
 
-function configOf(env) {
-  const chain = CHAINS[env.SPONSOR_NETWORK];
-  if (!chain) throw new Error(`unknown SPONSOR_NETWORK ${env.SPONSOR_NETWORK}`);
+async function configOf(env) {
+  const { network, koios, survey, dailyCap } = deployed;
+  const chain = CHAINS[network];
+  if (!chain) throw new Error(`unknown network ${network}`);
   if (!env.SPONSOR_MNEMONIC) throw new Error("no SPONSOR_MNEMONIC");
-  const [, txId, index] = /^([0-9a-f]{64})#(\d+)$/.exec(env.SPONSOR_SURVEY ?? "") ?? [];
-  if (!txId) throw new Error(`SPONSOR_SURVEY isn't "<tx id>#<index>": ${env.SPONSOR_SURVEY}`);
-  if (!env.db) throw new Error("no db binding");
-  if (env.SPONSOR_DAILY_CAP && !/^\d+$/.test(env.SPONSOR_DAILY_CAP)) throw new Error("SPONSOR_DAILY_CAP isn't lovelace");
+  const [, txId, index] = /^([0-9a-f]{64})#(\d+)$/.exec(survey ?? "") ?? [];
+  if (!txId) throw new Error(`the survey isn't "<tx id>#<index>": ${survey}`);
+  if (dailyCap !== null && !Number.isSafeInteger(dailyCap)) throw new Error("the daily cap isn't lovelace");
   return {
-    network: env.SPONSOR_NETWORK,
+    network,
     chain,
-    koios: env.SPONSOR_KOIOS.replace(/\/$/, ""),
+    koios: koios.replace(/\/$/, ""),
     mnemonic: env.SPONSOR_MNEMONIC,
     survey: { txId, index: Number(index) },
-    db: env.db,
-    dailyCap: env.SPONSOR_DAILY_CAP ? BigInt(env.SPONSOR_DAILY_CAP) : null,
+    db: await store.database(env),
+    dailyCap: dailyCap === null ? null : BigInt(dailyCap),
   };
 }
 

@@ -10,7 +10,7 @@ import built from "built-survey";
 
 import { fromDetailedJson } from "../cip179/metadatum.js";
 import { epochAt, epochEnd, transactionUrl } from "../cip179/network.js";
-import { respondent, turnstileChallenge } from "../cip179/respondent.js";
+import { respondent } from "../cip179/respondent.js";
 import { next, start } from "./flow.js";
 import { googleCalendarUrl, icsFile, mailtoUrl, reminderTime } from "./reminder.js";
 import de from "./texts/de.js";
@@ -36,7 +36,6 @@ const endEpoch = Number(definition.endEpoch);
 const close = epochEnd(built.network, endEpoch);
 // Each survey has its own respondent: key, answers and language.
 const me = respondent(`survey.${built.survey}.`);
-const challenge = turnstileChallenge("#challenge", built.turnstileSiteKey);
 
 // The languages the page and the survey both have.
 const { defaultLanguage, translations } = built.translations;
@@ -103,7 +102,7 @@ async function publish() {
   // A survey built before it is published (`site.js --unpublished`) is only tried.
   if (built.unpublished) return dispatch({ type: "refused", code: "unpublished" });
   try {
-    const published = await me.submit(payload, { challenge, onAttempt: (attempt) => dispatch({ type: "attempt", attempt }) });
+    const published = await me.submit(payload, { onAttempt: (attempt) => dispatch({ type: "attempt", attempt }) });
     dispatch({ type: "published", txId: published });
   } catch (error) {
     console.error(error);
@@ -209,7 +208,6 @@ function show() {
       break;
     case "submit": {
       const sending = state.step === "sending";
-      challenge.load();
       $("#answered").textContent = texts.submit.answered(state.answered);
       showClosing();
       $("#problem").hidden = state.step !== "failed";

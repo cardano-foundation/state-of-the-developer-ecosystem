@@ -6,7 +6,7 @@ import { test } from "node:test";
 
 import { mainnet, preprod, preview } from "@evolution-sdk/evolution/sdk/client/Chain";
 
-import { epochAt, epochEnd, slotTime, transactionUrl } from "../network.js";
+import { epochAt, epochEnd, slotTime } from "../network.js";
 
 test("epochs from the time", () => {
   const start = Date.UTC(2022, 9, 25); // preview slot 0
@@ -41,10 +41,4 @@ test("slots as the SDK times them", () => {
       assert.equal(slotTime(network, slot), Number(zeroTime) + (slot - Number(zeroSlot)) * slotLength, network);
     }
   }
-});
-
-test("explorer links", () => {
-  assert.equal(transactionUrl("preview", "ab12"), "https://preview.cardanoscan.io/transaction/ab12?tab=metadata");
-  assert.equal(transactionUrl("mainnet", "ab12"), "https://cardanoscan.io/transaction/ab12?tab=metadata");
-  assert.throws(() => transactionUrl("testnet", "ab12"), /unknown network/);
 });

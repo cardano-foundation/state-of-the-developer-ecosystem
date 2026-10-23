@@ -1,31 +1,19 @@
-// The sponsor's state on a local D1, in memory: leases, submissions,
-// refusals and the checks from Koios.
+// The sponsor's state on a libSQL database in memory, with the project's
+// migrations: leases, submissions, refusals and the checks from Koios.
 
+import { createClient } from "@libsql/client";
 import assert from "node:assert/strict";
-import { readdir, readFile } from "node:fs/promises";
-import { after, before, beforeEach, test } from "node:test";
-import { getPlatformProxy } from "wrangler";
+import { afterEach, beforeEach, test } from "node:test";
 
 import * as store from "../sponsor-store.js";
 
-const config = new URL("../../wrangler.jsonc", import.meta.url).pathname;
-const migrations = new URL("../../migrations/", import.meta.url).pathname;
-
-let db, dispose;
-before(async () => {
-  // The project's `db`, in memory.
-  ({ env: { db }, dispose } = await getPlatformProxy({ configPath: config, persist: false, envFiles: [] }));
-});
-after(() => dispose());
+let db;
 beforeEach(async () => {
-  await db.batch(["chain_view", "sponsorships", "coins"].map((t) => db.prepare(`DROP TABLE IF EXISTS ${t}`)));
-  for (const file of (await readdir(migrations)).sort()) {
-    const sql = await readFile(migrations + file, "utf8");
-    const statements = sql.split(/;\s*$/m).filter((s) => s.replace(/--.*$/gm, "").trim());
-    await db.batch(statements.map((s) => db.prepare(s)));
-  }
+  db = createClient({ url: ":memory:" });
+  await store.migrate(db);
   await store.startView(db, view());
 });
+afterEach(() => db.close());
 
 const T = 1_800_000_000_000;
 const ADA = 1_000_000;
@@ -47,7 +35,7 @@ const lease = (n, coinRef, now = T, changes = {}) =>
   store.lease(db, { key: key(n), coin: coinRef, tx: tx(n), fee: 200_000n, validUntil: now + 5 * 60_000, ...changes }, now, changes);
 const submitted = (n, coinRef, at, validUntil = at + 60_000) =>
   store.submitted(db, { key: key(n), coin: coinRef, tx: tx(n), fee: 200_000n, validUntil, change: { ref: change(n), lovelace: 8.8 * ADA } }, at);
-const coins = async () => (await db.prepare("SELECT ref, lovelace, usable_from FROM coins ORDER BY ref").all()).results;
+const coins = async () => (await db.execute("SELECT ref, lovelace, usable_from FROM coins ORDER BY ref")).rows;
 const refs = async (now = T) => (await store.candidates(db, now, MIN_COIN)).map((c) => c.ref);
 
 test("the chain view round trips, bigints included", async () => {
@@ -70,7 +58,7 @@ test("the chain view round trips, bigints included", async () => {
 });
 
 test("the schema refuses impossible rows", async () => {
-  const insert = (sql, ...args) => db.prepare(sql).bind(...args).run();
+  const insert = (sql, ...args) => db.execute(sql, args);
   await assert.rejects(insert("INSERT INTO coins VALUES ('nohash', 1, 0)"));
   await assert.rejects(insert("INSERT INTO coins VALUES (?, 0, 0)", coin(1)));
   const s = "INSERT INTO sponsorships VALUES (?, ?, ?, ?, ?, ?)";

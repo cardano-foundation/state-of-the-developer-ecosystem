@@ -201,10 +201,6 @@ select:focus-visible {
   color: var(--muted);
 }
 
-#challenge:not(:empty) {
-  margin-top: 1rem;
-}
-
 .results {
   margin-top: 1.5rem;
   color: var(--muted);

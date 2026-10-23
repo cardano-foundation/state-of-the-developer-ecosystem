@@ -24,7 +24,6 @@ const PROBLEMS = {
   budget: "budget",
   "too-long": "tooLong",
   offline: "offline",
-  turnstile: "check",
   unpublished: "unpublished",
 };
 

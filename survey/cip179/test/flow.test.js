@@ -49,7 +49,6 @@ test("each refusal has its problem, or its screen", () => {
     ["budget", "budget"],
     ["too-long", "tooLong"],
     ["offline", "offline"],
-    ["turnstile", "check"],
     ["unpublished", "unpublished"],
     ["invalid", "failed"],
     ["failed", "failed"],

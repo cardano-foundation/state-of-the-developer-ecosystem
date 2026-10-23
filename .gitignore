@@ -6,4 +6,7 @@ _worker.bundle
 node_modules
 survey/dist
 .dev.vars
+.env
+.local
+.vercel
 survey/definition.metadata.json

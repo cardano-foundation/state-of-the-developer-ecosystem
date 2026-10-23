@@ -3,10 +3,10 @@
 //
 //   POST { tx, vkey, signature } → { txId }
 
-import { reply, submit } from "../../../cip179/sponsor.js";
+import { reply, submit } from "../../cip179/sponsor.js";
 
-export const onRequestPost = ({ request, env }) =>
+export const POST = (request) =>
   reply(async () => {
     const { tx, vkey, signature } = await request.json();
-    return { txId: await submit(env, tx, { vkey, signature }) };
+    return { txId: await submit(process.env, tx, { vkey, signature }) };
   });

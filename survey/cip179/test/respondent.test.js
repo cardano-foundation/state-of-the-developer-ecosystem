@@ -72,11 +72,11 @@ test("a sponsored response: signed, recorded, its answers forgotten", async () =
   const requests = sponsor({ tx: "84a0", txId: TX_ID }, { txId: TX_ID });
   const attempts = [];
 
-  const txId = await me.submit(PAYLOAD, { challenge: async () => "token", onAttempt: (n) => attempts.push(n) });
+  const txId = await me.submit(PAYLOAD, { onAttempt: (n) => attempts.push(n) });
 
   assert.equal(txId, TX_ID);
   assert.deepEqual(attempts, [1]);
-  assert.deepEqual(requests[0], { path: "/api/sponsor", body: { challenge: "token", payload: bytesToHex(toCbor(PAYLOAD)) } });
+  assert.deepEqual(requests[0], { path: "/api/sponsor", body: { payload: bytesToHex(toCbor(PAYLOAD)) } });
   const { tx, vkey, signature } = requests[1].body;
   assert.equal(requests[1].path, "/api/sponsor/submit");
   assert.equal(tx, "84a0");
@@ -87,7 +87,7 @@ test("a sponsored response: signed, recorded, its answers forgotten", async () =
   assert.equal(respondent("a.", { storage }).submitted(), TX_ID);
 });
 
-test("a busy sponsor is tried again, with a new token", async () => {
+test("a busy sponsor is tried again", async () => {
   const me = respondent("a.", { storage: memory(), retryMs: 0 });
   const requests = sponsor(
     { status: 503, code: "busy", error: "busy" },
@@ -96,14 +96,12 @@ test("a busy sponsor is tried again, with a new token", async () => {
     { tx: "84a0", txId: TX_ID },
     { txId: TX_ID },
   );
-  let tokens = 0;
   const attempts = [];
 
-  await me.submit(PAYLOAD, { challenge: async () => `token ${++tokens}`, onAttempt: (n) => attempts.push(n) });
+  await me.submit(PAYLOAD, { onAttempt: (n) => attempts.push(n) });
 
   assert.deepEqual(attempts, [1, 2, 3]);
   assert.deepEqual(requests.map((r) => r.path), ["/api/sponsor", "/api/sponsor", "/api/sponsor/submit", "/api/sponsor", "/api/sponsor/submit"]);
-  assert.equal(requests[3].body.challenge, "token 3");
 });
 
 test("three attempts at most, and none after another refusal", async () => {
@@ -111,11 +109,11 @@ test("three attempts at most, and none after another refusal", async () => {
   me.stash.set("s", { q: 1 });
   const busy = { status: 503, code: "busy", error: "busy" };
   let requests = sponsor(busy, busy, busy, busy);
-  await assert.rejects(me.submit(PAYLOAD, { challenge: async () => "token" }), { code: "busy", status: 503 });
+  await assert.rejects(me.submit(PAYLOAD), { code: "busy", status: 503 });
   assert.equal(requests.length, 3);
 
   requests = sponsor({ status: 503, code: "budget", error: "today's budget is spent" }, busy);
-  await assert.rejects(me.submit(PAYLOAD, { challenge: async () => "token" }), { code: "budget", message: "today's budget is spent" });
+  await assert.rejects(me.submit(PAYLOAD), { code: "budget", message: "today's budget is spent" });
   assert.equal(requests.length, 1);
   assert.equal(me.submitted(), null);
   assert.deepEqual(me.stash.get("s"), { q: 1 });
@@ -124,17 +122,14 @@ test("three attempts at most, and none after another refusal", async () => {
 test("a key that already had a response sponsored remembers it", async () => {
   const me = respondent("a.", { storage: memory() });
   sponsor({ status: 409, code: "already", error: "already", txId: TX_ID });
-  await assert.rejects(me.submit(PAYLOAD, { challenge: async () => "token" }), { code: "already", txId: TX_ID });
+  await assert.rejects(me.submit(PAYLOAD), { code: "already", txId: TX_ID });
   assert.equal(me.submitted(), TX_ID);
 });
 
-test("an unreachable sponsor, a failed check", async () => {
+test("an unreachable sponsor", async () => {
   const me = respondent("a.", { storage: memory() });
   globalThis.fetch = async () => {
     throw new TypeError("fetch failed");
   };
-  await assert.rejects(me.submit(PAYLOAD, { challenge: async () => "token" }), { code: "offline" });
-
-  const failed = Object.assign(new Error("the Turnstile check failed"), { code: "turnstile" });
-  await assert.rejects(me.submit(PAYLOAD, { challenge: () => Promise.reject(failed) }), { code: "turnstile" });
+  await assert.rejects(me.submit(PAYLOAD), { code: "offline" });
 });

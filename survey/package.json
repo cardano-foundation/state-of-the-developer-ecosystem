@@ -7,21 +7,21 @@
   "private": false,
   "type": "module",
   "scripts": {
-    "dev": "wrangler pages dev dist",
+    "dev": "node --watch cip179/dev.js",
     "cip179": "node cip179/build.js",
     "site": "node cip179/site.js",
-    "db:migrate": "wrangler d1 migrations apply db",
+    "db:migrate": "node cip179/migrate.js",
     "test": "node --test 'cip179/test/*.test.js'"
   },
   "dependencies": {
     "@evolution-sdk/evolution": "0.5.16",
+    "@libsql/client": "0.18.0",
     "@noble/curves": "^2.4.0",
     "@noble/hashes": "^2.4.0",
     "cardano-tessera-respond": "0.8.0",
     "cip-179": "0.6.0"
   },
   "devDependencies": {
-    "esbuild": "0.27.0",
-    "wrangler": "^4.40.2"
+    "esbuild": "0.27.0"
   }
 }

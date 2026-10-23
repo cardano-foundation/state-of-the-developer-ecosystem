@@ -9,8 +9,8 @@
 //
 //   node cip179/sponsor-split.js [--coins <n>] [--submit]
 //
-// Spends every ada-only coin of the wallet in `.dev.vars`, on the network and
-// through the Koios of `wrangler.jsonc`. Without `--submit`, only shows the
+// Spends every ada-only coin of the wallet in `.env`, on the network and
+// through the Koios of `config.js`. Without `--submit`, only shows the
 // transaction.
 
 import * as Address from "@evolution-sdk/evolution/Address";
@@ -19,10 +19,10 @@ import * as TransactionHash from "@evolution-sdk/evolution/TransactionHash";
 import { mainnet, preprod, preview } from "@evolution-sdk/evolution/sdk/client/Chain";
 import * as Client from "@evolution-sdk/evolution/sdk/client/Client";
 import { addressFromSeed } from "@evolution-sdk/evolution/sdk/wallet/Derivation";
-import { dirname, join } from "node:path";
-import { fileURLToPath } from "node:url";
+import { existsSync } from "node:fs";
 import { parseArgs } from "node:util";
-import { getPlatformProxy } from "wrangler";
+
+import deployed from "../config.js";
 
 const { values: args } = parseArgs({
   options: {
@@ -31,21 +31,22 @@ const { values: args } = parseArgs({
   },
 });
 
-const proxy = await getPlatformProxy({ configPath: join(dirname(fileURLToPath(import.meta.url)), "..", "wrangler.jsonc") });
-const { env } = proxy;
-await proxy.dispose();
-const chain = { preview, preprod, mainnet }[env.SPONSOR_NETWORK];
-if (!chain) throw new Error(`unknown SPONSOR_NETWORK ${env.SPONSOR_NETWORK}`);
+const { network, koios } = deployed;
+if (existsSync(".env")) process.loadEnvFile(".env");
+const mnemonic = process.env.SPONSOR_MNEMONIC;
+if (!mnemonic) throw new Error("no SPONSOR_MNEMONIC in .env");
+const chain = { preview, preprod, mainnet }[network];
+if (!chain) throw new Error(`unknown network ${network}`);
 const count = Number(args.coins);
 if (!Number.isInteger(count) || count < 2) throw new Error("--coins must be at least 2");
 
-const client = Client.make(chain).withKoios({ baseUrl: env.SPONSOR_KOIOS }).withSeed({ mnemonic: env.SPONSOR_MNEMONIC });
-const { address } = addressFromSeed(env.SPONSOR_MNEMONIC, { networkId: chain.id });
+const client = Client.make(chain).withKoios({ baseUrl: koios }).withSeed({ mnemonic });
+const { address } = addressFromSeed(mnemonic, { networkId: chain.id });
 const coins = (await client.getWalletUtxos()).filter((u) => !u.assets.multiAsset);
 const total = coins.reduce((sum, u) => sum + u.assets.lovelace, 0n);
 // Rounded down to 0.1 ada; the last coin is the change, after the fee.
 const share = (total / BigInt(count) / 100_000n) * 100_000n;
-console.log(`${Address.toBech32(address)} on ${env.SPONSOR_NETWORK}`);
+console.log(`${Address.toBech32(address)} on ${network}`);
 console.log(`${coins.length} coins, ${ada(total)} ada → ${count} coins of about ${ada(share)} ada`);
 
 let tx = client.newTx().collectFrom({ inputs: coins });

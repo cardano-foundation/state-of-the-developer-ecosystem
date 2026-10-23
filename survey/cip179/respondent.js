@@ -19,12 +19,6 @@ const RETRIABLE = ["busy", "refused", "expired"];
 const RETRIES = 2;
 const RETRY_MS = 5000;
 
-const TURNSTILE_SCRIPT = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
-// Turnstile's test site key always passes, and gives the dummy token that the
-// test secret in .dev.vars accepts.
-const TURNSTILE_SITEKEY = (hostname, sitekey) =>
-  ["[::1]", "127.0.0.1", "localhost"].includes(hostname) ? "1x00000000000000000000AA" : sitekey;
-
 /**
  * The respondent on this device. `prefix` names what is kept in `storage`: a
  * survey with its own prefix has its own respondent.
@@ -68,19 +62,19 @@ export function respondent(prefix, { storage = deviceStorage(), retryMs = RETRY_
     /**
      * Has the sponsor put a response (a label-17 payload) on chain: the
      * sponsor builds and signs the transaction, we sign it, it submits it.
-     * `challenge` gives a Turnstile token for each attempt, and `onAttempt` is
-     * told their number, from 1. Once the node accepts the transaction, the
-     * response is as good as on chain: the unsent answers are forgotten.
+     * `onAttempt` is told the attempts' number, from 1. Once the node accepts
+     * the transaction, the response is as good as on chain: the unsent
+     * answers are forgotten.
      *
      * Returns the transaction id. A refusal is thrown with the sponsor's
      * `code`; "already" comes with the `txId` of the response this key had
      * sponsored, which is remembered as submitted.
      */
-    async submit(payload, { challenge, onAttempt = () => {} }) {
+    async submit(payload, { onAttempt = () => {} } = {}) {
       for (let n = 1; ; n++) {
         onAttempt(n);
         try {
-          const { tx, txId } = await post("/api/sponsor", { challenge: await challenge(), payload: bytesToHex(toCbor(payload)) });
+          const { tx, txId } = await post("/api/sponsor", { payload: bytesToHex(toCbor(payload)) });
           const signature = ed25519.sign(hexToBytes(txId), secret);
           await post("/api/sponsor/submit", { tx, vkey: bytesToHex(publicKey), signature: bytesToHex(signature) });
           kept.set("sponsored", txId);
@@ -94,46 +88,6 @@ export function respondent(prefix, { storage = deviceStorage(), retryMs = RETRY_
       }
     },
   };
-}
-
-/**
- * Turnstile in `element`, with the widget's `sitekey` (Turnstile's test site
- * key on localhost), only visible when it needs the respondent. Returns
- * the function giving a fresh token: each is good for one request. Cloudflare's
- * script is loaded at the first token, or ahead of it with `load()`.
- */
-export function turnstileChallenge(element, sitekey) {
-  const failed = (reason) => Object.assign(new Error(`the Turnstile check failed (${reason})`), { code: "turnstile" });
-  let waiting, rendered;
-  const load = () =>
-    (rendered ??= new Promise((resolve, reject) => {
-      // An element with the id "turnstile" would be a global of that name too.
-      if (typeof globalThis.turnstile?.render === "function") return resolve();
-      const script = Object.assign(document.createElement("script"), { src: TURNSTILE_SCRIPT, onload: resolve });
-      script.onerror = () => reject(failed("its script didn't load"));
-      document.head.append(script);
-    }).then(() =>
-      turnstile.render(element, {
-        sitekey: TURNSTILE_SITEKEY(location.hostname, sitekey),
-        execution: "execute",
-        appearance: "interaction-only",
-        callback: (token) => waiting?.resolve(token),
-        "error-callback": (code) => waiting?.reject(failed(code)),
-      }),
-    ));
-  const token = async () => {
-    // A script that didn't load is tried again at the next token.
-    const id = await load().catch((error) => {
-      rendered = undefined;
-      throw error;
-    });
-    return new Promise((resolve, reject) => {
-      waiting = { resolve, reject };
-      turnstile.reset(id);
-      turnstile.execute(id);
-    });
-  };
-  return Object.assign(token, { load: () => void load().catch(() => {}) });
 }
 
 /** A refusal is thrown with its `status`, and the sponsor's `code` and `txId`. */
