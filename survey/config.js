@@ -7,9 +7,9 @@
 // machine run Preprod. NETWORK, if set, chooses another.
 //
 // The secrets are in the Vercel project's env, one value for Production and
-// one for Preview, and locally in the gitignored `.env`: SPONSOR_MNEMONIC, the
-// sponsor's seed phrase, TURSO_DATABASE_URL and
-// TURSO_DATABASE_TURSO_AUTH_TOKEN, its database, and KOIOS_URL and
+// one for Preview, and locally in the gitignored `.env`, and `.env.mainnet`
+// for Mainnet: SPONSOR_MNEMONIC, the sponsor's seed phrase, TURSO_DATABASE_URL
+// and TURSO_DATABASE_TURSO_AUTH_TOKEN, its database, and KOIOS_URL and
 // KOIOS_TOKEN, the Koios of production (`cip179/koios.js`).
 
 const networks = {
@@ -23,7 +23,7 @@ const networks = {
   },
   mainnet: {
     koios: "https://api.koios.rest/api/v1",
-    survey: null,
+    survey: "8a9e8ee18d216904681d544f2a0bae365bb39de8bd397d5434cde9516a618081#0",
     dailyCap: null,
   },
 };
@@ -36,7 +36,6 @@ export function deployedOf(env) {
 }
 
 /**
- * Our machine's secrets for a network: Mainnet's apart, so that `yarn dev`
- * and the testnet tools never have its wallet.
+ * Our machine's secrets for a network.
  */
 export const secretsFile = (network) => (network === "mainnet" ? ".env.mainnet" : ".env");
