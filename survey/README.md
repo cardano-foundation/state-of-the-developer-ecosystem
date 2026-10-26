@@ -20,14 +20,14 @@ yarn dev
 
 Open http://localhost:8788/. After editing `cip179/2026/survey.json` or `site/`, run `yarn site --unpublished` again and reload. `yarn dev` restarts by itself when the sponsor's code changes. It needs no Vercel account.
 
-**Publishing answers** from your machine needs a published survey and a funded sponsor: do [Deploy](#deploy) steps 1 and 2, then:
+**Publishing answers** from your machine needs a published survey and a funded sponsor, on Preprod: do [Deploy](#deploy) steps 1 and 2, then:
 
 ```
 yarn site
 yarn dev
 ```
 
-The sponsor's database is then the file `.local/sponsor.db`, which `yarn dev` migrates at its start. There is no bot check on your machine: BotID runs only on Vercel. A browser publishes once: use another browser, or clear the site's data in yours, to publish again. Your machine and the deployed site share the sponsor wallet: avoid testing locally while the survey is open.
+The sponsor's database is then the file `.local/sponsor.db`, which `yarn dev` migrates at its start. There is no bot check on your machine: BotID runs only on Vercel. A browser publishes once: use another browser, or clear the site's data in yours, to publish again. Your machine and the previews share Preprod's sponsor wallet, but not its database: one can spend a coin the other counts as free, which then refuses one response.
 
 ## Edit the survey
 
@@ -38,20 +38,19 @@ The sponsor's database is then the file `.local/sponsor.db`, which `yarn dev` mi
 
 ## Deploy
 
-The survey runs on one network at a time: Preview to develop it, Preprod for the final test, then Mainnet. The steps are the same, with each network's values:
+The survey runs on two networks: Preprod, to try it, and Mainnet, for the respondents. Vercel's production, the deployment of `main`, runs Mainnet. The previews, of the other branches and of pull requests, run Preprod, and so does our machine. Each network has its own survey, published from the same `survey.json`, in `config.js`, its own sponsor wallet and its own database.
 
-| | Preview | Preprod | Mainnet |
-| --- | --- | --- | --- |
-| `network` | `preview` | `preprod` | `mainnet` |
-| `koios` | `https://preview.koios.rest/api/v1` | `https://preprod.koios.rest/api/v1` | `https://api.koios.rest/api/v1` |
-| An epoch lasts | 1 day | 5 days | 5 days |
-| Ada | from the [faucet](https://docs.cardano.org/cardano-testnets/tools/faucet) | from the faucet | real ada |
+|                                           | Preprod                                                                   | Mainnet                         |
+| ----------------------------------------- | ------------------------------------------------------------------------- | ------------------------------- |
+| Runs on                                   | the previews and our machine                                              | production                      |
+| Public Koios                              | `https://preprod.koios.rest/api/v1`                                       | `https://api.koios.rest/api/v1` |
+| The sponsor's seed phrase, on our machine | `.env`                                                                    | `.env.mainnet`                  |
 
-Start by setting `network` and `koios` in `config.js`: the public Koios, for our machine. On Mainnet, go through [Before Mainnet](#before-mainnet) first.
+Steps 1 and 2 are for each network, Preprod first. Their commands work on Preprod, and on Mainnet with `NETWORK=mainnet` before them, such as `NETWORK=mainnet node cip179/sponsor-split.js`. On Mainnet, go through [Before Mainnet](#before-mainnet) first. Step 3 is once.
 
 You need:
 
-- a Cardano wallet on the network, the survey's owner: it publishes the survey, and can cancel it;
+- a Cardano wallet on each network, the survey's owner: it publishes the survey, and can cancel it;
 - the foundation's Vercel project, [set up once](#3-set-up-vercel) by its infrastructure team.
 
 ### Before Mainnet
@@ -63,10 +62,10 @@ You need:
   ```
 
 - **The owner's wallet**: the one that publishes the survey, and alone can cancel it.
-- **The sponsor's own wallet**, apart from the owner's and from the testnets' one: move `.env` away before [step 2](#2-fund-the-sponsor), and give the new seed phrase in [Vercel's step 3](#3-set-up-vercel). Its ada is real: keep a copy of the seed phrase somewhere safe.
+- **The sponsor's own wallet**, apart from the owner's: [step 2](#2-fund-the-sponsor) with `NETWORK=mainnet` writes its seed phrase to `.env.mainnet`, apart from Preprod's in `.env`, which `yarn dev` uses. Its ada is real: keep a copy of the seed phrase somewhere safe.
 - **Its budget**: the expected responses times about 0.2 ada, plus a margin. During the survey, ada sent to its address becomes a new coin within 30 minutes.
-- **Its coins**: one per respondent publishing at the same time, each worth at least 1.5 ada. An announcement brings many respondents at once: split into more coins than on the testnets.
-- **The daily cap**, `dailyCap` in `config.js` (see [Later](#later)): it bounds the spending if something goes wrong.
+- **Its coins**: one per respondent publishing at the same time, each worth at least 1.5 ada. An announcement brings many respondents at once: split into more coins than on Preprod.
+- **The daily cap**, Mainnet's `dailyCap` in `config.js` (see [Later](#later)): it bounds the spending if something goes wrong.
 - **BotID's Deep Analysis**, in the Vercel project ([step 6](#3-set-up-vercel)). Basic only stops simple bots.
 - **The browser test**, on a preview deployment: publish from Chrome, Safari, Brave with its shields up, Firefox in strict mode, through a VPN and through Tor. BotID shows no challenge to pass: a respondent it takes for a robot can't publish. Optionally, a rate limit on `/api/sponsor` in the project's firewall.
 - **A [custom domain](#custom-domain)**, for the site's address.
@@ -74,7 +73,7 @@ You need:
 
 ### 1. Publish the survey
 
-1. Pick the end epoch: the current epoch, from `curl -s <koios>/tip` (`epoch_no`), plus the number of epochs to stay open. Responses count until the end of the end epoch.
+1. Pick the end epoch: the current epoch, from `curl -s <koios>/tip` (`epoch_no`), plus the number of epochs to stay open. Responses count until the end of the end epoch. On Preprod, pick a far one, such as 100 epochs (about 500 days): past it, the previews show the survey closed.
 2. Write the definition, with your wallet's key hash as owner:
 
    ```
@@ -82,17 +81,18 @@ You need:
    ```
 
 3. Publish the `definition.metadata.json` it wrote with your wallet: import it in Tessera's Create page, and publish. With cardano-cli: `--metadata-json-file definition.metadata.json --json-metadata-detailed-schema --required-signer-hash <key hash>`.
-4. In `config.js`, set `survey` to `<tx id>#0`.
+4. In `config.js`, set the network's `survey` to `<tx id>#0`.
 
 ### 2. Fund the sponsor
 
 1. Make its wallet:
 
    ```
-   node cip179/sponsor-key.js --network <network>
+   node cip179/sponsor-key.js
    ```
 
-   It writes the seed phrase to `.env` and prints the address. If `.env` already has one, it stops: that wallet is the sponsor. Preview and Preprod share addresses, so one wallet serves both.
+   It writes the seed phrase to `.env` (`.env.mainnet` on Mainnet) and prints the address. If the file already has one, it stops: that wallet is the sponsor.
+
 2. Send ada to the address. A response costs about 0.2 ada, and at most 0.5 ada.
 3. Split the wallet into coins, one per respondent publishing at the same time:
 
@@ -102,22 +102,22 @@ You need:
 
 ### 3. Set up Vercel
 
-Once, by the foundation's infrastructure team. Step 3 again when the sponsor's wallet changes.
+Once, by the foundation's infrastructure team. Step 3 again when a sponsor's wallet changes. The environment variables have two values: Mainnet's in Production, and Preprod's in Preview.
 
 1. A project on this repository, production branch `main`, root directory `survey`, with "Include files outside the root directory in the Build Step" on: the build copies the reports of the repository's `<year>/` folders. `vercel.json` sets the rest.
-2. A Turso database from the Marketplace (Storage), connected to the Production environment: it sets `TURSO_DATABASE_URL` and `TURSO_DATABASE_TURSO_AUTH_TOKEN`. The build creates its tables. For previews that publish, another one, connected to Preview.
-3. The sponsor's seed phrase, `SPONSOR_MNEMONIC` in `.env`, as a sensitive environment variable of Production, and of Preview while testing on a testnet. Without it, a deployment shows the site and can't publish.
-4. `KOIOS_URL`, the Koios for the network of `config.js`, and `KOIOS_TOKEN`, its token, as environment variables of Production, the token sensitive. Every Koios request sends it, the build's too, and Production doesn't run without it. Previews without them use the public Koios of `config.js`.
+2. Two Turso databases from the Marketplace (Storage), one connected to Production, the other to Preview: each sets `TURSO_DATABASE_URL` and `TURSO_DATABASE_TURSO_AUTH_TOKEN` for its environment. The build creates their tables. The previews share theirs, as they share Preprod's wallet.
+3. The sponsor's seed phrase, `SPONSOR_MNEMONIC`, as a sensitive environment variable: Mainnet's, from `.env.mainnet`, in Production, and Preprod's, from `.env`, in Preview. Without it, a deployment shows the site and can't publish.
+4. `KOIOS_URL`, the Koios of Mainnet, and `KOIOS_TOKEN`, its token, as environment variables of Production, the token sensitive. Every Koios request sends it, the build's too, and Production doesn't run without it. In Preview, they are optional: without them, the previews use Preprod's public Koios.
 5. OIDC federation left on, as by default (Settings, Security): BotID's check needs it.
 6. Before Mainnet, BotID's Deep Analysis (Firewall, Rules), on Pro or Enterprise plans: $1 per 1,000 checks, one per response.
 
+Until Mainnet's survey is published, the production build fails, and production stays as it was. To show Preprod's survey there meanwhile, set `NETWORK` to `preprod` in Production, with Preprod's values for the variables above. Remove it, and set Mainnet's values, for the launch.
+
 ### 4. Deploy
 
-Commit `config.js` and `survey.json`, and merge into `main`: Vercel builds and deploys. The repository says what is deployed.
+Commit `config.js` and `survey.json`. A pull request gets a preview deployment, at its own address, on Preprod: try it there. Merged into `main`, Vercel deploys production, on Mainnet. The repository says what is deployed.
 
-The build runs `yarn site`, which reads the survey published as `survey` in `config.js`, and stops unless `survey.json` makes that same definition: the deployment then fails, and the site stays as it was. `yarn site` also copies the reports, served at `/<year>/`, and the free-text schema. Then `yarn db:migrate` applies the new `migrations/` to the deployment's database.
-
-A pull request gets a preview deployment, at its own address.
+The build runs `yarn site`, which reads the network's survey in `config.js`, and stops unless `survey.json` makes that same definition: the deployment then fails, and the site stays as it was. `yarn site` also copies the reports, served at `/<year>/`, and the free-text schema. Then `yarn db:migrate` applies the new `migrations/` to the deployment's database.
 
 ### 5. Check
 
@@ -125,7 +125,7 @@ Answer the survey on the site and publish: the last screen links to the transact
 
 ### Custom domain
 
-Once, on the project that runs Mainnet. The domain, `devsurvey.cardano.org`, is permanent: the home page has the current survey, `/<year>/` the reports, and the definitions on chain name the free-text schema there. In the project (Settings, Domains), add the domain, then the DNS record Vercel shows, at the DNS provider of `cardano.org`.
+Once, on the project's production. The domain, `devsurvey.cardano.org`, is permanent: the home page has the current survey, `/<year>/` the reports, and the definitions on chain name the free-text schema there. In the project (Settings, Domains), add the domain, then the DNS record Vercel shows, at the DNS provider of `cardano.org`.
 
 ### Update the deployed site
 
@@ -133,9 +133,9 @@ Step 4. The deployment fails if the definition changed: the English texts, the q
 
 A new report shows once merged into `main`, on GitHub Pages and on the custom domain: the merge deploys the site, which then links the report from the thank-you and closed screens.
 
-A new definition is a new survey:
+A new definition is a new survey, on each network:
 
-1. Step 1: pick the end epoch, write the definition, publish, and set `survey`.
+1. Step 1: pick the end epoch, write the definition, publish, and set the network's `survey`.
 2. Step 4.
 3. Cancel the previous survey with the owner's wallet, in Tessera, so that other CIP-179 tools show it closed.
 
@@ -146,7 +146,7 @@ A display condition changed while the survey is open also changes the export: it
 ### Later
 
 - **`migrations/` changed**: the next deployment applies them, before it is live, so keep them working with the code deployed. `yarn dev` applies them to your machine's copy.
-- **Cap the spending**: set `dailyCap` in `config.js`, in lovelace per 24 hours, then step 4.
+- **Cap the spending**: set the network's `dailyCap` in `config.js`, in lovelace per 24 hours, then step 4.
 - **Close early**: cancel the survey with the owner's wallet, in Tessera. The sponsor stops within 10 minutes.
 
 ## How it works
@@ -158,8 +158,8 @@ A display condition changed while the survey is open also changes the export: it
 - `cip179/2026/survey.json`: the 2026 survey.
 - `api/sponsor/`: the sponsor's endpoints, as Vercel Functions.
 - `migrations/`: the sponsor's database, a SQLite one: Turso when deployed.
-- `config.js`: the network and the survey, for the page and the sponsor alike, and the daily cap. Secrets are in the Vercel project's environment, and locally in the gitignored `.env`.
-- `cip179/koios.js`: every Koios request, of the build, the sponsor and the wallet split: at `KOIOS_URL`, or the `koios` of `config.js`, with `KOIOS_TOKEN` if set.
+- `config.js`: each network's survey and daily cap, for the page and the sponsor alike, and which network runs where. Secrets are in the Vercel project's environment, and locally in the gitignored `.env`, and `.env.mainnet` for Mainnet's wallet.
+- `cip179/koios.js`: every Koios request, of the build, the sponsor and the wallet split: at `KOIOS_URL`, or the network's public Koios, with `KOIOS_TOKEN` if set.
 - `vercel.json`: the build, the functions' time limit, and the headers that let other sites read the schema.
 
 **The site** (`site/flow.js`):

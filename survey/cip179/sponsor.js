@@ -24,8 +24,8 @@
 // parameters read once per epoch. `sponsor-split.js` splits the wallet into
 // coins, so that several respondents can submit at once.
 //
-// Config: the network, the survey and the daily cap of `config.js`, and from
-// `env`, the secrets: SPONSOR_MNEMONIC, TURSO_DATABASE_URL and
+// Config: the survey and the daily cap of `config.js`, for the network of
+// `env`, and from `env`, the secrets: SPONSOR_MNEMONIC, TURSO_DATABASE_URL and
 // TURSO_DATABASE_TURSO_AUTH_TOKEN for the database, and KOIOS_URL and
 // KOIOS_TOKEN for Koios (`koios.js`).
 
@@ -49,7 +49,7 @@ import { inSurveyWindow, mechanismAProven } from "cip-179/domain";
 import { cborToMetadatum, evolutionCodec, toTxMetadatum } from "cip-179/evolution";
 import { decodeTxProof } from "cip-179/txproof";
 
-import deployed from "../config.js";
+import { deployedOf } from "../config.js";
 import * as Koios from "./koios.js";
 import { epochAt, epochEnd, slotTime } from "./network.js";
 import * as store from "./sponsor-store.js";
@@ -229,12 +229,13 @@ export async function submit(env, txHex, { vkey, signature }) {
 // ----------------------------------------------------------------------------
 
 async function configOf(env) {
-  const { network, survey, dailyCap } = deployed;
+  const { network, survey, dailyCap } = deployedOf(env);
   const chain = CHAINS[network];
   if (!chain) throw new Error(`unknown network ${network}`);
   if (!env.SPONSOR_MNEMONIC) throw new Error("no SPONSOR_MNEMONIC");
-  const [, txId, index] = /^([0-9a-f]{64})#(\d+)$/.exec(survey ?? "") ?? [];
-  if (!txId) throw new Error(`the survey isn't "<tx id>#<index>": ${survey}`);
+  if (survey === null) throw new Error(`no survey on ${network} yet`);
+  const [, txId, index] = /^([0-9a-f]{64})#(\d+)$/.exec(survey) ?? [];
+  if (!txId) throw new Error(`the survey on ${network} isn't "<tx id>#<index>": ${survey}`);
   if (dailyCap !== null && !Number.isSafeInteger(dailyCap)) throw new Error("the daily cap isn't lovelace");
   return {
     network,

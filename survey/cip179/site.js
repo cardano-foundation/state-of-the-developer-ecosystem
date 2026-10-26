@@ -5,8 +5,9 @@
 //
 //   node cip179/site.js [--unpublished]
 //
-// The network and the survey's reference are the sponsor's, from `config.js`:
-// the page and the sponsor can't disagree. The questions are built from
+// The network and the survey's reference are the sponsor's, from `config.js`
+// (Mainnet for Vercel's production, Preprod otherwise, or NETWORK): the page
+// and the sponsor can't disagree. The questions are built from
 // `survey.json`, with the owner and end epoch of the survey published at that
 // reference, read from Koios (`koios.js`), and must make that same
 // definition: a page showing other questions would record answers to the
@@ -29,7 +30,7 @@ import { fileURLToPath } from "node:url";
 import { isDeepStrictEqual, parseArgs } from "node:util";
 import { gzipSync } from "node:zlib";
 
-import deployed from "../config.js";
+import { deployedOf } from "../config.js";
 import { SCHEMA_PATH, SURVEY_YEAR, readSurvey } from "./definition.js";
 import { koiosOf, txCbor } from "./koios.js";
 import { toDetailedJson } from "./metadatum.js";
@@ -46,9 +47,10 @@ const reports = readdirSync(repository)
   .filter((name) => /^\d{4}$/.test(name) && statSync(join(repository, name, "index.html"), { throwIfNoEntry: false })?.isFile())
   .map(Number)
   .sort((a, b) => b - a);
-const { network, survey } = deployed;
+const { network, survey } = deployedOf(process.env);
 const [, txId, index] = /^([0-9a-f]{64})#(\d+)$/.exec(survey ?? "") ?? [];
-if (!txId) fail(`the survey of config.js isn't "<tx id>#<index>": ${survey}`);
+if (!args.unpublished && survey === null) fail(`no survey on ${network} in config.js yet: publish it, or build with --unpublished`);
+if (!args.unpublished && !txId) fail(`the survey on ${network} in config.js isn't "<tx id>#<index>": ${survey}`);
 
 const published = args.unpublished ? undefined : await publishedDefinition();
 const built = readSurvey(

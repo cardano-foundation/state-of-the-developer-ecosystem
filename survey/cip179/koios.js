@@ -1,10 +1,10 @@
 // Koios, the chain's API, for all that reads or submits to the chain: the
-// build, the sponsor and the wallet split. Its address is KOIOS_URL, or else
-// the public Koios of `config.js`. KOIOS_TOKEN, if set, goes with every
+// build, the sponsor and the wallet tools. Its address is KOIOS_URL, or else
+// the network's public Koios, in `config.js`. KOIOS_TOKEN, if set, goes with every
 // request as a bearer token, the library's included. Production needs it, the
 // build too; on our machine, the public Koios needs none.
 
-import deployed from "../config.js";
+import { deployedOf } from "../config.js";
 
 // Koios refuses larger requests.
 const BATCH = 50;
@@ -26,7 +26,7 @@ export class KoiosError extends Error {
 export function koiosOf(env) {
   const token = env.KOIOS_TOKEN || undefined;
   if (!token && env.VERCEL_ENV === "production") throw new Error("no KOIOS_TOKEN: production calls Koios with its token");
-  return { baseUrl: (env.KOIOS_URL || deployed.koios).replace(/\/$/, ""), token };
+  return { baseUrl: (env.KOIOS_URL || deployedOf(env).koios).replace(/\/$/, ""), token };
 }
 
 export const txCbor = (koios, txHashes) => batched(txHashes, (b) => post(koios, "tx_cbor", { _tx_hashes: b }));

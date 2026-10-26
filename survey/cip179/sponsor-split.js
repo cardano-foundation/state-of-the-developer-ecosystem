@@ -9,9 +9,9 @@
 //
 //   node cip179/sponsor-split.js [--coins <n>] [--submit]
 //
-// Spends every ada-only coin of the wallet in `.env`, on the network of
-// `config.js`, through Koios (`koios.js`). Without `--submit`, only shows the
-// transaction.
+// Spends every ada-only coin of the wallet in `.env`, on Preprod, through
+// Koios (`koios.js`). With NETWORK=mainnet, the wallet in `.env.mainnet`, on
+// Mainnet. Without `--submit`, only shows the transaction.
 
 import * as Address from "@evolution-sdk/evolution/Address";
 import * as Assets from "@evolution-sdk/evolution/Assets";
@@ -22,7 +22,7 @@ import { addressFromSeed } from "@evolution-sdk/evolution/sdk/wallet/Derivation"
 import { existsSync } from "node:fs";
 import { parseArgs } from "node:util";
 
-import deployed from "../config.js";
+import { deployedOf, secretsFile } from "../config.js";
 import { koiosOf } from "./koios.js";
 
 const { values: args } = parseArgs({
@@ -32,10 +32,11 @@ const { values: args } = parseArgs({
   },
 });
 
-const { network } = deployed;
-if (existsSync(".env")) process.loadEnvFile(".env");
+const { network } = deployedOf(process.env);
+const secrets = secretsFile(network);
+if (existsSync(secrets)) process.loadEnvFile(secrets);
 const mnemonic = process.env.SPONSOR_MNEMONIC;
-if (!mnemonic) throw new Error("no SPONSOR_MNEMONIC in .env");
+if (!mnemonic) throw new Error(`no SPONSOR_MNEMONIC in ${secrets}`);
 const chain = { preview, preprod, mainnet }[network];
 if (!chain) throw new Error(`unknown network ${network}`);
 const count = Number(args.coins);
