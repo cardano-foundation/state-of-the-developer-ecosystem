@@ -47,7 +47,7 @@ The survey runs on one network at a time: Preview to develop it, Preprod for the
 | An epoch lasts | 1 day | 5 days | 5 days |
 | Ada | from the [faucet](https://docs.cardano.org/cardano-testnets/tools/faucet) | from the faucet | real ada |
 
-Start by setting `network` and `koios` in `config.js`. On Mainnet, go through [Before Mainnet](#before-mainnet) first.
+Start by setting `network` and `koios` in `config.js`: the public Koios, for our machine. On Mainnet, go through [Before Mainnet](#before-mainnet) first.
 
 You need:
 
@@ -67,7 +67,7 @@ You need:
 - **Its budget**: the expected responses times about 0.2 ada, plus a margin. During the survey, ada sent to its address becomes a new coin within 30 minutes.
 - **Its coins**: one per respondent publishing at the same time, each worth at least 1.5 ada. An announcement brings many respondents at once: split into more coins than on the testnets.
 - **The daily cap**, `dailyCap` in `config.js` (see [Later](#later)): it bounds the spending if something goes wrong.
-- **BotID's Deep Analysis**, in the Vercel project ([step 5](#3-set-up-vercel)). Basic only stops simple bots.
+- **BotID's Deep Analysis**, in the Vercel project ([step 6](#3-set-up-vercel)). Basic only stops simple bots.
 - **The browser test**, on a preview deployment: publish from Chrome, Safari, Brave with its shields up, Firefox in strict mode, through a VPN and through Tor. BotID shows no challenge to pass: a respondent it takes for a robot can't publish. Optionally, a rate limit on `/api/sponsor` in the project's firewall.
 - **A [custom domain](#custom-domain)**, for the site's address.
 - **Who watches** the sponsor's logs ([step 5](#5-check)) and its balance, during the survey.
@@ -107,8 +107,9 @@ Once, by the foundation's infrastructure team. Step 3 again when the sponsor's w
 1. A project on this repository, production branch `main`, root directory `survey`, with "Include files outside the root directory in the Build Step" on: the build copies the reports of the repository's `<year>/` folders. `vercel.json` sets the rest.
 2. A Turso database from the Marketplace (Storage), connected to the Production environment: it sets `TURSO_DATABASE_URL` and `TURSO_DATABASE_TURSO_AUTH_TOKEN`. The build creates its tables. For previews that publish, another one, connected to Preview.
 3. The sponsor's seed phrase, `SPONSOR_MNEMONIC` in `.env`, as a sensitive environment variable of Production, and of Preview while testing on a testnet. Without it, a deployment shows the site and can't publish.
-4. OIDC federation left on, as by default (Settings, Security): BotID's check needs it.
-5. Before Mainnet, BotID's Deep Analysis (Firewall, Rules), on Pro or Enterprise plans: $1 per 1,000 checks, one per response.
+4. `KOIOS_URL`, the Koios for the network of `config.js`, and `KOIOS_TOKEN`, its token, as environment variables of Production, the token sensitive. Every Koios request sends it, the build's too, and Production doesn't run without it. Previews without them use the public Koios of `config.js`.
+5. OIDC federation left on, as by default (Settings, Security): BotID's check needs it.
+6. Before Mainnet, BotID's Deep Analysis (Firewall, Rules), on Pro or Enterprise plans: $1 per 1,000 checks, one per response.
 
 ### 4. Deploy
 
@@ -158,6 +159,7 @@ A display condition changed while the survey is open also changes the export: it
 - `api/sponsor/`: the sponsor's endpoints, as Vercel Functions.
 - `migrations/`: the sponsor's database, a SQLite one: Turso when deployed.
 - `config.js`: the network and the survey, for the page and the sponsor alike, and the daily cap. Secrets are in the Vercel project's environment, and locally in the gitignored `.env`.
+- `cip179/koios.js`: every Koios request, of the build, the sponsor and the wallet split: at `KOIOS_URL`, or the `koios` of `config.js`, with `KOIOS_TOKEN` if set.
 - `vercel.json`: the build, the functions' time limit, and the headers that let other sites read the schema.
 
 **The site** (`site/flow.js`):

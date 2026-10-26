@@ -8,10 +8,10 @@
 // The network and the survey's reference are the sponsor's, from `config.js`:
 // the page and the sponsor can't disagree. The questions are built from
 // `survey.json`, with the owner and end epoch of the survey published at that
-// reference, read from Koios, and must make that same definition: a page
-// showing other questions would record answers to the wrong ones. Only the
-// English texts are on chain: the translations and display conditions can
-// change.
+// reference, read from Koios (`koios.js`), and must make that same
+// definition: a page showing other questions would record answers to the
+// wrong ones. Only the English texts are on chain: the translations and
+// display conditions can change.
 //
 // With `--unpublished`, there is no published survey: the page shows the
 // survey open until the end of the next epoch, and can't publish answers.
@@ -31,6 +31,7 @@ import { gzipSync } from "node:zlib";
 
 import deployed from "../config.js";
 import { SCHEMA_PATH, SURVEY_YEAR, readSurvey } from "./definition.js";
+import { koiosOf, txCbor } from "./koios.js";
 import { toDetailedJson } from "./metadatum.js";
 import { epochAt } from "./network.js";
 
@@ -45,7 +46,7 @@ const reports = readdirSync(repository)
   .filter((name) => /^\d{4}$/.test(name) && statSync(join(repository, name, "index.html"), { throwIfNoEntry: false })?.isFile())
   .map(Number)
   .sort((a, b) => b - a);
-const { network, koios, survey } = deployed;
+const { network, survey } = deployed;
 const [, txId, index] = /^([0-9a-f]{64})#(\d+)$/.exec(survey ?? "") ?? [];
 if (!txId) fail(`the survey of config.js isn't "<tx id>#<index>": ${survey}`);
 
@@ -132,13 +133,12 @@ for (const file of files(OUT).filter((file) => !reports.includes(Number(relative
 
 /** The definition published as the survey of `config.js`. */
 async function publishedDefinition() {
-  const res = await fetch(`${koios.replace(/\/$/, "")}/tx_cbor`, {
-    method: "POST",
-    headers: { "content-type": "application/json" },
-    body: JSON.stringify({ _tx_hashes: [txId] }),
-  }).catch((error) => fail(`Koios can't be reached (${error.cause?.message ?? error.message})`));
-  if (!res.ok) fail(`Koios tx_cbor: ${res.status} ${await res.text()}`);
-  const [row] = await res.json();
+  let row;
+  try {
+    [row] = await txCbor(koiosOf(process.env), [txId]);
+  } catch (error) {
+    fail(`the build reads the published survey from Koios: ${error.message}`);
+  }
   if (!row) fail(`the survey transaction ${txId} isn't on ${network}`);
   const onChain = Transaction.fromCBORHex(row.cbor).auxiliaryData?.metadata?.get(17n);
   const definition = onChain && decodeMetadata(new Map([[17n, onChain]])).definitions?.[Number(index)];

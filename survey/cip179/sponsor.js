@@ -24,9 +24,10 @@
 // parameters read once per epoch. `sponsor-split.js` splits the wallet into
 // coins, so that several respondents can submit at once.
 //
-// Config: the network, its Koios, the survey and the daily cap of
-// `config.js`, and from `env`, the secrets: SPONSOR_MNEMONIC, and
-// TURSO_DATABASE_URL and TURSO_DATABASE_TURSO_AUTH_TOKEN for the database.
+// Config: the network, the survey and the daily cap of `config.js`, and from
+// `env`, the secrets: SPONSOR_MNEMONIC, TURSO_DATABASE_URL and
+// TURSO_DATABASE_TURSO_AUTH_TOKEN for the database, and KOIOS_URL and
+// KOIOS_TOKEN for Koios (`koios.js`).
 
 import { ed25519 } from "@noble/curves/ed25519.js";
 import { blake2b } from "@noble/hashes/blake2.js";
@@ -49,6 +50,7 @@ import { cborToMetadatum, evolutionCodec, toTxMetadatum } from "cip-179/evolutio
 import { decodeTxProof } from "cip-179/txproof";
 
 import deployed from "../config.js";
+import * as Koios from "./koios.js";
 import { epochAt, epochEnd, slotTime } from "./network.js";
 import * as store from "./sponsor-store.js";
 
@@ -72,8 +74,6 @@ const COINS_CHECK_MS = 30 * 60 * 1000;
 // cancellation of the survey, and how many at most per request.
 const CANCELLATION_CHECK_MS = 10 * 60 * 1000;
 const SCAN_TXS = 200;
-// Koios refuses larger requests.
-const KOIOS_BATCH = 50;
 
 const CHAINS = { preview, preprod, mainnet };
 
@@ -211,16 +211,14 @@ export async function submit(env, txHex, { vkey, signature }) {
     ],
   });
   const signed = Transaction.addVKeyWitnessesHex(txHex, TransactionWitnessSet.toCBORHex(respondent));
-  const res = await fetch(`${config.koios}/submittx`, {
-    method: "POST",
-    headers: { "content-type": "application/cbor" },
-    body: fromHex(signed, "transaction"),
-  });
-  if (!res.ok) {
+  try {
+    await Koios.submitTx(config.koios, fromHex(signed, "transaction"));
+  } catch (error) {
+    if (!(error instanceof Koios.KoiosError)) throw error;
     // Most likely its coin was spent by a transaction we don't know of: the
     // coin waits, the next request asks Koios what the wallet has, and the
     // respondent can try again.
-    console.error(`sponsor: ${sponsorship.tx} refused: ${await res.text()}`);
+    console.error(`sponsor: ${sponsorship.tx} refused: ${error.message}`);
     await store.refused(db, sponsorship, now);
     throw new SponsorError("the transaction was refused, please try again", 502, "refused");
   }
@@ -231,7 +229,7 @@ export async function submit(env, txHex, { vkey, signature }) {
 // ----------------------------------------------------------------------------
 
 async function configOf(env) {
-  const { network, koios, survey, dailyCap } = deployed;
+  const { network, survey, dailyCap } = deployed;
   const chain = CHAINS[network];
   if (!chain) throw new Error(`unknown network ${network}`);
   if (!env.SPONSOR_MNEMONIC) throw new Error("no SPONSOR_MNEMONIC");
@@ -241,7 +239,7 @@ async function configOf(env) {
   return {
     network,
     chain,
-    koios: koios.replace(/\/$/, ""),
+    koios: Koios.koiosOf(env),
     mnemonic: env.SPONSOR_MNEMONIC,
     survey: { txId, index: Number(index) },
     db: await store.database(env),
@@ -258,7 +256,7 @@ function walletOf(config) {
   if (!wallets.has(id)) {
     const { address } = addressFromSeed(config.mnemonic, { networkId: config.chain.id });
     wallets.set(id, {
-      client: Client.make(config.chain).withKoios({ baseUrl: config.koios }).withSeed({ mnemonic: config.mnemonic }),
+      client: Client.make(config.chain).withKoios(config.koios).withSeed({ mnemonic: config.mnemonic }),
       address,
       bech32: Address.toBech32(address),
       keyHash: address.paymentCredential.hash,
@@ -289,7 +287,7 @@ async function chainView(config, now) {
   const view = await store.chainView(db);
   if (view?.survey !== survey || view.sponsor !== bech32) {
     const [[row], params] = await Promise.all([
-      koios(config, "tx_cbor", { _tx_hashes: [config.survey.txId] }),
+      Koios.txCbor(config.koios, [config.survey.txId]),
       walletOf(config).client.getProtocolParameters(),
     ]);
     if (!row) throw new Error(`the survey transaction ${config.survey.txId} isn't on ${config.network}`);
@@ -352,7 +350,7 @@ function alreadySponsored(txId) {
  * transactions never made it on chain.
  */
 async function checkCoins(config, now) {
-  const [info] = await koios(config, "address_info", { _addresses: [walletOf(config).bech32] });
+  const [info] = await Koios.addressInfo(config.koios, [walletOf(config).bech32]);
   const listed = (info?.utxo_set ?? [])
     .filter((u) => (u.asset_list ?? []).length === 0)
     .map((u) => ({ ref: `${u.tx_hash}#${u.tx_index}`, lovelace: Number(u.value) }));
@@ -367,9 +365,10 @@ async function checkCoins(config, now) {
 async function checkNotCancelled(config, view, survey, now) {
   const scan = view.cancellation;
   if (scan.state === "open" && now - scan.caughtUpAt > CANCELLATION_CHECK_MS) {
-    const rows = await koios(
-      config,
-      `tx_by_metalabel?_label=17&absolute_slot=gt.${scan.scannedTo}&select=tx_hash,absolute_slot,epoch_no&order=absolute_slot.asc&limit=${SCAN_TXS}`,
+    const rows = await Koios.txByMetalabel(
+      config.koios,
+      17,
+      `absolute_slot=gt.${scan.scannedTo}&select=tx_hash,absolute_slot,epoch_no&order=absolute_slot.asc&limit=${SCAN_TXS}`,
     );
     const caughtUp = rows.length < SCAN_TXS;
     // A full page may cut the transactions of its last slot in two: that slot
@@ -393,7 +392,7 @@ async function cancellationIn(config, survey, rows) {
   const { txId, index } = config.survey;
   // Koios gives the metadata as JSON, with bytes as "0x…" strings: enough to
   // spot cancellations, which are then read from the transaction itself.
-  const metadata = await batched(rows, (b) => koios(config, "tx_metadata", { _tx_hashes: b.map((r) => r.tx_hash) }));
+  const metadata = await Koios.txMetadata(config.koios, rows.map((r) => r.tx_hash));
   const candidates = metadata
     .filter(({ metadata }) => {
       const payload = metadata?.["17"];
@@ -402,7 +401,7 @@ async function cancellationIn(config, survey, rows) {
     .map((m) => m.tx_hash);
   if (candidates.length === 0) return null;
 
-  for (const { tx_hash, cbor } of await koios(config, "tx_cbor", { _tx_hashes: candidates })) {
+  for (const { tx_hash, cbor } of await Koios.txCbor(config.koios, candidates)) {
     const { absolute_slot, epoch_no } = rows.find((r) => r.tx_hash === tx_hash);
     if (!inSurveyWindow(survey, { slot: absolute_slot, epochNo: epoch_no })) continue;
     let payload;
@@ -415,24 +414,6 @@ async function cancellationIn(config, survey, rows) {
     if (ours && mechanismAProven(survey.definition.owner, decodeTxProof(evolutionCodec, cbor))) return tx_hash;
   }
   return null;
-}
-
-async function koios(config, endpoint, body) {
-  const res = await fetch(
-    `${config.koios}/${endpoint}`,
-    body
-      ? { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) }
-      : { headers: { accept: "application/json" } },
-  );
-  if (!res.ok) throw new Error(`Koios ${endpoint}: ${res.status} ${await res.text()}`);
-  return res.json();
-}
-
-/** The results of `request` on batches of KOIOS_BATCH items, concatenated. */
-async function batched(items, request) {
-  const batches = [];
-  for (let i = 0; i < items.length; i += KOIOS_BATCH) batches.push(items.slice(i, i + KOIOS_BATCH));
-  return (await Promise.all(batches.map(request))).flat();
 }
 
 /** The transaction id: the hash of the body exactly as encoded. */

@@ -9,8 +9,8 @@
 //
 //   node cip179/sponsor-split.js [--coins <n>] [--submit]
 //
-// Spends every ada-only coin of the wallet in `.env`, on the network and
-// through the Koios of `config.js`. Without `--submit`, only shows the
+// Spends every ada-only coin of the wallet in `.env`, on the network of
+// `config.js`, through Koios (`koios.js`). Without `--submit`, only shows the
 // transaction.
 
 import * as Address from "@evolution-sdk/evolution/Address";
@@ -23,6 +23,7 @@ import { existsSync } from "node:fs";
 import { parseArgs } from "node:util";
 
 import deployed from "../config.js";
+import { koiosOf } from "./koios.js";
 
 const { values: args } = parseArgs({
   options: {
@@ -31,7 +32,7 @@ const { values: args } = parseArgs({
   },
 });
 
-const { network, koios } = deployed;
+const { network } = deployed;
 if (existsSync(".env")) process.loadEnvFile(".env");
 const mnemonic = process.env.SPONSOR_MNEMONIC;
 if (!mnemonic) throw new Error("no SPONSOR_MNEMONIC in .env");
@@ -40,7 +41,7 @@ if (!chain) throw new Error(`unknown network ${network}`);
 const count = Number(args.coins);
 if (!Number.isInteger(count) || count < 2) throw new Error("--coins must be at least 2");
 
-const client = Client.make(chain).withKoios({ baseUrl: koios }).withSeed({ mnemonic });
+const client = Client.make(chain).withKoios(koiosOf(process.env)).withSeed({ mnemonic });
 const { address } = addressFromSeed(mnemonic, { networkId: chain.id });
 const coins = (await client.getWalletUtxos()).filter((u) => !u.assets.multiAsset);
 const total = coins.reduce((sum, u) => sum + u.assets.lovelace, 0n);
