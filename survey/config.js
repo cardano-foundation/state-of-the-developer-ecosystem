@@ -5,7 +5,7 @@
 //
 // The secrets are in the Vercel project's env, and locally in the gitignored
 // `.env`: SPONSOR_MNEMONIC, the sponsor's seed phrase, and TURSO_DATABASE_URL
-// and TURSO_AUTH_TOKEN, its database.
+// and TURSO_DATABASE_TURSO_AUTH_TOKEN, its database.
 
 export default {
   // preview, preprod or mainnet.

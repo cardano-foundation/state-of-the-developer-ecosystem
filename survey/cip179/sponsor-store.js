@@ -31,11 +31,11 @@ const MIGRATIONS = new URL("../migrations/", import.meta.url);
 const clients = new Map();
 
 /**
- * The database of TURSO_DATABASE_URL, with its TURSO_AUTH_TOKEN: Turso's,
- * over HTTP, or a file. Only a file needs libSQL's native module, which
- * Vercel's functions may lack.
+ * The database of TURSO_DATABASE_URL, with its
+ * TURSO_DATABASE_TURSO_AUTH_TOKEN: Turso's, over HTTP, or a file. Only a file
+ * needs libSQL's native module, which Vercel's functions may lack.
  */
-export function database({ TURSO_DATABASE_URL: url, TURSO_AUTH_TOKEN: authToken }) {
+export function database({ TURSO_DATABASE_URL: url, TURSO_DATABASE_TURSO_AUTH_TOKEN: authToken }) {
   if (!url) return Promise.reject(new Error("no TURSO_DATABASE_URL"));
   if (!clients.has(url)) {
     const client = url.startsWith("file:") ? import("@libsql/client/sqlite3") : import("@libsql/client/http");

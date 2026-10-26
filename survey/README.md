@@ -105,7 +105,7 @@ You need:
 Once, by the foundation's infrastructure team. Step 3 again when the sponsor's wallet changes.
 
 1. A project on this repository, production branch `main`, root directory `survey`, with "Include files outside the root directory in the Build Step" on: the build copies the reports of the repository's `<year>/` folders. `vercel.json` sets the rest.
-2. A Turso database from the Marketplace (Storage), connected to the Production environment: it sets `TURSO_DATABASE_URL` and `TURSO_AUTH_TOKEN`. The build creates its tables. For previews that publish, another one, connected to Preview.
+2. A Turso database from the Marketplace (Storage), connected to the Production environment: it sets `TURSO_DATABASE_URL` and `TURSO_DATABASE_TURSO_AUTH_TOKEN`. The build creates its tables. For previews that publish, another one, connected to Preview.
 3. The sponsor's seed phrase, `SPONSOR_MNEMONIC` in `.env`, as a sensitive environment variable of Production, and of Preview while testing on a testnet. Without it, a deployment shows the site and can't publish.
 4. OIDC federation left on, as by default (Settings, Security): BotID's check needs it.
 5. Before Mainnet, BotID's Deep Analysis (Firewall, Rules), on Pro or Enterprise plans: $1 per 1,000 checks, one per response.

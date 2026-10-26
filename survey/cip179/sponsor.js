@@ -26,7 +26,7 @@
 //
 // Config: the network, its Koios, the survey and the daily cap of
 // `config.js`, and from `env`, the secrets: SPONSOR_MNEMONIC, and
-// TURSO_DATABASE_URL and TURSO_AUTH_TOKEN for the database.
+// TURSO_DATABASE_URL and TURSO_DATABASE_TURSO_AUTH_TOKEN for the database.
 
 import { ed25519 } from "@noble/curves/ed25519.js";
 import { blake2b } from "@noble/hashes/blake2.js";
