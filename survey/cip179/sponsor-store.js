@@ -22,9 +22,9 @@ export const PROPAGATION_MS = 30 * 1000;
 export const INDEXING_MS = 10 * 60 * 1000;
 const DAY_MS = 24 * 60 * 60 * 1000;
 
-// The database on our machine, which `yarn dev` uses unless `.env` names
-// another.
-export const LOCAL_DATABASE = "file:.local/sponsor.db";
+// The database on our machine of a network, which `yarn dev` uses unless its
+// secrets file names another.
+export const localDatabase = (network) => (network === "mainnet" ? "file:.local/sponsor-mainnet.db" : "file:.local/sponsor.db");
 const MIGRATIONS = new URL("../migrations/", import.meta.url);
 
 // One client per database and instance.

@@ -6,20 +6,22 @@
 // Vercel runs it at each build, on the database of the deployment's
 // TURSO_DATABASE_URL: a preview without one has nothing to migrate. On our
 // machine, it migrates the database `yarn dev` uses, which `yarn dev` also
-// does at its start.
+// does at its start; with NETWORK=mainnet, Mainnet's.
 
 import { existsSync, mkdirSync } from "node:fs";
 
-import { LOCAL_DATABASE, database, migrate } from "./sponsor-store.js";
+import { deployedOf, secretsFile } from "../config.js";
+import { database, localDatabase, migrate } from "./sponsor-store.js";
 
-if (existsSync(".env")) process.loadEnvFile(".env");
+const { network } = deployedOf(process.env);
+if (existsSync(secretsFile(network))) process.loadEnvFile(secretsFile(network));
 if (!process.env.TURSO_DATABASE_URL) {
   if (process.env.VERCEL) {
     console.log("no TURSO_DATABASE_URL: no database to migrate");
     process.exit(0);
   }
   mkdirSync(".local", { recursive: true });
-  process.env.TURSO_DATABASE_URL = LOCAL_DATABASE;
+  process.env.TURSO_DATABASE_URL = localDatabase(network);
 }
 const applied = await migrate(await database(process.env));
 console.log(applied.length > 0 ? `migrated: ${applied.join(", ")}` : "the database is up to date");

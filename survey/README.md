@@ -29,6 +29,13 @@ yarn dev
 
 The sponsor's database is then the file `.local/sponsor.db`, which `yarn dev` migrates at its start. There is no bot check on your machine: BotID runs only on Vercel. A browser publishes once: use another browser, or clear the site's data in yours, to publish again. Your machine and the previews share Preprod's sponsor wallet, but not its database: one can spend a coin the other counts as free, which then refuses one response.
 
+**On Mainnet**, to publish a real response before production does, with Mainnet's wallet in `.env.mainnet` and its own database, `.local/sponsor-mainnet.db`:
+
+```
+NETWORK=mainnet yarn site
+NETWORK=mainnet yarn dev
+```
+
 ## Edit the survey
 
 1. Edit `cip179/2026/survey.json`, in SurveyJS's format. It is the only source: the definition published on chain (its English texts), the translations, the display conditions and the export's mapping are all built from it.
@@ -62,7 +69,7 @@ You need:
   ```
 
 - **The owner's wallet**: the one that publishes the survey, and alone can cancel it.
-- **The sponsor's own wallet**, apart from the owner's: [step 2](#2-fund-the-sponsor) with `NETWORK=mainnet` writes its seed phrase to `.env.mainnet`, apart from Preprod's in `.env`, which `yarn dev` uses. Its ada is real: keep a copy of the seed phrase somewhere safe.
+- **The sponsor's own wallet**, apart from the owner's: [step 2](#2-fund-the-sponsor) with `NETWORK=mainnet` writes its seed phrase to `.env.mainnet`, apart from Preprod's in `.env`, which `yarn dev` uses unless `NETWORK=mainnet`. Its ada is real: keep a copy of the seed phrase somewhere safe.
 - **Its budget**: the expected responses times about 0.2 ada, plus a margin. During the survey, ada sent to its address becomes a new coin within 30 minutes.
 - **Its coins**: one per respondent publishing at the same time, each worth at least 1.5 ada. An announcement brings many respondents at once: split into more coins than on Preprod.
 - **The daily cap**, Mainnet's `dailyCap` in `config.js` (see [Later](#later)): it bounds the spending if something goes wrong.

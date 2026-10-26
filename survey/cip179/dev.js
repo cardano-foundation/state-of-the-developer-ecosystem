@@ -7,7 +7,10 @@
 //
 // The sponsor's secrets are in the gitignored `.env`. Its database is the
 // file `.local/sponsor.db`, unless `.env` names another with
-// TURSO_DATABASE_URL; it is migrated at the start.
+// TURSO_DATABASE_URL; it is migrated at the start. With NETWORK=mainnet,
+// Mainnet's: `.env.mainnet` and `.local/sponsor-mainnet.db`.
+//
+// It listens on 127.0.0.1 only: there is no bot check here.
 
 import { existsSync, mkdirSync } from "node:fs";
 import { readFile, stat } from "node:fs/promises";
@@ -17,7 +20,8 @@ import { parseArgs } from "node:util";
 
 import * as sponsor from "../api/sponsor/index.js";
 import * as submit from "../api/sponsor/submit.js";
-import { LOCAL_DATABASE, database, migrate } from "./sponsor-store.js";
+import { deployedOf, secretsFile } from "../config.js";
+import { database, localDatabase, migrate } from "./sponsor-store.js";
 
 const OUT = resolve("dist");
 const FUNCTIONS = { "/api/sponsor": sponsor, "/api/sponsor/submit": submit };
@@ -32,10 +36,11 @@ const TYPES = {
 };
 
 const { values: args } = parseArgs({ options: { port: { type: "string", default: "8788" } } });
-if (existsSync(".env")) process.loadEnvFile(".env");
+const { network } = deployedOf(process.env);
+if (existsSync(secretsFile(network))) process.loadEnvFile(secretsFile(network));
 if (!process.env.TURSO_DATABASE_URL) {
   mkdirSync(".local", { recursive: true });
-  process.env.TURSO_DATABASE_URL = LOCAL_DATABASE;
+  process.env.TURSO_DATABASE_URL = localDatabase(network);
 }
 for (const name of await migrate(await database(process.env))) console.log(`migrated: ${name}`);
 if (!existsSync(OUT)) console.warn("no dist/ yet: run yarn site first");
@@ -51,7 +56,7 @@ createServer(async (req, res) => {
     console.error(error);
     res.writeHead(500).end();
   }
-}).listen(Number(args.port), () => console.log(`http://localhost:${args.port}/`));
+}).listen(Number(args.port), "127.0.0.1", () => console.log(`http://localhost:${args.port}/`));
 
 /** A function's response, from its export named after the method. */
 async function call(route, req, url) {
