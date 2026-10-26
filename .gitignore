@@ -1,5 +1,13 @@
+temp/
 **/elm-stuff
 .yarn-integrity
 .wrangler
 _worker.bundle
 node_modules
+survey/dist
+.dev.vars
+.env
+.env.mainnet
+.local
+.vercel
+survey/definition.metadata.json

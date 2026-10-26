@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>State of the Cardano Developer Ecosystem - 2026 Survey</title>
+    <meta name="description" content="The annual survey to assess the state of the Cardano developer ecosystem. Edition 2026." />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#001D3E" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="State of the Cardano Developer Ecosystem - 2026 Survey" />
+    <meta property="og:description" content="The annual survey to assess the state of the Cardano developer ecosystem. Edition 2026." />
+    <meta property="og:image" content="https://devsurvey.cardano.org/img/maskable_icon_x192.png" />
+    <meta property="twitter:card" content="summary" />
+
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="icon" href="./img/favicon.png" />
+    <link rel="stylesheet" href="./site.css" />
+    <script type="module" src="./main.js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="./img/cardano.svg" alt="" width="40" height="37" />
+      <span data-text="brand">State of the Cardano Developer Ecosystem</span>
+      <select id="language" aria-label="Language" hidden></select>
+    </header>
+
+    <main>
+      <!-- Shown until the script runs. -->
+      <section id="loading">
+        <p data-text="loading">Loading…</p>
+        <noscript><p>This survey needs JavaScript.</p></noscript>
+      </section>
+
+      <section id="welcome" tabindex="-1" hidden>
+        <h1 class="survey-title"></h1>
+        <p class="survey-description"></p>
+        <ul class="facts">
+          <li id="until"></li>
+          <li data-text="welcome.noWallet"></li>
+          <li data-text="welcome.kept"></li>
+        </ul>
+        <div class="notice">
+          <h2 data-text="welcome.publicTitle"></h2>
+          <p data-text="welcome.public"></p>
+          <p>
+            <span data-text="welcome.consent"></span>
+            <a href="./terms-and-conditions.html" target="_blank" class="terms" data-text="terms"></a><span data-text="period"></span>
+          </p>
+        </div>
+        <div class="actions">
+          <button id="start" type="button" class="primary"></button>
+          <button id="restart" type="button" data-text="welcome.restart" hidden></button>
+          <span id="exits" class="exits"></span>
+        </div>
+        <p class="remind">
+          <span data-text="welcome.remind"></span>
+          <a id="calendar" href="#" download="reminder.ics" data-text="welcome.calendar"></a> ·
+          <a id="google" href="#" target="_blank" rel="noopener" data-text="welcome.google"></a> ·
+          <a id="email" href="#" data-text="welcome.email"></a>
+        </p>
+      </section>
+
+      <section id="screened" tabindex="-1" hidden>
+        <h1 data-text="screened.title"></h1>
+        <p data-text="screened.body"></p>
+        <p data-text="screened.invite"></p>
+        <div class="actions">
+          <button id="share" type="button" class="primary" data-text="screened.share"></button>
+          <button id="return" type="button" data-text="screened.back"></button>
+        </div>
+      </section>
+
+      <!-- The widget is added here when the respondent starts. -->
+      <section id="questions" tabindex="-1" hidden></section>
+
+      <section id="submit" tabindex="-1" hidden>
+        <h1 data-text="submit.title"></h1>
+        <p id="answered"></p>
+        <p id="closing" class="soon" hidden></p>
+        <p class="notice" data-text="submit.notice"></p>
+        <p id="problem" class="problem" role="alert" hidden></p>
+        <div class="actions">
+          <button id="publish" type="button" class="primary"></button>
+          <button id="back" type="button" data-text="submit.back"></button>
+        </div>
+        <p id="progress" role="status"></p>
+      </section>
+
+      <section id="thanks" tabindex="-1" hidden>
+        <h1 data-text="thanks.title"></h1>
+        <p id="published"></p>
+        <p><a id="transaction" target="_blank" rel="noopener" data-text="thanks.transaction"></a></p>
+        <!-- The survey's report, or the latest until it is out, and all reports. -->
+        <div class="results">
+          <p class="report"></p>
+          <p class="reports"></p>
+        </div>
+      </section>
+
+      <section id="closed" tabindex="-1" hidden>
+        <h1 data-text="closed.title"></h1>
+        <p id="closed-body"></p>
+        <!-- The survey's report, or the latest until it is out, and all reports. -->
+        <div class="results">
+          <p class="report"></p>
+          <p class="reports"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a href="./terms-and-conditions.html" target="_blank" data-text="terms">Terms and conditions</a>
+      <a href="https://github.com/cardano-foundation/state-of-the-developer-ecosystem" target="_blank" rel="noopener" data-text="source">Source code</a>
+    </footer>
+  </body>
+</html>

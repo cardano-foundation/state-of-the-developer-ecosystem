@@ -1,20 +1,28 @@
 {
   "name": "state-of-the-cardano-developer-ecosystem",
   "version": "1.0.0",
-  "main": "public/index.js",
   "repository": "https://github.com/cardano-foundation/state-of-the-developer-ecosystem.git",
   "author": "KtorZ <matthias.benkort@gmail.com>",
   "license": "Apache-2.0",
   "private": false,
+  "type": "module",
   "scripts": {
-    "dev": "wrangler pages dev .",
-    "count": "count() { wrangler kv key list --binding kv \"$@\" | jq length; }; count",
-    "results": "results() { wrangler kv key list --binding kv \"$@\" > /tmp/kv.json; wrangler kv bulk get /tmp/kv.json --binding kv \"$@\"; }; results"
+    "dev": "node --watch cip179/dev.js",
+    "cip179": "node cip179/build.js",
+    "site": "node cip179/site.js",
+    "db:migrate": "node cip179/migrate.js",
+    "test": "node --test 'cip179/test/*.test.js'"
   },
   "dependencies": {
-    "nanoid": "^5.1.6"
+    "@evolution-sdk/evolution": "0.5.16",
+    "@libsql/client": "0.18.0",
+    "@noble/curves": "^2.4.0",
+    "@noble/hashes": "^2.4.0",
+    "botid": "1.5.11",
+    "cardano-tessera-respond": "0.8.0",
+    "cip-179": "0.6.0"
   },
   "devDependencies": {
-    "wrangler": "^4.40.2"
+    "esbuild": "0.27.0"
   }
 }

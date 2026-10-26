@@ -1,4 +1,4 @@
-fetch("/state-of-the-developer-ecosystem/2023/data/answers.json").then(res => res.json()).then(data => {
+fetch("data/answers.json").then(res => res.json()).then(data => {
   const repository = "https://github.com/cardano-foundation/state-of-the-developer-ecosystem/blob/main"
   const node = document.createElement("div");
   document.querySelector('body').appendChild(node);

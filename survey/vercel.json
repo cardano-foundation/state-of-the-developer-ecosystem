@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "yarn site && yarn db:migrate",
+  "outputDirectory": "dist",
+  "functions": {
+    "api/sponsor/*.js": { "maxDuration": 60 }
+  },
+  "redirects": [{ "source": "/:year(\\d{4})", "destination": "/:year/", "permanent": true }],
+  "headers": [{ "source": "/cip179/(.*)", "headers": [{ "key": "Access-Control-Allow-Origin", "value": "*" }] }]
+}

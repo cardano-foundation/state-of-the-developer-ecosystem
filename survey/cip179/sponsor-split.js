@@ -1,0 +1,65 @@
+#!/usr/bin/env node
+// Splits the sponsor wallet into coins of equal value. Each sponsored
+// transaction spends one coin, and two transactions spending the same coin
+// can't both land, so more coins let more respondents submit at once. Change
+// returns to the same address, so the count stays the same.
+//
+// Best run before the survey opens: the sponsor learns of the new coins at
+// its next check from Koios (`sponsor.js`), after refusing the spent ones.
+//
+//   node cip179/sponsor-split.js [--coins <n>] [--submit]
+//
+// Spends every ada-only coin of the wallet in `.env`, on Preprod, through
+// Koios (`koios.js`). With NETWORK=mainnet, the wallet in `.env.mainnet`, on
+// Mainnet. Without `--submit`, only shows the transaction.
+
+import * as Address from "@evolution-sdk/evolution/Address";
+import * as Assets from "@evolution-sdk/evolution/Assets";
+import * as TransactionHash from "@evolution-sdk/evolution/TransactionHash";
+import { mainnet, preprod, preview } from "@evolution-sdk/evolution/sdk/client/Chain";
+import * as Client from "@evolution-sdk/evolution/sdk/client/Client";
+import { addressFromSeed } from "@evolution-sdk/evolution/sdk/wallet/Derivation";
+import { existsSync } from "node:fs";
+import { parseArgs } from "node:util";
+
+import { deployedOf, secretsFile } from "../config.js";
+import { koiosOf } from "./koios.js";
+
+const { values: args } = parseArgs({
+  options: {
+    coins: { type: "string", default: "10" },
+    submit: { type: "boolean", default: false },
+  },
+});
+
+const { network } = deployedOf(process.env);
+const secrets = secretsFile(network);
+if (existsSync(secrets)) process.loadEnvFile(secrets);
+const mnemonic = process.env.SPONSOR_MNEMONIC;
+if (!mnemonic) throw new Error(`no SPONSOR_MNEMONIC in ${secrets}`);
+const chain = { preview, preprod, mainnet }[network];
+if (!chain) throw new Error(`unknown network ${network}`);
+const count = Number(args.coins);
+if (!Number.isInteger(count) || count < 2) throw new Error("--coins must be at least 2");
+
+const client = Client.make(chain).withKoios(koiosOf(process.env)).withSeed({ mnemonic });
+const { address } = addressFromSeed(mnemonic, { networkId: chain.id });
+const coins = (await client.getWalletUtxos()).filter((u) => !u.assets.multiAsset);
+const total = coins.reduce((sum, u) => sum + u.assets.lovelace, 0n);
+// Rounded down to 0.1 ada; the last coin is the change, after the fee.
+const share = (total / BigInt(count) / 100_000n) * 100_000n;
+console.log(`${Address.toBech32(address)} on ${network}`);
+console.log(`${coins.length} coins, ${ada(total)} ada → ${count} coins of about ${ada(share)} ada`);
+
+let tx = client.newTx().collectFrom({ inputs: coins });
+for (let i = 1; i < count; i++) tx = tx.payToAddress({ address, assets: Assets.fromLovelace(share) });
+const built = await tx.build({ availableUtxos: coins });
+const { body } = await built.toTransaction();
+console.log(`outputs: ${body.outputs.map((o) => ada(o.assets.lovelace)).join(", ")} ada; fee ${ada(body.fee)} ada`);
+
+if (args.submit) console.log(`submitted: ${TransactionHash.toHex(await built.signAndSubmit())}`);
+else console.log("not submitted (--submit to submit)");
+
+function ada(lovelace) {
+  return (Number(lovelace) / 1e6).toFixed(6);
+}
