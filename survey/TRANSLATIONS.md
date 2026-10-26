@@ -10,9 +10,7 @@ You need a GitHub account, and nothing else: you suggest changes from your brows
 
 ## Read the survey
 
-**On the site**, to see the texts as respondents will: https://state-of-cardano-developer-survey-2026.pages.dev/. Pick your language in the menu at the top.
-
-The site only shows the questions that apply to your answers. **The file** has them all, in order: [`cip179/2026/survey.json`](cip179/2026/survey.json). Each text is in all nine languages, one per line, under its two-letter code: `default` is English, then `fr`, `es`, `pt`, `it`, `de`, `ja`, `vi` and `zh`.
+The questions are all in one file, in order: [`cip179/2026/survey.json`](cip179/2026/survey.json). Each text is in all nine languages, one per line, under its two-letter code: `default` is English, then `fr`, `es`, `pt`, `it`, `de`, `ja`, `vi` and `zh`.
 
 ```json
 "title": {
